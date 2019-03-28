@@ -2,11 +2,11 @@
 <html class="no-js" lang="en">
 
 <head>
-<title>Image · Doodle</title>
+<title>Layout · Doodle</title>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <meta name="description" content='Compositional graphics for Scala'/>
-<link rel="canonical" href="https://github.com/creativescala/doodleimage/index.html"/>
+<link rel="canonical" href="https://github.com/creativescala/doodleimage/layout.html"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:100normal,100italic,300normal,300italic,400normal,400italic,500normal,500italic,700normal,700italic,900normal,900italicc" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../lib/jquery/jquery.min.js"></script>
 <script type="text/javascript" src="../js/page.js"></script>
@@ -37,12 +37,12 @@
 </div>
 <div class="nav-toc">
 <ul>
-  <li><a href="../image/index.html" class="active page">Image</a>
+  <li><a href="../image/index.html" class="page">Image</a>
   <ul>
     <li><a href="../image/shape.html" class="page">Shapes</a></li>
     <li><a href="../image/path.html" class="page">Paths</a></li>
     <li><a href="../image/styling.html" class="page">Styling</a></li>
-    <li><a href="../image/layout.html" class="page">Layout</a></li>
+    <li><a href="../image/layout.html" class="active page">Layout</a></li>
     <li><a href="../image/transform.html" class="page">Transforms</a></li>
   </ul></li>
 </ul>
@@ -81,12 +81,12 @@ C16.952,7,17,6.553,17,6c0-0.553-0.048-1-0.6-1H3.6C3.048,5,3,5.447,3,6C3,6.553,3.
 </div>
 <div class="nav-toc">
 <ul>
-  <li><a href="../image/index.html" class="active page">Image</a>
+  <li><a href="../image/index.html" class="page">Image</a>
   <ul>
     <li><a href="../image/shape.html" class="page">Shapes</a></li>
     <li><a href="../image/path.html" class="page">Paths</a></li>
     <li><a href="../image/styling.html" class="page">Styling</a></li>
-    <li><a href="../image/layout.html" class="page">Layout</a></li>
+    <li><a href="../image/layout.html" class="active page">Layout</a></li>
     <li><a href="../image/transform.html" class="page">Transforms</a></li>
   </ul></li>
 </ul>
@@ -105,7 +105,8 @@ C16.952,7,17,6.553,17,6c0-0.553-0.048-1-0.6-1H3.6C3.048,5,3,5.447,3,6C3,6.553,3.
 <div class="nav-breadcrumbs">
 <ul>
   <li><a href="../index.html">Doodle</a></li>
-  <li>Image</li>
+  <li><a href="../image/index.html">Image</a></li>
+  <li>Layout</li>
 </ul>
 </div>
 </div>
@@ -113,45 +114,16 @@ C16.952,7,17,6.553,17,6c0-0.553-0.048-1-0.6-1H3.6C3.048,5,3,5.447,3,6C3,6.553,3.
 
 <div class="page-content row">
 <div class="small-12 large-9 column" id="docs">
-<h1><a href="#image" name="image" class="anchor"><span class="anchor-link"></span></a>Image</h1>
-<p>The Image DSL is the easiest way to create images using Doodle. The tradeoff the Image library makes is that it only support a (large but limited) subset of operations that are supported across all the backends.</p>
-<h2><a href="#imports" name="imports" class="anchor"><span class="anchor-link"></span></a>Imports</h2>
-<p>To use Image you&rsquo;ll need the following imports:</p>
-<pre class="prettyprint"><code class="language-scala">import doodle.image._
-import doodle.image.syntax._
-import doodle.core._
-</code></pre>
-<h2><a href="#basic-concepts" name="basic-concepts" class="anchor"><span class="anchor-link"></span></a>Basic Concepts</h2>
-<p>Image is based on <em>composition</em> and the <em>interpreter pattern</em>. Composition basically means that you build big Images out of small Images. For example, if you have an Image describing a red square and an Image describing a blue square</p>
-<pre class="prettyprint"><code class="language-scala">val redSquare = Image.square(100).fillColor(Color.red)
-val blueSquare = Image.square(100).fillColor(Color.blue)
-</code></pre>
-<p>you can create an Image describing a red square next to a blue square by combining them together.</p>
-<pre class="prettyprint"><code class="language-scala">val combination = redSquare.beside(blueSquare)
-</code></pre>
+<h1><a href="#layout" name="layout" class="anchor"><span class="anchor-link"></span></a>Layout</h1>
 <div class="source-github">
-The source code for this page can be found <a href="https://github.com/creativescala/doodle/tree/master/site/src/main/paradox/image/index.md">here</a>.
+The source code for this page can be found <a href="https://github.com/creativescala/doodle/tree/master/site/src/main/paradox/image/layout.md">here</a>.
 </div>
 
 <div class="nav-next">
-<p><strong>Next:</strong> <a href="../image/shape.html">Shapes</a></p>
+<p><strong>Next:</strong> <a href="../image/transform.html">Transforms</a></p>
 </div>
 </div>
 <div class="large-3 show-for-large column" data-sticky-container>
-<nav class="sidebar sticky" data-sticky data-anchor="docs" data-sticky-on="large">
-<div class="page-nav">
-<div class="nav-title">On this page:</div>
-<div class="nav-toc">
-<ul>
-  <li><a href="../image/index.html#image" class="header">Image</a>
-  <ul>
-    <li><a href="../image/index.html#imports" class="header">Imports</a></li>
-    <li><a href="../image/index.html#basic-concepts" class="header">Basic Concepts</a></li>
-  </ul></li>
-</ul>
-</div>
-</div>
-</nav>
 </div>
 </div>
 

@@ -2,11 +2,11 @@
 <html class="no-js" lang="en">
 
 <head>
-<title>Image · Doodle</title>
+<title>Shapes · Doodle</title>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <meta name="description" content='Compositional graphics for Scala'/>
-<link rel="canonical" href="https://github.com/creativescala/doodleimage/index.html"/>
+<link rel="canonical" href="https://github.com/creativescala/doodleimage/shape.html"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:100normal,100italic,300normal,300italic,400normal,400italic,500normal,500italic,700normal,700italic,900normal,900italicc" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../lib/jquery/jquery.min.js"></script>
 <script type="text/javascript" src="../js/page.js"></script>
@@ -37,9 +37,9 @@
 </div>
 <div class="nav-toc">
 <ul>
-  <li><a href="../image/index.html" class="active page">Image</a>
+  <li><a href="../image/index.html" class="page">Image</a>
   <ul>
-    <li><a href="../image/shape.html" class="page">Shapes</a></li>
+    <li><a href="../image/shape.html" class="active page">Shapes</a></li>
     <li><a href="../image/path.html" class="page">Paths</a></li>
     <li><a href="../image/styling.html" class="page">Styling</a></li>
     <li><a href="../image/layout.html" class="page">Layout</a></li>
@@ -81,9 +81,9 @@ C16.952,7,17,6.553,17,6c0-0.553-0.048-1-0.6-1H3.6C3.048,5,3,5.447,3,6C3,6.553,3.
 </div>
 <div class="nav-toc">
 <ul>
-  <li><a href="../image/index.html" class="active page">Image</a>
+  <li><a href="../image/index.html" class="page">Image</a>
   <ul>
-    <li><a href="../image/shape.html" class="page">Shapes</a></li>
+    <li><a href="../image/shape.html" class="active page">Shapes</a></li>
     <li><a href="../image/path.html" class="page">Paths</a></li>
     <li><a href="../image/styling.html" class="page">Styling</a></li>
     <li><a href="../image/layout.html" class="page">Layout</a></li>
@@ -105,7 +105,8 @@ C16.952,7,17,6.553,17,6c0-0.553-0.048-1-0.6-1H3.6C3.048,5,3,5.447,3,6C3,6.553,3.
 <div class="nav-breadcrumbs">
 <ul>
   <li><a href="../index.html">Doodle</a></li>
-  <li>Image</li>
+  <li><a href="../image/index.html">Image</a></li>
+  <li>Shapes</li>
 </ul>
 </div>
 </div>
@@ -113,28 +114,37 @@ C16.952,7,17,6.553,17,6c0-0.553-0.048-1-0.6-1H3.6C3.048,5,3,5.447,3,6C3,6.553,3.
 
 <div class="page-content row">
 <div class="small-12 large-9 column" id="docs">
-<h1><a href="#image" name="image" class="anchor"><span class="anchor-link"></span></a>Image</h1>
-<p>The Image DSL is the easiest way to create images using Doodle. The tradeoff the Image library makes is that it only support a (large but limited) subset of operations that are supported across all the backends.</p>
-<h2><a href="#imports" name="imports" class="anchor"><span class="anchor-link"></span></a>Imports</h2>
-<p>To use Image you&rsquo;ll need the following imports:</p>
-<pre class="prettyprint"><code class="language-scala">import doodle.image._
-import doodle.image.syntax._
-import doodle.core._
-</code></pre>
-<h2><a href="#basic-concepts" name="basic-concepts" class="anchor"><span class="anchor-link"></span></a>Basic Concepts</h2>
-<p>Image is based on <em>composition</em> and the <em>interpreter pattern</em>. Composition basically means that you build big Images out of small Images. For example, if you have an Image describing a red square and an Image describing a blue square</p>
-<pre class="prettyprint"><code class="language-scala">val redSquare = Image.square(100).fillColor(Color.red)
-val blueSquare = Image.square(100).fillColor(Color.blue)
-</code></pre>
-<p>you can create an Image describing a red square next to a blue square by combining them together.</p>
-<pre class="prettyprint"><code class="language-scala">val combination = redSquare.beside(blueSquare)
-</code></pre>
+<h1><a href="#shapes" name="shapes" class="anchor"><span class="anchor-link"></span></a>Shapes</h1>
+<h2><a href="#basic-shapes" name="basic-shapes" class="anchor"><span class="anchor-link"></span></a>Basic Shapes</h2>
+<p>The basic shapes are on the <code>Image</code> companion object. This includes:</p>
+<ul>
+  <li><code>Image.empty</code> creates the empty Image that takes up no space and renders nothing. Useful for that sweet monoid identity and for the base case in recursions.</li>
+  <li><code>Image.square(sideLength)</code> creates a square with the given side length.</li>
+  <li><code>Image.rectangle(width, height)</code> creates a rectangle with the given width and height.</li>
+  <li><code>Image.circle(diameter)</code> creates a circle with the given diameter. Specified in terms of diameter rather than radius so that <code>Image.square(100)</code> and <code>Image.circle(100)</code> take up the same space.</li>
+  <li><code>Image.triangle(width, height)</code> creates an isoceles triangle with the given width and height.</li>
+</ul>
+<h2><a href="#complex-shapes" name="complex-shapes" class="anchor"><span class="anchor-link"></span></a>Complex Shapes</h2>
+<p>Some more complex shapes are also available on the <code>Image</code> companion object:</p>
+<ul>
+  <li><code>Image.regularPolygon(sides, radius, angle)</code> creates a regular polygon with the given number of sides and radius. The <code>angle</code> specifies the rotation of the polygon relative to the x-axis.</li>
+  <li><code>Image.star(points, outerRadius, innerRadius, angle)</code> creates a star with the given number of points. The points extend as far as <code>outerRadius</code> and go in to <code>innerRadius</code>. The <code>angle</code> specifies the rotation of the star relative to the x-axis.</li>
+  <li><code>Image.rightArrow(width, height)</code> creates an arrow points to the right with the given width and height.</li>
+  <li><code>Image.roundedRectangle(width, height, radius)</code> creates a rectangle of the given width and height, with rounded corners with size given by <code>radius</code>.</li>
+</ul>
+<h2><a href="#paths" name="paths" class="anchor"><span class="anchor-link"></span></a>Paths</h2>
+<p>Paths allow construction of custom shapes. They are described in <a href="path.html">their own section</a>. There are three methods on the <code>Image</code> companion object that deal with paths:</p>
+<ul>
+  <li><code>Image.openPath(pathElements)</code> converts a <code>Seq[PathElement]</code> into an <code>Image</code> representing an open path (a path that does not end where it begins).</li>
+  <li><code>Image.closedPath</code> converts a <code>Seq[PathElement]</code> to an <code>Image</code> representing a closed path (a path that ends where it begins; a straight line will be inserted if to make this the case if needed.)</li>
+  <li><code>Image.interpolatingSpline</code> converts a <code>Seq[Point]</code> to an <code>Image</code> by interpolating a smooth curve between the points using the [Catmull-Rom][catmull-rom] algorithm.</li>
+</ul>
 <div class="source-github">
-The source code for this page can be found <a href="https://github.com/creativescala/doodle/tree/master/site/src/main/paradox/image/index.md">here</a>.
+The source code for this page can be found <a href="https://github.com/creativescala/doodle/tree/master/site/src/main/paradox/image/shape.md">here</a>.
 </div>
 
 <div class="nav-next">
-<p><strong>Next:</strong> <a href="../image/shape.html">Shapes</a></p>
+<p><strong>Next:</strong> <a href="../image/path.html">Paths</a></p>
 </div>
 </div>
 <div class="large-3 show-for-large column" data-sticky-container>
@@ -143,10 +153,11 @@ The source code for this page can be found <a href="https://github.com/creatives
 <div class="nav-title">On this page:</div>
 <div class="nav-toc">
 <ul>
-  <li><a href="../image/index.html#image" class="header">Image</a>
+  <li><a href="../image/shape.html#shapes" class="header">Shapes</a>
   <ul>
-    <li><a href="../image/index.html#imports" class="header">Imports</a></li>
-    <li><a href="../image/index.html#basic-concepts" class="header">Basic Concepts</a></li>
+    <li><a href="../image/shape.html#basic-shapes" class="header">Basic Shapes</a></li>
+    <li><a href="../image/shape.html#complex-shapes" class="header">Complex Shapes</a></li>
+    <li><a href="../image/shape.html#paths" class="header">Paths</a></li>
   </ul></li>
 </ul>
 </div>
