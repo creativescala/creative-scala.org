@@ -2,11 +2,11 @@
 <html class="no-js" lang="en">
 
 <head>
-<title>Image · Doodle</title>
+<title>Image</title>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <meta name="description" content='Compositional graphics for Scala'/>
-<link rel="canonical" href="https://github.com/creativescala/doodleimage/index.html"/>
+<link rel="canonical" href="https://github.com/creativescala/doodle../image/index.html"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:100normal,100italic,300normal,300italic,400normal,400italic,500normal,500italic,700normal,700italic,900normal,900italicc" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../lib/jquery/jquery.min.js"></script>
 <script type="text/javascript" src="../js/page.js"></script>
@@ -28,8 +28,8 @@
 <div class="off-canvas position-left" id="off-canvas-menu" data-off-canvas>
 <nav class="off-canvas-nav">
 <div class="nav-home">
-<a href="../index.html" >
-<span class="home-icon">⌂</span>Doodle
+<a href="../image/index.html" class="active">
+<span class="home-icon">⌂</span>Image
 </a>
 <div class="version-number">
 0.9.1*
@@ -37,14 +37,11 @@
 </div>
 <div class="nav-toc">
 <ul>
-  <li><a href="../image/index.html" class="active page">Image</a>
-  <ul>
-    <li><a href="../image/shape.html" class="page">Shapes</a></li>
-    <li><a href="../image/path.html" class="page">Paths</a></li>
-    <li><a href="../image/styling.html" class="page">Styling</a></li>
-    <li><a href="../image/layout.html" class="page">Layout</a></li>
-    <li><a href="../image/transform.html" class="page">Transforms</a></li>
-  </ul></li>
+  <li><a href="../image/shape.html" class="page">Shapes</a></li>
+  <li><a href="../image/path.html" class="page">Paths</a></li>
+  <li><a href="../image/styling.html" class="page">Styling</a></li>
+  <li><a href="../image/layout.html" class="page">Layout</a></li>
+  <li><a href="../image/transform.html" class="page">Transforms</a></li>
 </ul>
 </div>
 
@@ -59,7 +56,7 @@
 H3.6C3.048,13,3,13.447,3,14c0,0.553,0.048,1,0.6,1H16.4c0.552,0,0.6-0.447,0.6-1C17,13.447,16.952,13,16.4,13z M3.6,7H16.4
 C16.952,7,17,6.553,17,6c0-0.553-0.048-1-0.6-1H3.6C3.048,5,3,5.447,3,6C3,6.553,3.048,7,3.6,7z"/></svg>
 </a>
-<div class="title"><a href="../index.html">Doodle</a></div>
+<div class="title"><a href="../image/index.html" class="active">Image</a></div>
 
 <!--
 <a href="https://www.example.com" class="logo show-for-medium">logo</a>
@@ -72,8 +69,8 @@ C16.952,7,17,6.553,17,6c0-0.553-0.048-1-0.6-1H3.6C3.048,5,3,5.447,3,6C3,6.553,3.
 <div class="medium-3 large-2 show-for-medium column">
 <nav class="site-nav">
 <div class="nav-home">
-<a href="../index.html" >
-<span class="home-icon">⌂</span>Doodle
+<a href="../image/index.html" class="active">
+<span class="home-icon">⌂</span>Image
 </a>
 <div class="version-number">
 0.9.1*
@@ -81,14 +78,11 @@ C16.952,7,17,6.553,17,6c0-0.553-0.048-1-0.6-1H3.6C3.048,5,3,5.447,3,6C3,6.553,3.
 </div>
 <div class="nav-toc">
 <ul>
-  <li><a href="../image/index.html" class="active page">Image</a>
-  <ul>
-    <li><a href="../image/shape.html" class="page">Shapes</a></li>
-    <li><a href="../image/path.html" class="page">Paths</a></li>
-    <li><a href="../image/styling.html" class="page">Styling</a></li>
-    <li><a href="../image/layout.html" class="page">Layout</a></li>
-    <li><a href="../image/transform.html" class="page">Transforms</a></li>
-  </ul></li>
+  <li><a href="../image/shape.html" class="page">Shapes</a></li>
+  <li><a href="../image/path.html" class="page">Paths</a></li>
+  <li><a href="../image/styling.html" class="page">Styling</a></li>
+  <li><a href="../image/layout.html" class="page">Layout</a></li>
+  <li><a href="../image/transform.html" class="page">Transforms</a></li>
 </ul>
 </div>
 
@@ -102,12 +96,6 @@ C16.952,7,17,6.553,17,6c0-0.553-0.048-1-0.6-1H3.6C3.048,5,3,5.447,3,6C3,6.553,3.
 
 <div class="page-header row">
 <div class="medium-12 show-for-medium column">
-<div class="nav-breadcrumbs">
-<ul>
-  <li><a href="../index.html">Doodle</a></li>
-  <li>Image</li>
-</ul>
-</div>
 </div>
 </div>
 
@@ -122,15 +110,55 @@ import doodle.image.syntax._
 import doodle.core._
 </code></pre>
 <h2><a href="#basic-concepts" name="basic-concepts" class="anchor"><span class="anchor-link"></span></a>Basic Concepts</h2>
-<p>Image is based on <em>composition</em> and the <em>interpreter pattern</em>. Composition basically means that you build big Images out of small Images. For example, if you have an Image describing a red square and an Image describing a blue square</p>
+<p>Image is based on <em>composition</em> and the <em>interpreter pattern</em>.</p>
+<p>Composition basically means that we build big Images out of small Images. For example, if we have an Image describing a red square and an Image describing a blue square</p>
 <pre class="prettyprint"><code class="language-scala">val redSquare = Image.square(100).fillColor(Color.red)
+// redSquare: Image = FillColor(
+//   Rectangle(100.0, 100.0),
+//   RGBA(
+//     UnsignedByte(127),
+//     UnsignedByte(-128),
+//     UnsignedByte(-128),
+//     Normalized(1.0)
+//   )
+// )
 val blueSquare = Image.square(100).fillColor(Color.blue)
+// blueSquare: Image = FillColor(
+//   Rectangle(100.0, 100.0),
+//   RGBA(
+//     UnsignedByte(-128),
+//     UnsignedByte(-128),
+//     UnsignedByte(127),
+//     Normalized(1.0)
+//   )
+// )
 </code></pre>
-<p>you can create an Image describing a red square next to a blue square by combining them together.</p>
+<p>we can create an Image describing a red square next to a blue square by combining them together.</p>
 <pre class="prettyprint"><code class="language-scala">val combination = redSquare.beside(blueSquare)
+// combination: Image = Beside(
+//   FillColor(
+//     Rectangle(100.0, 100.0),
+//     RGBA(
+//       UnsignedByte(127),
+//       UnsignedByte(-128),
+//       UnsignedByte(-128),
+//       Normalized(1.0)
+//     )
+//   ),
+//   FillColor(
+//     Rectangle(100.0, 100.0),
+//     RGBA(
+//       UnsignedByte(-128),
+//       UnsignedByte(-128),
+//       UnsignedByte(127),
+//       Normalized(1.0)
+//     )
+//   )
+// )
 </code></pre>
+<p>The interpreter pattern means that we separate describing the Image from rendering it. Writing <code>Image.square(100)</code> doesn&rsquo;t draw anything. To draw an image we need to call the <code>draw()</code> method. This separation is important for composition; if we were to immediately draw we would lose composition.</p>
 <div class="source-github">
-The source code for this page can be found <a href="https://github.com/creativescala/doodle/tree/master/site/src/main/paradox/image/index.md">here</a>.
+The source code for this page can be found <a href="https://github.com/creativescala/doodle/tree/master/docs/src/main/paradox/image/index.md">here</a>.
 </div>
 
 <div class="nav-next">
