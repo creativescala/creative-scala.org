@@ -114,36 +114,201 @@ C16.952,7,17,6.553,17,6c0-0.553-0.048-1-0.6-1H3.6C3.048,5,3,5.447,3,6C3,6.553,3.
 <p>To use Doodle, add to your <code>build.sbt</code></p>
 <pre class="prettyprint"><code class="language-scala">libraryDependencies += &quot;org.creativescala&quot; %% &quot;doodle&quot; % &quot;0.9.0&quot;
 </code></pre>
+<h2><a href="#scaladoc" name="scaladoc" class="anchor"><span class="anchor-link"></span></a>ScalaDoc</h2>
+<p>ScalaDoc is <a href="api/doodle/index.html">here</a></p>
 <h2><a href="#quick-example" name="quick-example" class="anchor"><span class="anchor-link"></span></a>Quick Example</h2>
+<p>The following example creates a Chessboard, by first creating a 2x2 board, then a 4x4 board from the 2x2 board, and finally the complete 8x8 board from the 4x4 board.</p>
 <pre class="prettyprint"><code class="language-scala">// The &quot;Image&quot; DSL is the easiest way to create images
 import doodle.image._
-// Extension methods
-import doodle.image.syntax._
 // Colors and other useful stuff
 import doodle.core._
-// Render to a window using Java2D (must be running in the JVM)
-import doodle.java2d._
 
 val blackSquare = Image.rectangle(30, 30).fillColor(Color.black)
+// blackSquare: Image = FillColor(
+//   Rectangle(30.0, 30.0),
+//   RGBA(
+//     UnsignedByte(-128),
+//     UnsignedByte(-128),
+//     UnsignedByte(-128),
+//     Normalized(1.0)
+//   )
+// )
 val redSquare = Image.rectangle(30, 30).fillColor(Color.red)
+// redSquare: Image = FillColor(
+//   Rectangle(30.0, 30.0),
+//   RGBA(
+//     UnsignedByte(127),
+//     UnsignedByte(-128),
+//     UnsignedByte(-128),
+//     Normalized(1.0)
+//   )
+// )
 
 // A chessboard, broken into steps showing the recursive construction
 val twoByTwo =
   (redSquare.beside(blackSquare))
     .above(blackSquare.beside(redSquare))
+// twoByTwo: Image = Above(
+//   Beside(
+//     FillColor(
+//       Rectangle(30.0, 30.0),
+//       RGBA(
+//         UnsignedByte(127),
+//         UnsignedByte(-128),
+//         UnsignedByte(-128),
+//         Normalized(1.0)
+//       )
+//     ),
+//     FillColor(
+//       Rectangle(30.0, 30.0),
+//       RGBA(
+//         UnsignedByte(-128),
+//         UnsignedByte(-128),
+//         UnsignedByte(-128),
+//         Normalized(1.0)
+//       )
+//     )
+//   ),
+//   Beside(
+//     FillColor(
+//       Rectangle(30.0, 30.0),
+//       RGBA(
+//         UnsignedByte(-128),
+//         UnsignedByte(-128),
+//         UnsignedByte(-128),
+//         Normalized(1.0)
+//       )
+//     ),
+//     FillColor(
+//       Rectangle(30.0, 30.0),
+//       RGBA(
+//         UnsignedByte(127),
+//         UnsignedByte(-128),
+//         UnsignedByte(-128),
+//         Normalized(1.0)
+//       )
+//     )
+//   )
+// )
 
 val fourByFour =
   (twoByTwo.beside(twoByTwo))
     .above(twoByTwo.beside(twoByTwo))
+// fourByFour: Image = Above(
+//   Beside(
+//     Above(
+//       Beside(
+//         FillColor(
+//           Rectangle(30.0, 30.0),
+//           RGBA(
+//             UnsignedByte(127),
+//             UnsignedByte(-128),
+//             UnsignedByte(-128),
+//             Normalized(1.0)
+//           )
+//         ),
+//         FillColor(
+//           Rectangle(30.0, 30.0),
+//           RGBA(
+//             UnsignedByte(-128),
+//             UnsignedByte(-128),
+//             UnsignedByte(-128),
+//             Normalized(1.0)
+//           )
+//         )
+//       ),
+//       Beside(
+//         FillColor(
+//           Rectangle(30.0, 30.0),
+//           RGBA(
+//             UnsignedByte(-128),
+//             UnsignedByte(-128),
+//             UnsignedByte(-128),
+//             Normalized(1.0)
+//           )
+//         ),
+//         FillColor(
+//           Rectangle(30.0, 30.0),
+//           RGBA(
+//             UnsignedByte(127),
+//             UnsignedByte(-128),
+//             UnsignedByte(-128),
+//             Normalized(1.0)
+//           )
+//         )
+//       )
+//     ),
+//     Above(
+//       Beside(
+//         FillColor(
+//           Rectangle(30.0, 30.0),
+//           RGBA(
+// ...
 
 val chessboard =
   (fourByFour.beside(fourByFour))
     .above(fourByFour.beside(fourByFour))
+// chessboard: Image = Above(
+//   Beside(
+//     Above(
+//       Beside(
+//         Above(
+//           Beside(
+//             FillColor(
+//               Rectangle(30.0, 30.0),
+//               RGBA(
+//                 UnsignedByte(127),
+//                 UnsignedByte(-128),
+//                 UnsignedByte(-128),
+//                 Normalized(1.0)
+//               )
+//             ),
+//             FillColor(
+//               Rectangle(30.0, 30.0),
+//               RGBA(
+//                 UnsignedByte(-128),
+//                 UnsignedByte(-128),
+//                 UnsignedByte(-128),
+//                 Normalized(1.0)
+//               )
+//             )
+//           ),
+//           Beside(
+//             FillColor(
+//               Rectangle(30.0, 30.0),
+//               RGBA(
+//                 UnsignedByte(-128),
+//                 UnsignedByte(-128),
+//                 UnsignedByte(-128),
+//                 Normalized(1.0)
+//               )
+//             ),
+//             FillColor(
+//               Rectangle(30.0, 30.0),
+//               RGBA(
+//                 UnsignedByte(127),
+//                 UnsignedByte(-128),
+//                 UnsignedByte(-128),
+//                 Normalized(1.0)
+//               )
+//             )
+//           )
+//         ),
+//         Above(
+//           Beside(
+//             FillColor(
+// ...
+</code></pre>
+<p>To draw these Images call the <code>draw</code> method like so</p>
+<pre class="prettyprint"><code class="language-scala">// Extension methods
+import doodle.image.syntax._
+// Render to a window using Java2D (must be running in the JVM)
+import doodle.java2d._
 
 chessboard.draw()
 </code></pre>
 <div class="source-github">
-The source code for this page can be found <a href="https://github.com/creativescala/doodle/tree/master/site/src/main/paradox/index.md">here</a>.
+The source code for this page can be found <a href="https://github.com/creativescala/doodle/tree/master/docs/src/main/paradox/index.md">here</a>.
 </div>
 
 <div class="nav-next">
@@ -159,6 +324,7 @@ The source code for this page can be found <a href="https://github.com/creatives
   <li><a href="index.html#doodle" class="header">Doodle</a>
   <ul>
     <li><a href="index.html#getting-started" class="header">Getting Started</a></li>
+    <li><a href="index.html#scaladoc" class="header">ScalaDoc</a></li>
     <li><a href="index.html#quick-example" class="header">Quick Example</a></li>
   </ul></li>
 </ul>
