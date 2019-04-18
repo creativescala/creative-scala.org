@@ -37,6 +37,7 @@
 </div>
 <div class="nav-toc">
 <ul>
+  <li><a href="core/index.html" class="page">Core</a></li>
   <li><a href="image/index.html" class="page">Image</a>
   <ul>
     <li><a href="image/shape.html" class="page">Shapes</a></li>
@@ -81,6 +82,7 @@ C16.952,7,17,6.553,17,6c0-0.553-0.048-1-0.6-1H3.6C3.048,5,3,5.447,3,6C3,6.553,3.
 </div>
 <div class="nav-toc">
 <ul>
+  <li><a href="core/index.html" class="page">Core</a></li>
   <li><a href="image/index.html" class="page">Image</a>
   <ul>
     <li><a href="image/shape.html" class="page">Shapes</a></li>
@@ -109,7 +111,7 @@ C16.952,7,17,6.553,17,6c0-0.553-0.048-1-0.6-1H3.6C3.048,5,3,5.447,3,6C3,6.553,3.
 <div class="small-12 large-9 column" id="docs">
 <h1><a href="#doodle" name="doodle" class="anchor"><span class="anchor-link"></span></a>Doodle</h1>
 <p>Doodle is a library for 2D graphics. It runs in both the JVM, rendering via <a href="https://en.wikipedia.org/wiki/Java_2D">Java2D</a>, and the web browser using <a href="https://en.wikipedia.org/wiki/Scalable_Vector_Graphics">SVG</a>.</p>
-<p>Doodle provides a simple to use DSL, called <a href="image/index.html">Image</a>. This DSL is built on tagless final algebras. The tagless final algebras allow Doodle to support features that are not available across all backends (addressing the so-called <a href="https://en.wikipedia.org/wiki/Expression_problem">expression problem</a>). Doodle also provides libraries for animation and other utilties.</p>
+<p>Doodle provides a simple to use DSL, called <a href="image/index.html">Image</a>. This DSL is in turn built on tagless final algebras. The tagless final algebras allow Doodle to support features that are not available across all backends (addressing the so-called <a href="https://en.wikipedia.org/wiki/Expression_problem">expression problem</a>). Doodle also provides libraries for animation and other utilties.</p>
 <h2><a href="#getting-started" name="getting-started" class="anchor"><span class="anchor-link"></span></a>Getting Started</h2>
 <p>To use Doodle, add to your <code>build.sbt</code></p>
 <pre class="prettyprint"><code class="language-scala">libraryDependencies += &quot;org.creativescala&quot; %% &quot;doodle&quot; % &quot;0.9.0&quot;
@@ -124,180 +126,20 @@ import doodle.image._
 import doodle.core._
 
 val blackSquare = Image.rectangle(30, 30).fillColor(Color.black)
-// blackSquare: Image = FillColor(
-//   Rectangle(30.0, 30.0),
-//   RGBA(
-//     UnsignedByte(-128),
-//     UnsignedByte(-128),
-//     UnsignedByte(-128),
-//     Normalized(1.0)
-//   )
-// )
 val redSquare = Image.rectangle(30, 30).fillColor(Color.red)
-// redSquare: Image = FillColor(
-//   Rectangle(30.0, 30.0),
-//   RGBA(
-//     UnsignedByte(127),
-//     UnsignedByte(-128),
-//     UnsignedByte(-128),
-//     Normalized(1.0)
-//   )
-// )
 
 // A chessboard, broken into steps showing the recursive construction
 val twoByTwo =
   (redSquare.beside(blackSquare))
     .above(blackSquare.beside(redSquare))
-// twoByTwo: Image = Above(
-//   Beside(
-//     FillColor(
-//       Rectangle(30.0, 30.0),
-//       RGBA(
-//         UnsignedByte(127),
-//         UnsignedByte(-128),
-//         UnsignedByte(-128),
-//         Normalized(1.0)
-//       )
-//     ),
-//     FillColor(
-//       Rectangle(30.0, 30.0),
-//       RGBA(
-//         UnsignedByte(-128),
-//         UnsignedByte(-128),
-//         UnsignedByte(-128),
-//         Normalized(1.0)
-//       )
-//     )
-//   ),
-//   Beside(
-//     FillColor(
-//       Rectangle(30.0, 30.0),
-//       RGBA(
-//         UnsignedByte(-128),
-//         UnsignedByte(-128),
-//         UnsignedByte(-128),
-//         Normalized(1.0)
-//       )
-//     ),
-//     FillColor(
-//       Rectangle(30.0, 30.0),
-//       RGBA(
-//         UnsignedByte(127),
-//         UnsignedByte(-128),
-//         UnsignedByte(-128),
-//         Normalized(1.0)
-//       )
-//     )
-//   )
-// )
 
 val fourByFour =
   (twoByTwo.beside(twoByTwo))
     .above(twoByTwo.beside(twoByTwo))
-// fourByFour: Image = Above(
-//   Beside(
-//     Above(
-//       Beside(
-//         FillColor(
-//           Rectangle(30.0, 30.0),
-//           RGBA(
-//             UnsignedByte(127),
-//             UnsignedByte(-128),
-//             UnsignedByte(-128),
-//             Normalized(1.0)
-//           )
-//         ),
-//         FillColor(
-//           Rectangle(30.0, 30.0),
-//           RGBA(
-//             UnsignedByte(-128),
-//             UnsignedByte(-128),
-//             UnsignedByte(-128),
-//             Normalized(1.0)
-//           )
-//         )
-//       ),
-//       Beside(
-//         FillColor(
-//           Rectangle(30.0, 30.0),
-//           RGBA(
-//             UnsignedByte(-128),
-//             UnsignedByte(-128),
-//             UnsignedByte(-128),
-//             Normalized(1.0)
-//           )
-//         ),
-//         FillColor(
-//           Rectangle(30.0, 30.0),
-//           RGBA(
-//             UnsignedByte(127),
-//             UnsignedByte(-128),
-//             UnsignedByte(-128),
-//             Normalized(1.0)
-//           )
-//         )
-//       )
-//     ),
-//     Above(
-//       Beside(
-//         FillColor(
-//           Rectangle(30.0, 30.0),
-//           RGBA(
-// ...
 
 val chessboard =
   (fourByFour.beside(fourByFour))
     .above(fourByFour.beside(fourByFour))
-// chessboard: Image = Above(
-//   Beside(
-//     Above(
-//       Beside(
-//         Above(
-//           Beside(
-//             FillColor(
-//               Rectangle(30.0, 30.0),
-//               RGBA(
-//                 UnsignedByte(127),
-//                 UnsignedByte(-128),
-//                 UnsignedByte(-128),
-//                 Normalized(1.0)
-//               )
-//             ),
-//             FillColor(
-//               Rectangle(30.0, 30.0),
-//               RGBA(
-//                 UnsignedByte(-128),
-//                 UnsignedByte(-128),
-//                 UnsignedByte(-128),
-//                 Normalized(1.0)
-//               )
-//             )
-//           ),
-//           Beside(
-//             FillColor(
-//               Rectangle(30.0, 30.0),
-//               RGBA(
-//                 UnsignedByte(-128),
-//                 UnsignedByte(-128),
-//                 UnsignedByte(-128),
-//                 Normalized(1.0)
-//               )
-//             ),
-//             FillColor(
-//               Rectangle(30.0, 30.0),
-//               RGBA(
-//                 UnsignedByte(127),
-//                 UnsignedByte(-128),
-//                 UnsignedByte(-128),
-//                 Normalized(1.0)
-//               )
-//             )
-//           )
-//         ),
-//         Above(
-//           Beside(
-//             FillColor(
-// ...
 </code></pre>
 <p>To draw these Images call the <code>draw</code> method like so</p>
 <pre class="prettyprint"><code class="language-scala">// Extension methods
@@ -307,12 +149,18 @@ import doodle.java2d._
 
 chessboard.draw()
 </code></pre>
+<h2><a href="#library-overview" name="library-overview" class="anchor"><span class="anchor-link"></span></a>Library Overview</h2>
+<p>The main packages of Doodle are:</p>
+<ul>
+  <li><a href="core/index.md">core</a>, which provides common utilities such as <a href="api/doodle/core/Color.html">colors</a>, <a href="api/doodle/core/Point.html">points</a>, and <a href="api/doodle/core/Parametric$.html">parametric curves</a>.</li>
+  <li><a href="image/index.md">image</a></li>
+</ul>
 <div class="source-github">
 The source code for this page can be found <a href="https://github.com/creativescala/doodle/tree/master/docs/src/main/paradox/index.md">here</a>.
 </div>
 
 <div class="nav-next">
-<p><strong>Next:</strong> <a href="image/index.html">Image</a></p>
+<p><strong>Next:</strong> <a href="core/index.html">Core</a></p>
 </div>
 </div>
 <div class="large-3 show-for-large column" data-sticky-container>
@@ -326,6 +174,7 @@ The source code for this page can be found <a href="https://github.com/creatives
     <li><a href="index.html#getting-started" class="header">Getting Started</a></li>
     <li><a href="index.html#scaladoc" class="header">ScalaDoc</a></li>
     <li><a href="index.html#quick-example" class="header">Quick Example</a></li>
+    <li><a href="index.html#library-overview" class="header">Library Overview</a></li>
   </ul></li>
 </ul>
 </div>
