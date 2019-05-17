@@ -2,11 +2,11 @@
 <html class="no-js" lang="en">
 
 <head>
-<title>Paths · Doodle</title>
+<title>Writing to a File · Doodle</title>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <meta name="description" content='Compositional graphics for Scala'/>
-<link rel="canonical" href="https://github.com/creativescala/doodleimage/path.html"/>
+<link rel="canonical" href="https://github.com/creativescala/doodleimage/writing.html"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:100normal,100italic,300normal,300italic,400normal,400italic,500normal,500italic,700normal,700italic,900normal,900italicc" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../lib/jquery/jquery.min.js"></script>
 <script type="text/javascript" src="../js/page.js"></script>
@@ -41,11 +41,11 @@
   <li><a href="../image/index.html" class="page">Image</a>
   <ul>
     <li><a href="../image/shape.html" class="page">Shapes</a></li>
-    <li><a href="../image/path.html" class="active page">Paths</a></li>
+    <li><a href="../image/path.html" class="page">Paths</a></li>
     <li><a href="../image/styling.html" class="page">Styling</a></li>
     <li><a href="../image/layout.html" class="page">Layout</a></li>
     <li><a href="../image/transform.html" class="page">Transforms</a></li>
-    <li><a href="../image/writing.html" class="page">Writing to a File</a></li>
+    <li><a href="../image/writing.html" class="active page">Writing to a File</a></li>
   </ul></li>
 </ul>
 </div>
@@ -87,11 +87,11 @@ C16.952,7,17,6.553,17,6c0-0.553-0.048-1-0.6-1H3.6C3.048,5,3,5.447,3,6C3,6.553,3.
   <li><a href="../image/index.html" class="page">Image</a>
   <ul>
     <li><a href="../image/shape.html" class="page">Shapes</a></li>
-    <li><a href="../image/path.html" class="active page">Paths</a></li>
+    <li><a href="../image/path.html" class="page">Paths</a></li>
     <li><a href="../image/styling.html" class="page">Styling</a></li>
     <li><a href="../image/layout.html" class="page">Layout</a></li>
     <li><a href="../image/transform.html" class="page">Transforms</a></li>
-    <li><a href="../image/writing.html" class="page">Writing to a File</a></li>
+    <li><a href="../image/writing.html" class="active page">Writing to a File</a></li>
   </ul></li>
 </ul>
 </div>
@@ -110,7 +110,7 @@ C16.952,7,17,6.553,17,6c0-0.553-0.048-1-0.6-1H3.6C3.048,5,3,5.447,3,6C3,6.553,3.
 <ul>
   <li><a href="../index.html">Doodle</a></li>
   <li><a href="../image/index.html">Image</a></li>
-  <li>Paths</li>
+  <li>Writing to a File</li>
 </ul>
 </div>
 </div>
@@ -118,16 +118,58 @@ C16.952,7,17,6.553,17,6c0-0.553-0.048-1-0.6-1H3.6C3.048,5,3,5.447,3,6C3,6.553,3.
 
 <div class="page-content row">
 <div class="small-12 large-9 column" id="docs">
-<h1><a href="#paths" name="paths" class="anchor"><span class="anchor-link"></span></a>Paths</h1>
+<h1><a href="#writing-to-a-file" name="writing-to-a-file" class="anchor"><span class="anchor-link"></span></a>Writing to a File</h1>
+<p>The <a href="../api/doodle/image/index.html">Image DSL</a> can write a file as well as displaying on screen. The file formats you can write depend on the backend you&rsquo;re using:</p>
+<ul>
+  <li>the Java2D backend can write PNG, GIF, and JPEG;</li>
+  <li>the SVG backend running on the JVM can write SVG; and</li>
+  <li>the SVG backend running in the web browser cannot write files.</li>
+</ul>
+<p>Most people will use the Java2D backend and the examples below show this.</p>
+<h2><a href="#imports" name="imports" class="anchor"><span class="anchor-link"></span></a>Imports</h2>
+<p>In addition to the usual imports of</p>
+<pre class="prettyprint"><code class="language-scala">import doodle.image._
+import doodle.image.syntax._
+import doodle.core._
+</code></pre>
+<p>to write to a file you&rsquo;ll need</p>
+<pre class="prettyprint"><code class="language-scala">import doodle.java2d._
+import doodle.effect.Writer._
+</code></pre>
+<p>The first import pulls in the Java2D backend. The second import makes available the standard formats supported by Doodle.</p>
+<h2><a href="#writing-to-a-file" name="writing-to-a-file" class="anchor"><span class="anchor-link"></span></a>Writing to a File</h2>
+<p>To write to a file, call the <code>write</code> method, giving the format as a type parameter and the file name as a normal parameter. For example, to write a PNG to the file called <code>&quot;circle.png&quot;</code></p>
+<pre class="prettyprint"><code class="language-scala">val image = Image.circle(100)
+  .strokeWidth(10.0)
+  .fillColor(Color.crimson)
+// image: Image = FillColor(
+//   StrokeWidth(Circle(100.0), 10.0),
+//   RGBA(UnsignedByte(92), UnsignedByte(-108), UnsignedByte(-68), Normalized(1.0))
+// )
+  
+image.write[Png](&quot;circle.png&quot;)
+</code></pre>
+<p>Instead of using <code>Png</code> you could use <code>Gif</code> or <code>Jpg</code> to specify those file formats. You&rsquo;d probably want to change the file name as well if you change the format. That&rsquo;s it! Your masterpiece is now ready to share with the world.</p>
 <div class="source-github">
-The source code for this page can be found <a href="https://github.com/creativescala/doodle/tree/master/docs/src/main/paradox/image/path.md">here</a>.
+The source code for this page can be found <a href="https://github.com/creativescala/doodle/tree/master/docs/src/main/paradox/image/writing.md">here</a>.
 </div>
 
-<div class="nav-next">
-<p><strong>Next:</strong> <a href="../image/styling.html">Styling</a></p>
-</div>
 </div>
 <div class="large-3 show-for-large column" data-sticky-container>
+<nav class="sidebar sticky" data-sticky data-anchor="docs" data-sticky-on="large">
+<div class="page-nav">
+<div class="nav-title">On this page:</div>
+<div class="nav-toc">
+<ul>
+  <li><a href="../image/writing.html#writing-to-a-file" class="header">Writing to a File</a>
+  <ul>
+    <li><a href="../image/writing.html#imports" class="header">Imports</a></li>
+    <li><a href="../image/writing.html#writing-to-a-file" class="header">Writing to a File</a></li>
+  </ul></li>
+</ul>
+</div>
+</div>
+</nav>
 </div>
 </div>
 
