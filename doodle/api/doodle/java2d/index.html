@@ -247,8 +247,8 @@
       
     </li><li class="current-entities indented2">
                         <span class="separator"></span>
-                        <a class="object" href="package$$Image$.html" title=""></a>
-                        <a href="package$$Image$.html" title="">Image</a>
+                        <a class="object" href="package$$Picture$.html" title=""></a>
+                        <a href="package$$Picture$.html" title="">Picture</a>
                       </li><li name="doodle.language" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="language"></a><a id="language:language"></a>
       <span class="permalink">
@@ -394,9 +394,9 @@
         <div id="types" class="types members">
               <h3>Type Members</h3>
               <ol><li name="doodle.java2d.Algebra" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="Algebra=doodle.java2d.algebra.Algebra"></a><a id="Algebra:Algebra"></a>
+      <a id="Algebra[F[_]]=doodle.algebra.Algebra[F]withdoodle.language.Basic[F]"></a><a id="Algebra[F[_]]:Algebra[F]"></a>
       <span class="permalink">
-      <a href="../../doodle/java2d/index.html#Algebra=doodle.java2d.algebra.Algebra" title="Permalink">
+      <a href="../../doodle/java2d/index.html#Algebra[F[_]]=doodle.algebra.Algebra[F]withdoodle.language.Basic[F]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -405,14 +405,14 @@
         <span class="kind">type</span>
       </span>
       <span class="symbol">
-        <span class="name">Algebra</span><span class="result alias"> = <a href="algebra/Algebra.html" class="extype" name="doodle.java2d.algebra.Algebra">java2d.algebra.Algebra</a></span>
+        <span class="name">Algebra</span><span class="tparams">[<span name="F">F<span class="tparams">[<span name="_">_</span>]</span></span>]</span><span class="result alias"> = <a href="../algebra/Algebra.html" class="extype" name="doodle.algebra.Algebra">algebra.Algebra</a>[<span class="extype" name="doodle.java2d.Algebra.F">F</span>] with <a href="../language/Basic.html" class="extype" name="doodle.language.Basic">Basic</a>[<span class="extype" name="doodle.java2d.Algebra.F">F</span>]</span>
       </span>
       
       
     </li><li name="doodle.java2d.Drawing" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="Drawing[A]=doodle.algebra.generic.Finalized[A]"></a><a id="Drawing[A]:Drawing[A]"></a>
+      <a id="Drawing[A]=doodle.algebra.generic.Finalized[doodle.algebra.generic.reified.Reification,A]"></a><a id="Drawing[A]:Drawing[A]"></a>
       <span class="permalink">
-      <a href="../../doodle/java2d/index.html#Drawing[A]=doodle.algebra.generic.Finalized[A]" title="Permalink">
+      <a href="../../doodle/java2d/index.html#Drawing[A]=doodle.algebra.generic.Finalized[doodle.algebra.generic.reified.Reification,A]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -421,23 +421,7 @@
         <span class="kind">type</span>
       </span>
       <span class="symbol">
-        <span class="name">Drawing</span><span class="tparams">[<span name="A">A</span>]</span><span class="result alias"> = <span class="extype" name="cats.data.IndexedStateT">IndexedStateT</span>[<span class="extype" name="cats.Eval">Eval</span>, <span class="extype" name="scala.List">List</span>[<a href="../algebra/generic/index.html#ContextTransform=doodle.algebra.generic.DrawingContext=&gt;doodle.algebra.generic.DrawingContext" class="extmbr" name="doodle.algebra.generic.ContextTransform">ContextTransform</a>], <span class="extype" name="scala.List">List</span>[<a href="../algebra/generic/index.html#ContextTransform=doodle.algebra.generic.DrawingContext=&gt;doodle.algebra.generic.DrawingContext" class="extmbr" name="doodle.algebra.generic.ContextTransform">ContextTransform</a>], (<a href="../algebra/generic/BoundingBox.html" class="extype" name="doodle.algebra.generic.BoundingBox">BoundingBox</a>, <a href="../algebra/generic/index.html#Renderable[A]=cats.data.ReaderWriterState[Unit,List[doodle.algebra.generic.Reified],doodle.core.Transform,A]" class="extmbr" name="doodle.algebra.generic.Renderable">algebra.generic.Renderable</a>[<span class="extype" name="doodle.java2d.Drawing.A">A</span>])]</span>
-      </span>
-      
-      
-    </li><li name="doodle.java2d.Image" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="Image[A]=doodle.algebra.Image[doodle.java2d.package.Algebra,doodle.java2d.package.Drawing,A]"></a><a id="Image[A]:Image[A]"></a>
-      <span class="permalink">
-      <a href="../../doodle/java2d/index.html#Image[A]=doodle.algebra.Image[doodle.java2d.package.Algebra,doodle.java2d.package.Drawing,A]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">type</span>
-      </span>
-      <span class="symbol">
-        <span class="name">Image</span><span class="tparams">[<span name="A">A</span>]</span><span class="result alias"> = <a href="../algebra/Image.html" class="extype" name="doodle.algebra.Image">algebra.Image</a>[<a href="#Algebra=doodle.java2d.algebra.Algebra" class="extmbr" name="doodle.java2d.Algebra">Algebra</a>, <a href="#Drawing[A]=doodle.algebra.generic.Finalized[A]" class="extmbr" name="doodle.java2d.Drawing">Drawing</a>, <span class="extype" name="doodle.java2d.Image.A">A</span>]</span>
+        <span class="name">Drawing</span><span class="tparams">[<span name="A">A</span>]</span><span class="result alias"> = <span class="extype" name="cats.data.IndexedStateT">IndexedStateT</span>[<span class="extype" name="cats.Eval">Eval</span>, <span class="extype" name="scala.List">List</span>[<a href="../algebra/generic/index.html#ContextTransform=doodle.algebra.generic.DrawingContext=&gt;doodle.algebra.generic.DrawingContext" class="extmbr" name="doodle.algebra.generic.ContextTransform">ContextTransform</a>], <span class="extype" name="scala.List">List</span>[<a href="../algebra/generic/index.html#ContextTransform=doodle.algebra.generic.DrawingContext=&gt;doodle.algebra.generic.DrawingContext" class="extmbr" name="doodle.algebra.generic.ContextTransform">ContextTransform</a>], (<a href="../algebra/generic/BoundingBox.html" class="extype" name="doodle.algebra.generic.BoundingBox">BoundingBox</a>, <a href="../algebra/generic/index.html#Renderable[F[_],A]=cats.data.State[doodle.core.Transform,F[A]]" class="extmbr" name="doodle.algebra.generic.Renderable">algebra.generic.Renderable</a>[<a href="../algebra/generic/reified/index.html#Reification[A]=cats.data.WriterT[cats.Eval,List[doodle.algebra.generic.reified.Reified],A]" class="extmbr" name="doodle.algebra.generic.reified.Reification">Reification</a>, <span class="extype" name="doodle.java2d.Drawing.A">A</span>])]</span>
       </span>
       
       
@@ -457,10 +441,10 @@
       </span>
       
       
-    </li><li name="doodle.java2d.Renderable" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="Renderable[A]=doodle.algebra.generic.Renderable[A]"></a><a id="Renderable[A]:Renderable[A]"></a>
+    </li><li name="doodle.java2d.Picture" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Picture[A]=doodle.algebra.Picture[doodle.java2d.package.Algebra,doodle.java2d.package.Drawing,A]"></a><a id="Picture[A]:Picture[A]"></a>
       <span class="permalink">
-      <a href="../../doodle/java2d/index.html#Renderable[A]=doodle.algebra.generic.Renderable[A]" title="Permalink">
+      <a href="../../doodle/java2d/index.html#Picture[A]=doodle.algebra.Picture[doodle.java2d.package.Algebra,doodle.java2d.package.Drawing,A]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -469,7 +453,23 @@
         <span class="kind">type</span>
       </span>
       <span class="symbol">
-        <span class="name">Renderable</span><span class="tparams">[<span name="A">A</span>]</span><span class="result alias"> = <span class="extype" name="cats.data.IndexedReaderWriterStateT">IndexedReaderWriterStateT</span>[<span class="extype" name="cats.Eval">Eval</span>, <span class="extype" name="scala.Unit">Unit</span>, <span class="extype" name="scala.List">List</span>[<a href="../algebra/generic/Reified.html" class="extype" name="doodle.algebra.generic.Reified">Reified</a>], <a href="../core/Transform.html" class="extype" name="doodle.core.Transform">Transform</a>, <a href="../core/Transform.html" class="extype" name="doodle.core.Transform">Transform</a>, <span class="extype" name="doodle.java2d.Renderable.A">A</span>]</span>
+        <span class="name">Picture</span><span class="tparams">[<span name="A">A</span>]</span><span class="result alias"> = <a href="../algebra/Picture.html" class="extype" name="doodle.algebra.Picture">algebra.Picture</a>[<a href="#Algebra[F[_]]=doodle.algebra.Algebra[F]withdoodle.language.Basic[F]" class="extmbr" name="doodle.java2d.Algebra">Algebra</a>, <a href="#Drawing[A]=doodle.algebra.generic.Finalized[doodle.algebra.generic.reified.Reification,A]" class="extmbr" name="doodle.java2d.Drawing">Drawing</a>, <span class="extype" name="doodle.java2d.Picture.A">A</span>]</span>
+      </span>
+      
+      
+    </li><li name="doodle.java2d.Renderable" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Renderable[A]=doodle.algebra.generic.Renderable[doodle.algebra.generic.reified.Reification,A]"></a><a id="Renderable[A]:Renderable[A]"></a>
+      <span class="permalink">
+      <a href="../../doodle/java2d/index.html#Renderable[A]=doodle.algebra.generic.Renderable[doodle.algebra.generic.reified.Reification,A]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Renderable</span><span class="tparams">[<span name="A">A</span>]</span><span class="result alias"> = <span class="extype" name="cats.data.IndexedStateT">IndexedStateT</span>[<span class="extype" name="cats.Eval">Eval</span>, <a href="../core/Transform.html" class="extype" name="doodle.core.Transform">Transform</a>, <a href="../core/Transform.html" class="extype" name="doodle.core.Transform">Transform</a>, <a href="../algebra/generic/reified/index.html#Reification[A]=cats.data.WriterT[cats.Eval,List[doodle.algebra.generic.reified.Reified],A]" class="extmbr" name="doodle.algebra.generic.reified.Reification">Reification</a>[<span class="extype" name="doodle.java2d.Renderable.A">A</span>]]</span>
       </span>
       
       
@@ -493,7 +493,7 @@
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">java2DRenderer</span><span class="result">: <a href="../effect/DefaultRenderer.html" class="extype" name="doodle.effect.DefaultRenderer">DefaultRenderer</a>[<a href="#Algebra=doodle.java2d.algebra.Algebra" class="extmbr" name="doodle.java2d.Algebra">Algebra</a>, <a href="#Drawing[A]=doodle.algebra.generic.Finalized[A]" class="extmbr" name="doodle.java2d.Drawing">Drawing</a>, <a href="effect/Frame.html" class="extype" name="doodle.java2d.effect.Frame">Frame</a>, <a href="#Java2DFrame=doodle.java2d.effect.Java2DFrame" class="extmbr" name="doodle.java2d.Java2DFrame">Java2DFrame</a>]</span>
+        <span class="name">java2DRenderer</span><span class="result">: <a href="../effect/DefaultRenderer.html" class="extype" name="doodle.effect.DefaultRenderer">DefaultRenderer</a>[<a href="#Algebra[F[_]]=doodle.algebra.Algebra[F]withdoodle.language.Basic[F]" class="extmbr" name="doodle.java2d.Algebra">Algebra</a>, <a href="#Drawing[A]=doodle.algebra.generic.Finalized[doodle.algebra.generic.reified.Reification,A]" class="extmbr" name="doodle.java2d.Drawing">Drawing</a>, <a href="effect/Frame.html" class="extype" name="doodle.java2d.effect.Frame">Frame</a>, <a href="#Java2DFrame=doodle.java2d.effect.Java2DFrame" class="extmbr" name="doodle.java2d.Java2DFrame">Java2DFrame</a>]</span>
       </span>
       
       
@@ -545,10 +545,10 @@
       </span>
       
       
-    </li><li name="doodle.java2d.Image" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="Image"></a><a id="Image:Image"></a>
+    </li><li name="doodle.java2d.Picture" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Picture"></a><a id="Picture:Picture"></a>
       <span class="permalink">
-      <a href="../../doodle/java2d/index.html#Image" title="Permalink">
+      <a href="../../doodle/java2d/index.html#Picture" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -557,7 +557,7 @@
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a title="" href="package$$Image$.html"><span class="name">Image</span></a>
+        <a title="" href="package$$Picture$.html"><span class="name">Picture</span></a>
       </span>
       
       

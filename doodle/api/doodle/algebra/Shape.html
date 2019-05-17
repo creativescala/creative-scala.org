@@ -119,12 +119,12 @@
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="doodle.algebra">algebra</a></dd></dl></div>
     </li><li class="current-entities indented2">
                         <span class="separator"></span>
+                        <a class="trait" href="Algebra.html" title="Base type for algebras that produce results in some effect type F."></a>
+                        <a href="Algebra.html" title="Base type for algebras that produce results in some effect type F.">Algebra</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
                         <a class="trait" href="Blend.html" title="Algebra describing color blending modes."></a>
                         <a href="Blend.html" title="Algebra describing color blending modes.">Blend</a>
-                      </li><li class="current-entities indented2">
-                        <a class="object" href="Image$.html" title=""></a>
-                        <a class="trait" href="Image.html" title=""></a>
-                        <a href="Image.html" title="">Image</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
                         <a class="trait" href="Layout.html" title=""></a>
@@ -133,6 +133,10 @@
                         <span class="separator"></span>
                         <a class="trait" href="Path.html" title=""></a>
                         <a href="Path.html" title="">Path</a>
+                      </li><li class="current-entities indented2">
+                        <a class="object" href="Picture$.html" title=""></a>
+                        <a class="trait" href="Picture.html" title=""></a>
+                        <a href="Picture.html" title="">Picture</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
                         <a class="trait" href="" title="Higher level shape primitives."></a>
@@ -168,7 +172,7 @@
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <span class="name">Shape</span><span class="tparams">[<span name="F">F<span class="tparams">[<span name="_">_</span>]</span></span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+        <span class="name">Shape</span><span class="tparams">[<span name="F">F<span class="tparams">[<span name="_">_</span>]</span></span>]</span><span class="result"> extends <a href="Algebra.html" class="extype" name="doodle.algebra.Algebra">Algebra</a>[<span class="extype" name="doodle.algebra.Shape.F">F</span>]</span>
       </span>
       </h4>
 
@@ -178,12 +182,12 @@ center of the shape the origin of the bounding box.</p></div><div class="toggleC
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><a href="Algebra.html" class="extype" name="doodle.algebra.Algebra">Algebra</a>[<span class="extype" name="doodle.algebra.Shape.F">F</span>], <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div><div class="toggleContainer block">
             <span class="toggle">
               Known Subclasses
             </span>
-            <div class="subClasses hiddenContent"><a href="generic/GenericShape.html" class="extype" name="doodle.algebra.generic.GenericShape">GenericShape</a>, <a href="../java2d/algebra/Algebra.html" class="extype" name="doodle.java2d.algebra.Algebra">Algebra</a>, <a href="../java2d/algebra/Shape.html" class="extype" name="doodle.java2d.algebra.Shape">Shape</a>, <a href="../language/Basic.html" class="extype" name="doodle.language.Basic">Basic</a>, <a href="../svg/algebra/Algebra$.html" class="extype" name="doodle.svg.algebra.Algebra">Algebra</a></div>
+            <div class="subClasses hiddenContent"><a href="generic/GenericShape.html" class="extype" name="doodle.algebra.generic.GenericShape">GenericShape</a>, <a href="generic/reified/ReifiedShape.html" class="extype" name="doodle.algebra.generic.reified.ReifiedShape">ReifiedShape</a>, <a href="../java2d/algebra/Algebra.html" class="extype" name="doodle.java2d.algebra.Algebra">Algebra</a>, <a href="../language/Basic.html" class="extype" name="doodle.language.Basic">Basic</a>, <a href="../svg/algebra/Algebra$.html" class="extype" name="doodle.svg.algebra.Algebra">Algebra</a></div>
           </div></div>
         
 
@@ -209,7 +213,7 @@ center of the shape the origin of the bounding box.</p></div><div class="toggleC
                   <span class="filtertype">Inherited<br />
                   </span>
                   <ol id="linearization">
-                    <li class="in" name="doodle.algebra.Shape"><span>Shape</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                    <li class="in" name="doodle.algebra.Shape"><span>Shape</span></li><li class="in" name="doodle.algebra.Algebra"><span>Algebra</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                   </ol>
                 </div><div class="ancestors">
               <span class="filtertype"></span>
@@ -697,7 +701,9 @@ circle(100) has the same size as square(100)</p></div></div>
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="scala.AnyRef">
+        <div class="parent" name="doodle.algebra.Algebra">
+              <h3>Inherited from <a href="Algebra.html" class="extype" name="doodle.algebra.Algebra">Algebra</a>[<span class="extype" name="doodle.algebra.Shape.F">F</span>]</h3>
+            </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
             </div><div class="parent" name="scala.Any">
               <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>

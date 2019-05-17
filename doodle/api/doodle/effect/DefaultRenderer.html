@@ -107,12 +107,12 @@
                         <a href="" title="The DefaultRenderer typeclass is a Renderer that has a reasonable default frame.">DefaultRenderer</a>
                       </li><li class="current-entities indented2">
                         <a class="object" href="Renderer$.html" title=""></a>
-                        <a class="trait" href="Renderer.html" title="The Renderer typeclass describes a data type that can create an area to render an image (a Canvas) from a description (a Frame) and render an image to that Canvas."></a>
-                        <a href="Renderer.html" title="The Renderer typeclass describes a data type that can create an area to render an image (a Canvas) from a description (a Frame) and render an image to that Canvas.">Renderer</a>
+                        <a class="trait" href="Renderer.html" title="The Renderer typeclass describes a data type that can create an area to render a picture (a Canvas) from a description (a Frame) and render a picture to that Canvas."></a>
+                        <a href="Renderer.html" title="The Renderer typeclass describes a data type that can create an area to render a picture (a Canvas) from a description (a Frame) and render a picture to that Canvas.">Renderer</a>
                       </li><li class="current-entities indented2">
                         <a class="object" href="Writer$.html" title=""></a>
-                        <a class="trait" href="Writer.html" title="The Writer typeclass represents write an image to a file in a given format."></a>
-                        <a href="Writer.html" title="The Writer typeclass represents write an image to a file in a given format.">Writer</a>
+                        <a class="trait" href="Writer.html" title="The Writer typeclass represents write a picture to a file in a given format."></a>
+                        <a href="Writer.html" title="The Writer typeclass represents write a picture to a file in a given format.">Writer</a>
                       </li>
               </ul>
             </div>
@@ -138,7 +138,7 @@
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <span class="name">DefaultRenderer</span><span class="tparams">[<span name="Algebra">+Algebra</span>, <span name="F">F<span class="tparams">[<span name="_">_</span>]</span></span>, <span name="Frame">Frame</span>, <span name="Canvas">Canvas</span>]</span><span class="result"> extends <a href="Renderer.html" class="extype" name="doodle.effect.Renderer">Renderer</a>[<span class="extype" name="doodle.effect.DefaultRenderer.Algebra">Algebra</span>, <span class="extype" name="doodle.effect.DefaultRenderer.F">F</span>, <span class="extype" name="doodle.effect.DefaultRenderer.Frame">Frame</span>, <span class="extype" name="doodle.effect.DefaultRenderer.Canvas">Canvas</span>]</span>
+        <span class="name">DefaultRenderer</span><span class="tparams">[<span name="Alg">Alg<span class="tparams">[<span name="x">x<span class="tparams">[<span name="_">_</span>]</span></span>]</span> &lt;: <a href="../algebra/Algebra.html" class="extype" name="doodle.algebra.Algebra">Algebra</a>[<span class="extype" name="doodle.effect.DefaultRenderer.Alg.x">x</span>[<span class="extype" name="doodle.effect.DefaultRenderer.Alg.x._">_</span>]]</span>, <span name="F">F<span class="tparams">[<span name="_">_</span>]</span></span>, <span name="Frame">Frame</span>, <span name="Canvas">Canvas</span>]</span><span class="result"> extends <a href="Renderer.html" class="extype" name="doodle.effect.Renderer">Renderer</a>[<span class="extype" name="doodle.effect.DefaultRenderer.Alg">Alg</span>, <span class="extype" name="doodle.effect.DefaultRenderer.F">F</span>, <span class="extype" name="doodle.effect.DefaultRenderer.Frame">Frame</span>, <span class="extype" name="doodle.effect.DefaultRenderer.Canvas">Canvas</span>]</span>
       </span>
       </h4>
 
@@ -148,7 +148,7 @@
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><a href="Renderer.html" class="extype" name="doodle.effect.Renderer">Renderer</a>[<span class="extype" name="doodle.effect.DefaultRenderer.Algebra">Algebra</span>, <span class="extype" name="doodle.effect.DefaultRenderer.F">F</span>, <span class="extype" name="doodle.effect.DefaultRenderer.Frame">Frame</span>, <span class="extype" name="doodle.effect.DefaultRenderer.Canvas">Canvas</span>], <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><a href="Renderer.html" class="extype" name="doodle.effect.Renderer">Renderer</a>[<span class="extype" name="doodle.effect.DefaultRenderer.Alg">Alg</span>, <span class="extype" name="doodle.effect.DefaultRenderer.F">F</span>, <span class="extype" name="doodle.effect.DefaultRenderer.Frame">Frame</span>, <span class="extype" name="doodle.effect.DefaultRenderer.Canvas">Canvas</span>], <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div><div class="toggleContainer block">
             <span class="toggle">
               Known Subclasses
@@ -236,9 +236,9 @@
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Renderer.html" class="extype" name="doodle.effect.Renderer">Renderer</a></dd></dl></div>
     </li><li name="doodle.effect.Renderer#render" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="render[A](canvas:Canvas)(f:Algebra=&gt;F[A]):cats.effect.IO[A]"></a><a id="render[A](Canvas)((Algebra)⇒F[A]):IO[A]"></a>
+      <a id="render[A](canvas:Canvas)(picture:doodle.algebra.Picture[Alg,F,A]):cats.effect.IO[A]"></a><a id="render[A](Canvas)(Picture[Alg,F,A]):IO[A]"></a>
       <span class="permalink">
-      <a href="../../doodle/effect/DefaultRenderer.html#render[A](canvas:Canvas)(f:Algebra=&gt;F[A]):cats.effect.IO[A]" title="Permalink">
+      <a href="../../doodle/effect/DefaultRenderer.html#render[A](canvas:Canvas)(picture:doodle.algebra.Picture[Alg,F,A]):cats.effect.IO[A]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -247,7 +247,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">render</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="canvas">canvas: <span class="extype" name="doodle.effect.DefaultRenderer.Canvas">Canvas</span></span>)</span><span class="params">(<span name="f">f: (<span class="extype" name="doodle.effect.DefaultRenderer.Algebra">Algebra</span>) ⇒ <span class="extype" name="doodle.effect.DefaultRenderer.F">F</span>[<span class="extype" name="doodle.effect.Renderer.render.A">A</span>]</span>)</span><span class="result">: <span class="extype" name="cats.effect.IO">IO</span>[<span class="extype" name="doodle.effect.Renderer.render.A">A</span>]</span>
+        <span class="name">render</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="canvas">canvas: <span class="extype" name="doodle.effect.DefaultRenderer.Canvas">Canvas</span></span>)</span><span class="params">(<span name="picture">picture: <a href="../algebra/Picture.html" class="extype" name="doodle.algebra.Picture">Picture</a>[<span class="extype" name="doodle.effect.DefaultRenderer.Alg">Alg</span>, <span class="extype" name="doodle.effect.DefaultRenderer.F">F</span>, <span class="extype" name="doodle.effect.Renderer.render.A">A</span>]</span>)</span><span class="result">: <span class="extype" name="cats.effect.IO">IO</span>[<span class="extype" name="doodle.effect.Renderer.render.A">A</span>]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Renderer.html" class="extype" name="doodle.effect.Renderer">Renderer</a></dd></dl></div>
@@ -635,7 +635,7 @@
 
         <div id="inheritedMembers">
         <div class="parent" name="doodle.effect.Renderer">
-              <h3>Inherited from <a href="Renderer.html" class="extype" name="doodle.effect.Renderer">Renderer</a>[<span class="extype" name="doodle.effect.DefaultRenderer.Algebra">Algebra</span>, <span class="extype" name="doodle.effect.DefaultRenderer.F">F</span>, <span class="extype" name="doodle.effect.DefaultRenderer.Frame">Frame</span>, <span class="extype" name="doodle.effect.DefaultRenderer.Canvas">Canvas</span>]</h3>
+              <h3>Inherited from <a href="Renderer.html" class="extype" name="doodle.effect.Renderer">Renderer</a>[<span class="extype" name="doodle.effect.DefaultRenderer.Alg">Alg</span>, <span class="extype" name="doodle.effect.DefaultRenderer.F">F</span>, <span class="extype" name="doodle.effect.DefaultRenderer.Frame">Frame</span>, <span class="extype" name="doodle.effect.DefaultRenderer.Canvas">Canvas</span>]</h3>
             </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
             </div><div class="parent" name="scala.Any">

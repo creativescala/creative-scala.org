@@ -117,6 +117,22 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="doodle.algebra">algebra</a></dd></dl></div>
+    </li><li name="doodle.algebra.generic.reified" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="reified"></a><a id="reified:reified"></a>
+      <span class="permalink">
+      <a href="../../../doodle/algebra/generic/index.html#reified" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="reified/index.html"><span class="name">reified</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="doodle.algebra.generic">generic</a></dd></dl></div>
     </li><li class="current-entities indented3">
                         <a class="object" href="BlendMode$.html" title=""></a>
                         <a class="class" href="BlendMode.html" title=""></a>
@@ -139,7 +155,7 @@
                         <a href="package$$Finalized$.html" title="">Finalized</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
-                        <a class="trait" href="GenericLayout.html" title=""></a>
+                        <a class="class" href="GenericLayout.html" title=""></a>
                         <a href="GenericLayout.html" title="">GenericLayout</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
@@ -157,14 +173,6 @@
                         <span class="separator"></span>
                         <a class="trait" href="GenericTransform.html" title=""></a>
                         <a href="GenericTransform.html" title="">GenericTransform</a>
-                      </li><li class="current-entities indented3">
-                        <span class="separator"></span>
-                        <a class="trait" href="GraphicsContext.html" title="Render in screen space"></a>
-                        <a href="GraphicsContext.html" title="Render in screen space">GraphicsContext</a>
-                      </li><li class="current-entities indented3">
-                        <a class="object" href="Reified$.html" title=""></a>
-                        <a class="class" href="Reified.html" title=""></a>
-                        <a href="Reified.html" title="">Reified</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
                         <a class="object" href="" title=""></a>
@@ -307,9 +315,9 @@
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="doodle.algebra.generic.Renderable#apply" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="apply[A](f:doodle.core.Transform=&gt;cats.Eval[(List[doodle.algebra.generic.Reified],A)]):doodle.algebra.generic.package.Renderable[A]"></a><a id="apply[A]((core.Transform)⇒Eval[(List[Reified],A)]):Renderable[A]"></a>
+      <a id="apply[F[_],A](f:doodle.core.Transform=&gt;cats.Eval[F[A]]):doodle.algebra.generic.package.Renderable[F,A]"></a><a id="apply[F[_],A]((core.Transform)⇒Eval[F[A]]):Renderable[F,A]"></a>
       <span class="permalink">
-      <a href="../../../doodle/algebra/generic/package$$Renderable$.html#apply[A](f:doodle.core.Transform=&gt;cats.Eval[(List[doodle.algebra.generic.Reified],A)]):doodle.algebra.generic.package.Renderable[A]" title="Permalink">
+      <a href="../../../doodle/algebra/generic/package$$Renderable$.html#apply[F[_],A](f:doodle.core.Transform=&gt;cats.Eval[F[A]]):doodle.algebra.generic.package.Renderable[F,A]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -318,7 +326,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="f">f: (<a href="../../core/Transform.html" class="extype" name="doodle.core.Transform">core.Transform</a>) ⇒ <span class="extype" name="cats.Eval">Eval</span>[(<span class="extype" name="scala.List">List</span>[<a href="Reified.html" class="extype" name="doodle.algebra.generic.Reified">Reified</a>], <span class="extype" name="doodle.algebra.generic.Renderable.apply.A">A</span>)]</span>)</span><span class="result">: <a href="index.html#Renderable[A]=cats.data.ReaderWriterState[Unit,List[doodle.algebra.generic.Reified],doodle.core.Transform,A]" class="extmbr" name="doodle.algebra.generic.Renderable">Renderable</a>[<span class="extype" name="doodle.algebra.generic.Renderable.apply.A">A</span>]</span>
+        <span class="name">apply</span><span class="tparams">[<span name="F">F<span class="tparams">[<span name="_">_</span>]</span></span>, <span name="A">A</span>]</span><span class="params">(<span name="f">f: (<a href="../../core/Transform.html" class="extype" name="doodle.core.Transform">core.Transform</a>) ⇒ <span class="extype" name="cats.Eval">Eval</span>[<span class="extype" name="doodle.algebra.generic.Renderable.apply.F">F</span>[<span class="extype" name="doodle.algebra.generic.Renderable.apply.A">A</span>]]</span>)</span><span class="result">: <a href="index.html#Renderable[F[_],A]=cats.data.State[doodle.core.Transform,F[A]]" class="extmbr" name="doodle.algebra.generic.Renderable">Renderable</a>[<span class="extype" name="doodle.algebra.generic.Renderable.apply.F">F</span>, <span class="extype" name="doodle.algebra.generic.Renderable.apply.A">A</span>]</span>
       </span>
       
       
@@ -513,9 +521,9 @@
               
         </dd></dl></div>
     </li><li name="doodle.algebra.generic.Renderable#parallel" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="parallel[A](txLeft:doodle.core.Transform,txRight:doodle.core.Transform)(left:doodle.algebra.generic.package.Renderable[A])(right:doodle.algebra.generic.package.Renderable[A])(implicitevidence$1:cats.Semigroup[A]):doodle.algebra.generic.package.Renderable[A]"></a><a id="parallel[A](core.Transform,core.Transform)(Renderable[A])(Renderable[A])(Semigroup[A]):Renderable[A]"></a>
+      <a id="parallel[F[_],A](txLeft:doodle.core.Transform,txRight:doodle.core.Transform)(left:doodle.algebra.generic.package.Renderable[F,A])(right:doodle.algebra.generic.package.Renderable[F,A])(implicitevidence$1:cats.Apply[F],implicitevidence$2:cats.Semigroup[A]):doodle.algebra.generic.package.Renderable[F,A]"></a><a id="parallel[F[_],A](core.Transform,core.Transform)(Renderable[F,A])(Renderable[F,A])(Apply[F],Semigroup[A]):Renderable[F,A]"></a>
       <span class="permalink">
-      <a href="../../../doodle/algebra/generic/package$$Renderable$.html#parallel[A](txLeft:doodle.core.Transform,txRight:doodle.core.Transform)(left:doodle.algebra.generic.package.Renderable[A])(right:doodle.algebra.generic.package.Renderable[A])(implicitevidence$1:cats.Semigroup[A]):doodle.algebra.generic.package.Renderable[A]" title="Permalink">
+      <a href="../../../doodle/algebra/generic/package$$Renderable$.html#parallel[F[_],A](txLeft:doodle.core.Transform,txRight:doodle.core.Transform)(left:doodle.algebra.generic.package.Renderable[F,A])(right:doodle.algebra.generic.package.Renderable[F,A])(implicitevidence$1:cats.Apply[F],implicitevidence$2:cats.Semigroup[A]):doodle.algebra.generic.package.Renderable[F,A]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -524,14 +532,14 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">parallel</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="txLeft">txLeft: <a href="../../core/Transform.html" class="extype" name="doodle.core.Transform">core.Transform</a></span>, <span name="txRight">txRight: <a href="../../core/Transform.html" class="extype" name="doodle.core.Transform">core.Transform</a></span>)</span><span class="params">(<span name="left">left: <a href="index.html#Renderable[A]=cats.data.ReaderWriterState[Unit,List[doodle.algebra.generic.Reified],doodle.core.Transform,A]" class="extmbr" name="doodle.algebra.generic.Renderable">Renderable</a>[<span class="extype" name="doodle.algebra.generic.Renderable.parallel.A">A</span>]</span>)</span><span class="params">(<span name="right">right: <a href="index.html#Renderable[A]=cats.data.ReaderWriterState[Unit,List[doodle.algebra.generic.Reified],doodle.core.Transform,A]" class="extmbr" name="doodle.algebra.generic.Renderable">Renderable</a>[<span class="extype" name="doodle.algebra.generic.Renderable.parallel.A">A</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <span class="extype" name="cats.Semigroup">Semigroup</span>[<span class="extype" name="doodle.algebra.generic.Renderable.parallel.A">A</span>]</span>)</span><span class="result">: <a href="index.html#Renderable[A]=cats.data.ReaderWriterState[Unit,List[doodle.algebra.generic.Reified],doodle.core.Transform,A]" class="extmbr" name="doodle.algebra.generic.Renderable">Renderable</a>[<span class="extype" name="doodle.algebra.generic.Renderable.parallel.A">A</span>]</span>
+        <span class="name">parallel</span><span class="tparams">[<span name="F">F<span class="tparams">[<span name="_">_</span>]</span></span>, <span name="A">A</span>]</span><span class="params">(<span name="txLeft">txLeft: <a href="../../core/Transform.html" class="extype" name="doodle.core.Transform">core.Transform</a></span>, <span name="txRight">txRight: <a href="../../core/Transform.html" class="extype" name="doodle.core.Transform">core.Transform</a></span>)</span><span class="params">(<span name="left">left: <a href="index.html#Renderable[F[_],A]=cats.data.State[doodle.core.Transform,F[A]]" class="extmbr" name="doodle.algebra.generic.Renderable">Renderable</a>[<span class="extype" name="doodle.algebra.generic.Renderable.parallel.F">F</span>, <span class="extype" name="doodle.algebra.generic.Renderable.parallel.A">A</span>]</span>)</span><span class="params">(<span name="right">right: <a href="index.html#Renderable[F[_],A]=cats.data.State[doodle.core.Transform,F[A]]" class="extmbr" name="doodle.algebra.generic.Renderable">Renderable</a>[<span class="extype" name="doodle.algebra.generic.Renderable.parallel.F">F</span>, <span class="extype" name="doodle.algebra.generic.Renderable.parallel.A">A</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <span class="extype" name="cats.Apply">Apply</span>[<span class="extype" name="doodle.algebra.generic.Renderable.parallel.F">F</span>]</span>, <span name="arg1">arg1: <span class="extype" name="cats.Semigroup">Semigroup</span>[<span class="extype" name="doodle.algebra.generic.Renderable.parallel.A">A</span>]</span>)</span><span class="result">: <a href="index.html#Renderable[F[_],A]=cats.data.State[doodle.core.Transform,F[A]]" class="extmbr" name="doodle.algebra.generic.Renderable">Renderable</a>[<span class="extype" name="doodle.algebra.generic.Renderable.parallel.F">F</span>, <span class="extype" name="doodle.algebra.generic.Renderable.parallel.A">A</span>]</span>
       </span>
       
       
     </li><li name="doodle.algebra.generic.Renderable#renderableSemigroup" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="renderableSemigroup[A](implicitm:cats.Semigroup[A]):cats.Semigroup[doodle.algebra.generic.package.Renderable[A]]"></a><a id="renderableSemigroup[A](Semigroup[A]):Semigroup[Renderable[A]]"></a>
+      <a id="renderableSemigroup[F[_],A](implicitevidence$3:cats.Apply[F],implicitevidence$4:cats.Semigroup[A]):cats.Semigroup[doodle.algebra.generic.package.Renderable[F,A]]"></a><a id="renderableSemigroup[F[_],A](Apply[F],Semigroup[A]):Semigroup[Renderable[F,A]]"></a>
       <span class="permalink">
-      <a href="../../../doodle/algebra/generic/package$$Renderable$.html#renderableSemigroup[A](implicitm:cats.Semigroup[A]):cats.Semigroup[doodle.algebra.generic.package.Renderable[A]]" title="Permalink">
+      <a href="../../../doodle/algebra/generic/package$$Renderable$.html#renderableSemigroup[F[_],A](implicitevidence$3:cats.Apply[F],implicitevidence$4:cats.Semigroup[A]):cats.Semigroup[doodle.algebra.generic.package.Renderable[F,A]]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -540,7 +548,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">renderableSemigroup</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span class="implicit">implicit </span><span name="m">m: <span class="extype" name="cats.Semigroup">Semigroup</span>[<span class="extype" name="doodle.algebra.generic.Renderable.renderableSemigroup.A">A</span>]</span>)</span><span class="result">: <span class="extype" name="cats.Semigroup">Semigroup</span>[<a href="index.html#Renderable[A]=cats.data.ReaderWriterState[Unit,List[doodle.algebra.generic.Reified],doodle.core.Transform,A]" class="extmbr" name="doodle.algebra.generic.Renderable">Renderable</a>[<span class="extype" name="doodle.algebra.generic.Renderable.renderableSemigroup.A">A</span>]]</span>
+        <span class="name">renderableSemigroup</span><span class="tparams">[<span name="F">F<span class="tparams">[<span name="_">_</span>]</span></span>, <span name="A">A</span>]</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <span class="extype" name="cats.Apply">Apply</span>[<span class="extype" name="doodle.algebra.generic.Renderable.renderableSemigroup.F">F</span>]</span>, <span name="arg1">arg1: <span class="extype" name="cats.Semigroup">Semigroup</span>[<span class="extype" name="doodle.algebra.generic.Renderable.renderableSemigroup.A">A</span>]</span>)</span><span class="result">: <span class="extype" name="cats.Semigroup">Semigroup</span>[<a href="index.html#Renderable[F[_],A]=cats.data.State[doodle.core.Transform,F[A]]" class="extmbr" name="doodle.algebra.generic.Renderable">Renderable</a>[<span class="extype" name="doodle.algebra.generic.Renderable.renderableSemigroup.F">F</span>, <span class="extype" name="doodle.algebra.generic.Renderable.renderableSemigroup.A">A</span>]]</span>
       </span>
       
       
@@ -577,9 +585,9 @@
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="doodle.algebra.generic.Renderable#transform" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="transform[A](transform:doodle.core.Transform)(child:doodle.algebra.generic.package.Renderable[A]):doodle.algebra.generic.package.Renderable[A]"></a><a id="transform[A](core.Transform)(Renderable[A]):Renderable[A]"></a>
+      <a id="transform[F[_],A](transform:doodle.core.Transform)(child:doodle.algebra.generic.package.Renderable[F,A]):doodle.algebra.generic.package.Renderable[F,A]"></a><a id="transform[F[_],A](core.Transform)(Renderable[F,A]):Renderable[F,A]"></a>
       <span class="permalink">
-      <a href="../../../doodle/algebra/generic/package$$Renderable$.html#transform[A](transform:doodle.core.Transform)(child:doodle.algebra.generic.package.Renderable[A]):doodle.algebra.generic.package.Renderable[A]" title="Permalink">
+      <a href="../../../doodle/algebra/generic/package$$Renderable$.html#transform[F[_],A](transform:doodle.core.Transform)(child:doodle.algebra.generic.package.Renderable[F,A]):doodle.algebra.generic.package.Renderable[F,A]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -588,14 +596,14 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">transform</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="transform">transform: <a href="../../core/Transform.html" class="extype" name="doodle.core.Transform">core.Transform</a></span>)</span><span class="params">(<span name="child">child: <a href="index.html#Renderable[A]=cats.data.ReaderWriterState[Unit,List[doodle.algebra.generic.Reified],doodle.core.Transform,A]" class="extmbr" name="doodle.algebra.generic.Renderable">Renderable</a>[<span class="extype" name="doodle.algebra.generic.Renderable.transform.A">A</span>]</span>)</span><span class="result">: <a href="index.html#Renderable[A]=cats.data.ReaderWriterState[Unit,List[doodle.algebra.generic.Reified],doodle.core.Transform,A]" class="extmbr" name="doodle.algebra.generic.Renderable">Renderable</a>[<span class="extype" name="doodle.algebra.generic.Renderable.transform.A">A</span>]</span>
+        <span class="name">transform</span><span class="tparams">[<span name="F">F<span class="tparams">[<span name="_">_</span>]</span></span>, <span name="A">A</span>]</span><span class="params">(<span name="transform">transform: <a href="../../core/Transform.html" class="extype" name="doodle.core.Transform">core.Transform</a></span>)</span><span class="params">(<span name="child">child: <a href="index.html#Renderable[F[_],A]=cats.data.State[doodle.core.Transform,F[A]]" class="extmbr" name="doodle.algebra.generic.Renderable">Renderable</a>[<span class="extype" name="doodle.algebra.generic.Renderable.transform.F">F</span>, <span class="extype" name="doodle.algebra.generic.Renderable.transform.A">A</span>]</span>)</span><span class="result">: <a href="index.html#Renderable[F[_],A]=cats.data.State[doodle.core.Transform,F[A]]" class="extmbr" name="doodle.algebra.generic.Renderable">Renderable</a>[<span class="extype" name="doodle.algebra.generic.Renderable.transform.F">F</span>, <span class="extype" name="doodle.algebra.generic.Renderable.transform.A">A</span>]</span>
       </span>
       
       
     </li><li name="doodle.algebra.generic.Renderable#unit" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="unit(reified:List[doodle.algebra.generic.Reified]):doodle.algebra.generic.package.Renderable[Unit]"></a><a id="unit(List[Reified]):Renderable[Unit]"></a>
+      <a id="unit[F[_]](fUnit:F[Unit]):doodle.algebra.generic.package.Renderable[F,Unit]"></a><a id="unit[F[_]](F[Unit]):Renderable[F,Unit]"></a>
       <span class="permalink">
-      <a href="../../../doodle/algebra/generic/package$$Renderable$.html#unit(reified:List[doodle.algebra.generic.Reified]):doodle.algebra.generic.package.Renderable[Unit]" title="Permalink">
+      <a href="../../../doodle/algebra/generic/package$$Renderable$.html#unit[F[_]](fUnit:F[Unit]):doodle.algebra.generic.package.Renderable[F,Unit]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -604,7 +612,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">unit</span><span class="params">(<span name="reified">reified: <span class="extype" name="scala.List">List</span>[<a href="Reified.html" class="extype" name="doodle.algebra.generic.Reified">Reified</a>]</span>)</span><span class="result">: <a href="index.html#Renderable[A]=cats.data.ReaderWriterState[Unit,List[doodle.algebra.generic.Reified],doodle.core.Transform,A]" class="extmbr" name="doodle.algebra.generic.Renderable">Renderable</a>[<span class="extype" name="scala.Unit">Unit</span>]</span>
+        <span class="name">unit</span><span class="tparams">[<span name="F">F<span class="tparams">[<span name="_">_</span>]</span></span>]</span><span class="params">(<span name="fUnit">fUnit: <span class="extype" name="doodle.algebra.generic.Renderable.unit.F">F</span>[<span class="extype" name="scala.Unit">Unit</span>]</span>)</span><span class="result">: <a href="index.html#Renderable[F[_],A]=cats.data.State[doodle.core.Transform,F[A]]" class="extmbr" name="doodle.algebra.generic.Renderable">Renderable</a>[<span class="extype" name="doodle.algebra.generic.Renderable.unit.F">F</span>, <span class="extype" name="scala.Unit">Unit</span>]</span>
       </span>
       
       

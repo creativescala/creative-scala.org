@@ -119,12 +119,12 @@
       
     </li><li class="current-entities indented2">
                         <span class="separator"></span>
+                        <a class="trait" href="Algebra.html" title="Base type for algebras that produce results in some effect type F."></a>
+                        <a href="Algebra.html" title="Base type for algebras that produce results in some effect type F.">Algebra</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
                         <a class="trait" href="Blend.html" title="Algebra describing color blending modes."></a>
                         <a href="Blend.html" title="Algebra describing color blending modes.">Blend</a>
-                      </li><li class="current-entities indented2">
-                        <a class="object" href="Image$.html" title=""></a>
-                        <a class="trait" href="Image.html" title=""></a>
-                        <a href="Image.html" title="">Image</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
                         <a class="trait" href="Layout.html" title=""></a>
@@ -133,6 +133,10 @@
                         <span class="separator"></span>
                         <a class="trait" href="Path.html" title=""></a>
                         <a href="Path.html" title="">Path</a>
+                      </li><li class="current-entities indented2">
+                        <a class="object" href="Picture$.html" title=""></a>
+                        <a class="trait" href="Picture.html" title=""></a>
+                        <a href="Picture.html" title="">Picture</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
                         <a class="trait" href="Shape.html" title="Higher level shape primitives."></a>
@@ -384,10 +388,10 @@
 
         <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li name="doodle.algebra.Blend" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="Blend[F[_]]extendsAnyRef"></a><a id="Blend[F[_]]:Blend[F]"></a>
+              <ol><li name="doodle.algebra.Algebra" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="Algebra[+F[_]]extendsAnyRef"></a><a id="Algebra[+F[_]]:Algebra[F]"></a>
       <span class="permalink">
-      <a href="../../doodle/algebra/index.html#Blend[F[_]]extendsAnyRef" title="Permalink">
+      <a href="../../doodle/algebra/index.html#Algebra[+F[_]]extendsAnyRef" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -396,30 +400,32 @@
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="Algebra describing color blending modes." href="Blend.html"><span class="name">Blend</span></a><span class="tparams">[<span name="F">F<span class="tparams">[<span name="_">_</span>]</span></span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+        <a title="Base type for algebras that produce results in some effect type F." href="Algebra.html"><span class="name">Algebra</span></a><span class="tparams">[<span name="F">+F<span class="tparams">[<span name="_">_</span>]</span></span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Base type for algebras that produce results in some effect type F.</p><div class="fullcomment"><div class="comment cmt"><p>Base type for algebras that produce results in some effect type F. This type
+serves to make sure algebras are internally consistent. E.g. they all
+produce an effect with the same type.</p></div></div>
+    </li><li name="doodle.algebra.Blend" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="Blend[F[_]]extendsAlgebra[F]"></a><a id="Blend[F[_]]:Blend[F]"></a>
+      <span class="permalink">
+      <a href="../../doodle/algebra/index.html#Blend[F[_]]extendsAlgebra[F]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="Algebra describing color blending modes." href="Blend.html"><span class="name">Blend</span></a><span class="tparams">[<span name="F">F<span class="tparams">[<span name="_">_</span>]</span></span>]</span><span class="result"> extends <a href="Algebra.html" class="extype" name="doodle.algebra.Algebra">Algebra</a>[<span class="extype" name="doodle.algebra.Blend.F">F</span>]</span>
       </span>
       
       <p class="shortcomment cmt">Algebra describing color blending modes.</p>
-    </li><li name="doodle.algebra.Image" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="Image[Algebra,F[_],A]extendsAnyRef"></a><a id="Image[Algebra,F[_],A]:Image[Algebra,F,A]"></a>
-      <span class="permalink">
-      <a href="../../doodle/algebra/index.html#Image[Algebra,F[_],A]extendsAnyRef" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">trait</span>
-      </span>
-      <span class="symbol">
-        <a title="" href="Image.html"><span class="name">Image</span></a><span class="tparams">[<span name="Algebra">Algebra</span>, <span name="F">F<span class="tparams">[<span name="_">_</span>]</span></span>, <span name="A">A</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
-      </span>
-      
-      
     </li><li name="doodle.algebra.Layout" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="Layout[F[_]]extendsAnyRef"></a><a id="Layout[F[_]]:Layout[F]"></a>
+      <a id="Layout[F[_]]extendsAlgebra[F]"></a><a id="Layout[F[_]]:Layout[F]"></a>
       <span class="permalink">
-      <a href="../../doodle/algebra/index.html#Layout[F[_]]extendsAnyRef" title="Permalink">
+      <a href="../../doodle/algebra/index.html#Layout[F[_]]extendsAlgebra[F]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -428,14 +434,14 @@
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="" href="Layout.html"><span class="name">Layout</span></a><span class="tparams">[<span name="F">F<span class="tparams">[<span name="_">_</span>]</span></span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+        <a title="" href="Layout.html"><span class="name">Layout</span></a><span class="tparams">[<span name="F">F<span class="tparams">[<span name="_">_</span>]</span></span>]</span><span class="result"> extends <a href="Algebra.html" class="extype" name="doodle.algebra.Algebra">Algebra</a>[<span class="extype" name="doodle.algebra.Layout.F">F</span>]</span>
       </span>
       
       
     </li><li name="doodle.algebra.Path" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="Path[F[_]]extendsAnyRef"></a><a id="Path[F[_]]:Path[F]"></a>
+      <a id="Path[F[_]]extendsAlgebra[F]"></a><a id="Path[F[_]]:Path[F]"></a>
       <span class="permalink">
-      <a href="../../doodle/algebra/index.html#Path[F[_]]extendsAnyRef" title="Permalink">
+      <a href="../../doodle/algebra/index.html#Path[F[_]]extendsAlgebra[F]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -444,14 +450,30 @@
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="" href="Path.html"><span class="name">Path</span></a><span class="tparams">[<span name="F">F<span class="tparams">[<span name="_">_</span>]</span></span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+        <a title="" href="Path.html"><span class="name">Path</span></a><span class="tparams">[<span name="F">F<span class="tparams">[<span name="_">_</span>]</span></span>]</span><span class="result"> extends <a href="Algebra.html" class="extype" name="doodle.algebra.Algebra">Algebra</a>[<span class="extype" name="doodle.algebra.Path.F">F</span>]</span>
+      </span>
+      
+      
+    </li><li name="doodle.algebra.Picture" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="Picture[-Alg[x[_]]&lt;:doodle.algebra.Algebra[x],F[_],A]extendsAnyRef"></a><a id="Picture[-Alg[x[_]]&lt;:Algebra[x[_]],F[_],A]:Picture[Alg,F,A]"></a>
+      <span class="permalink">
+      <a href="../../doodle/algebra/index.html#Picture[-Alg[x[_]]&lt;:doodle.algebra.Algebra[x],F[_],A]extendsAnyRef" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="Picture.html"><span class="name">Picture</span></a><span class="tparams">[<span name="Alg">-Alg<span class="tparams">[<span name="x">x<span class="tparams">[<span name="_">_</span>]</span></span>]</span> &lt;: <a href="Algebra.html" class="extype" name="doodle.algebra.Algebra">Algebra</a>[<span class="extype" name="doodle.algebra.Picture.Alg.x">x</span>[<span class="extype" name="doodle.algebra.Picture.Alg.x._">_</span>]]</span>, <span name="F">F<span class="tparams">[<span name="_">_</span>]</span></span>, <span name="A">A</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       
       
     </li><li name="doodle.algebra.Shape" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="Shape[F[_]]extendsAnyRef"></a><a id="Shape[F[_]]:Shape[F]"></a>
+      <a id="Shape[F[_]]extendsAlgebra[F]"></a><a id="Shape[F[_]]:Shape[F]"></a>
       <span class="permalink">
-      <a href="../../doodle/algebra/index.html#Shape[F[_]]extendsAnyRef" title="Permalink">
+      <a href="../../doodle/algebra/index.html#Shape[F[_]]extendsAlgebra[F]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -460,15 +482,15 @@
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="Higher level shape primitives." href="Shape.html"><span class="name">Shape</span></a><span class="tparams">[<span name="F">F<span class="tparams">[<span name="_">_</span>]</span></span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+        <a title="Higher level shape primitives." href="Shape.html"><span class="name">Shape</span></a><span class="tparams">[<span name="F">F<span class="tparams">[<span name="_">_</span>]</span></span>]</span><span class="result"> extends <a href="Algebra.html" class="extype" name="doodle.algebra.Algebra">Algebra</a>[<span class="extype" name="doodle.algebra.Shape.F">F</span>]</span>
       </span>
       
       <p class="shortcomment cmt">Higher level shape primitives.</p><div class="fullcomment"><div class="comment cmt"><p>Higher level shape primitives. These draw common geometric shapes with the
 center of the shape the origin of the bounding box.</p></div></div>
     </li><li name="doodle.algebra.Style" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="Style[F[_]]extendsAnyRef"></a><a id="Style[F[_]]:Style[F]"></a>
+      <a id="Style[F[_]]extendsAlgebra[F]"></a><a id="Style[F[_]]:Style[F]"></a>
       <span class="permalink">
-      <a href="../../doodle/algebra/index.html#Style[F[_]]extendsAnyRef" title="Permalink">
+      <a href="../../doodle/algebra/index.html#Style[F[_]]extendsAlgebra[F]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -477,14 +499,14 @@ center of the shape the origin of the bounding box.</p></div></div>
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="Apply styling to a image." href="Style.html"><span class="name">Style</span></a><span class="tparams">[<span name="F">F<span class="tparams">[<span name="_">_</span>]</span></span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+        <a title="Apply styling to a image." href="Style.html"><span class="name">Style</span></a><span class="tparams">[<span name="F">F<span class="tparams">[<span name="_">_</span>]</span></span>]</span><span class="result"> extends <a href="Algebra.html" class="extype" name="doodle.algebra.Algebra">Algebra</a>[<span class="extype" name="doodle.algebra.Style.F">F</span>]</span>
       </span>
       
       <p class="shortcomment cmt">Apply styling to a image.</p>
     </li><li name="doodle.algebra.Transform" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="Transform[F[_]]extendsAnyRef"></a><a id="Transform[F[_]]:Transform[F]"></a>
+      <a id="Transform[F[_]]extendsAlgebra[F]"></a><a id="Transform[F[_]]:Transform[F]"></a>
       <span class="permalink">
-      <a href="../../doodle/algebra/index.html#Transform[F[_]]extendsAnyRef" title="Permalink">
+      <a href="../../doodle/algebra/index.html#Transform[F[_]]extendsAlgebra[F]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -493,7 +515,7 @@ center of the shape the origin of the bounding box.</p></div></div>
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="" href="Transform.html"><span class="name">Transform</span></a><span class="tparams">[<span name="F">F<span class="tparams">[<span name="_">_</span>]</span></span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+        <a title="" href="Transform.html"><span class="name">Transform</span></a><span class="tparams">[<span name="F">F<span class="tparams">[<span name="_">_</span>]</span></span>]</span><span class="result"> extends <a href="Algebra.html" class="extype" name="doodle.algebra.Algebra">Algebra</a>[<span class="extype" name="doodle.algebra.Transform.F">F</span>]</span>
       </span>
       
       
@@ -505,10 +527,10 @@ center of the shape the origin of the bounding box.</p></div></div>
         <div class="values members">
               <h3>Value Members</h3>
               <ol>
-                <li name="doodle.algebra.Image" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="Image"></a><a id="Image:Image"></a>
+                <li name="doodle.algebra.Picture" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Picture"></a><a id="Picture:Picture"></a>
       <span class="permalink">
-      <a href="../../doodle/algebra/index.html#Image" title="Permalink">
+      <a href="../../doodle/algebra/index.html#Picture" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -517,7 +539,7 @@ center of the shape the origin of the bounding box.</p></div></div>
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a title="" href="Image$.html"><span class="name">Image</span></a>
+        <a title="" href="Picture$.html"><span class="name">Picture</span></a>
       </span>
       
       

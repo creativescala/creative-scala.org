@@ -134,6 +134,10 @@
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="doodle.java2d">java2d</a></dd></dl></div>
     </li><li class="current-entities indented3">
+                        <a class="object" href="Center$.html" title=""></a>
+                        <a class="class" href="Center.html" title="Determines where the center of the canvas is located."></a>
+                        <a href="Center.html" title="Determines where the center of the canvas is located.">Center</a>
+                      </li><li class="current-entities indented3">
                         <a class="object" href="Frame$.html" title=""></a>
                         <a class="class" href="Frame.html" title=""></a>
                         <a href="Frame.html" title="">Frame</a>
@@ -145,6 +149,10 @@
                         <a class="object" href="Java2DPanel$.html" title=""></a>
                         <a class="class" href="Java2DPanel.html" title=""></a>
                         <a href="Java2DPanel.html" title="">Java2DPanel</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="object" href="Java2d$.html" title="Utilities for rendering with Java2D"></a>
+                        <a href="Java2d$.html" title="Utilities for rendering with Java2D">Java2d</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
                         <a class="object" href="Java2dGifWriter$.html" title=""></a>
@@ -162,7 +170,7 @@
                         <a class="object" href="Java2dRenderer$.html" title=""></a>
                         <a href="Java2dRenderer$.html" title="">Java2dRenderer</a>
                       </li><li class="current-entities indented3">
-                        <span class="separator"></span>
+                        <a class="object" href="Java2dWriter$.html" title=""></a>
                         <a class="trait" href="Java2dWriter.html" title=""></a>
                         <a href="Java2dWriter.html" title="">Java2dWriter</a>
                       </li><li class="current-entities indented3">
@@ -232,7 +240,23 @@
 
         <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li name="doodle.java2d.effect.Frame" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+              <ol><li name="doodle.java2d.effect.Center" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="CenterextendsProductwithSerializable"></a><a id="Center:Center"></a>
+      <span class="permalink">
+      <a href="../../../doodle/java2d/effect/index.html#CenterextendsProductwithSerializable" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">sealed abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Determines where the center of the canvas is located." href="Center.html"><span class="name">Center</span></a><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Determines where the center of the canvas is located.</p>
+    </li><li name="doodle.java2d.effect.Frame" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="FrameextendsProductwithSerializable"></a><a id="Frame:Frame"></a>
       <span class="permalink">
       <a href="../../../doodle/java2d/effect/index.html#FrameextendsProductwithSerializable" title="Permalink">
@@ -244,7 +268,7 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a title="" href="Frame.html"><span class="name">Frame</span></a><span class="params">(<span name="size">size: <a href="Size.html" class="extype" name="doodle.java2d.effect.Size">Size</a></span>, <span name="title">title: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">&quot;&quot;</span></span>, <span name="background">background: <span class="extype" name="scala.Option">Option</span>[<a href="../../core/Color.html" class="extype" name="doodle.core.Color">Color</a>] = <span class="symbol">None</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a title="" href="Frame.html"><span class="name">Frame</span></a><span class="params">(<span name="size">size: <a href="Size.html" class="extype" name="doodle.java2d.effect.Size">Size</a></span>, <span name="title">title: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">&quot;Doodle&quot;</span></span>, <span name="center">center: <a href="Center.html" class="extype" name="doodle.java2d.effect.Center">Center</a></span>, <span name="background">background: <span class="extype" name="scala.Option">Option</span>[<a href="../../core/Color.html" class="extype" name="doodle.core.Color">Color</a>] = <span class="symbol">None</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       
       
@@ -281,9 +305,9 @@
       
       
     </li><li name="doodle.java2d.effect.Java2dWriter" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="Java2dWriter[Format]extendsWriter[doodle.java2d.algebra.Algebra,doodle.java2d.Drawing,doodle.java2d.effect.Frame,Format]"></a><a id="Java2dWriter[Format]:Java2dWriter[Format]"></a>
+      <a id="Java2dWriter[Format]extendsWriter[doodle.java2d.Algebra,doodle.java2d.Drawing,doodle.java2d.effect.Frame,Format]"></a><a id="Java2dWriter[Format]:Java2dWriter[Format]"></a>
       <span class="permalink">
-      <a href="../../../doodle/java2d/effect/index.html#Java2dWriter[Format]extendsWriter[doodle.java2d.algebra.Algebra,doodle.java2d.Drawing,doodle.java2d.effect.Frame,Format]" title="Permalink">
+      <a href="../../../doodle/java2d/effect/index.html#Java2dWriter[Format]extendsWriter[doodle.java2d.Algebra,doodle.java2d.Drawing,doodle.java2d.effect.Frame,Format]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -292,7 +316,7 @@
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="" href="Java2dWriter.html"><span class="name">Java2dWriter</span></a><span class="tparams">[<span name="Format">Format</span>]</span><span class="result"> extends <a href="../../effect/Writer.html" class="extype" name="doodle.effect.Writer">Writer</a>[<a href="../algebra/Algebra.html" class="extype" name="doodle.java2d.algebra.Algebra">algebra.Algebra</a>, <a href="../index.html#Drawing[A]=doodle.algebra.generic.Finalized[A]" class="extmbr" name="doodle.java2d.Drawing">Drawing</a>, <a href="Frame.html" class="extype" name="doodle.java2d.effect.Frame">Frame</a>, <span class="extype" name="doodle.java2d.effect.Java2dWriter.Format">Format</span>]</span>
+        <a title="" href="Java2dWriter.html"><span class="name">Java2dWriter</span></a><span class="tparams">[<span name="Format">Format</span>]</span><span class="result"> extends <a href="../../effect/Writer.html" class="extype" name="doodle.effect.Writer">Writer</a>[<a href="../index.html#Algebra[F[_]]=doodle.algebra.Algebra[F]withdoodle.language.Basic[F]" class="extmbr" name="doodle.java2d.Algebra">Algebra</a>, <a href="../index.html#Drawing[A]=doodle.algebra.generic.Finalized[doodle.algebra.generic.reified.Reification,A]" class="extmbr" name="doodle.java2d.Drawing">Drawing</a>, <a href="Frame.html" class="extype" name="doodle.java2d.effect.Frame">Frame</a>, <span class="extype" name="doodle.java2d.effect.Java2dWriter.Format">Format</span>]</span>
       </span>
       
       
@@ -320,7 +344,23 @@
         <div class="values members">
               <h3>Value Members</h3>
               <ol>
-                <li name="doodle.java2d.effect.Frame" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+                <li name="doodle.java2d.effect.Center" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Center"></a><a id="Center:Center"></a>
+      <span class="permalink">
+      <a href="../../../doodle/java2d/effect/index.html#Center" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="Center$.html"><span class="name">Center</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      
+    </li><li name="doodle.java2d.effect.Frame" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="Frame"></a><a id="Frame:Frame"></a>
       <span class="permalink">
       <a href="../../../doodle/java2d/effect/index.html#Frame" title="Permalink">
@@ -368,6 +408,22 @@
       </span>
       
       
+    </li><li name="doodle.java2d.effect.Java2d" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Java2d"></a><a id="Java2d:Java2d"></a>
+      <span class="permalink">
+      <a href="../../../doodle/java2d/effect/index.html#Java2d" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="Utilities for rendering with Java2D" href="Java2d$.html"><span class="name">Java2d</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">Utilities for rendering with Java2D</p>
     </li><li name="doodle.java2d.effect.Java2dGifWriter" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="Java2dGifWriter"></a><a id="Java2dGifWriter:Java2dGifWriter"></a>
       <span class="permalink">
@@ -428,7 +484,23 @@
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a title="" href="Java2dRenderer$.html"><span class="name">Java2dRenderer</span></a><span class="result"> extends <a href="../../effect/DefaultRenderer.html" class="extype" name="doodle.effect.DefaultRenderer">DefaultRenderer</a>[<a href="../index.html#Algebra=doodle.java2d.algebra.Algebra" class="extmbr" name="doodle.java2d.Algebra">Algebra</a>, <a href="../index.html#Drawing[A]=doodle.algebra.generic.Finalized[A]" class="extmbr" name="doodle.java2d.Drawing">Drawing</a>, <a href="Frame.html" class="extype" name="doodle.java2d.effect.Frame">Frame</a>, <a href="Java2DFrame.html" class="extype" name="doodle.java2d.effect.Java2DFrame">Java2DFrame</a>]</span>
+        <a title="" href="Java2dRenderer$.html"><span class="name">Java2dRenderer</span></a><span class="result"> extends <a href="../../effect/DefaultRenderer.html" class="extype" name="doodle.effect.DefaultRenderer">DefaultRenderer</a>[<a href="../index.html#Algebra[F[_]]=doodle.algebra.Algebra[F]withdoodle.language.Basic[F]" class="extmbr" name="doodle.java2d.Algebra">Algebra</a>, <a href="../index.html#Drawing[A]=doodle.algebra.generic.Finalized[doodle.algebra.generic.reified.Reification,A]" class="extmbr" name="doodle.java2d.Drawing">Drawing</a>, <a href="Frame.html" class="extype" name="doodle.java2d.effect.Frame">Frame</a>, <a href="Java2DFrame.html" class="extype" name="doodle.java2d.effect.Java2DFrame">Java2DFrame</a>]</span>
+      </span>
+      
+      
+    </li><li name="doodle.java2d.effect.Java2dWriter" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Java2dWriter"></a><a id="Java2dWriter:Java2dWriter"></a>
+      <span class="permalink">
+      <a href="../../../doodle/java2d/effect/index.html#Java2dWriter" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="Java2dWriter$.html"><span class="name">Java2dWriter</span></a>
       </span>
       
       

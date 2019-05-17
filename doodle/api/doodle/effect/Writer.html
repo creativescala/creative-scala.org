@@ -107,12 +107,12 @@
                         <a href="DefaultRenderer.html" title="The DefaultRenderer typeclass is a Renderer that has a reasonable default frame.">DefaultRenderer</a>
                       </li><li class="current-entities indented2">
                         <a class="object" href="Renderer$.html" title=""></a>
-                        <a class="trait" href="Renderer.html" title="The Renderer typeclass describes a data type that can create an area to render an image (a Canvas) from a description (a Frame) and render an image to that Canvas."></a>
-                        <a href="Renderer.html" title="The Renderer typeclass describes a data type that can create an area to render an image (a Canvas) from a description (a Frame) and render an image to that Canvas.">Renderer</a>
+                        <a class="trait" href="Renderer.html" title="The Renderer typeclass describes a data type that can create an area to render a picture (a Canvas) from a description (a Frame) and render a picture to that Canvas."></a>
+                        <a href="Renderer.html" title="The Renderer typeclass describes a data type that can create an area to render a picture (a Canvas) from a description (a Frame) and render a picture to that Canvas.">Renderer</a>
                       </li><li class="current-entities indented2">
                         <a class="object" href="Writer$.html" title=""></a>
-                        <a class="trait" href="" title="The Writer typeclass represents write an image to a file in a given format."></a>
-                        <a href="" title="The Writer typeclass represents write an image to a file in a given format.">Writer</a>
+                        <a class="trait" href="" title="The Writer typeclass represents write a picture to a file in a given format."></a>
+                        <a href="" title="The Writer typeclass represents write a picture to a file in a given format.">Writer</a>
                       </li>
               </ul>
             </div>
@@ -138,12 +138,12 @@
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <span class="name">Writer</span><span class="tparams">[<span name="Algebra">+Algebra</span>, <span name="F">F<span class="tparams">[<span name="_">_</span>]</span></span>, <span name="Frame">Frame</span>, <span name="Format">Format</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+        <span class="name">Writer</span><span class="tparams">[<span name="Alg">Alg<span class="tparams">[<span name="x">x<span class="tparams">[<span name="_">_</span>]</span></span>]</span> &lt;: <a href="../algebra/Algebra.html" class="extype" name="doodle.algebra.Algebra">Algebra</a>[<span class="extype" name="doodle.effect.Writer.Alg.x">x</span>[<span class="extype" name="doodle.effect.Writer.Alg.x._">_</span>]]</span>, <span name="F">F<span class="tparams">[<span name="_">_</span>]</span></span>, <span name="Frame">Frame</span>, <span name="Format">Format</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>The <code>Writer</code> typeclass represents write an image to a file in a given format.</p></div><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>The <code>Writer</code> typeclass represents write a picture to a file in a given format.</p></div><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
@@ -203,9 +203,9 @@
         <div class="values members">
               <h3>Abstract Value Members</h3>
               <ol><li name="doodle.effect.Writer#write" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="write[A,Alg&gt;:Algebra](file:java.io.File,image:doodle.algebra.Image[Alg,F,A]):cats.effect.IO[A]"></a><a id="write[A,Alg&gt;:Algebra](File,Image[Alg,F,A]):IO[A]"></a>
+      <a id="write[A](file:java.io.File,image:doodle.algebra.Picture[Alg,F,A]):cats.effect.IO[A]"></a><a id="write[A](File,Picture[Alg,F,A]):IO[A]"></a>
       <span class="permalink">
-      <a href="../../doodle/effect/Writer.html#write[A,Alg&gt;:Algebra](file:java.io.File,image:doodle.algebra.Image[Alg,F,A]):cats.effect.IO[A]" title="Permalink">
+      <a href="../../doodle/effect/Writer.html#write[A](file:java.io.File,image:doodle.algebra.Picture[Alg,F,A]):cats.effect.IO[A]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -214,14 +214,14 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">write</span><span class="tparams">[<span name="A">A</span>, <span name="Alg">Alg &gt;: <span class="extype" name="doodle.effect.Writer.Algebra">Algebra</span></span>]</span><span class="params">(<span name="file">file: <span class="extype" name="java.io.File">File</span></span>, <span name="image">image: <a href="../algebra/Image.html" class="extype" name="doodle.algebra.Image">Image</a>[<span class="extype" name="doodle.effect.Writer.write.Alg">Alg</span>, <span class="extype" name="doodle.effect.Writer.F">F</span>, <span class="extype" name="doodle.effect.Writer.write.A">A</span>]</span>)</span><span class="result">: <span class="extype" name="cats.effect.IO">IO</span>[<span class="extype" name="doodle.effect.Writer.write.A">A</span>]</span>
+        <span class="name">write</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="file">file: <span class="extype" name="java.io.File">File</span></span>, <span name="image">image: <a href="../algebra/Picture.html" class="extype" name="doodle.algebra.Picture">Picture</a>[<span class="extype" name="doodle.effect.Writer.Alg">Alg</span>, <span class="extype" name="doodle.effect.Writer.F">F</span>, <span class="extype" name="doodle.effect.Writer.write.A">A</span>]</span>)</span><span class="result">: <span class="extype" name="cats.effect.IO">IO</span>[<span class="extype" name="doodle.effect.Writer.write.A">A</span>]</span>
       </span>
       
       
     </li><li name="doodle.effect.Writer#write" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="write[A,Alg&gt;:Algebra](file:java.io.File,description:Frame,image:doodle.algebra.Image[Alg,F,A]):cats.effect.IO[A]"></a><a id="write[A,Alg&gt;:Algebra](File,Frame,Image[Alg,F,A]):IO[A]"></a>
+      <a id="write[A](file:java.io.File,description:Frame,image:doodle.algebra.Picture[Alg,F,A]):cats.effect.IO[A]"></a><a id="write[A](File,Frame,Picture[Alg,F,A]):IO[A]"></a>
       <span class="permalink">
-      <a href="../../doodle/effect/Writer.html#write[A,Alg&gt;:Algebra](file:java.io.File,description:Frame,image:doodle.algebra.Image[Alg,F,A]):cats.effect.IO[A]" title="Permalink">
+      <a href="../../doodle/effect/Writer.html#write[A](file:java.io.File,description:Frame,image:doodle.algebra.Picture[Alg,F,A]):cats.effect.IO[A]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -230,7 +230,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">write</span><span class="tparams">[<span name="A">A</span>, <span name="Alg">Alg &gt;: <span class="extype" name="doodle.effect.Writer.Algebra">Algebra</span></span>]</span><span class="params">(<span name="file">file: <span class="extype" name="java.io.File">File</span></span>, <span name="description">description: <span class="extype" name="doodle.effect.Writer.Frame">Frame</span></span>, <span name="image">image: <a href="../algebra/Image.html" class="extype" name="doodle.algebra.Image">Image</a>[<span class="extype" name="doodle.effect.Writer.write.Alg">Alg</span>, <span class="extype" name="doodle.effect.Writer.F">F</span>, <span class="extype" name="doodle.effect.Writer.write.A">A</span>]</span>)</span><span class="result">: <span class="extype" name="cats.effect.IO">IO</span>[<span class="extype" name="doodle.effect.Writer.write.A">A</span>]</span>
+        <span class="name">write</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="file">file: <span class="extype" name="java.io.File">File</span></span>, <span name="description">description: <span class="extype" name="doodle.effect.Writer.Frame">Frame</span></span>, <span name="image">image: <a href="../algebra/Picture.html" class="extype" name="doodle.algebra.Picture">Picture</a>[<span class="extype" name="doodle.effect.Writer.Alg">Alg</span>, <span class="extype" name="doodle.effect.Writer.F">F</span>, <span class="extype" name="doodle.effect.Writer.write.A">A</span>]</span>)</span><span class="result">: <span class="extype" name="cats.effect.IO">IO</span>[<span class="extype" name="doodle.effect.Writer.write.A">A</span>]</span>
       </span>
       
       

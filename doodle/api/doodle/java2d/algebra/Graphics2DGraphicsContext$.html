@@ -129,26 +129,6 @@
                         <span class="separator"></span>
                         <a class="object" href="Java2D$.html" title="Various utilities for using Java2D"></a>
                         <a href="Java2D$.html" title="Various utilities for using Java2D">Java2D</a>
-                      </li><li class="current-entities indented3">
-                        <span class="separator"></span>
-                        <a class="trait" href="Layout.html" title=""></a>
-                        <a href="Layout.html" title="">Layout</a>
-                      </li><li class="current-entities indented3">
-                        <span class="separator"></span>
-                        <a class="trait" href="Path.html" title="Higher level path primitives"></a>
-                        <a href="Path.html" title="Higher level path primitives">Path</a>
-                      </li><li class="current-entities indented3">
-                        <span class="separator"></span>
-                        <a class="trait" href="Shape.html" title="Higher level shape primitives"></a>
-                        <a href="Shape.html" title="Higher level shape primitives">Shape</a>
-                      </li><li class="current-entities indented3">
-                        <span class="separator"></span>
-                        <a class="trait" href="Style.html" title=""></a>
-                        <a href="Style.html" title="">Style</a>
-                      </li><li class="current-entities indented3">
-                        <span class="separator"></span>
-                        <a class="trait" href="Transform.html" title=""></a>
-                        <a href="Transform.html" title="">Transform</a>
                       </li>
               </ul>
             </div>
@@ -172,7 +152,7 @@
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <span class="name">Graphics2DGraphicsContext</span><span class="result"> extends <a href="../../algebra/generic/GraphicsContext.html" class="extype" name="doodle.algebra.generic.GraphicsContext">GraphicsContext</a>[<span class="extype" name="java.awt.Graphics2D">Graphics2D</span>]</span>
+        <span class="name">Graphics2DGraphicsContext</span><span class="result"> extends <a href="../../algebra/generic/reified/GraphicsContext.html" class="extype" name="doodle.algebra.generic.reified.GraphicsContext">GraphicsContext</a>[<span class="extype" name="java.awt.Graphics2D">Graphics2D</span>]</span>
       </span>
       </h4>
 
@@ -181,7 +161,7 @@
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><a href="../../algebra/generic/GraphicsContext.html" class="extype" name="doodle.algebra.generic.GraphicsContext">GraphicsContext</a>[<span class="extype" name="java.awt.Graphics2D">Graphics2D</span>], <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><a href="../../algebra/generic/reified/GraphicsContext.html" class="extype" name="doodle.algebra.generic.reified.GraphicsContext">GraphicsContext</a>[<span class="extype" name="java.awt.Graphics2D">Graphics2D</span>], <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -207,7 +187,7 @@
                   <span class="filtertype">Inherited<br />
                   </span>
                   <ol id="linearization">
-                    <li class="in" name="doodle.java2d.algebra.Graphics2DGraphicsContext"><span>Graphics2DGraphicsContext</span></li><li class="in" name="doodle.algebra.generic.GraphicsContext"><span>GraphicsContext</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                    <li class="in" name="doodle.java2d.algebra.Graphics2DGraphicsContext"><span>Graphics2DGraphicsContext</span></li><li class="in" name="doodle.algebra.generic.reified.GraphicsContext"><span>GraphicsContext</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                   </ol>
                 </div><div class="ancestors">
               <span class="filtertype"></span>
@@ -357,7 +337,7 @@
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="doodle.java2d.algebra.Graphics2DGraphicsContext#fillCircle" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="fillCircle(gc:java.awt.Graphics2D)(transform:doodle.core.Transform,fill:doodle.algebra.generic.Fill,radius:Double):Unit"></a><a id="fillCircle(Graphics2D)(core.Transform,Fill,Double):Unit"></a>
+      <a id="fillCircle(gc:java.awt.Graphics2D)(transform:doodle.core.Transform,fill:doodle.algebra.generic.Fill,radius:Double):Unit"></a><a id="fillCircle(Graphics2D)(Transform,Fill,Double):Unit"></a>
       <span class="permalink">
       <a href="../../../doodle/java2d/algebra/Graphics2DGraphicsContext$.html#fillCircle(gc:java.awt.Graphics2D)(transform:doodle.core.Transform,fill:doodle.algebra.generic.Fill,radius:Double):Unit" title="Permalink">
         <i class="material-icons"></i>
@@ -368,12 +348,12 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">fillCircle</span><span class="params">(<span name="gc">gc: <span class="extype" name="java.awt.Graphics2D">Graphics2D</span></span>)</span><span class="params">(<span name="transform">transform: <a href="../../core/Transform.html" class="extype" name="doodle.core.Transform">core.Transform</a></span>, <span name="fill">fill: <a href="../../algebra/generic/Fill.html" class="extype" name="doodle.algebra.generic.Fill">Fill</a></span>, <span name="radius">radius: <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">fillCircle</span><span class="params">(<span name="gc">gc: <span class="extype" name="java.awt.Graphics2D">Graphics2D</span></span>)</span><span class="params">(<span name="transform">transform: <a href="../../core/Transform.html" class="extype" name="doodle.core.Transform">Transform</a></span>, <span name="fill">fill: <a href="../../algebra/generic/Fill.html" class="extype" name="doodle.algebra.generic.Fill">Fill</a></span>, <span name="radius">radius: <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="doodle.java2d.algebra.Graphics2DGraphicsContext">Graphics2DGraphicsContext</a> → <a href="../../algebra/generic/GraphicsContext.html" class="extype" name="doodle.algebra.generic.GraphicsContext">GraphicsContext</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="doodle.java2d.algebra.Graphics2DGraphicsContext">Graphics2DGraphicsContext</a> → <a href="../../algebra/generic/reified/GraphicsContext.html" class="extype" name="doodle.algebra.generic.reified.GraphicsContext">GraphicsContext</a></dd></dl></div>
     </li><li name="doodle.java2d.algebra.Graphics2DGraphicsContext#fillClosedPath" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="fillClosedPath(gc:java.awt.Graphics2D)(transform:doodle.core.Transform,fill:doodle.algebra.generic.Fill,elements:List[doodle.core.PathElement]):Unit"></a><a id="fillClosedPath(Graphics2D)(core.Transform,Fill,List[PathElement]):Unit"></a>
+      <a id="fillClosedPath(gc:java.awt.Graphics2D)(transform:doodle.core.Transform,fill:doodle.algebra.generic.Fill,elements:List[doodle.core.PathElement]):Unit"></a><a id="fillClosedPath(Graphics2D)(Transform,Fill,List[PathElement]):Unit"></a>
       <span class="permalink">
       <a href="../../../doodle/java2d/algebra/Graphics2DGraphicsContext$.html#fillClosedPath(gc:java.awt.Graphics2D)(transform:doodle.core.Transform,fill:doodle.algebra.generic.Fill,elements:List[doodle.core.PathElement]):Unit" title="Permalink">
         <i class="material-icons"></i>
@@ -384,12 +364,12 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">fillClosedPath</span><span class="params">(<span name="gc">gc: <span class="extype" name="java.awt.Graphics2D">Graphics2D</span></span>)</span><span class="params">(<span name="transform">transform: <a href="../../core/Transform.html" class="extype" name="doodle.core.Transform">core.Transform</a></span>, <span name="fill">fill: <a href="../../algebra/generic/Fill.html" class="extype" name="doodle.algebra.generic.Fill">Fill</a></span>, <span name="elements">elements: <span class="extype" name="scala.List">List</span>[<a href="../../core/PathElement.html" class="extype" name="doodle.core.PathElement">PathElement</a>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">fillClosedPath</span><span class="params">(<span name="gc">gc: <span class="extype" name="java.awt.Graphics2D">Graphics2D</span></span>)</span><span class="params">(<span name="transform">transform: <a href="../../core/Transform.html" class="extype" name="doodle.core.Transform">Transform</a></span>, <span name="fill">fill: <a href="../../algebra/generic/Fill.html" class="extype" name="doodle.algebra.generic.Fill">Fill</a></span>, <span name="elements">elements: <span class="extype" name="scala.List">List</span>[<a href="../../core/PathElement.html" class="extype" name="doodle.core.PathElement">PathElement</a>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="doodle.java2d.algebra.Graphics2DGraphicsContext">Graphics2DGraphicsContext</a> → <a href="../../algebra/generic/GraphicsContext.html" class="extype" name="doodle.algebra.generic.GraphicsContext">GraphicsContext</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="doodle.java2d.algebra.Graphics2DGraphicsContext">Graphics2DGraphicsContext</a> → <a href="../../algebra/generic/reified/GraphicsContext.html" class="extype" name="doodle.algebra.generic.reified.GraphicsContext">GraphicsContext</a></dd></dl></div>
     </li><li name="doodle.java2d.algebra.Graphics2DGraphicsContext#fillOpenPath" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="fillOpenPath(gc:java.awt.Graphics2D)(transform:doodle.core.Transform,fill:doodle.algebra.generic.Fill,elements:List[doodle.core.PathElement]):Unit"></a><a id="fillOpenPath(Graphics2D)(core.Transform,Fill,List[PathElement]):Unit"></a>
+      <a id="fillOpenPath(gc:java.awt.Graphics2D)(transform:doodle.core.Transform,fill:doodle.algebra.generic.Fill,elements:List[doodle.core.PathElement]):Unit"></a><a id="fillOpenPath(Graphics2D)(Transform,Fill,List[PathElement]):Unit"></a>
       <span class="permalink">
       <a href="../../../doodle/java2d/algebra/Graphics2DGraphicsContext$.html#fillOpenPath(gc:java.awt.Graphics2D)(transform:doodle.core.Transform,fill:doodle.algebra.generic.Fill,elements:List[doodle.core.PathElement]):Unit" title="Permalink">
         <i class="material-icons"></i>
@@ -400,12 +380,12 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">fillOpenPath</span><span class="params">(<span name="gc">gc: <span class="extype" name="java.awt.Graphics2D">Graphics2D</span></span>)</span><span class="params">(<span name="transform">transform: <a href="../../core/Transform.html" class="extype" name="doodle.core.Transform">core.Transform</a></span>, <span name="fill">fill: <a href="../../algebra/generic/Fill.html" class="extype" name="doodle.algebra.generic.Fill">Fill</a></span>, <span name="elements">elements: <span class="extype" name="scala.List">List</span>[<a href="../../core/PathElement.html" class="extype" name="doodle.core.PathElement">PathElement</a>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">fillOpenPath</span><span class="params">(<span name="gc">gc: <span class="extype" name="java.awt.Graphics2D">Graphics2D</span></span>)</span><span class="params">(<span name="transform">transform: <a href="../../core/Transform.html" class="extype" name="doodle.core.Transform">Transform</a></span>, <span name="fill">fill: <a href="../../algebra/generic/Fill.html" class="extype" name="doodle.algebra.generic.Fill">Fill</a></span>, <span name="elements">elements: <span class="extype" name="scala.List">List</span>[<a href="../../core/PathElement.html" class="extype" name="doodle.core.PathElement">PathElement</a>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="doodle.java2d.algebra.Graphics2DGraphicsContext">Graphics2DGraphicsContext</a> → <a href="../../algebra/generic/GraphicsContext.html" class="extype" name="doodle.algebra.generic.GraphicsContext">GraphicsContext</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="doodle.java2d.algebra.Graphics2DGraphicsContext">Graphics2DGraphicsContext</a> → <a href="../../algebra/generic/reified/GraphicsContext.html" class="extype" name="doodle.algebra.generic.reified.GraphicsContext">GraphicsContext</a></dd></dl></div>
     </li><li name="doodle.java2d.algebra.Graphics2DGraphicsContext#fillPolygon" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="fillPolygon(gc:java.awt.Graphics2D)(transform:doodle.core.Transform,fill:doodle.algebra.generic.Fill,points:Array[doodle.core.Point]):Unit"></a><a id="fillPolygon(Graphics2D)(core.Transform,Fill,Array[Point]):Unit"></a>
+      <a id="fillPolygon(gc:java.awt.Graphics2D)(transform:doodle.core.Transform,fill:doodle.algebra.generic.Fill,points:Array[doodle.core.Point]):Unit"></a><a id="fillPolygon(Graphics2D)(Transform,Fill,Array[Point]):Unit"></a>
       <span class="permalink">
       <a href="../../../doodle/java2d/algebra/Graphics2DGraphicsContext$.html#fillPolygon(gc:java.awt.Graphics2D)(transform:doodle.core.Transform,fill:doodle.algebra.generic.Fill,points:Array[doodle.core.Point]):Unit" title="Permalink">
         <i class="material-icons"></i>
@@ -416,12 +396,12 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">fillPolygon</span><span class="params">(<span name="gc">gc: <span class="extype" name="java.awt.Graphics2D">Graphics2D</span></span>)</span><span class="params">(<span name="transform">transform: <a href="../../core/Transform.html" class="extype" name="doodle.core.Transform">core.Transform</a></span>, <span name="fill">fill: <a href="../../algebra/generic/Fill.html" class="extype" name="doodle.algebra.generic.Fill">Fill</a></span>, <span name="points">points: <span class="extype" name="scala.Array">Array</span>[<a href="../../core/Point.html" class="extype" name="doodle.core.Point">Point</a>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">fillPolygon</span><span class="params">(<span name="gc">gc: <span class="extype" name="java.awt.Graphics2D">Graphics2D</span></span>)</span><span class="params">(<span name="transform">transform: <a href="../../core/Transform.html" class="extype" name="doodle.core.Transform">Transform</a></span>, <span name="fill">fill: <a href="../../algebra/generic/Fill.html" class="extype" name="doodle.algebra.generic.Fill">Fill</a></span>, <span name="points">points: <span class="extype" name="scala.Array">Array</span>[<a href="../../core/Point.html" class="extype" name="doodle.core.Point">Point</a>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="doodle.java2d.algebra.Graphics2DGraphicsContext">Graphics2DGraphicsContext</a> → <a href="../../algebra/generic/GraphicsContext.html" class="extype" name="doodle.algebra.generic.GraphicsContext">GraphicsContext</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="doodle.java2d.algebra.Graphics2DGraphicsContext">Graphics2DGraphicsContext</a> → <a href="../../algebra/generic/reified/GraphicsContext.html" class="extype" name="doodle.algebra.generic.reified.GraphicsContext">GraphicsContext</a></dd></dl></div>
     </li><li name="doodle.java2d.algebra.Graphics2DGraphicsContext#fillRect" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="fillRect(gc:java.awt.Graphics2D)(transform:doodle.core.Transform,fill:doodle.algebra.generic.Fill,width:Double,height:Double):Unit"></a><a id="fillRect(Graphics2D)(core.Transform,Fill,Double,Double):Unit"></a>
+      <a id="fillRect(gc:java.awt.Graphics2D)(transform:doodle.core.Transform,fill:doodle.algebra.generic.Fill,width:Double,height:Double):Unit"></a><a id="fillRect(Graphics2D)(Transform,Fill,Double,Double):Unit"></a>
       <span class="permalink">
       <a href="../../../doodle/java2d/algebra/Graphics2DGraphicsContext$.html#fillRect(gc:java.awt.Graphics2D)(transform:doodle.core.Transform,fill:doodle.algebra.generic.Fill,width:Double,height:Double):Unit" title="Permalink">
         <i class="material-icons"></i>
@@ -432,10 +412,10 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">fillRect</span><span class="params">(<span name="gc">gc: <span class="extype" name="java.awt.Graphics2D">Graphics2D</span></span>)</span><span class="params">(<span name="transform">transform: <a href="../../core/Transform.html" class="extype" name="doodle.core.Transform">core.Transform</a></span>, <span name="fill">fill: <a href="../../algebra/generic/Fill.html" class="extype" name="doodle.algebra.generic.Fill">Fill</a></span>, <span name="width">width: <span class="extype" name="scala.Double">Double</span></span>, <span name="height">height: <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">fillRect</span><span class="params">(<span name="gc">gc: <span class="extype" name="java.awt.Graphics2D">Graphics2D</span></span>)</span><span class="params">(<span name="transform">transform: <a href="../../core/Transform.html" class="extype" name="doodle.core.Transform">Transform</a></span>, <span name="fill">fill: <a href="../../algebra/generic/Fill.html" class="extype" name="doodle.algebra.generic.Fill">Fill</a></span>, <span name="width">width: <span class="extype" name="scala.Double">Double</span></span>, <span name="height">height: <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="doodle.java2d.algebra.Graphics2DGraphicsContext">Graphics2DGraphicsContext</a> → <a href="../../algebra/generic/GraphicsContext.html" class="extype" name="doodle.algebra.generic.GraphicsContext">GraphicsContext</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="doodle.java2d.algebra.Graphics2DGraphicsContext">Graphics2DGraphicsContext</a> → <a href="../../algebra/generic/reified/GraphicsContext.html" class="extype" name="doodle.algebra.generic.reified.GraphicsContext">GraphicsContext</a></dd></dl></div>
     </li><li name="scala.AnyRef#getClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <span class="permalink">
@@ -553,7 +533,7 @@
               
         </dd></dl></div>
     </li><li name="doodle.java2d.algebra.Graphics2DGraphicsContext#strokeCircle" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="strokeCircle(gc:java.awt.Graphics2D)(transform:doodle.core.Transform,stroke:doodle.algebra.generic.Stroke,diameter:Double):Unit"></a><a id="strokeCircle(Graphics2D)(core.Transform,Stroke,Double):Unit"></a>
+      <a id="strokeCircle(gc:java.awt.Graphics2D)(transform:doodle.core.Transform,stroke:doodle.algebra.generic.Stroke,diameter:Double):Unit"></a><a id="strokeCircle(Graphics2D)(Transform,Stroke,Double):Unit"></a>
       <span class="permalink">
       <a href="../../../doodle/java2d/algebra/Graphics2DGraphicsContext$.html#strokeCircle(gc:java.awt.Graphics2D)(transform:doodle.core.Transform,stroke:doodle.algebra.generic.Stroke,diameter:Double):Unit" title="Permalink">
         <i class="material-icons"></i>
@@ -564,12 +544,12 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">strokeCircle</span><span class="params">(<span name="gc">gc: <span class="extype" name="java.awt.Graphics2D">Graphics2D</span></span>)</span><span class="params">(<span name="transform">transform: <a href="../../core/Transform.html" class="extype" name="doodle.core.Transform">core.Transform</a></span>, <span name="stroke">stroke: <a href="../../algebra/generic/Stroke.html" class="extype" name="doodle.algebra.generic.Stroke">Stroke</a></span>, <span name="diameter">diameter: <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">strokeCircle</span><span class="params">(<span name="gc">gc: <span class="extype" name="java.awt.Graphics2D">Graphics2D</span></span>)</span><span class="params">(<span name="transform">transform: <a href="../../core/Transform.html" class="extype" name="doodle.core.Transform">Transform</a></span>, <span name="stroke">stroke: <a href="../../algebra/generic/Stroke.html" class="extype" name="doodle.algebra.generic.Stroke">Stroke</a></span>, <span name="diameter">diameter: <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="doodle.java2d.algebra.Graphics2DGraphicsContext">Graphics2DGraphicsContext</a> → <a href="../../algebra/generic/GraphicsContext.html" class="extype" name="doodle.algebra.generic.GraphicsContext">GraphicsContext</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="doodle.java2d.algebra.Graphics2DGraphicsContext">Graphics2DGraphicsContext</a> → <a href="../../algebra/generic/reified/GraphicsContext.html" class="extype" name="doodle.algebra.generic.reified.GraphicsContext">GraphicsContext</a></dd></dl></div>
     </li><li name="doodle.java2d.algebra.Graphics2DGraphicsContext#strokeClosedPath" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="strokeClosedPath(gc:java.awt.Graphics2D)(transform:doodle.core.Transform,stroke:doodle.algebra.generic.Stroke,elements:List[doodle.core.PathElement]):Unit"></a><a id="strokeClosedPath(Graphics2D)(core.Transform,Stroke,List[PathElement]):Unit"></a>
+      <a id="strokeClosedPath(gc:java.awt.Graphics2D)(transform:doodle.core.Transform,stroke:doodle.algebra.generic.Stroke,elements:List[doodle.core.PathElement]):Unit"></a><a id="strokeClosedPath(Graphics2D)(Transform,Stroke,List[PathElement]):Unit"></a>
       <span class="permalink">
       <a href="../../../doodle/java2d/algebra/Graphics2DGraphicsContext$.html#strokeClosedPath(gc:java.awt.Graphics2D)(transform:doodle.core.Transform,stroke:doodle.algebra.generic.Stroke,elements:List[doodle.core.PathElement]):Unit" title="Permalink">
         <i class="material-icons"></i>
@@ -580,12 +560,12 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">strokeClosedPath</span><span class="params">(<span name="gc">gc: <span class="extype" name="java.awt.Graphics2D">Graphics2D</span></span>)</span><span class="params">(<span name="transform">transform: <a href="../../core/Transform.html" class="extype" name="doodle.core.Transform">core.Transform</a></span>, <span name="stroke">stroke: <a href="../../algebra/generic/Stroke.html" class="extype" name="doodle.algebra.generic.Stroke">Stroke</a></span>, <span name="elements">elements: <span class="extype" name="scala.List">List</span>[<a href="../../core/PathElement.html" class="extype" name="doodle.core.PathElement">PathElement</a>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">strokeClosedPath</span><span class="params">(<span name="gc">gc: <span class="extype" name="java.awt.Graphics2D">Graphics2D</span></span>)</span><span class="params">(<span name="transform">transform: <a href="../../core/Transform.html" class="extype" name="doodle.core.Transform">Transform</a></span>, <span name="stroke">stroke: <a href="../../algebra/generic/Stroke.html" class="extype" name="doodle.algebra.generic.Stroke">Stroke</a></span>, <span name="elements">elements: <span class="extype" name="scala.List">List</span>[<a href="../../core/PathElement.html" class="extype" name="doodle.core.PathElement">PathElement</a>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="doodle.java2d.algebra.Graphics2DGraphicsContext">Graphics2DGraphicsContext</a> → <a href="../../algebra/generic/GraphicsContext.html" class="extype" name="doodle.algebra.generic.GraphicsContext">GraphicsContext</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="doodle.java2d.algebra.Graphics2DGraphicsContext">Graphics2DGraphicsContext</a> → <a href="../../algebra/generic/reified/GraphicsContext.html" class="extype" name="doodle.algebra.generic.reified.GraphicsContext">GraphicsContext</a></dd></dl></div>
     </li><li name="doodle.java2d.algebra.Graphics2DGraphicsContext#strokeOpenPath" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="strokeOpenPath(gc:java.awt.Graphics2D)(transform:doodle.core.Transform,stroke:doodle.algebra.generic.Stroke,elements:List[doodle.core.PathElement]):Unit"></a><a id="strokeOpenPath(Graphics2D)(core.Transform,Stroke,List[PathElement]):Unit"></a>
+      <a id="strokeOpenPath(gc:java.awt.Graphics2D)(transform:doodle.core.Transform,stroke:doodle.algebra.generic.Stroke,elements:List[doodle.core.PathElement]):Unit"></a><a id="strokeOpenPath(Graphics2D)(Transform,Stroke,List[PathElement]):Unit"></a>
       <span class="permalink">
       <a href="../../../doodle/java2d/algebra/Graphics2DGraphicsContext$.html#strokeOpenPath(gc:java.awt.Graphics2D)(transform:doodle.core.Transform,stroke:doodle.algebra.generic.Stroke,elements:List[doodle.core.PathElement]):Unit" title="Permalink">
         <i class="material-icons"></i>
@@ -596,12 +576,12 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">strokeOpenPath</span><span class="params">(<span name="gc">gc: <span class="extype" name="java.awt.Graphics2D">Graphics2D</span></span>)</span><span class="params">(<span name="transform">transform: <a href="../../core/Transform.html" class="extype" name="doodle.core.Transform">core.Transform</a></span>, <span name="stroke">stroke: <a href="../../algebra/generic/Stroke.html" class="extype" name="doodle.algebra.generic.Stroke">Stroke</a></span>, <span name="elements">elements: <span class="extype" name="scala.List">List</span>[<a href="../../core/PathElement.html" class="extype" name="doodle.core.PathElement">PathElement</a>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">strokeOpenPath</span><span class="params">(<span name="gc">gc: <span class="extype" name="java.awt.Graphics2D">Graphics2D</span></span>)</span><span class="params">(<span name="transform">transform: <a href="../../core/Transform.html" class="extype" name="doodle.core.Transform">Transform</a></span>, <span name="stroke">stroke: <a href="../../algebra/generic/Stroke.html" class="extype" name="doodle.algebra.generic.Stroke">Stroke</a></span>, <span name="elements">elements: <span class="extype" name="scala.List">List</span>[<a href="../../core/PathElement.html" class="extype" name="doodle.core.PathElement">PathElement</a>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="doodle.java2d.algebra.Graphics2DGraphicsContext">Graphics2DGraphicsContext</a> → <a href="../../algebra/generic/GraphicsContext.html" class="extype" name="doodle.algebra.generic.GraphicsContext">GraphicsContext</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="doodle.java2d.algebra.Graphics2DGraphicsContext">Graphics2DGraphicsContext</a> → <a href="../../algebra/generic/reified/GraphicsContext.html" class="extype" name="doodle.algebra.generic.reified.GraphicsContext">GraphicsContext</a></dd></dl></div>
     </li><li name="doodle.java2d.algebra.Graphics2DGraphicsContext#strokePolygon" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="strokePolygon(gc:java.awt.Graphics2D)(transform:doodle.core.Transform,stroke:doodle.algebra.generic.Stroke,points:Array[doodle.core.Point]):Unit"></a><a id="strokePolygon(Graphics2D)(core.Transform,Stroke,Array[Point]):Unit"></a>
+      <a id="strokePolygon(gc:java.awt.Graphics2D)(transform:doodle.core.Transform,stroke:doodle.algebra.generic.Stroke,points:Array[doodle.core.Point]):Unit"></a><a id="strokePolygon(Graphics2D)(Transform,Stroke,Array[Point]):Unit"></a>
       <span class="permalink">
       <a href="../../../doodle/java2d/algebra/Graphics2DGraphicsContext$.html#strokePolygon(gc:java.awt.Graphics2D)(transform:doodle.core.Transform,stroke:doodle.algebra.generic.Stroke,points:Array[doodle.core.Point]):Unit" title="Permalink">
         <i class="material-icons"></i>
@@ -612,12 +592,12 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">strokePolygon</span><span class="params">(<span name="gc">gc: <span class="extype" name="java.awt.Graphics2D">Graphics2D</span></span>)</span><span class="params">(<span name="transform">transform: <a href="../../core/Transform.html" class="extype" name="doodle.core.Transform">core.Transform</a></span>, <span name="stroke">stroke: <a href="../../algebra/generic/Stroke.html" class="extype" name="doodle.algebra.generic.Stroke">Stroke</a></span>, <span name="points">points: <span class="extype" name="scala.Array">Array</span>[<a href="../../core/Point.html" class="extype" name="doodle.core.Point">Point</a>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">strokePolygon</span><span class="params">(<span name="gc">gc: <span class="extype" name="java.awt.Graphics2D">Graphics2D</span></span>)</span><span class="params">(<span name="transform">transform: <a href="../../core/Transform.html" class="extype" name="doodle.core.Transform">Transform</a></span>, <span name="stroke">stroke: <a href="../../algebra/generic/Stroke.html" class="extype" name="doodle.algebra.generic.Stroke">Stroke</a></span>, <span name="points">points: <span class="extype" name="scala.Array">Array</span>[<a href="../../core/Point.html" class="extype" name="doodle.core.Point">Point</a>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="doodle.java2d.algebra.Graphics2DGraphicsContext">Graphics2DGraphicsContext</a> → <a href="../../algebra/generic/GraphicsContext.html" class="extype" name="doodle.algebra.generic.GraphicsContext">GraphicsContext</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="doodle.java2d.algebra.Graphics2DGraphicsContext">Graphics2DGraphicsContext</a> → <a href="../../algebra/generic/reified/GraphicsContext.html" class="extype" name="doodle.algebra.generic.reified.GraphicsContext">GraphicsContext</a></dd></dl></div>
     </li><li name="doodle.java2d.algebra.Graphics2DGraphicsContext#strokeRect" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="strokeRect(gc:java.awt.Graphics2D)(transform:doodle.core.Transform,stroke:doodle.algebra.generic.Stroke,width:Double,height:Double):Unit"></a><a id="strokeRect(Graphics2D)(core.Transform,Stroke,Double,Double):Unit"></a>
+      <a id="strokeRect(gc:java.awt.Graphics2D)(transform:doodle.core.Transform,stroke:doodle.algebra.generic.Stroke,width:Double,height:Double):Unit"></a><a id="strokeRect(Graphics2D)(Transform,Stroke,Double,Double):Unit"></a>
       <span class="permalink">
       <a href="../../../doodle/java2d/algebra/Graphics2DGraphicsContext$.html#strokeRect(gc:java.awt.Graphics2D)(transform:doodle.core.Transform,stroke:doodle.algebra.generic.Stroke,width:Double,height:Double):Unit" title="Permalink">
         <i class="material-icons"></i>
@@ -628,10 +608,10 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">strokeRect</span><span class="params">(<span name="gc">gc: <span class="extype" name="java.awt.Graphics2D">Graphics2D</span></span>)</span><span class="params">(<span name="transform">transform: <a href="../../core/Transform.html" class="extype" name="doodle.core.Transform">core.Transform</a></span>, <span name="stroke">stroke: <a href="../../algebra/generic/Stroke.html" class="extype" name="doodle.algebra.generic.Stroke">Stroke</a></span>, <span name="width">width: <span class="extype" name="scala.Double">Double</span></span>, <span name="height">height: <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">strokeRect</span><span class="params">(<span name="gc">gc: <span class="extype" name="java.awt.Graphics2D">Graphics2D</span></span>)</span><span class="params">(<span name="transform">transform: <a href="../../core/Transform.html" class="extype" name="doodle.core.Transform">Transform</a></span>, <span name="stroke">stroke: <a href="../../algebra/generic/Stroke.html" class="extype" name="doodle.algebra.generic.Stroke">Stroke</a></span>, <span name="width">width: <span class="extype" name="scala.Double">Double</span></span>, <span name="height">height: <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="doodle.java2d.algebra.Graphics2DGraphicsContext">Graphics2DGraphicsContext</a> → <a href="../../algebra/generic/GraphicsContext.html" class="extype" name="doodle.algebra.generic.GraphicsContext">GraphicsContext</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="doodle.java2d.algebra.Graphics2DGraphicsContext">Graphics2DGraphicsContext</a> → <a href="../../algebra/generic/reified/GraphicsContext.html" class="extype" name="doodle.algebra.generic.reified.GraphicsContext">GraphicsContext</a></dd></dl></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
       <span class="permalink">
@@ -771,8 +751,8 @@
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="doodle.algebra.generic.GraphicsContext">
-              <h3>Inherited from <a href="../../algebra/generic/GraphicsContext.html" class="extype" name="doodle.algebra.generic.GraphicsContext">GraphicsContext</a>[<span class="extype" name="java.awt.Graphics2D">Graphics2D</span>]</h3>
+        <div class="parent" name="doodle.algebra.generic.reified.GraphicsContext">
+              <h3>Inherited from <a href="../../algebra/generic/reified/GraphicsContext.html" class="extype" name="doodle.algebra.generic.reified.GraphicsContext">GraphicsContext</a>[<span class="extype" name="java.awt.Graphics2D">Graphics2D</span>]</h3>
             </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
             </div><div class="parent" name="scala.Any">

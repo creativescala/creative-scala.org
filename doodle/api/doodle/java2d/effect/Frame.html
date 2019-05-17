@@ -118,6 +118,10 @@
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="doodle.java2d">java2d</a></dd></dl></div>
     </li><li class="current-entities indented3">
+                        <a class="object" href="Center$.html" title=""></a>
+                        <a class="class" href="Center.html" title="Determines where the center of the canvas is located."></a>
+                        <a href="Center.html" title="Determines where the center of the canvas is located.">Center</a>
+                      </li><li class="current-entities indented3">
                         <a class="object" href="Frame$.html" title=""></a>
                         <a class="class" href="" title=""></a>
                         <a href="" title="">Frame</a>
@@ -129,6 +133,10 @@
                         <a class="object" href="Java2DPanel$.html" title=""></a>
                         <a class="class" href="Java2DPanel.html" title=""></a>
                         <a href="Java2DPanel.html" title="">Java2DPanel</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="object" href="Java2d$.html" title="Utilities for rendering with Java2D"></a>
+                        <a href="Java2d$.html" title="Utilities for rendering with Java2D">Java2d</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
                         <a class="object" href="Java2dGifWriter$.html" title=""></a>
@@ -146,7 +154,7 @@
                         <a class="object" href="Java2dRenderer$.html" title=""></a>
                         <a href="Java2dRenderer$.html" title="">Java2dRenderer</a>
                       </li><li class="current-entities indented3">
-                        <span class="separator"></span>
+                        <a class="object" href="Java2dWriter$.html" title=""></a>
                         <a class="trait" href="Java2dWriter.html" title=""></a>
                         <a href="Java2dWriter.html" title="">Java2dWriter</a>
                       </li><li class="current-entities indented3">
@@ -178,7 +186,7 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">Frame</span><span class="params">(<span name="size">size: <a href="Size.html" class="extype" name="doodle.java2d.effect.Size">Size</a></span>, <span name="title">title: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">&quot;&quot;</span></span>, <span name="background">background: <span class="extype" name="scala.Option">Option</span>[<a href="../../core/Color.html" class="extype" name="doodle.core.Color">Color</a>] = <span class="symbol">None</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <span class="name">Frame</span><span class="params">(<span name="size">size: <a href="Size.html" class="extype" name="doodle.java2d.effect.Size">Size</a></span>, <span name="title">title: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">&quot;Doodle&quot;</span></span>, <span name="center">center: <a href="Center.html" class="extype" name="doodle.java2d.effect.Center">Center</a></span>, <span name="background">background: <span class="extype" name="scala.Option">Option</span>[<a href="../../core/Color.html" class="extype" name="doodle.core.Color">Color</a>] = <span class="symbol">None</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
 
@@ -234,9 +242,9 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="doodle.java2d.effect.Frame#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(size:doodle.java2d.effect.Size,title:String,background:Option[doodle.core.Color]):doodle.java2d.effect.Frame"></a><a id="&lt;init&gt;:Frame"></a>
+      <a id="&lt;init&gt;(size:doodle.java2d.effect.Size,title:String,center:doodle.java2d.effect.Center,background:Option[doodle.core.Color]):doodle.java2d.effect.Frame"></a><a id="&lt;init&gt;:Frame"></a>
       <span class="permalink">
-      <a href="../../../doodle/java2d/effect/Frame.html#&lt;init&gt;(size:doodle.java2d.effect.Size,title:String,background:Option[doodle.core.Color]):doodle.java2d.effect.Frame" title="Permalink">
+      <a href="../../../doodle/java2d/effect/Frame.html#&lt;init&gt;(size:doodle.java2d.effect.Size,title:String,center:doodle.java2d.effect.Center,background:Option[doodle.core.Color]):doodle.java2d.effect.Frame" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -245,7 +253,7 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">Frame</span><span class="params">(<span name="size">size: <a href="Size.html" class="extype" name="doodle.java2d.effect.Size">Size</a></span>, <span name="title">title: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">&quot;&quot;</span></span>, <span name="background">background: <span class="extype" name="scala.Option">Option</span>[<a href="../../core/Color.html" class="extype" name="doodle.core.Color">Color</a>] = <span class="symbol">None</span></span>)</span>
+        <span class="name">Frame</span><span class="params">(<span name="size">size: <a href="Size.html" class="extype" name="doodle.java2d.effect.Size">Size</a></span>, <span name="title">title: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">&quot;Doodle&quot;</span></span>, <span name="center">center: <a href="Center.html" class="extype" name="doodle.java2d.effect.Center">Center</a></span>, <span name="background">background: <span class="extype" name="scala.Option">Option</span>[<a href="../../core/Color.html" class="extype" name="doodle.core.Color">Color</a>] = <span class="symbol">None</span></span>)</span>
       </span>
       
       
@@ -352,6 +360,54 @@
       </span>
       <span class="symbol">
         <span class="name">background</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<a href="../../core/Color.html" class="extype" name="doodle.core.Color">Color</a>]</span>
+      </span>
+      
+      
+    </li><li name="doodle.java2d.effect.Frame#center" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="center:doodle.java2d.effect.Center"></a><a id="center:Center"></a>
+      <span class="permalink">
+      <a href="../../../doodle/java2d/effect/Frame.html#center:doodle.java2d.effect.Center" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">center</span><span class="result">: <a href="Center.html" class="extype" name="doodle.java2d.effect.Center">Center</a></span>
+      </span>
+      
+      
+    </li><li name="doodle.java2d.effect.Frame#centerAtOrigin" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="centerAtOrigin:doodle.java2d.effect.Frame"></a><a id="centerAtOrigin:Frame"></a>
+      <span class="permalink">
+      <a href="../../../doodle/java2d/effect/Frame.html#centerAtOrigin:doodle.java2d.effect.Frame" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">centerAtOrigin</span><span class="result">: <a href="" class="extype" name="doodle.java2d.effect.Frame">Frame</a></span>
+      </span>
+      
+      
+    </li><li name="doodle.java2d.effect.Frame#centerOnPicture" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="centerOnPicture:doodle.java2d.effect.Frame"></a><a id="centerOnPicture:Frame"></a>
+      <span class="permalink">
+      <a href="../../../doodle/java2d/effect/Frame.html#centerOnPicture:doodle.java2d.effect.Frame" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">centerOnPicture</span><span class="result">: <a href="" class="extype" name="doodle.java2d.effect.Frame">Frame</a></span>
       </span>
       
       

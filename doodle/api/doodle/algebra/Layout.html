@@ -119,12 +119,12 @@
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="doodle.algebra">algebra</a></dd></dl></div>
     </li><li class="current-entities indented2">
                         <span class="separator"></span>
+                        <a class="trait" href="Algebra.html" title="Base type for algebras that produce results in some effect type F."></a>
+                        <a href="Algebra.html" title="Base type for algebras that produce results in some effect type F.">Algebra</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
                         <a class="trait" href="Blend.html" title="Algebra describing color blending modes."></a>
                         <a href="Blend.html" title="Algebra describing color blending modes.">Blend</a>
-                      </li><li class="current-entities indented2">
-                        <a class="object" href="Image$.html" title=""></a>
-                        <a class="trait" href="Image.html" title=""></a>
-                        <a href="Image.html" title="">Image</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
                         <a class="trait" href="" title=""></a>
@@ -133,6 +133,10 @@
                         <span class="separator"></span>
                         <a class="trait" href="Path.html" title=""></a>
                         <a href="Path.html" title="">Path</a>
+                      </li><li class="current-entities indented2">
+                        <a class="object" href="Picture$.html" title=""></a>
+                        <a class="trait" href="Picture.html" title=""></a>
+                        <a href="Picture.html" title="">Picture</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
                         <a class="trait" href="Shape.html" title="Higher level shape primitives."></a>
@@ -168,7 +172,7 @@
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <span class="name">Layout</span><span class="tparams">[<span name="F">F<span class="tparams">[<span name="_">_</span>]</span></span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+        <span class="name">Layout</span><span class="tparams">[<span name="F">F<span class="tparams">[<span name="_">_</span>]</span></span>]</span><span class="result"> extends <a href="Algebra.html" class="extype" name="doodle.algebra.Algebra">Algebra</a>[<span class="extype" name="doodle.algebra.Layout.F">F</span>]</span>
       </span>
       </h4>
 
@@ -177,12 +181,12 @@
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><a href="Algebra.html" class="extype" name="doodle.algebra.Algebra">Algebra</a>[<span class="extype" name="doodle.algebra.Layout.F">F</span>], <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div><div class="toggleContainer block">
             <span class="toggle">
               Known Subclasses
             </span>
-            <div class="subClasses hiddenContent"><a href="generic/GenericLayout.html" class="extype" name="doodle.algebra.generic.GenericLayout">GenericLayout</a>, <a href="../java2d/algebra/Algebra.html" class="extype" name="doodle.java2d.algebra.Algebra">Algebra</a>, <a href="../java2d/algebra/Layout.html" class="extype" name="doodle.java2d.algebra.Layout">Layout</a>, <a href="../language/Basic.html" class="extype" name="doodle.language.Basic">Basic</a>, <a href="../svg/algebra/Algebra$.html" class="extype" name="doodle.svg.algebra.Algebra">Algebra</a></div>
+            <div class="subClasses hiddenContent"><a href="generic/GenericLayout.html" class="extype" name="doodle.algebra.generic.GenericLayout">GenericLayout</a>, <a href="../java2d/algebra/Algebra.html" class="extype" name="doodle.java2d.algebra.Algebra">Algebra</a>, <a href="../language/Basic.html" class="extype" name="doodle.language.Basic">Basic</a>, <a href="../svg/algebra/Algebra$.html" class="extype" name="doodle.svg.algebra.Algebra">Algebra</a></div>
           </div></div>
         
 
@@ -208,7 +212,7 @@
                   <span class="filtertype">Inherited<br />
                   </span>
                   <ol id="linearization">
-                    <li class="in" name="doodle.algebra.Layout"><span>Layout</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                    <li class="in" name="doodle.algebra.Layout"><span>Layout</span></li><li class="in" name="doodle.algebra.Algebra"><span>Algebra</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                   </ol>
                 </div><div class="ancestors">
               <span class="filtertype"></span>
@@ -233,9 +237,9 @@
         <div class="values members">
               <h3>Abstract Value Members</h3>
               <ol><li name="doodle.algebra.Layout#above" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="above[A](top:F[A],bottom:F[A])(implicitevidence$3:cats.Semigroup[A]):F[A]"></a><a id="above[A](F[A],F[A])(Semigroup[A]):F[A]"></a>
+      <a id="above[A](top:F[A],bottom:F[A])(implicits:cats.Semigroup[A]):F[A]"></a><a id="above[A](F[A],F[A])(Semigroup[A]):F[A]"></a>
       <span class="permalink">
-      <a href="../../doodle/algebra/Layout.html#above[A](top:F[A],bottom:F[A])(implicitevidence$3:cats.Semigroup[A]):F[A]" title="Permalink">
+      <a href="../../doodle/algebra/Layout.html#above[A](top:F[A],bottom:F[A])(implicits:cats.Semigroup[A]):F[A]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -244,7 +248,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">above</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="top">top: <span class="extype" name="doodle.algebra.Layout.F">F</span>[<span class="extype" name="doodle.algebra.Layout.above.A">A</span>]</span>, <span name="bottom">bottom: <span class="extype" name="doodle.algebra.Layout.F">F</span>[<span class="extype" name="doodle.algebra.Layout.above.A">A</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <span class="extype" name="cats.Semigroup">Semigroup</span>[<span class="extype" name="doodle.algebra.Layout.above.A">A</span>]</span>)</span><span class="result">: <span class="extype" name="doodle.algebra.Layout.F">F</span>[<span class="extype" name="doodle.algebra.Layout.above.A">A</span>]</span>
+        <span class="name">above</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="top">top: <span class="extype" name="doodle.algebra.Layout.F">F</span>[<span class="extype" name="doodle.algebra.Layout.above.A">A</span>]</span>, <span name="bottom">bottom: <span class="extype" name="doodle.algebra.Layout.F">F</span>[<span class="extype" name="doodle.algebra.Layout.above.A">A</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="s">s: <span class="extype" name="cats.Semigroup">Semigroup</span>[<span class="extype" name="doodle.algebra.Layout.above.A">A</span>]</span>)</span><span class="result">: <span class="extype" name="doodle.algebra.Layout.F">F</span>[<span class="extype" name="doodle.algebra.Layout.above.A">A</span>]</span>
       </span>
       
       
@@ -265,9 +269,9 @@
       
       
     </li><li name="doodle.algebra.Layout#beside" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="beside[A](left:F[A],right:F[A])(implicitevidence$2:cats.Semigroup[A]):F[A]"></a><a id="beside[A](F[A],F[A])(Semigroup[A]):F[A]"></a>
+      <a id="beside[A](left:F[A],right:F[A])(implicits:cats.Semigroup[A]):F[A]"></a><a id="beside[A](F[A],F[A])(Semigroup[A]):F[A]"></a>
       <span class="permalink">
-      <a href="../../doodle/algebra/Layout.html#beside[A](left:F[A],right:F[A])(implicitevidence$2:cats.Semigroup[A]):F[A]" title="Permalink">
+      <a href="../../doodle/algebra/Layout.html#beside[A](left:F[A],right:F[A])(implicits:cats.Semigroup[A]):F[A]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -276,14 +280,14 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">beside</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="left">left: <span class="extype" name="doodle.algebra.Layout.F">F</span>[<span class="extype" name="doodle.algebra.Layout.beside.A">A</span>]</span>, <span name="right">right: <span class="extype" name="doodle.algebra.Layout.F">F</span>[<span class="extype" name="doodle.algebra.Layout.beside.A">A</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <span class="extype" name="cats.Semigroup">Semigroup</span>[<span class="extype" name="doodle.algebra.Layout.beside.A">A</span>]</span>)</span><span class="result">: <span class="extype" name="doodle.algebra.Layout.F">F</span>[<span class="extype" name="doodle.algebra.Layout.beside.A">A</span>]</span>
+        <span class="name">beside</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="left">left: <span class="extype" name="doodle.algebra.Layout.F">F</span>[<span class="extype" name="doodle.algebra.Layout.beside.A">A</span>]</span>, <span name="right">right: <span class="extype" name="doodle.algebra.Layout.F">F</span>[<span class="extype" name="doodle.algebra.Layout.beside.A">A</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="s">s: <span class="extype" name="cats.Semigroup">Semigroup</span>[<span class="extype" name="doodle.algebra.Layout.beside.A">A</span>]</span>)</span><span class="result">: <span class="extype" name="doodle.algebra.Layout.F">F</span>[<span class="extype" name="doodle.algebra.Layout.beside.A">A</span>]</span>
       </span>
       
       
     </li><li name="doodle.algebra.Layout#on" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="on[A](top:F[A],bottom:F[A])(implicitevidence$1:cats.Semigroup[A]):F[A]"></a><a id="on[A](F[A],F[A])(Semigroup[A]):F[A]"></a>
+      <a id="on[A](top:F[A],bottom:F[A])(implicits:cats.Semigroup[A]):F[A]"></a><a id="on[A](F[A],F[A])(Semigroup[A]):F[A]"></a>
       <span class="permalink">
-      <a href="../../doodle/algebra/Layout.html#on[A](top:F[A],bottom:F[A])(implicitevidence$1:cats.Semigroup[A]):F[A]" title="Permalink">
+      <a href="../../doodle/algebra/Layout.html#on[A](top:F[A],bottom:F[A])(implicits:cats.Semigroup[A]):F[A]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -292,7 +296,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">on</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="top">top: <span class="extype" name="doodle.algebra.Layout.F">F</span>[<span class="extype" name="doodle.algebra.Layout.on.A">A</span>]</span>, <span name="bottom">bottom: <span class="extype" name="doodle.algebra.Layout.F">F</span>[<span class="extype" name="doodle.algebra.Layout.on.A">A</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <span class="extype" name="cats.Semigroup">Semigroup</span>[<span class="extype" name="doodle.algebra.Layout.on.A">A</span>]</span>)</span><span class="result">: <span class="extype" name="doodle.algebra.Layout.F">F</span>[<span class="extype" name="doodle.algebra.Layout.on.A">A</span>]</span>
+        <span class="name">on</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="top">top: <span class="extype" name="doodle.algebra.Layout.F">F</span>[<span class="extype" name="doodle.algebra.Layout.on.A">A</span>]</span>, <span name="bottom">bottom: <span class="extype" name="doodle.algebra.Layout.F">F</span>[<span class="extype" name="doodle.algebra.Layout.on.A">A</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="s">s: <span class="extype" name="cats.Semigroup">Semigroup</span>[<span class="extype" name="doodle.algebra.Layout.on.A">A</span>]</span>)</span><span class="result">: <span class="extype" name="doodle.algebra.Layout.F">F</span>[<span class="extype" name="doodle.algebra.Layout.on.A">A</span>]</span>
       </span>
       
       
@@ -399,9 +403,9 @@
       
       
     </li><li name="doodle.algebra.Layout#below" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="below[A](bottom:F[A],top:F[A])(implicitevidence$5:cats.Semigroup[A]):F[A]"></a><a id="below[A](F[A],F[A])(Semigroup[A]):F[A]"></a>
+      <a id="below[A](bottom:F[A],top:F[A])(implicits:cats.Semigroup[A]):F[A]"></a><a id="below[A](F[A],F[A])(Semigroup[A]):F[A]"></a>
       <span class="permalink">
-      <a href="../../doodle/algebra/Layout.html#below[A](bottom:F[A],top:F[A])(implicitevidence$5:cats.Semigroup[A]):F[A]" title="Permalink">
+      <a href="../../doodle/algebra/Layout.html#below[A](bottom:F[A],top:F[A])(implicits:cats.Semigroup[A]):F[A]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -410,7 +414,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">below</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="bottom">bottom: <span class="extype" name="doodle.algebra.Layout.F">F</span>[<span class="extype" name="doodle.algebra.Layout.below.A">A</span>]</span>, <span name="top">top: <span class="extype" name="doodle.algebra.Layout.F">F</span>[<span class="extype" name="doodle.algebra.Layout.below.A">A</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <span class="extype" name="cats.Semigroup">Semigroup</span>[<span class="extype" name="doodle.algebra.Layout.below.A">A</span>]</span>)</span><span class="result">: <span class="extype" name="doodle.algebra.Layout.F">F</span>[<span class="extype" name="doodle.algebra.Layout.below.A">A</span>]</span>
+        <span class="name">below</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="bottom">bottom: <span class="extype" name="doodle.algebra.Layout.F">F</span>[<span class="extype" name="doodle.algebra.Layout.below.A">A</span>]</span>, <span name="top">top: <span class="extype" name="doodle.algebra.Layout.F">F</span>[<span class="extype" name="doodle.algebra.Layout.below.A">A</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="s">s: <span class="extype" name="cats.Semigroup">Semigroup</span>[<span class="extype" name="doodle.algebra.Layout.below.A">A</span>]</span>)</span><span class="result">: <span class="extype" name="doodle.algebra.Layout.F">F</span>[<span class="extype" name="doodle.algebra.Layout.below.A">A</span>]</span>
       </span>
       
       
@@ -621,9 +625,9 @@
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="doodle.algebra.Layout#under" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="under[A](bottom:F[A],top:F[A])(implicitevidence$4:cats.Semigroup[A]):F[A]"></a><a id="under[A](F[A],F[A])(Semigroup[A]):F[A]"></a>
+      <a id="under[A](bottom:F[A],top:F[A])(implicits:cats.Semigroup[A]):F[A]"></a><a id="under[A](F[A],F[A])(Semigroup[A]):F[A]"></a>
       <span class="permalink">
-      <a href="../../doodle/algebra/Layout.html#under[A](bottom:F[A],top:F[A])(implicitevidence$4:cats.Semigroup[A]):F[A]" title="Permalink">
+      <a href="../../doodle/algebra/Layout.html#under[A](bottom:F[A],top:F[A])(implicits:cats.Semigroup[A]):F[A]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -632,7 +636,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">under</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="bottom">bottom: <span class="extype" name="doodle.algebra.Layout.F">F</span>[<span class="extype" name="doodle.algebra.Layout.under.A">A</span>]</span>, <span name="top">top: <span class="extype" name="doodle.algebra.Layout.F">F</span>[<span class="extype" name="doodle.algebra.Layout.under.A">A</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <span class="extype" name="cats.Semigroup">Semigroup</span>[<span class="extype" name="doodle.algebra.Layout.under.A">A</span>]</span>)</span><span class="result">: <span class="extype" name="doodle.algebra.Layout.F">F</span>[<span class="extype" name="doodle.algebra.Layout.under.A">A</span>]</span>
+        <span class="name">under</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="bottom">bottom: <span class="extype" name="doodle.algebra.Layout.F">F</span>[<span class="extype" name="doodle.algebra.Layout.under.A">A</span>]</span>, <span name="top">top: <span class="extype" name="doodle.algebra.Layout.F">F</span>[<span class="extype" name="doodle.algebra.Layout.under.A">A</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="s">s: <span class="extype" name="cats.Semigroup">Semigroup</span>[<span class="extype" name="doodle.algebra.Layout.under.A">A</span>]</span>)</span><span class="result">: <span class="extype" name="doodle.algebra.Layout.F">F</span>[<span class="extype" name="doodle.algebra.Layout.under.A">A</span>]</span>
       </span>
       
       
@@ -743,7 +747,9 @@
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="scala.AnyRef">
+        <div class="parent" name="doodle.algebra.Algebra">
+              <h3>Inherited from <a href="Algebra.html" class="extype" name="doodle.algebra.Algebra">Algebra</a>[<span class="extype" name="doodle.algebra.Layout.F">F</span>]</h3>
+            </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
             </div><div class="parent" name="scala.Any">
               <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>

@@ -118,6 +118,10 @@
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="doodle.java2d">java2d</a></dd></dl></div>
     </li><li class="current-entities indented3">
+                        <a class="object" href="Center$.html" title=""></a>
+                        <a class="class" href="Center.html" title="Determines where the center of the canvas is located."></a>
+                        <a href="Center.html" title="Determines where the center of the canvas is located.">Center</a>
+                      </li><li class="current-entities indented3">
                         <a class="object" href="Frame$.html" title=""></a>
                         <a class="class" href="Frame.html" title=""></a>
                         <a href="Frame.html" title="">Frame</a>
@@ -129,6 +133,10 @@
                         <a class="object" href="Java2DPanel$.html" title=""></a>
                         <a class="class" href="Java2DPanel.html" title=""></a>
                         <a href="Java2DPanel.html" title="">Java2DPanel</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="object" href="Java2d$.html" title="Utilities for rendering with Java2D"></a>
+                        <a href="Java2d$.html" title="Utilities for rendering with Java2D">Java2d</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
                         <a class="object" href="Java2dGifWriter$.html" title=""></a>
@@ -146,7 +154,7 @@
                         <a class="object" href="Java2dRenderer$.html" title=""></a>
                         <a href="Java2dRenderer$.html" title="">Java2dRenderer</a>
                       </li><li class="current-entities indented3">
-                        <span class="separator"></span>
+                        <a class="object" href="Java2dWriter$.html" title=""></a>
                         <a class="trait" href="Java2dWriter.html" title=""></a>
                         <a href="Java2dWriter.html" title="">Java2dWriter</a>
                       </li><li class="current-entities indented3">
@@ -185,7 +193,7 @@
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><a href="Java2dWriter.html" class="extype" name="doodle.java2d.effect.Java2dWriter">Java2dWriter</a>[<a href="../../effect/Writer$$Png.html" class="extype" name="doodle.effect.Writer.Png">Png</a>], <a href="../../effect/Writer.html" class="extype" name="doodle.effect.Writer">Writer</a>[<a href="../algebra/Algebra.html" class="extype" name="doodle.java2d.algebra.Algebra">algebra.Algebra</a>, <a href="../index.html#Drawing[A]=doodle.algebra.generic.Finalized[A]" class="extmbr" name="doodle.java2d.Drawing">Drawing</a>, <a href="Frame.html" class="extype" name="doodle.java2d.effect.Frame">Frame</a>, <a href="../../effect/Writer$$Png.html" class="extype" name="doodle.effect.Writer.Png">Png</a>], <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><a href="Java2dWriter.html" class="extype" name="doodle.java2d.effect.Java2dWriter">Java2dWriter</a>[<a href="../../effect/Writer$$Png.html" class="extype" name="doodle.effect.Writer.Png">Png</a>], <a href="../../effect/Writer.html" class="extype" name="doodle.effect.Writer">Writer</a>[<a href="../index.html#Algebra[F[_]]=doodle.algebra.Algebra[F]withdoodle.language.Basic[F]" class="extmbr" name="doodle.java2d.Algebra">Algebra</a>, <a href="../index.html#Drawing[A]=doodle.algebra.generic.Finalized[doodle.algebra.generic.reified.Reification,A]" class="extmbr" name="doodle.java2d.Drawing">Drawing</a>, <a href="Frame.html" class="extype" name="doodle.java2d.effect.Frame">Frame</a>, <a href="../../effect/Writer$$Png.html" class="extype" name="doodle.effect.Writer.Png">Png</a>], <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -593,9 +601,9 @@
               
         </dd></dl></div>
     </li><li name="doodle.java2d.effect.Java2dWriter#write" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="write[A,Alg&gt;:doodle.java2d.algebra.Algebra](file:java.io.File,frame:doodle.java2d.effect.Frame,image:doodle.algebra.Image[Alg,doodle.java2d.Drawing,A]):cats.effect.IO[A]"></a><a id="write[A,Alg&gt;:algebra.Algebra](File,Frame,algebra.Image[Alg,Drawing,A]):IO[A]"></a>
+      <a id="write[A](file:java.io.File,frame:doodle.java2d.effect.Frame,picture:doodle.java2d.Picture[A]):cats.effect.IO[A]"></a><a id="write[A](File,Frame,Picture[A]):IO[A]"></a>
       <span class="permalink">
-      <a href="../../../doodle/java2d/effect/Java2dPngWriter$.html#write[A,Alg&gt;:doodle.java2d.algebra.Algebra](file:java.io.File,frame:doodle.java2d.effect.Frame,image:doodle.algebra.Image[Alg,doodle.java2d.Drawing,A]):cats.effect.IO[A]" title="Permalink">
+      <a href="../../../doodle/java2d/effect/Java2dPngWriter$.html#write[A](file:java.io.File,frame:doodle.java2d.effect.Frame,picture:doodle.java2d.Picture[A]):cats.effect.IO[A]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -604,14 +612,14 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">write</span><span class="tparams">[<span name="A">A</span>, <span name="Alg">Alg &gt;: <a href="../algebra/Algebra.html" class="extype" name="doodle.java2d.algebra.Algebra">algebra.Algebra</a></span>]</span><span class="params">(<span name="file">file: <span class="extype" name="java.io.File">File</span></span>, <span name="frame">frame: <a href="Frame.html" class="extype" name="doodle.java2d.effect.Frame">Frame</a></span>, <span name="image">image: <a href="../../algebra/Image.html" class="extype" name="doodle.algebra.Image">algebra.Image</a>[<span class="extype" name="doodle.java2d.effect.Java2dWriter.write.Alg">Alg</span>, <a href="../index.html#Drawing[A]=doodle.algebra.generic.Finalized[A]" class="extmbr" name="doodle.java2d.Drawing">Drawing</a>, <span class="extype" name="doodle.java2d.effect.Java2dWriter.write.A">A</span>]</span>)</span><span class="result">: <span class="extype" name="cats.effect.IO">IO</span>[<span class="extype" name="doodle.java2d.effect.Java2dWriter.write.A">A</span>]</span>
+        <span class="name">write</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="file">file: <span class="extype" name="java.io.File">File</span></span>, <span name="frame">frame: <a href="Frame.html" class="extype" name="doodle.java2d.effect.Frame">Frame</a></span>, <span name="picture">picture: <a href="../index.html#Picture[A]=doodle.algebra.Picture[doodle.java2d.package.Algebra,doodle.java2d.package.Drawing,A]" class="extmbr" name="doodle.java2d.Picture">Picture</a>[<span class="extype" name="doodle.java2d.effect.Java2dWriter.write.A">A</span>]</span>)</span><span class="result">: <span class="extype" name="cats.effect.IO">IO</span>[<span class="extype" name="doodle.java2d.effect.Java2dWriter.write.A">A</span>]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Java2dWriter.html" class="extype" name="doodle.java2d.effect.Java2dWriter">Java2dWriter</a> → <a href="../../effect/Writer.html" class="extype" name="doodle.effect.Writer">Writer</a></dd></dl></div>
     </li><li name="doodle.java2d.effect.Java2dWriter#write" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="write[A,Alg&gt;:doodle.java2d.algebra.Algebra](file:java.io.File,image:doodle.algebra.Image[Alg,doodle.java2d.Drawing,A]):cats.effect.IO[A]"></a><a id="write[A,Alg&gt;:algebra.Algebra](File,algebra.Image[Alg,Drawing,A]):IO[A]"></a>
+      <a id="write[A](file:java.io.File,picture:doodle.java2d.Picture[A]):cats.effect.IO[A]"></a><a id="write[A](File,Picture[A]):IO[A]"></a>
       <span class="permalink">
-      <a href="../../../doodle/java2d/effect/Java2dPngWriter$.html#write[A,Alg&gt;:doodle.java2d.algebra.Algebra](file:java.io.File,image:doodle.algebra.Image[Alg,doodle.java2d.Drawing,A]):cats.effect.IO[A]" title="Permalink">
+      <a href="../../../doodle/java2d/effect/Java2dPngWriter$.html#write[A](file:java.io.File,picture:doodle.java2d.Picture[A]):cats.effect.IO[A]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -620,7 +628,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">write</span><span class="tparams">[<span name="A">A</span>, <span name="Alg">Alg &gt;: <a href="../algebra/Algebra.html" class="extype" name="doodle.java2d.algebra.Algebra">algebra.Algebra</a></span>]</span><span class="params">(<span name="file">file: <span class="extype" name="java.io.File">File</span></span>, <span name="image">image: <a href="../../algebra/Image.html" class="extype" name="doodle.algebra.Image">algebra.Image</a>[<span class="extype" name="doodle.java2d.effect.Java2dWriter.write.Alg">Alg</span>, <a href="../index.html#Drawing[A]=doodle.algebra.generic.Finalized[A]" class="extmbr" name="doodle.java2d.Drawing">Drawing</a>, <span class="extype" name="doodle.java2d.effect.Java2dWriter.write.A">A</span>]</span>)</span><span class="result">: <span class="extype" name="cats.effect.IO">IO</span>[<span class="extype" name="doodle.java2d.effect.Java2dWriter.write.A">A</span>]</span>
+        <span class="name">write</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="file">file: <span class="extype" name="java.io.File">File</span></span>, <span name="picture">picture: <a href="../index.html#Picture[A]=doodle.algebra.Picture[doodle.java2d.package.Algebra,doodle.java2d.package.Drawing,A]" class="extmbr" name="doodle.java2d.Picture">Picture</a>[<span class="extype" name="doodle.java2d.effect.Java2dWriter.write.A">A</span>]</span>)</span><span class="result">: <span class="extype" name="cats.effect.IO">IO</span>[<span class="extype" name="doodle.java2d.effect.Java2dWriter.write.A">A</span>]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Java2dWriter.html" class="extype" name="doodle.java2d.effect.Java2dWriter">Java2dWriter</a> → <a href="../../effect/Writer.html" class="extype" name="doodle.effect.Writer">Writer</a></dd></dl></div>
@@ -666,7 +674,7 @@
         <div class="parent" name="doodle.java2d.effect.Java2dWriter">
               <h3>Inherited from <a href="Java2dWriter.html" class="extype" name="doodle.java2d.effect.Java2dWriter">Java2dWriter</a>[<a href="../../effect/Writer$$Png.html" class="extype" name="doodle.effect.Writer.Png">Png</a>]</h3>
             </div><div class="parent" name="doodle.effect.Writer">
-              <h3>Inherited from <a href="../../effect/Writer.html" class="extype" name="doodle.effect.Writer">Writer</a>[<a href="../algebra/Algebra.html" class="extype" name="doodle.java2d.algebra.Algebra">algebra.Algebra</a>, <a href="../index.html#Drawing[A]=doodle.algebra.generic.Finalized[A]" class="extmbr" name="doodle.java2d.Drawing">Drawing</a>, <a href="Frame.html" class="extype" name="doodle.java2d.effect.Frame">Frame</a>, <a href="../../effect/Writer$$Png.html" class="extype" name="doodle.effect.Writer.Png">Png</a>]</h3>
+              <h3>Inherited from <a href="../../effect/Writer.html" class="extype" name="doodle.effect.Writer">Writer</a>[<a href="../index.html#Algebra[F[_]]=doodle.algebra.Algebra[F]withdoodle.language.Basic[F]" class="extmbr" name="doodle.java2d.Algebra">Algebra</a>, <a href="../index.html#Drawing[A]=doodle.algebra.generic.Finalized[doodle.algebra.generic.reified.Reification,A]" class="extmbr" name="doodle.java2d.Drawing">Drawing</a>, <a href="Frame.html" class="extype" name="doodle.java2d.effect.Frame">Frame</a>, <a href="../../effect/Writer$$Png.html" class="extype" name="doodle.effect.Writer.Png">Png</a>]</h3>
             </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
             </div><div class="parent" name="scala.Any">

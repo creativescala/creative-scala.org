@@ -152,7 +152,7 @@
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <span class="name">SvgWriter</span><span class="result"> extends <a href="../../effect/Writer.html" class="extype" name="doodle.effect.Writer">Writer</a>[<a href="../algebra/Algebra$.html" class="extype" name="doodle.svg.algebra.Algebra">Algebra</a>.type, <a href="../index.html#Drawing[A]=doodle.algebra.generic.Finalized[A]" class="extmbr" name="doodle.svg.Drawing">Drawing</a>, <a href="../index.html#SvgFrame=Unit" class="extmbr" name="doodle.svg.SvgFrame">SvgFrame</a>, <a href="../../effect/Writer$$Svg.html" class="extype" name="doodle.effect.Writer.Svg">effect.Writer.Svg</a>]</span>
+        <span class="name">SvgWriter</span><span class="result"> extends <a href="../../effect/Writer.html" class="extype" name="doodle.effect.Writer">Writer</a>[<a href="../index.html#Algebra[F[_]]=doodle.algebra.Algebra[F]withdoodle.language.Basic[F]" class="extmbr" name="doodle.svg.Algebra">Algebra</a>, <a href="../index.html#Drawing[A]=doodle.algebra.generic.Finalized[doodle.algebra.generic.reified.Reification,A]" class="extmbr" name="doodle.svg.Drawing">Drawing</a>, <a href="../index.html#SvgFrame=Unit" class="extmbr" name="doodle.svg.SvgFrame">SvgFrame</a>, <a href="../../effect/Writer$$Svg.html" class="extype" name="doodle.effect.Writer.Svg">effect.Writer.Svg</a>]</span>
       </span>
       </h4>
 
@@ -161,7 +161,7 @@
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><a href="../../effect/Writer.html" class="extype" name="doodle.effect.Writer">Writer</a>[<a href="../algebra/Algebra$.html" class="extype" name="doodle.svg.algebra.Algebra">Algebra</a>.type, <a href="../index.html#Drawing[A]=doodle.algebra.generic.Finalized[A]" class="extmbr" name="doodle.svg.Drawing">Drawing</a>, <a href="../index.html#SvgFrame=Unit" class="extmbr" name="doodle.svg.SvgFrame">SvgFrame</a>, <a href="../../effect/Writer$$Svg.html" class="extype" name="doodle.effect.Writer.Svg">effect.Writer.Svg</a>], <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><a href="../../effect/Writer.html" class="extype" name="doodle.effect.Writer">Writer</a>[<a href="../index.html#Algebra[F[_]]=doodle.algebra.Algebra[F]withdoodle.language.Basic[F]" class="extmbr" name="doodle.svg.Algebra">Algebra</a>, <a href="../index.html#Drawing[A]=doodle.algebra.generic.Finalized[doodle.algebra.generic.reified.Reification,A]" class="extmbr" name="doodle.svg.Drawing">Drawing</a>, <a href="../index.html#SvgFrame=Unit" class="extmbr" name="doodle.svg.SvgFrame">SvgFrame</a>, <a href="../../effect/Writer$$Svg.html" class="extype" name="doodle.effect.Writer.Svg">effect.Writer.Svg</a>], <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -569,9 +569,9 @@
               
         </dd></dl></div>
     </li><li name="doodle.svg.effect.SvgWriter#write" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="write[A,Alg&gt;:doodle.svg.algebra.Algebra.type](file:java.io.File,image:doodle.algebra.Image[Alg,doodle.svg.Drawing,A]):cats.effect.IO[A]"></a><a id="write[A,Alg&gt;:Algebra.type](File,algebra.Image[Alg,Drawing,A]):IO[A]"></a>
+      <a id="write[A](file:java.io.File,picture:doodle.algebra.Picture[doodle.svg.Algebra,doodle.svg.Drawing,A]):cats.effect.IO[A]"></a><a id="write[A](File,algebra.Picture[Algebra,Drawing,A]):IO[A]"></a>
       <span class="permalink">
-      <a href="../../../doodle/svg/effect/SvgWriter$.html#write[A,Alg&gt;:doodle.svg.algebra.Algebra.type](file:java.io.File,image:doodle.algebra.Image[Alg,doodle.svg.Drawing,A]):cats.effect.IO[A]" title="Permalink">
+      <a href="../../../doodle/svg/effect/SvgWriter$.html#write[A](file:java.io.File,picture:doodle.algebra.Picture[doodle.svg.Algebra,doodle.svg.Drawing,A]):cats.effect.IO[A]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -580,14 +580,14 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">write</span><span class="tparams">[<span name="A">A</span>, <span name="Alg">Alg &gt;: <a href="../algebra/Algebra$.html" class="extype" name="doodle.svg.algebra.Algebra">Algebra</a>.type</span>]</span><span class="params">(<span name="file">file: <span class="extype" name="java.io.File">File</span></span>, <span name="image">image: <a href="../../algebra/Image.html" class="extype" name="doodle.algebra.Image">algebra.Image</a>[<span class="extype" name="doodle.svg.effect.SvgWriter.write.Alg">Alg</span>, <a href="../index.html#Drawing[A]=doodle.algebra.generic.Finalized[A]" class="extmbr" name="doodle.svg.Drawing">Drawing</a>, <span class="extype" name="doodle.svg.effect.SvgWriter.write.A">A</span>]</span>)</span><span class="result">: <span class="extype" name="cats.effect.IO">IO</span>[<span class="extype" name="doodle.svg.effect.SvgWriter.write.A">A</span>]</span>
+        <span class="name">write</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="file">file: <span class="extype" name="java.io.File">File</span></span>, <span name="picture">picture: <a href="../../algebra/Picture.html" class="extype" name="doodle.algebra.Picture">algebra.Picture</a>[<a href="../index.html#Algebra[F[_]]=doodle.algebra.Algebra[F]withdoodle.language.Basic[F]" class="extmbr" name="doodle.svg.Algebra">Algebra</a>, <a href="../index.html#Drawing[A]=doodle.algebra.generic.Finalized[doodle.algebra.generic.reified.Reification,A]" class="extmbr" name="doodle.svg.Drawing">Drawing</a>, <span class="extype" name="doodle.svg.effect.SvgWriter.write.A">A</span>]</span>)</span><span class="result">: <span class="extype" name="cats.effect.IO">IO</span>[<span class="extype" name="doodle.svg.effect.SvgWriter.write.A">A</span>]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="doodle.svg.effect.SvgWriter">SvgWriter</a> → <a href="../../effect/Writer.html" class="extype" name="doodle.effect.Writer">Writer</a></dd></dl></div>
     </li><li name="doodle.svg.effect.SvgWriter#write" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="write[A,Alg&gt;:doodle.svg.algebra.Algebra.type](file:java.io.File,description:doodle.svg.SvgFrame,image:doodle.algebra.Image[Alg,doodle.svg.Drawing,A]):cats.effect.IO[A]"></a><a id="write[A,Alg&gt;:Algebra.type](File,SvgFrame,algebra.Image[Alg,Drawing,A]):IO[A]"></a>
+      <a id="write[A](file:java.io.File,description:doodle.svg.SvgFrame,picture:doodle.algebra.Picture[doodle.svg.Algebra,doodle.svg.Drawing,A]):cats.effect.IO[A]"></a><a id="write[A](File,SvgFrame,algebra.Picture[Algebra,Drawing,A]):IO[A]"></a>
       <span class="permalink">
-      <a href="../../../doodle/svg/effect/SvgWriter$.html#write[A,Alg&gt;:doodle.svg.algebra.Algebra.type](file:java.io.File,description:doodle.svg.SvgFrame,image:doodle.algebra.Image[Alg,doodle.svg.Drawing,A]):cats.effect.IO[A]" title="Permalink">
+      <a href="../../../doodle/svg/effect/SvgWriter$.html#write[A](file:java.io.File,description:doodle.svg.SvgFrame,picture:doodle.algebra.Picture[doodle.svg.Algebra,doodle.svg.Drawing,A]):cats.effect.IO[A]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -596,7 +596,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">write</span><span class="tparams">[<span name="A">A</span>, <span name="Alg">Alg &gt;: <a href="../algebra/Algebra$.html" class="extype" name="doodle.svg.algebra.Algebra">Algebra</a>.type</span>]</span><span class="params">(<span name="file">file: <span class="extype" name="java.io.File">File</span></span>, <span name="description">description: <a href="../index.html#SvgFrame=Unit" class="extmbr" name="doodle.svg.SvgFrame">SvgFrame</a></span>, <span name="image">image: <a href="../../algebra/Image.html" class="extype" name="doodle.algebra.Image">algebra.Image</a>[<span class="extype" name="doodle.svg.effect.SvgWriter.write.Alg">Alg</span>, <a href="../index.html#Drawing[A]=doodle.algebra.generic.Finalized[A]" class="extmbr" name="doodle.svg.Drawing">Drawing</a>, <span class="extype" name="doodle.svg.effect.SvgWriter.write.A">A</span>]</span>)</span><span class="result">: <span class="extype" name="cats.effect.IO">IO</span>[<span class="extype" name="doodle.svg.effect.SvgWriter.write.A">A</span>]</span>
+        <span class="name">write</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="file">file: <span class="extype" name="java.io.File">File</span></span>, <span name="description">description: <a href="../index.html#SvgFrame=Unit" class="extmbr" name="doodle.svg.SvgFrame">SvgFrame</a></span>, <span name="picture">picture: <a href="../../algebra/Picture.html" class="extype" name="doodle.algebra.Picture">algebra.Picture</a>[<a href="../index.html#Algebra[F[_]]=doodle.algebra.Algebra[F]withdoodle.language.Basic[F]" class="extmbr" name="doodle.svg.Algebra">Algebra</a>, <a href="../index.html#Drawing[A]=doodle.algebra.generic.Finalized[doodle.algebra.generic.reified.Reification,A]" class="extmbr" name="doodle.svg.Drawing">Drawing</a>, <span class="extype" name="doodle.svg.effect.SvgWriter.write.A">A</span>]</span>)</span><span class="result">: <span class="extype" name="cats.effect.IO">IO</span>[<span class="extype" name="doodle.svg.effect.SvgWriter.write.A">A</span>]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="doodle.svg.effect.SvgWriter">SvgWriter</a> → <a href="../../effect/Writer.html" class="extype" name="doodle.effect.Writer">Writer</a></dd></dl></div>
@@ -640,7 +640,7 @@
 
         <div id="inheritedMembers">
         <div class="parent" name="doodle.effect.Writer">
-              <h3>Inherited from <a href="../../effect/Writer.html" class="extype" name="doodle.effect.Writer">Writer</a>[<a href="../algebra/Algebra$.html" class="extype" name="doodle.svg.algebra.Algebra">Algebra</a>.type, <a href="../index.html#Drawing[A]=doodle.algebra.generic.Finalized[A]" class="extmbr" name="doodle.svg.Drawing">Drawing</a>, <a href="../index.html#SvgFrame=Unit" class="extmbr" name="doodle.svg.SvgFrame">SvgFrame</a>, <a href="../../effect/Writer$$Svg.html" class="extype" name="doodle.effect.Writer.Svg">effect.Writer.Svg</a>]</h3>
+              <h3>Inherited from <a href="../../effect/Writer.html" class="extype" name="doodle.effect.Writer">Writer</a>[<a href="../index.html#Algebra[F[_]]=doodle.algebra.Algebra[F]withdoodle.language.Basic[F]" class="extmbr" name="doodle.svg.Algebra">Algebra</a>, <a href="../index.html#Drawing[A]=doodle.algebra.generic.Finalized[doodle.algebra.generic.reified.Reification,A]" class="extmbr" name="doodle.svg.Drawing">Drawing</a>, <a href="../index.html#SvgFrame=Unit" class="extmbr" name="doodle.svg.SvgFrame">SvgFrame</a>, <a href="../../effect/Writer$$Svg.html" class="extype" name="doodle.effect.Writer.Svg">effect.Writer.Svg</a>]</h3>
             </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
             </div><div class="parent" name="scala.Any">
