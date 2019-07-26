@@ -118,6 +118,14 @@
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="doodle.svg">svg</a></dd></dl></div>
     </li><li class="current-entities indented3">
+                        <a class="object" href="Frame$.html" title=""></a>
+                        <a class="class" href="Frame.html" title=""></a>
+                        <a href="Frame.html" title="">Frame</a>
+                      </li><li class="current-entities indented3">
+                        <a class="object" href="Size$.html" title=""></a>
+                        <a class="class" href="Size.html" title=""></a>
+                        <a href="Size.html" title="">Size</a>
+                      </li><li class="current-entities indented3">
                         <a class="object" href="Svg$.html" title=""></a>
                         <a class="class" href="" title=""></a>
                         <a href="" title="">Svg</a>
@@ -154,7 +162,7 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">Svg</span><span class="tparams">[<span name="Builder">Builder</span>, <span name="Output">Output &lt;: <span class="extype" name="doodle.svg.effect.Svg.FragT">FragT</span></span>, <span name="FragT">FragT</span>]</span><span class="params">(<span name="bundle">bundle: <span class="extype" name="scalatags.generic.Bundle">Bundle</span>[<span class="extype" name="doodle.svg.effect.Svg.Builder">Builder</span>, <span class="extype" name="doodle.svg.effect.Svg.Output">Output</span>, <span class="extype" name="doodle.svg.effect.Svg.FragT">FragT</span>]</span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <span class="name">Svg</span><span class="tparams">[<span name="Builder">Builder</span>, <span name="Output">Output &lt;: <span class="extype" name="doodle.svg.effect.Svg.FragT">FragT</span></span>, <span name="FragT">FragT</span>]</span><span class="params">(<span name="bundle">bundle: <span class="extype" name="scalatags.generic.Bundle">Bundle</span>[<span class="extype" name="doodle.svg.effect.Svg.Builder">Builder</span>, <span class="extype" name="doodle.svg.effect.Svg.Output">Output</span>, <span class="extype" name="doodle.svg.effect.Svg.FragT">FragT</span>] { type Tag &lt;: scalatags.generic.TypedTag[Builder,Output,FragT] }</span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
 
@@ -210,9 +218,9 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="doodle.svg.effect.Svg#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(bundle:scalatags.generic.Bundle[Builder,Output,FragT]):doodle.svg.effect.Svg[Builder,Output,FragT]"></a><a id="&lt;init&gt;:Svg[Builder,Output,FragT]"></a>
+      <a id="&lt;init&gt;(bundle:scalatags.generic.Bundle[Builder,Output,FragT]{typeTag&lt;:scalatags.generic.TypedTag[Builder,Output,FragT]}):doodle.svg.effect.Svg[Builder,Output,FragT]"></a><a id="&lt;init&gt;:Svg[Builder,Output,FragT]"></a>
       <span class="permalink">
-      <a href="../../../doodle/svg/effect/Svg.html#&lt;init&gt;(bundle:scalatags.generic.Bundle[Builder,Output,FragT]):doodle.svg.effect.Svg[Builder,Output,FragT]" title="Permalink">
+      <a href="../../../doodle/svg/effect/Svg.html#&lt;init&gt;(bundle:scalatags.generic.Bundle[Builder,Output,FragT]{typeTag&lt;:scalatags.generic.TypedTag[Builder,Output,FragT]}):doodle.svg.effect.Svg[Builder,Output,FragT]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -221,14 +229,49 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">Svg</span><span class="params">(<span name="bundle">bundle: <span class="extype" name="scalatags.generic.Bundle">Bundle</span>[<span class="extype" name="doodle.svg.effect.Svg.Builder">Builder</span>, <span class="extype" name="doodle.svg.effect.Svg.Output">Output</span>, <span class="extype" name="doodle.svg.effect.Svg.FragT">FragT</span>]</span>)</span>
+        <span class="name">Svg</span><span class="params">(<span name="bundle">bundle: <span class="extype" name="scalatags.generic.Bundle">Bundle</span>[<span class="extype" name="doodle.svg.effect.Svg.Builder">Builder</span>, <span class="extype" name="doodle.svg.effect.Svg.Output">Output</span>, <span class="extype" name="doodle.svg.effect.Svg.FragT">FragT</span>] { type Tag &lt;: scalatags.generic.TypedTag[Builder,Output,FragT] }</span>)</span>
       </span>
       
       
     </li></ol>
             </div>
 
-        
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="doodle.svg.effect.Svg.Drawing" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Drawing[A]=doodle.algebra.generic.Finalized[Svg.this.SvgResult,A]"></a><a id="Drawing[A]:Drawing[A]"></a>
+      <span class="permalink">
+      <a href="../../../doodle/svg/effect/Svg.html#Drawing[A]=doodle.algebra.generic.Finalized[Svg.this.SvgResult,A]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Drawing</span><span class="tparams">[<span name="A">A</span>]</span><span class="result alias"> = <span class="extype" name="cats.data.IndexedStateT">IndexedStateT</span>[<span class="extype" name="cats.Eval">Eval</span>, <span class="extype" name="scala.List">List</span>[<a href="../../algebra/generic/index.html#ContextTransform=doodle.algebra.generic.DrawingContext=&gt;doodle.algebra.generic.DrawingContext" class="extmbr" name="doodle.algebra.generic.ContextTransform">ContextTransform</a>], <span class="extype" name="scala.List">List</span>[<a href="../../algebra/generic/index.html#ContextTransform=doodle.algebra.generic.DrawingContext=&gt;doodle.algebra.generic.DrawingContext" class="extmbr" name="doodle.algebra.generic.ContextTransform">ContextTransform</a>], (<a href="../../algebra/generic/BoundingBox.html" class="extype" name="doodle.algebra.generic.BoundingBox">BoundingBox</a>, <a href="../../algebra/generic/index.html#Renderable[F[_],A]=cats.data.State[doodle.core.Transform,F[A]]" class="extmbr" name="doodle.algebra.generic.Renderable">Renderable</a>[<a href="#SvgResult[A]=(Svg.this.bundle.Tag,A)" class="extmbr" name="doodle.svg.effect.Svg.SvgResult">SvgResult</a>, <span class="extype" name="doodle.svg.effect.Svg.Drawing.A">A</span>])]</span>
+      </span>
+      
+      
+    </li><li name="doodle.svg.effect.Svg.SvgResult" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SvgResult[A]=(Svg.this.bundle.Tag,A)"></a><a id="SvgResult[A]:SvgResult[A]"></a>
+      <span class="permalink">
+      <a href="../../../doodle/svg/effect/Svg.html#SvgResult[A]=(Svg.this.bundle.Tag,A)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">SvgResult</span><span class="tparams">[<span name="A">A</span>]</span><span class="result alias"> = ((<a href="#bundle:scalatags.generic.Bundle[Builder,Output,FragT]{typeTag&lt;:scalatags.generic.TypedTag[Builder,Output,FragT]}" class="extmbr" name="doodle.svg.effect.Svg#bundle">bundle</a>)#<span class="extype" name="scalatags.generic.Aliases.Tag">Tag</span>, <span class="extype" name="doodle.svg.effect.Svg.SvgResult.A">A</span>)</span>
+      </span>
+      
+      
+    </li></ol>
+            </div>
 
         
 
@@ -300,9 +343,9 @@
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li name="doodle.svg.effect.Svg#bundle" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="bundle:scalatags.generic.Bundle[Builder,Output,FragT]"></a><a id="bundle:Bundle[Builder,Output,FragT]"></a>
+      <a id="bundle:scalatags.generic.Bundle[Builder,Output,FragT]{typeTag&lt;:scalatags.generic.TypedTag[Builder,Output,FragT]}"></a><a id="bundle:Bundle[Builder,Output,FragT]{typeTag&lt;:scalatags.generic.TypedTag[Builder,Output,FragT]}"></a>
       <span class="permalink">
-      <a href="../../../doodle/svg/effect/Svg.html#bundle:scalatags.generic.Bundle[Builder,Output,FragT]" title="Permalink">
+      <a href="../../../doodle/svg/effect/Svg.html#bundle:scalatags.generic.Bundle[Builder,Output,FragT]{typeTag&lt;:scalatags.generic.TypedTag[Builder,Output,FragT]}" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -311,7 +354,7 @@
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">bundle</span><span class="result">: <span class="extype" name="scalatags.generic.Bundle">Bundle</span>[<span class="extype" name="doodle.svg.effect.Svg.Builder">Builder</span>, <span class="extype" name="doodle.svg.effect.Svg.Output">Output</span>, <span class="extype" name="doodle.svg.effect.Svg.FragT">FragT</span>]</span>
+        <span class="name">bundle</span><span class="result">: <span class="extype" name="scalatags.generic.Bundle">Bundle</span>[<span class="extype" name="doodle.svg.effect.Svg.Builder">Builder</span>, <span class="extype" name="doodle.svg.effect.Svg.Output">Output</span>, <span class="extype" name="doodle.svg.effect.Svg.FragT">FragT</span>] { type Tag &lt;: scalatags.generic.TypedTag[Builder,Output,FragT] }</span>
       </span>
       
       
@@ -332,8 +375,6 @@
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../java/lang/index.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@native</span><span class="args">()</span>
-              
-                <span class="name">@HotSpotIntrinsicCandidate</span><span class="args">()</span>
               
                 <span class="name">@throws</span><span class="args">(<span>
       
@@ -373,6 +414,28 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="finalize():Unit"></a>
+      <span class="permalink">
+      <a href="../../../doodle/svg/effect/Svg.html#finalize():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../java/lang/index.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Throwable]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
     </li><li name="scala.AnyRef#getClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <span class="permalink">
@@ -391,9 +454,24 @@
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
                 <span class="name">@native</span><span class="args">()</span>
               
-                <span class="name">@HotSpotIntrinsicCandidate</span><span class="args">()</span>
-              
         </dd></dl></div>
+    </li><li name="doodle.svg.effect.Svg#inverseClientTransform" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="inverseClientTransform(bb:doodle.algebra.generic.BoundingBox,size:doodle.svg.effect.Size):doodle.core.Transform"></a><a id="inverseClientTransform(BoundingBox,Size):Transform"></a>
+      <span class="permalink">
+      <a href="../../../doodle/svg/effect/Svg.html#inverseClientTransform(bb:doodle.algebra.generic.BoundingBox,size:doodle.svg.effect.Size):doodle.core.Transform" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">inverseClientTransform</span><span class="params">(<span name="bb">bb: <a href="../../algebra/generic/BoundingBox.html" class="extype" name="doodle.algebra.generic.BoundingBox">BoundingBox</a></span>, <span name="size">size: <a href="Size.html" class="extype" name="doodle.svg.effect.Size">Size</a></span>)</span><span class="result">: <a href="../../core/Transform.html" class="extype" name="doodle.core.Transform">Transform</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Transform from client coordinates to local coordinates
+</p>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <span class="permalink">
@@ -444,8 +522,6 @@
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@native</span><span class="args">()</span>
               
-                <span class="name">@HotSpotIntrinsicCandidate</span><span class="args">()</span>
-              
         </dd></dl></div>
     </li><li name="scala.AnyRef#notifyAll" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notifyAll():Unit"></a>
@@ -465,13 +541,11 @@
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@native</span><span class="args">()</span>
               
-                <span class="name">@HotSpotIntrinsicCandidate</span><span class="args">()</span>
-              
         </dd></dl></div>
     </li><li name="doodle.svg.effect.Svg#render" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="render(boundingBox:doodle.algebra.generic.BoundingBox,instructions:List[doodle.algebra.generic.reified.Reified]):Svg.this.bundle.svgTags.svg.Self#Self"></a><a id="render(BoundingBox,List[Reified]):scalatags.generic.TypedTag.Self.Self"></a>
+      <a id="render[Alg[x[_]]&lt;:doodle.algebra.Algebra[x],A](frame:doodle.svg.effect.Frame,algebra:Alg[Svg.this.Drawing],picture:doodle.algebra.Picture[Alg,Svg.this.Drawing,A]):cats.effect.IO[(Output,A)]"></a><a id="render[Alg[x[_]]&lt;:algebra.Algebra[x[_]],A](Frame,Alg[Drawing],algebra.Picture[Alg,Drawing,A]):IO[(Output,A)]"></a>
       <span class="permalink">
-      <a href="../../../doodle/svg/effect/Svg.html#render(boundingBox:doodle.algebra.generic.BoundingBox,instructions:List[doodle.algebra.generic.reified.Reified]):Svg.this.bundle.svgTags.svg.Self#Self" title="Permalink">
+      <a href="../../../doodle/svg/effect/Svg.html#render[Alg[x[_]]&lt;:doodle.algebra.Algebra[x],A](frame:doodle.svg.effect.Frame,algebra:Alg[Svg.this.Drawing],picture:doodle.algebra.Picture[Alg,Svg.this.Drawing,A]):cats.effect.IO[(Output,A)]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -480,10 +554,43 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">render</span><span class="params">(<span name="boundingBox">boundingBox: <a href="../../algebra/generic/BoundingBox.html" class="extype" name="doodle.algebra.generic.BoundingBox">BoundingBox</a></span>, <span name="instructions">instructions: <span class="extype" name="scala.List">List</span>[<a href="../../algebra/generic/reified/Reified.html" class="extype" name="doodle.algebra.generic.reified.Reified">Reified</a>]</span>)</span><span class="result">: <span class="extype" name="scalatags.generic.TypedTag.Self">scalatags.generic.TypedTag.Self.Self</span></span>
+        <span class="name">render</span><span class="tparams">[<span name="Alg">Alg<span class="tparams">[<span name="x">x<span class="tparams">[<span name="_">_</span>]</span></span>]</span> &lt;: <a href="../../algebra/Algebra.html" class="extype" name="doodle.algebra.Algebra">algebra.Algebra</a>[<span class="extype" name="doodle.svg.effect.Svg.render.Alg.x">x</span>[<span class="extype" name="doodle.svg.effect.Svg.render.Alg.x._">_</span>]]</span>, <span name="A">A</span>]</span><span class="params">(<span name="frame">frame: <a href="Frame.html" class="extype" name="doodle.svg.effect.Frame">Frame</a></span>, <span name="algebra">algebra: <span class="extype" name="doodle.svg.effect.Svg.render.Alg">Alg</span>[<a href="#Drawing[A]=doodle.algebra.generic.Finalized[Svg.this.SvgResult,A]" class="extmbr" name="doodle.svg.effect.Svg.Drawing">Drawing</a>]</span>, <span name="picture">picture: <a href="../../algebra/Picture.html" class="extype" name="doodle.algebra.Picture">algebra.Picture</a>[<span class="extype" name="doodle.svg.effect.Svg.render.Alg">Alg</span>, <a href="#Drawing[A]=doodle.algebra.generic.Finalized[Svg.this.SvgResult,A]" class="extmbr" name="doodle.svg.effect.Svg.Drawing">Drawing</a>, <span class="extype" name="doodle.svg.effect.Svg.render.A">A</span>]</span>)</span><span class="result">: <span class="extype" name="cats.effect.IO">IO</span>[(<span class="extype" name="doodle.svg.effect.Svg.Output">Output</span>, <span class="extype" name="doodle.svg.effect.Svg.render.A">A</span>)]</span>
       </span>
       
       
+    </li><li name="doodle.svg.effect.Svg#renderWithoutRootTag" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="renderWithoutRootTag[Alg[x[_]]&lt;:doodle.algebra.Algebra[x],A](algebra:Alg[Svg.this.Drawing],picture:doodle.algebra.Picture[Alg,Svg.this.Drawing,A]):cats.effect.IO[(doodle.algebra.generic.BoundingBox,Svg.this.bundle.Tag,A)]"></a><a id="renderWithoutRootTag[Alg[x[_]]&lt;:algebra.Algebra[x[_]],A](Alg[Drawing],algebra.Picture[Alg,Drawing,A]):IO[(BoundingBox,(bundle)#Tag,A)]"></a>
+      <span class="permalink">
+      <a href="../../../doodle/svg/effect/Svg.html#renderWithoutRootTag[Alg[x[_]]&lt;:doodle.algebra.Algebra[x],A](algebra:Alg[Svg.this.Drawing],picture:doodle.algebra.Picture[Alg,Svg.this.Drawing,A]):cats.effect.IO[(doodle.algebra.generic.BoundingBox,Svg.this.bundle.Tag,A)]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">renderWithoutRootTag</span><span class="tparams">[<span name="Alg">Alg<span class="tparams">[<span name="x">x<span class="tparams">[<span name="_">_</span>]</span></span>]</span> &lt;: <a href="../../algebra/Algebra.html" class="extype" name="doodle.algebra.Algebra">algebra.Algebra</a>[<span class="extype" name="doodle.svg.effect.Svg.renderWithoutRootTag.Alg.x">x</span>[<span class="extype" name="doodle.svg.effect.Svg.renderWithoutRootTag.Alg.x._">_</span>]]</span>, <span name="A">A</span>]</span><span class="params">(<span name="algebra">algebra: <span class="extype" name="doodle.svg.effect.Svg.renderWithoutRootTag.Alg">Alg</span>[<a href="#Drawing[A]=doodle.algebra.generic.Finalized[Svg.this.SvgResult,A]" class="extmbr" name="doodle.svg.effect.Svg.Drawing">Drawing</a>]</span>, <span name="picture">picture: <a href="../../algebra/Picture.html" class="extype" name="doodle.algebra.Picture">algebra.Picture</a>[<span class="extype" name="doodle.svg.effect.Svg.renderWithoutRootTag.Alg">Alg</span>, <a href="#Drawing[A]=doodle.algebra.generic.Finalized[Svg.this.SvgResult,A]" class="extmbr" name="doodle.svg.effect.Svg.Drawing">Drawing</a>, <span class="extype" name="doodle.svg.effect.Svg.renderWithoutRootTag.A">A</span>]</span>)</span><span class="result">: <span class="extype" name="cats.effect.IO">IO</span>[(<a href="../../algebra/generic/BoundingBox.html" class="extype" name="doodle.algebra.generic.BoundingBox">BoundingBox</a>, (<a href="#bundle:scalatags.generic.Bundle[Builder,Output,FragT]{typeTag&lt;:scalatags.generic.TypedTag[Builder,Output,FragT]}" class="extmbr" name="doodle.svg.effect.Svg#bundle">bundle</a>)#<span class="extype" name="scalatags.generic.Aliases.Tag">Tag</span>, <span class="extype" name="doodle.svg.effect.Svg.renderWithoutRootTag.A">A</span>)]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Render to SVG without wrapping with a root &lt;svg&gt; tag.</p>
+    </li><li name="doodle.svg.effect.Svg#svgTag" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="svgTag(bb:doodle.algebra.generic.BoundingBox,frame:doodle.svg.effect.Frame):Svg.this.bundle.Tag"></a><a id="svgTag(BoundingBox,Frame):(bundle)#Tag"></a>
+      <span class="permalink">
+      <a href="../../../doodle/svg/effect/Svg.html#svgTag(bb:doodle.algebra.generic.BoundingBox,frame:doodle.svg.effect.Frame):Svg.this.bundle.Tag" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">svgTag</span><span class="params">(<span name="bb">bb: <a href="../../algebra/generic/BoundingBox.html" class="extype" name="doodle.algebra.generic.BoundingBox">BoundingBox</a></span>, <span name="frame">frame: <a href="Frame.html" class="extype" name="doodle.svg.effect.Frame">Frame</a></span>)</span><span class="result">: (<a href="#bundle:scalatags.generic.Bundle[Builder,Output,FragT]{typeTag&lt;:scalatags.generic.TypedTag[Builder,Output,FragT]}" class="extmbr" name="doodle.svg.effect.Svg#bundle">bundle</a>)#<span class="extype" name="scalatags.generic.Aliases.Tag">Tag</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Given a bounding box and a size specification create a &lt;svg&gt; tag that has the
+correct size and viewbox</p>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
       <span class="permalink">
@@ -500,6 +607,28 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait():Unit"></a>
+      <span class="permalink">
+      <a href="../../../doodle/svg/effect/Svg.html#wait():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait(x$1:Long,x$2:Int):Unit"></a><a id="wait(Long,Int):Unit"></a>
       <span class="permalink">
@@ -546,64 +675,13 @@
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="wait():Unit"></a>
-      <span class="permalink">
-      <a href="../../../doodle/svg/effect/Svg.html#wait():Unit" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">wait</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
-      </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
-                <span class="name">@throws</span><span class="args">(<span>
-      
-      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
-    </span>)</span>
-              
-        </dd></dl></div>
     </li>
               </ol>
             </div>
 
         
 
-        <div class="values members">
-              <h3>Deprecated Value Members</h3>
-              <ol><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="finalize():Unit"></a>
-      <span class="permalink">
-      <a href="../../../doodle/svg/effect/Svg.html#finalize():Unit" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name deprecated" title="Deprecated: (Since version ) see corresponding Javadoc for more information.">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
-      </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../java/lang/index.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
-                <span class="name">@Deprecated</span>
-              
-                <span class="name">@deprecated</span>
-              
-                <span class="name">@throws</span><span class="args">(<span>
-      
-      <span class="symbol">classOf[java.lang.Throwable]</span>
-    </span>)</span>
-              
-        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version )</i> see corresponding Javadoc for more information.</p></dd></dl></div>
-    </li></ol>
-            </div>
+        
         </div>
 
         <div id="inheritedMembers">
