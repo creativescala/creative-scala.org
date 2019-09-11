@@ -144,7 +144,7 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">TraverseOps</span><span class="tparams">[<span name="T">T<span class="tparams">[<span name="_">_</span>]</span></span>, <span name="F">F<span class="tparams">[<span name="_">_</span>]</span></span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+        <span class="name">TraverseOps</span><span class="tparams">[<span name="T">T<span class="tparams">[<span name="_">_</span>]</span></span>, <span name="Alg">Alg<span class="tparams">[<span name="x">x<span class="tparams">[<span name="_">_</span>]</span></span>]</span> &lt;: <a href="../algebra/Layout.html" class="extype" name="doodle.algebra.Layout">Layout</a>[<span class="extype" name="doodle.syntax.TraverseSyntax.TraverseOps.Alg.x">x</span>[<span class="extype" name="doodle.syntax.TraverseSyntax.TraverseOps.Alg.x._">_</span>]] with <a href="../algebra/Shape.html" class="extype" name="doodle.algebra.Shape">Shape</a>[<span class="extype" name="doodle.syntax.TraverseSyntax.TraverseOps.Alg.x">x</span>[<span class="extype" name="doodle.syntax.TraverseSyntax.TraverseOps.Alg.x._">_</span>]]</span>, <span name="F">F<span class="tparams">[<span name="_">_</span>]</span></span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4>
 
@@ -200,9 +200,9 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="doodle.syntax.TraverseSyntax.TraverseOps#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(t:T[F[Unit]]):TraverseSyntax.this.TraverseOps[T,F]"></a><a id="&lt;init&gt;:TraverseOps[T,F]"></a>
+      <a id="&lt;init&gt;(t:T[doodle.algebra.Picture[Alg,F,Unit]]):TraverseSyntax.this.TraverseOps[T,Alg,F]"></a><a id="&lt;init&gt;:TraverseOps[T,Alg,F]"></a>
       <span class="permalink">
-      <a href="../../doodle/syntax/TraverseSyntax$TraverseOps.html#&lt;init&gt;(t:T[F[Unit]]):TraverseSyntax.this.TraverseOps[T,F]" title="Permalink">
+      <a href="../../doodle/syntax/TraverseSyntax$TraverseOps.html#&lt;init&gt;(t:T[doodle.algebra.Picture[Alg,F,Unit]]):TraverseSyntax.this.TraverseOps[T,Alg,F]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -211,7 +211,7 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">TraverseOps</span><span class="params">(<span name="t">t: <span class="extype" name="doodle.syntax.TraverseSyntax.TraverseOps.T">T</span>[<span class="extype" name="doodle.syntax.TraverseSyntax.TraverseOps.F">F</span>[<span class="extype" name="scala.Unit">Unit</span>]]</span>)</span>
+        <span class="name">TraverseOps</span><span class="params">(<span name="t">t: <span class="extype" name="doodle.syntax.TraverseSyntax.TraverseOps.T">T</span>[<a href="../algebra/Picture.html" class="extype" name="doodle.algebra.Picture">Picture</a>[<span class="extype" name="doodle.syntax.TraverseSyntax.TraverseOps.Alg">Alg</span>, <span class="extype" name="doodle.syntax.TraverseSyntax.TraverseOps.F">F</span>, <span class="extype" name="scala.Unit">Unit</span>]]</span>)</span>
       </span>
       
       
@@ -274,9 +274,9 @@
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="doodle.syntax.TraverseSyntax.TraverseOps#allAbove" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="allAbove(implicitlayout:doodle.algebra.Layout[F],implicitshape:doodle.algebra.Shape[F],implicittraverse:cats.Traverse[T]):F[Unit]"></a><a id="allAbove(Layout[F],Shape[F],Traverse[T]):F[Unit]"></a>
+      <a id="allAbove(implicittraverse:cats.Traverse[T]):doodle.algebra.Picture[Alg,F,Unit]"></a><a id="allAbove(Traverse[T]):Picture[Alg,F,Unit]"></a>
       <span class="permalink">
-      <a href="../../doodle/syntax/TraverseSyntax$TraverseOps.html#allAbove(implicitlayout:doodle.algebra.Layout[F],implicitshape:doodle.algebra.Shape[F],implicittraverse:cats.Traverse[T]):F[Unit]" title="Permalink">
+      <a href="../../doodle/syntax/TraverseSyntax$TraverseOps.html#allAbove(implicittraverse:cats.Traverse[T]):doodle.algebra.Picture[Alg,F,Unit]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -285,14 +285,14 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">allAbove</span><span class="params">(<span class="implicit">implicit </span><span name="layout">layout: <a href="../algebra/Layout.html" class="extype" name="doodle.algebra.Layout">Layout</a>[<span class="extype" name="doodle.syntax.TraverseSyntax.TraverseOps.F">F</span>]</span>, <span name="shape">shape: <a href="../algebra/Shape.html" class="extype" name="doodle.algebra.Shape">Shape</a>[<span class="extype" name="doodle.syntax.TraverseSyntax.TraverseOps.F">F</span>]</span>, <span name="traverse">traverse: <span class="extype" name="cats.Traverse">Traverse</span>[<span class="extype" name="doodle.syntax.TraverseSyntax.TraverseOps.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="doodle.syntax.TraverseSyntax.TraverseOps.F">F</span>[<span class="extype" name="scala.Unit">Unit</span>]</span>
+        <span class="name">allAbove</span><span class="params">(<span class="implicit">implicit </span><span name="traverse">traverse: <span class="extype" name="cats.Traverse">Traverse</span>[<span class="extype" name="doodle.syntax.TraverseSyntax.TraverseOps.T">T</span>]</span>)</span><span class="result">: <a href="../algebra/Picture.html" class="extype" name="doodle.algebra.Picture">Picture</a>[<span class="extype" name="doodle.syntax.TraverseSyntax.TraverseOps.Alg">Alg</span>, <span class="extype" name="doodle.syntax.TraverseSyntax.TraverseOps.F">F</span>, <span class="extype" name="scala.Unit">Unit</span>]</span>
       </span>
       
       
     </li><li name="doodle.syntax.TraverseSyntax.TraverseOps#allBeside" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="allBeside(implicitlayout:doodle.algebra.Layout[F],implicitshape:doodle.algebra.Shape[F],implicittraverse:cats.Traverse[T]):F[Unit]"></a><a id="allBeside(Layout[F],Shape[F],Traverse[T]):F[Unit]"></a>
+      <a id="allBeside(implicittraverse:cats.Traverse[T]):doodle.algebra.Picture[Alg,F,Unit]"></a><a id="allBeside(Traverse[T]):Picture[Alg,F,Unit]"></a>
       <span class="permalink">
-      <a href="../../doodle/syntax/TraverseSyntax$TraverseOps.html#allBeside(implicitlayout:doodle.algebra.Layout[F],implicitshape:doodle.algebra.Shape[F],implicittraverse:cats.Traverse[T]):F[Unit]" title="Permalink">
+      <a href="../../doodle/syntax/TraverseSyntax$TraverseOps.html#allBeside(implicittraverse:cats.Traverse[T]):doodle.algebra.Picture[Alg,F,Unit]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -301,14 +301,14 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">allBeside</span><span class="params">(<span class="implicit">implicit </span><span name="layout">layout: <a href="../algebra/Layout.html" class="extype" name="doodle.algebra.Layout">Layout</a>[<span class="extype" name="doodle.syntax.TraverseSyntax.TraverseOps.F">F</span>]</span>, <span name="shape">shape: <a href="../algebra/Shape.html" class="extype" name="doodle.algebra.Shape">Shape</a>[<span class="extype" name="doodle.syntax.TraverseSyntax.TraverseOps.F">F</span>]</span>, <span name="traverse">traverse: <span class="extype" name="cats.Traverse">Traverse</span>[<span class="extype" name="doodle.syntax.TraverseSyntax.TraverseOps.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="doodle.syntax.TraverseSyntax.TraverseOps.F">F</span>[<span class="extype" name="scala.Unit">Unit</span>]</span>
+        <span class="name">allBeside</span><span class="params">(<span class="implicit">implicit </span><span name="traverse">traverse: <span class="extype" name="cats.Traverse">Traverse</span>[<span class="extype" name="doodle.syntax.TraverseSyntax.TraverseOps.T">T</span>]</span>)</span><span class="result">: <a href="../algebra/Picture.html" class="extype" name="doodle.algebra.Picture">Picture</a>[<span class="extype" name="doodle.syntax.TraverseSyntax.TraverseOps.Alg">Alg</span>, <span class="extype" name="doodle.syntax.TraverseSyntax.TraverseOps.F">F</span>, <span class="extype" name="scala.Unit">Unit</span>]</span>
       </span>
       
       
     </li><li name="doodle.syntax.TraverseSyntax.TraverseOps#allOn" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="allOn(implicitlayout:doodle.algebra.Layout[F],implicitshape:doodle.algebra.Shape[F],implicittraverse:cats.Traverse[T]):F[Unit]"></a><a id="allOn(Layout[F],Shape[F],Traverse[T]):F[Unit]"></a>
+      <a id="allOn(implicittraverse:cats.Traverse[T]):doodle.algebra.Picture[Alg,F,Unit]"></a><a id="allOn(Traverse[T]):Picture[Alg,F,Unit]"></a>
       <span class="permalink">
-      <a href="../../doodle/syntax/TraverseSyntax$TraverseOps.html#allOn(implicitlayout:doodle.algebra.Layout[F],implicitshape:doodle.algebra.Shape[F],implicittraverse:cats.Traverse[T]):F[Unit]" title="Permalink">
+      <a href="../../doodle/syntax/TraverseSyntax$TraverseOps.html#allOn(implicittraverse:cats.Traverse[T]):doodle.algebra.Picture[Alg,F,Unit]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -317,7 +317,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">allOn</span><span class="params">(<span class="implicit">implicit </span><span name="layout">layout: <a href="../algebra/Layout.html" class="extype" name="doodle.algebra.Layout">Layout</a>[<span class="extype" name="doodle.syntax.TraverseSyntax.TraverseOps.F">F</span>]</span>, <span name="shape">shape: <a href="../algebra/Shape.html" class="extype" name="doodle.algebra.Shape">Shape</a>[<span class="extype" name="doodle.syntax.TraverseSyntax.TraverseOps.F">F</span>]</span>, <span name="traverse">traverse: <span class="extype" name="cats.Traverse">Traverse</span>[<span class="extype" name="doodle.syntax.TraverseSyntax.TraverseOps.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="doodle.syntax.TraverseSyntax.TraverseOps.F">F</span>[<span class="extype" name="scala.Unit">Unit</span>]</span>
+        <span class="name">allOn</span><span class="params">(<span class="implicit">implicit </span><span name="traverse">traverse: <span class="extype" name="cats.Traverse">Traverse</span>[<span class="extype" name="doodle.syntax.TraverseSyntax.TraverseOps.T">T</span>]</span>)</span><span class="result">: <a href="../algebra/Picture.html" class="extype" name="doodle.algebra.Picture">Picture</a>[<span class="extype" name="doodle.syntax.TraverseSyntax.TraverseOps.Alg">Alg</span>, <span class="extype" name="doodle.syntax.TraverseSyntax.TraverseOps.F">F</span>, <span class="extype" name="scala.Unit">Unit</span>]</span>
       </span>
       
       
@@ -540,9 +540,9 @@
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li name="doodle.syntax.TraverseSyntax.TraverseOps#t" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="t:T[F[Unit]]"></a>
+      <a id="t:T[doodle.algebra.Picture[Alg,F,Unit]]"></a><a id="t:T[Picture[Alg,F,Unit]]"></a>
       <span class="permalink">
-      <a href="../../doodle/syntax/TraverseSyntax$TraverseOps.html#t:T[F[Unit]]" title="Permalink">
+      <a href="../../doodle/syntax/TraverseSyntax$TraverseOps.html#t:T[doodle.algebra.Picture[Alg,F,Unit]]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -551,7 +551,7 @@
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">t</span><span class="result">: <span class="extype" name="doodle.syntax.TraverseSyntax.TraverseOps.T">T</span>[<span class="extype" name="doodle.syntax.TraverseSyntax.TraverseOps.F">F</span>[<span class="extype" name="scala.Unit">Unit</span>]]</span>
+        <span class="name">t</span><span class="result">: <span class="extype" name="doodle.syntax.TraverseSyntax.TraverseOps.T">T</span>[<a href="../algebra/Picture.html" class="extype" name="doodle.algebra.Picture">Picture</a>[<span class="extype" name="doodle.syntax.TraverseSyntax.TraverseOps.Alg">Alg</span>, <span class="extype" name="doodle.syntax.TraverseSyntax.TraverseOps.F">F</span>, <span class="extype" name="scala.Unit">Unit</span>]]</span>
       </span>
       
       

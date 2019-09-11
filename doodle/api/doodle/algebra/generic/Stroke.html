@@ -167,6 +167,10 @@
                         <a href="GenericShape.html" title="">GenericShape</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
+                        <a class="class" href="GenericSize.html" title="Get information about the size of the bounding box enclosing an image."></a>
+                        <a href="GenericSize.html" title="Get information about the size of the bounding box enclosing an image.">GenericSize</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
                         <a class="trait" href="GenericStyle.html" title=""></a>
                         <a href="GenericStyle.html" title="">GenericStyle</a>
                       </li><li class="current-entities indented3">
@@ -204,7 +208,7 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">Stroke</span><span class="params">(<span name="color">color: <a href="../../core/Color.html" class="extype" name="doodle.core.Color">Color</a></span>, <span name="width">width: <span class="extype" name="scala.Double">Double</span></span>, <span name="cap">cap: <a href="../../core/Cap.html" class="extype" name="doodle.core.Cap">Cap</a></span>, <span name="join">join: <a href="../../core/Join.html" class="extype" name="doodle.core.Join">Join</a></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <span class="name">Stroke</span><span class="params">(<span name="color">color: <a href="../../core/Color.html" class="extype" name="doodle.core.Color">Color</a></span>, <span name="width">width: <span class="extype" name="scala.Double">Double</span></span>, <span name="cap">cap: <a href="../../core/Cap.html" class="extype" name="doodle.core.Cap">Cap</a></span>, <span name="join">join: <a href="../../core/Join.html" class="extype" name="doodle.core.Join">Join</a></span>, <span name="dash">dash: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Float">Float</span>]]</span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
 
@@ -260,9 +264,9 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="doodle.algebra.generic.Stroke#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(color:doodle.core.Color,width:Double,cap:doodle.core.Cap,join:doodle.core.Join):doodle.algebra.generic.Stroke"></a><a id="&lt;init&gt;:Stroke"></a>
+      <a id="&lt;init&gt;(color:doodle.core.Color,width:Double,cap:doodle.core.Cap,join:doodle.core.Join,dash:Option[Array[Float]]):doodle.algebra.generic.Stroke"></a><a id="&lt;init&gt;:Stroke"></a>
       <span class="permalink">
-      <a href="../../../doodle/algebra/generic/Stroke.html#&lt;init&gt;(color:doodle.core.Color,width:Double,cap:doodle.core.Cap,join:doodle.core.Join):doodle.algebra.generic.Stroke" title="Permalink">
+      <a href="../../../doodle/algebra/generic/Stroke.html#&lt;init&gt;(color:doodle.core.Color,width:Double,cap:doodle.core.Cap,join:doodle.core.Join,dash:Option[Array[Float]]):doodle.algebra.generic.Stroke" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -271,7 +275,7 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">Stroke</span><span class="params">(<span name="color">color: <a href="../../core/Color.html" class="extype" name="doodle.core.Color">Color</a></span>, <span name="width">width: <span class="extype" name="scala.Double">Double</span></span>, <span name="cap">cap: <a href="../../core/Cap.html" class="extype" name="doodle.core.Cap">Cap</a></span>, <span name="join">join: <a href="../../core/Join.html" class="extype" name="doodle.core.Join">Join</a></span>)</span>
+        <span class="name">Stroke</span><span class="params">(<span name="color">color: <a href="../../core/Color.html" class="extype" name="doodle.core.Color">Color</a></span>, <span name="width">width: <span class="extype" name="scala.Double">Double</span></span>, <span name="cap">cap: <a href="../../core/Cap.html" class="extype" name="doodle.core.Cap">Cap</a></span>, <span name="join">join: <a href="../../core/Join.html" class="extype" name="doodle.core.Join">Join</a></span>, <span name="dash">dash: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Float">Float</span>]]</span>)</span>
       </span>
       
       
@@ -402,6 +406,22 @@
       </span>
       <span class="symbol">
         <span class="name">color</span><span class="result">: <a href="../../core/Color.html" class="extype" name="doodle.core.Color">Color</a></span>
+      </span>
+      
+      
+    </li><li name="doodle.algebra.generic.Stroke#dash" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="dash:Option[Array[Float]]"></a>
+      <span class="permalink">
+      <a href="../../../doodle/algebra/generic/Stroke.html#dash:Option[Array[Float]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">dash</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Float">Float</span>]]</span>
       </span>
       
       

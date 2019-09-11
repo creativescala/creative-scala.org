@@ -167,6 +167,10 @@
                         <a href="GenericShape.html" title="">GenericShape</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
+                        <a class="class" href="GenericSize.html" title="Get information about the size of the bounding box enclosing an image."></a>
+                        <a href="GenericSize.html" title="Get information about the size of the bounding box enclosing an image.">GenericSize</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
                         <a class="trait" href="GenericStyle.html" title=""></a>
                         <a href="GenericStyle.html" title="">GenericStyle</a>
                       </li><li class="current-entities indented3">
@@ -326,7 +330,7 @@ though it can assumed to be reasonably tight.</p></div></div>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a title="Stores state about the current drawing style." href="DrawingContext.html"><span class="name">DrawingContext</span></a><span class="params">(<span name="blendMode">blendMode: <a href="BlendMode.html" class="extype" name="doodle.algebra.generic.BlendMode">BlendMode</a></span>, <span name="strokeColor">strokeColor: <a href="../../core/Color.html" class="extype" name="doodle.core.Color">Color</a></span>, <span name="strokeWidth">strokeWidth: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Double">Double</span>]</span>, <span name="strokeCap">strokeCap: <a href="../../core/Cap.html" class="extype" name="doodle.core.Cap">Cap</a></span>, <span name="strokeJoin">strokeJoin: <a href="../../core/Join.html" class="extype" name="doodle.core.Join">Join</a></span>, <span name="fillColor">fillColor: <span class="extype" name="scala.Option">Option</span>[<a href="../../core/Color.html" class="extype" name="doodle.core.Color">Color</a>]</span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a title="Stores state about the current drawing style." href="DrawingContext.html"><span class="name">DrawingContext</span></a><span class="params">(<span name="blendMode">blendMode: <a href="BlendMode.html" class="extype" name="doodle.algebra.generic.BlendMode">BlendMode</a></span>, <span name="strokeColor">strokeColor: <a href="../../core/Color.html" class="extype" name="doodle.core.Color">Color</a></span>, <span name="strokeWidth">strokeWidth: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Double">Double</span>]</span>, <span name="strokeCap">strokeCap: <a href="../../core/Cap.html" class="extype" name="doodle.core.Cap">Cap</a></span>, <span name="strokeJoin">strokeJoin: <a href="../../core/Join.html" class="extype" name="doodle.core.Join">Join</a></span>, <span name="strokeDash">strokeDash: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Float">Float</span>]]</span>, <span name="fillColor">fillColor: <span class="extype" name="scala.Option">Option</span>[<a href="../../core/Color.html" class="extype" name="doodle.core.Color">Color</a>]</span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       
       <p class="shortcomment cmt">Stores state about the current drawing style.</p>
@@ -420,6 +424,22 @@ applied: the innermost transform is at the head of the list.
       </span>
       
       
+    </li><li name="doodle.algebra.generic.GenericSize" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="GenericSize[F[_]]extendsSize[[β$0$]cats.data.IndexedStateT[cats.Eval,List[doodle.algebra.generic.DrawingContext=&gt;doodle.algebra.generic.DrawingContext],List[doodle.algebra.generic.DrawingContext=&gt;doodle.algebra.generic.DrawingContext],(doodle.algebra.generic.BoundingBox,cats.data.IndexedStateT[cats.Eval,doodle.core.Transform,doodle.core.Transform,F[β$0$]])]]"></a><a id="GenericSize[F[_]]:GenericSize[F]"></a>
+      <span class="permalink">
+      <a href="../../../doodle/algebra/generic/index.html#GenericSize[F[_]]extendsSize[[β$0$]cats.data.IndexedStateT[cats.Eval,List[doodle.algebra.generic.DrawingContext=&gt;doodle.algebra.generic.DrawingContext],List[doodle.algebra.generic.DrawingContext=&gt;doodle.algebra.generic.DrawingContext],(doodle.algebra.generic.BoundingBox,cats.data.IndexedStateT[cats.Eval,doodle.core.Transform,doodle.core.Transform,F[β$0$]])]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Get information about the size of the bounding box enclosing an image." href="GenericSize.html"><span class="name">GenericSize</span></a><span class="tparams">[<span name="F">F<span class="tparams">[<span name="_">_</span>]</span></span>]</span><span class="result"> extends <a href="../Size.html" class="extype" name="doodle.algebra.Size">Size</a>[[β$0$]<span class="extype" name="cats.data.IndexedStateT">IndexedStateT</span>[<span class="extype" name="cats.Eval">Eval</span>, <span class="extype" name="scala.collection.immutable.List">List</span>[(<a href="DrawingContext.html" class="extype" name="doodle.algebra.generic.DrawingContext">DrawingContext</a>) ⇒ <a href="DrawingContext.html" class="extype" name="doodle.algebra.generic.DrawingContext">DrawingContext</a>], <span class="extype" name="scala.collection.immutable.List">List</span>[(<a href="DrawingContext.html" class="extype" name="doodle.algebra.generic.DrawingContext">DrawingContext</a>) ⇒ <a href="DrawingContext.html" class="extype" name="doodle.algebra.generic.DrawingContext">DrawingContext</a>], (<a href="BoundingBox.html" class="extype" name="doodle.algebra.generic.BoundingBox">BoundingBox</a>, <span class="extype" name="cats.data.IndexedStateT">IndexedStateT</span>[<span class="extype" name="cats.Eval">Eval</span>, <a href="../../core/Transform.html" class="extype" name="doodle.core.Transform">core.Transform</a>, <a href="../../core/Transform.html" class="extype" name="doodle.core.Transform">core.Transform</a>, <span class="extype" name="doodle.algebra.generic.GenericSize.F">F</span>[<span class="extype" name="doodle.algebra.generic.&lt;refinement&gt;.Λ$.β$0$">β$0$</span>]])]]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Get information about the size of the bounding box enclosing an image.</p>
     </li><li name="doodle.algebra.generic.GenericStyle" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="GenericStyle[F[_]]extendsStyle[[β$0$]cats.data.IndexedStateT[cats.Eval,List[doodle.algebra.generic.DrawingContext=&gt;doodle.algebra.generic.DrawingContext],List[doodle.algebra.generic.DrawingContext=&gt;doodle.algebra.generic.DrawingContext],(doodle.algebra.generic.BoundingBox,cats.data.IndexedStateT[cats.Eval,doodle.core.Transform,doodle.core.Transform,F[β$0$]])]]"></a><a id="GenericStyle[F[_]]:GenericStyle[F]"></a>
       <span class="permalink">
@@ -486,7 +506,7 @@ trasform it receives from its surrounding context.</p></div></div>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a title="" href="Stroke.html"><span class="name">Stroke</span></a><span class="params">(<span name="color">color: <a href="../../core/Color.html" class="extype" name="doodle.core.Color">Color</a></span>, <span name="width">width: <span class="extype" name="scala.Double">Double</span></span>, <span name="cap">cap: <a href="../../core/Cap.html" class="extype" name="doodle.core.Cap">Cap</a></span>, <span name="join">join: <a href="../../core/Join.html" class="extype" name="doodle.core.Join">Join</a></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a title="" href="Stroke.html"><span class="name">Stroke</span></a><span class="params">(<span name="color">color: <a href="../../core/Color.html" class="extype" name="doodle.core.Color">Color</a></span>, <span name="width">width: <span class="extype" name="scala.Double">Double</span></span>, <span name="cap">cap: <a href="../../core/Cap.html" class="extype" name="doodle.core.Cap">Cap</a></span>, <span name="join">join: <a href="../../core/Join.html" class="extype" name="doodle.core.Join">Join</a></span>, <span name="dash">dash: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Float">Float</span>]]</span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       
       
