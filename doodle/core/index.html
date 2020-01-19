@@ -32,7 +32,7 @@
 <span class="home-icon">⌂</span>Doodle
 </a>
 <div class="version-number">
-0.9.7
+0.9.15
 </div>
 </div>
 <div class="nav-toc">
@@ -78,7 +78,7 @@ C16.952,7,17,6.553,17,6c0-0.553-0.048-1-0.6-1H3.6C3.048,5,3,5.447,3,6C3,6.553,3.
 <span class="home-icon">⌂</span>Doodle
 </a>
 <div class="version-number">
-0.9.7
+0.9.15
 </div>
 </div>
 <div class="nav-toc">
@@ -170,10 +170,28 @@ Color.limeGreen
 </code></pre>
 <p>There are many methods to modify colors, such as <code>spin</code>, <code>desaturate</code>, and so on. See the <a href="../api/doodle/core/Color.html">ScalaDoc</a> for full details.</p>
 <h2><a href="#point" name="point" class="anchor"><span class="anchor-link"></span></a>Point</h2>
+<p>A <code>Point</code> represents a location in the 2-D plane. We can construct points from cartesian (xy-coordinates) or polar (radius and angle) coordinates as shown below.</p>
+<pre class="prettyprint"><code class="language-scala">Point(1.0, 1.0) // cartesian coordinates
+// res18: Point = Cartesian(1.0, 1.0) // cartesian coordinates
+Point(1.0, 90.degrees) // polar coordinates
+// res19: Point = Polar(1.0, Angle(1.5707963267948966))
+</code></pre>
+<p>No matter how we construct a <code>Point</code> we can still access x- and y-coordinates or radius and angle.</p>
+<pre class="prettyprint"><code class="language-scala">val pt1 = Point(1.0, 0.0)
+// pt1: Point = Cartesian(1.0, 0.0)
+pt1.x
+// res20: Double = 1.0
+pt1.y
+// res21: Double = 0.0
+pt1.r
+// res22: Double = 1.0
+pt1.angle
+// res23: Angle = Angle(0.0)
+</code></pre>
 <h2><a href="#transform" name="transform" class="anchor"><span class="anchor-link"></span></a>Transform</h2>
 <h2><a href="#vec" name="vec" class="anchor"><span class="anchor-link"></span></a>Vec</h2>
 <div class="source-github">
-The source code for this page can be found <a href="https://github.com/creativescala/doodle/tree/v0.9.7/docs/src/main/paradox/core/index.md">here</a>.
+The source code for this page can be found <a href="https://github.com/creativescala/doodle/tree/v0.9.15/docs/src/main/paradox/core/index.md">here</a>.
 </div>
 
 <div class="nav-next">
@@ -236,7 +254,7 @@ The source code for this page can be found <a href="https://github.com/creatives
 
 <!--
 <div class="copyright">
-<span class="text">&copy; 2019</span>
+<span class="text">&copy; 2020</span>
 <a href="https://www.example.com" class="logo">logo</a>
 </div>
 -->
@@ -261,7 +279,7 @@ The source code for this page can be found <a href="https://github.com/creatives
 <script type="text/javascript" src="../lib/prettify/prettify.js"></script>
 <script type="text/javascript" src="../lib/prettify/lang-scala.js"></script>
 <script type="text/javascript">jQuery(function(){window.prettyPrint && prettyPrint()});</script>
-<script type="text/javascript">jQuery(function(jq){initOldVersionWarnings(jq, '0.9.7', 'https://github.com/creativescala/doodle')});</script>
+<script type="text/javascript">jQuery(function(jq){initOldVersionWarnings(jq, '0.9.15', 'https://github.com/creativescala/doodle')});</script>
 
 
 </html>

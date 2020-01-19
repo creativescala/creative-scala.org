@@ -8,17 +8,17 @@
           <meta name="keywords" content="" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
+      
       <link href="../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
       <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
       <link href="../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
-      <script type="text/javascript" src="../../../lib/jquery.js"></script>
+      <script type="text/javascript" src="../../../lib/jquery.min.js"></script>
       <script type="text/javascript" src="../../../lib/jquery.panzoom.min.js"></script>
       <script type="text/javascript" src="../../../lib/jquery.mousewheel.min.js"></script>
       <script type="text/javascript" src="../../../lib/index.js"></script>
       <script type="text/javascript" src="../../../index.js"></script>
       <script type="text/javascript" src="../../../lib/scheduler.js"></script>
       <script type="text/javascript" src="../../../lib/template.js"></script>
-      <script type="text/javascript" src="../../../lib/tools.tooltip.js"></script>
       
       <script type="text/javascript">
         /* this variable can be used by the JS to determine the path to the root document */
@@ -56,7 +56,7 @@
                 <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="_root_"></a><a id="root:_root_"></a>
       <span class="permalink">
-      <a href="index.html#_root_" title="Permalink">
+      <a href="../../../index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -72,7 +72,7 @@
     </li><li name="_root_.doodle" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="doodle"></a><a id="doodle:doodle"></a>
       <span class="permalink">
-      <a href="index.html#doodle" title="Permalink">
+      <a href="../../../doodle/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -88,7 +88,7 @@
     </li><li name="doodle.image" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="image"></a><a id="image:image"></a>
       <span class="permalink">
-      <a href="../doodle/index.html#image" title="Permalink">
+      <a href="../../../doodle/image/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -104,7 +104,7 @@
     </li><li name="doodle.image.examples" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="examples"></a><a id="examples:examples"></a>
       <span class="permalink">
-      <a href="../../doodle/image/index.html#examples" title="Permalink">
+      <a href="../../../doodle/image/examples/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -120,7 +120,7 @@
     </li><li name="doodle.image.examples.ParticleSystem" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ParticleSystem"></a><a id="ParticleSystem:ParticleSystem"></a>
       <span class="permalink">
-      <a href="../../../doodle/image/examples/index.html#ParticleSystem" title="Permalink">
+      <a href="../../../doodle/image/examples/ParticleSystem$.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -301,13 +301,13 @@
         <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../java/lang/index.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
-                <span class="name">@native</span><span class="args">()</span>
-              
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
     </span>)</span>
+              
+                <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
     </li><li name="doodle.image.examples.ParticleSystem.imageOnMonoid#combine" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
@@ -327,9 +327,9 @@
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="doodle.image.examples.ParticleSystem.imageOnMonoid">imageOnMonoid</a> → Semigroup</dd></dl></div>
     </li><li name="cats.kernel.Monoid#combineAll" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="combineAll(as:TraversableOnce[A]):A"></a><a id="combineAll(TraversableOnce[Image]):Image"></a>
+      <a id="combineAll(as:cats.kernel.compat.scalaVersionSpecific.IterableOnce[A]):A"></a><a id="combineAll(IterableOnce[Image]):Image"></a>
       <span class="permalink">
-      <a href="../../../doodle/image/examples/ParticleSystem$$imageOnMonoid$.html#combineAll(as:TraversableOnce[A]):A" title="Permalink">
+      <a href="../../../doodle/image/examples/ParticleSystem$$imageOnMonoid$.html#combineAll(as:cats.kernel.compat.scalaVersionSpecific.IterableOnce[A]):A" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -338,14 +338,14 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">combineAll</span><span class="params">(<span name="as">as: <span class="extype" name="scala.TraversableOnce">TraversableOnce</span>[<a href="../Image.html" class="extype" name="doodle.image.Image">Image</a>]</span>)</span><span class="result">: <a href="../Image.html" class="extype" name="doodle.image.Image">Image</a></span>
+        <span class="name">combineAll</span><span class="params">(<span name="as">as: <span class="extype" name="cats.kernel.compat.scalaVersionSpecific.IterableOnce">IterableOnce</span>[<a href="../Image.html" class="extype" name="doodle.image.Image">Image</a>]</span>)</span><span class="result">: <a href="../Image.html" class="extype" name="doodle.image.Image">Image</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Monoid</dd></dl></div>
     </li><li name="cats.kernel.Monoid#combineAllOption" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="combineAllOption(as:TraversableOnce[A]):Option[A]"></a><a id="combineAllOption(TraversableOnce[Image]):Option[Image]"></a>
+      <a id="combineAllOption(as:cats.kernel.compat.scalaVersionSpecific.IterableOnce[A]):Option[A]"></a><a id="combineAllOption(IterableOnce[Image]):Option[Image]"></a>
       <span class="permalink">
-      <a href="../../../doodle/image/examples/ParticleSystem$$imageOnMonoid$.html#combineAllOption(as:TraversableOnce[A]):Option[A]" title="Permalink">
+      <a href="../../../doodle/image/examples/ParticleSystem$$imageOnMonoid$.html#combineAllOption(as:cats.kernel.compat.scalaVersionSpecific.IterableOnce[A]):Option[A]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -354,7 +354,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">combineAllOption</span><span class="params">(<span name="as">as: <span class="extype" name="scala.TraversableOnce">TraversableOnce</span>[<a href="../Image.html" class="extype" name="doodle.image.Image">Image</a>]</span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<a href="../Image.html" class="extype" name="doodle.image.Image">Image</a>]</span>
+        <span class="name">combineAllOption</span><span class="params">(<span name="as">as: <span class="extype" name="cats.kernel.compat.scalaVersionSpecific.IterableOnce">IterableOnce</span>[<a href="../Image.html" class="extype" name="doodle.image.Image">Image</a>]</span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<a href="../Image.html" class="extype" name="doodle.image.Image">Image</a>]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Monoid → Semigroup</dd></dl></div>
@@ -437,7 +437,7 @@
         <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../java/lang/index.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="symbol">classOf[java.lang.Throwable]</span>
@@ -676,12 +676,12 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
-                <span class="name">@native</span><span class="args">()</span>
-              
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
     </span>)</span>
+              
+                <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
     </li>

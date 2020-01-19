@@ -8,17 +8,17 @@
           <meta name="keywords" content="" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
+      
       <link href="../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
       <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
       <link href="../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
-      <script type="text/javascript" src="../../../lib/jquery.js"></script>
+      <script type="text/javascript" src="../../../lib/jquery.min.js"></script>
       <script type="text/javascript" src="../../../lib/jquery.panzoom.min.js"></script>
       <script type="text/javascript" src="../../../lib/jquery.mousewheel.min.js"></script>
       <script type="text/javascript" src="../../../lib/index.js"></script>
       <script type="text/javascript" src="../../../index.js"></script>
       <script type="text/javascript" src="../../../lib/scheduler.js"></script>
       <script type="text/javascript" src="../../../lib/template.js"></script>
-      <script type="text/javascript" src="../../../lib/tools.tooltip.js"></script>
       
       <script type="text/javascript">
         /* this variable can be used by the JS to determine the path to the root document */
@@ -56,7 +56,7 @@
                 <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="_root_"></a><a id="root:_root_"></a>
       <span class="permalink">
-      <a href="index.html#_root_" title="Permalink">
+      <a href="../../../index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -72,7 +72,7 @@
     </li><li name="_root_.doodle" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="doodle"></a><a id="doodle:doodle"></a>
       <span class="permalink">
-      <a href="index.html#doodle" title="Permalink">
+      <a href="../../../doodle/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -88,7 +88,7 @@
     </li><li name="doodle.java2d" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="java2d"></a><a id="java2d:java2d"></a>
       <span class="permalink">
-      <a href="../doodle/index.html#java2d" title="Permalink">
+      <a href="../../../doodle/java2d/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -104,7 +104,7 @@
     </li><li name="doodle.java2d.effect" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="effect"></a><a id="effect:effect"></a>
       <span class="permalink">
-      <a href="../../doodle/java2d/index.html#effect" title="Permalink">
+      <a href="../../../doodle/java2d/effect/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -165,6 +165,10 @@
                         <span class="separator"></span>
                         <a class="object" href="Java2dJpgWriter$.html" title=""></a>
                         <a href="Java2dJpgWriter$.html" title="">Java2dJpgWriter</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="object" href="Java2dPdfWriter$.html" title=""></a>
+                        <a href="Java2dPdfWriter$.html" title="">Java2dPdfWriter</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
                         <a class="object" href="Java2dPngWriter$.html" title=""></a>
@@ -345,13 +349,13 @@
         <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../java/lang/index.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
-                <span class="name">@native</span><span class="args">()</span>
-              
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
     </span>)</span>
+              
+                <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
     </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
@@ -401,7 +405,7 @@
         <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../java/lang/index.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="symbol">classOf[java.lang.Throwable]</span>
@@ -447,9 +451,9 @@
               
         </dd></dl></div>
     </li><li name="doodle.java2d.effect.Java2d#inverseTransform" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="inverseTransform(bb:doodle.algebra.generic.BoundingBox,width:Double,height:Double,center:doodle.java2d.effect.Center):doodle.core.Transform"></a><a id="inverseTransform(BoundingBox,Double,Double,Center):Transform"></a>
+      <a id="inverseTransform(bb:doodle.core.BoundingBox,width:Double,height:Double,center:doodle.java2d.effect.Center):doodle.core.Transform"></a><a id="inverseTransform(BoundingBox,Double,Double,Center):Transform"></a>
       <span class="permalink">
-      <a href="../../../doodle/java2d/effect/Java2d$.html#inverseTransform(bb:doodle.algebra.generic.BoundingBox,width:Double,height:Double,center:doodle.java2d.effect.Center):doodle.core.Transform" title="Permalink">
+      <a href="../../../doodle/java2d/effect/Java2d$.html#inverseTransform(bb:doodle.core.BoundingBox,width:Double,height:Double,center:doodle.java2d.effect.Center):doodle.core.Transform" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -458,7 +462,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">inverseTransform</span><span class="params">(<span name="bb">bb: <a href="../../algebra/generic/BoundingBox.html" class="extype" name="doodle.algebra.generic.BoundingBox">BoundingBox</a></span>, <span name="width">width: <span class="extype" name="scala.Double">Double</span></span>, <span name="height">height: <span class="extype" name="scala.Double">Double</span></span>, <span name="center">center: <a href="Center.html" class="extype" name="doodle.java2d.effect.Center">Center</a></span>)</span><span class="result">: <a href="../../core/Transform.html" class="extype" name="doodle.core.Transform">Transform</a></span>
+        <span class="name">inverseTransform</span><span class="params">(<span name="bb">bb: <a href="../../core/BoundingBox.html" class="extype" name="doodle.core.BoundingBox">BoundingBox</a></span>, <span name="width">width: <span class="extype" name="scala.Double">Double</span></span>, <span name="height">height: <span class="extype" name="scala.Double">Double</span></span>, <span name="center">center: <a href="Center.html" class="extype" name="doodle.java2d.effect.Center">Center</a></span>)</span><span class="result">: <a href="../../core/Transform.html" class="extype" name="doodle.core.Transform">Transform</a></span>
       </span>
       
       <p class="shortcomment cmt">Create a transform from screen coordinates to local logical coordinates
@@ -535,9 +539,9 @@ the relationship between screen and picture.</p>
               
         </dd></dl></div>
     </li><li name="doodle.java2d.effect.Java2d#render" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="render(gc:java.awt.Graphics2D,image:List[doodle.algebra.generic.reified.Reified],transform:doodle.core.Transform):Unit"></a><a id="render(Graphics2D,List[Reified],Transform):Unit"></a>
+      <a id="render(gc:java.awt.Graphics2D,image:List[doodle.java2d.algebra.reified.Reified],transform:doodle.core.Transform):Unit"></a><a id="render(Graphics2D,List[Reified],Transform):Unit"></a>
       <span class="permalink">
-      <a href="../../../doodle/java2d/effect/Java2d$.html#render(gc:java.awt.Graphics2D,image:List[doodle.algebra.generic.reified.Reified],transform:doodle.core.Transform):Unit" title="Permalink">
+      <a href="../../../doodle/java2d/effect/Java2d$.html#render(gc:java.awt.Graphics2D,image:List[doodle.java2d.algebra.reified.Reified],transform:doodle.core.Transform):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -546,7 +550,7 @@ the relationship between screen and picture.</p>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">render</span><span class="params">(<span name="gc">gc: <span class="extype" name="java.awt.Graphics2D">Graphics2D</span></span>, <span name="image">image: <span class="extype" name="scala.List">List</span>[<a href="../../algebra/generic/reified/Reified.html" class="extype" name="doodle.algebra.generic.reified.Reified">Reified</a>]</span>, <span name="transform">transform: <a href="../../core/Transform.html" class="extype" name="doodle.core.Transform">Transform</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">render</span><span class="params">(<span name="gc">gc: <span class="extype" name="java.awt.Graphics2D">Graphics2D</span></span>, <span name="image">image: <span class="extype" name="scala.List">List</span>[<a href="../algebra/reified/Reified.html" class="extype" name="doodle.java2d.algebra.reified.Reified">Reified</a>]</span>, <span name="transform">transform: <a href="../../core/Transform.html" class="extype" name="doodle.core.Transform">Transform</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
       
@@ -567,9 +571,9 @@ the relationship between screen and picture.</p>
       
       
     </li><li name="doodle.java2d.effect.Java2d#size" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="size(bb:doodle.algebra.generic.BoundingBox,size:doodle.java2d.effect.Size):(Double,Double)"></a><a id="size(BoundingBox,Size):(Double,Double)"></a>
+      <a id="size(bb:doodle.core.BoundingBox,size:doodle.java2d.effect.Size):(Double,Double)"></a><a id="size(BoundingBox,Size):(Double,Double)"></a>
       <span class="permalink">
-      <a href="../../../doodle/java2d/effect/Java2d$.html#size(bb:doodle.algebra.generic.BoundingBox,size:doodle.java2d.effect.Size):(Double,Double)" title="Permalink">
+      <a href="../../../doodle/java2d/effect/Java2d$.html#size(bb:doodle.core.BoundingBox,size:doodle.java2d.effect.Size):(Double,Double)" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -578,7 +582,7 @@ the relationship between screen and picture.</p>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">size</span><span class="params">(<span name="bb">bb: <a href="../../algebra/generic/BoundingBox.html" class="extype" name="doodle.algebra.generic.BoundingBox">BoundingBox</a></span>, <span name="size">size: <a href="Size.html" class="extype" name="doodle.java2d.effect.Size">Size</a></span>)</span><span class="result">: (<span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Double">Double</span>)</span>
+        <span class="name">size</span><span class="params">(<span name="bb">bb: <a href="../../core/BoundingBox.html" class="extype" name="doodle.core.BoundingBox">BoundingBox</a></span>, <span name="size">size: <a href="Size.html" class="extype" name="doodle.java2d.effect.Size">Size</a></span>)</span><span class="result">: (<span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Double">Double</span>)</span>
       </span>
       
       <p class="shortcomment cmt">Calculate the size the panel or buffer should be given picture's bounding
@@ -616,9 +620,9 @@ box and the frame description.</p>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="doodle.java2d.effect.Java2d#transform" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="transform(bb:doodle.algebra.generic.BoundingBox,width:Double,height:Double,center:doodle.java2d.effect.Center):doodle.core.Transform"></a><a id="transform(BoundingBox,Double,Double,Center):Transform"></a>
+      <a id="transform(bb:doodle.core.BoundingBox,width:Double,height:Double,center:doodle.java2d.effect.Center):doodle.core.Transform"></a><a id="transform(BoundingBox,Double,Double,Center):Transform"></a>
       <span class="permalink">
-      <a href="../../../doodle/java2d/effect/Java2d$.html#transform(bb:doodle.algebra.generic.BoundingBox,width:Double,height:Double,center:doodle.java2d.effect.Center):doodle.core.Transform" title="Permalink">
+      <a href="../../../doodle/java2d/effect/Java2d$.html#transform(bb:doodle.core.BoundingBox,width:Double,height:Double,center:doodle.java2d.effect.Center):doodle.core.Transform" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -627,11 +631,11 @@ box and the frame description.</p>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">transform</span><span class="params">(<span name="bb">bb: <a href="../../algebra/generic/BoundingBox.html" class="extype" name="doodle.algebra.generic.BoundingBox">BoundingBox</a></span>, <span name="width">width: <span class="extype" name="scala.Double">Double</span></span>, <span name="height">height: <span class="extype" name="scala.Double">Double</span></span>, <span name="center">center: <a href="Center.html" class="extype" name="doodle.java2d.effect.Center">Center</a></span>)</span><span class="result">: <a href="../../core/Transform.html" class="extype" name="doodle.core.Transform">Transform</a></span>
+        <span class="name">transform</span><span class="params">(<span name="bb">bb: <a href="../../core/BoundingBox.html" class="extype" name="doodle.core.BoundingBox">BoundingBox</a></span>, <span name="width">width: <span class="extype" name="scala.Double">Double</span></span>, <span name="height">height: <span class="extype" name="scala.Double">Double</span></span>, <span name="center">center: <a href="Center.html" class="extype" name="doodle.java2d.effect.Center">Center</a></span>)</span><span class="result">: <a href="../../core/Transform.html" class="extype" name="doodle.core.Transform">Transform</a></span>
       </span>
       
       <p class="shortcomment cmt">Create a transform from local logical coordinates to screen coordinates
-given the bounding box for a picture, the screen size, and descriptino of
+given the bounding box for a picture, the screen size, and description of
 the relationship between screen and picture.</p>
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
@@ -693,12 +697,12 @@ the relationship between screen and picture.</p>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
-                <span class="name">@native</span><span class="args">()</span>
-              
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
     </span>)</span>
+              
+                <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
     </li>

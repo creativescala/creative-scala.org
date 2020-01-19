@@ -8,17 +8,17 @@
           <meta name="keywords" content="" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
+      
       <link href="../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
       <link href="../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
       <link href="../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
-      <script type="text/javascript" src="../../lib/jquery.js"></script>
+      <script type="text/javascript" src="../../lib/jquery.min.js"></script>
       <script type="text/javascript" src="../../lib/jquery.panzoom.min.js"></script>
       <script type="text/javascript" src="../../lib/jquery.mousewheel.min.js"></script>
       <script type="text/javascript" src="../../lib/index.js"></script>
       <script type="text/javascript" src="../../index.js"></script>
       <script type="text/javascript" src="../../lib/scheduler.js"></script>
       <script type="text/javascript" src="../../lib/template.js"></script>
-      <script type="text/javascript" src="../../lib/tools.tooltip.js"></script>
       
       <script type="text/javascript">
         /* this variable can be used by the JS to determine the path to the root document */
@@ -56,7 +56,7 @@
                 <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="_root_"></a><a id="root:_root_"></a>
       <span class="permalink">
-      <a href="index.html#_root_" title="Permalink">
+      <a href="../../index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -72,7 +72,7 @@
     </li><li name="_root_.doodle" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="doodle"></a><a id="doodle:doodle"></a>
       <span class="permalink">
-      <a href="index.html#doodle" title="Permalink">
+      <a href="../../doodle/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -88,7 +88,7 @@
     </li><li name="doodle.reactor" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="reactor"></a><a id="reactor:reactor"></a>
       <span class="permalink">
-      <a href="../doodle/index.html#reactor" title="Permalink">
+      <a href="../../doodle/reactor/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -104,7 +104,7 @@
     </li><li name="doodle.reactor.examples" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="examples"></a><a id="examples:examples"></a>
       <span class="permalink">
-      <a href="../../doodle/reactor/index.html#examples" title="Permalink">
+      <a href="../../doodle/reactor/examples/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -118,56 +118,51 @@
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="doodle.reactor">reactor</a></dd></dl></div>
     </li><li class="current-entities indented2">
-                        <a class="object" href="BasicReactor$.html" title=""></a>
-                        <a class="class" href="BasicReactor.html" title="A Reactor that has reasonable defaults and a simple builder style for creating more complicated behaviour."></a>
-                        <a href="BasicReactor.html" title="A Reactor that has reasonable defaults and a simple builder style for creating more complicated behaviour.">BasicReactor</a>
+                        <a class="object" href="BaseReactor$.html" title=""></a>
+                        <a class="trait" href="BaseReactor.html" title="A reactor is a simple way to express an interactive program."></a>
+                        <a href="BaseReactor.html" title="A reactor is a simple way to express an interactive program.">BaseReactor</a>
                       </li><li class="current-entities indented2">
-                        <span class="separator"></span>
-                        <a class="trait" href="" title="A Reactor is a simple way to express an interactive program."></a>
-                        <a href="" title="A Reactor is a simple way to express an interactive program.">Reactor</a>
+                        <a class="object" href="Reactor$.html" title=""></a>
+                        <a class="class" href="" title="A Reactor that has reasonable defaults and a simple builder style for creating more complicated behaviour."></a>
+                        <a href="" title="A Reactor that has reasonable defaults and a simple builder style for creating more complicated behaviour.">Reactor</a>
                       </li>
               </ul>
             </div>
           </div>
           <div id="content">
-            <body class="trait type">
+            <body class="class type">
       <div id="definition">
-        <div class="big-circle trait">t</div>
+        <a href="Reactor$.html" title="See companion object"><div class="big-circle class-companion-object">c</div></a>
         <p id="owner"><a href="../index.html" class="extype" name="doodle">doodle</a>.<a href="index.html" class="extype" name="doodle.reactor">reactor</a></p>
-        <h1>Reactor<span class="permalink">
+        <h1><a href="Reactor$.html" title="See companion object">Reactor</a><span class="permalink">
       <a href="../../doodle/reactor/Reactor.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span></h1>
-        <h3><span class="morelinks"></span></h3>
+        <h3><span class="morelinks"><div>
+            Companion <a href="Reactor$.html" title="See companion object">object Reactor</a>
+          </div></span></h3>
       </div>
 
       <h4 id="signature" class="signature">
       <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">trait</span>
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">Reactor</span><span class="tparams">[<span name="A">A</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+        <span class="name">Reactor</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="initial">initial: <span class="extype" name="doodle.reactor.Reactor.A">A</span></span>, <span name="onMouseMoveHandler">onMouseMoveHandler: (<a href="../core/Point.html" class="extype" name="doodle.core.Point">Point</a>, <span class="extype" name="doodle.reactor.Reactor.A">A</span>) ⇒ <span class="extype" name="doodle.reactor.Reactor.A">A</span> = <span class="symbol">(_: Point, a: A) =&gt; a</span></span>, <span name="onTickHandler">onTickHandler: (<span class="extype" name="doodle.reactor.Reactor.A">A</span>) ⇒ <span class="extype" name="doodle.reactor.Reactor.A">A</span> = <span class="symbol">(a: A) =&gt; a</span></span>, <span name="tickRate">tickRate: <span class="extype" name="scala.concurrent.duration.FiniteDuration">FiniteDuration</span> = <span class="symbol">FiniteDuration(100, MILLISECONDS)</span></span>, <span name="renderHandler">renderHandler: (<span class="extype" name="doodle.reactor.Reactor.A">A</span>) ⇒ <a href="../image/Image.html" class="extype" name="doodle.image.Image">Image</a> = <span class="symbol"><span class="name"><a href="../index.html">(_: A) =&gt; Image.empty</a></span></span></span>, <span name="stopHandler">stopHandler: (<span class="extype" name="doodle.reactor.Reactor.A">A</span>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">(_: A) =&gt; false</span></span>)</span><span class="result"> extends <a href="BaseReactor.html" class="extype" name="doodle.reactor.BaseReactor">BaseReactor</a>[<span class="extype" name="doodle.reactor.Reactor.A">A</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>A Reactor is a simple way to express an interactive program. It allows us to
-write programs in terms of some initial state and transformations of that
-state in response to inputs and clock ticks. This is the basic interface that
-does not handle any user input, only clock ticks.</p><p>It is based on * the same abstraction in Pyret.
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>A <a href="" class="extype" name="doodle.reactor.Reactor">Reactor</a> that has reasonable defaults and a simple builder style for
+creating more complicated behaviour.
 </p></div><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
-        </div><div class="toggleContainer block">
-            <span class="toggle">
-              Known Subclasses
-            </span>
-            <div class="subClasses hiddenContent"><a href="BasicReactor.html" class="extype" name="doodle.reactor.BasicReactor">BasicReactor</a></div>
-          </div></div>
+          <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <a href="BaseReactor.html" class="extype" name="doodle.reactor.BaseReactor">BaseReactor</a>[<span class="extype" name="doodle.reactor.Reactor.A">A</span>], <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+        </div></div>
         
 
       <div id="mbrsel">
@@ -192,7 +187,7 @@ does not handle any user input, only clock ticks.</p><p>It is based on * the sam
                   <span class="filtertype">Inherited<br />
                   </span>
                   <ol id="linearization">
-                    <li class="in" name="doodle.reactor.Reactor"><span>Reactor</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                    <li class="in" name="doodle.reactor.Reactor"><span>Reactor</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.Product"><span>Product</span></li><li class="in" name="scala.Equals"><span>Equals</span></li><li class="in" name="doodle.reactor.BaseReactor"><span>BaseReactor</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                   </ol>
                 </div><div class="ancestors">
               <span class="filtertype"></span>
@@ -210,97 +205,33 @@ does not handle any user input, only clock ticks.</p><p>It is based on * the sam
 
       <div id="template">
         <div id="allMembers">
-        
-
-        
-
-        <div class="values members">
-              <h3>Abstract Value Members</h3>
-              <ol><li name="doodle.reactor.Reactor#initial" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="initial:A"></a>
+        <div id="constructors" class="members">
+              <h3>Instance Constructors</h3>
+              <ol><li name="doodle.reactor.Reactor#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;(initial:A,onMouseMoveHandler:(doodle.core.Point,A)=&gt;A,onTickHandler:A=&gt;A,tickRate:scala.concurrent.duration.FiniteDuration,renderHandler:A=&gt;doodle.image.Image,stopHandler:A=&gt;Boolean):doodle.reactor.Reactor[A]"></a><a id="&lt;init&gt;:Reactor[A]"></a>
       <span class="permalink">
-      <a href="../../doodle/reactor/Reactor.html#initial:A" title="Permalink">
+      <a href="../../doodle/reactor/Reactor.html#&lt;init&gt;(initial:A,onMouseMoveHandler:(doodle.core.Point,A)=&gt;A,onTickHandler:A=&gt;A,tickRate:scala.concurrent.duration.FiniteDuration,renderHandler:A=&gt;doodle.image.Image,stopHandler:A=&gt;Boolean):doodle.reactor.Reactor[A]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
       <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">def</span>
+        <span class="modifier"></span>
+        <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">initial</span><span class="result">: <span class="extype" name="doodle.reactor.Reactor.A">A</span></span>
-      </span>
-      
-      
-    </li><li name="doodle.reactor.Reactor#onTick" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="onTick(value:A):A"></a><a id="onTick(A):A"></a>
-      <span class="permalink">
-      <a href="../../doodle/reactor/Reactor.html#onTick(value:A):A" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">onTick</span><span class="params">(<span name="value">value: <span class="extype" name="doodle.reactor.Reactor.A">A</span></span>)</span><span class="result">: <span class="extype" name="doodle.reactor.Reactor.A">A</span></span>
-      </span>
-      
-      
-    </li><li name="doodle.reactor.Reactor#render" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="render(value:A):doodle.image.Image"></a><a id="render(A):Image"></a>
-      <span class="permalink">
-      <a href="../../doodle/reactor/Reactor.html#render(value:A):doodle.image.Image" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">render</span><span class="params">(<span name="value">value: <span class="extype" name="doodle.reactor.Reactor.A">A</span></span>)</span><span class="result">: <a href="../image/Image.html" class="extype" name="doodle.image.Image">Image</a></span>
-      </span>
-      
-      
-    </li><li name="doodle.reactor.Reactor#stop" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="stop(value:A):Boolean"></a><a id="stop(A):Boolean"></a>
-      <span class="permalink">
-      <a href="../../doodle/reactor/Reactor.html#stop(value:A):Boolean" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">stop</span><span class="params">(<span name="value">value: <span class="extype" name="doodle.reactor.Reactor.A">A</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
-      </span>
-      
-      
-    </li><li name="doodle.reactor.Reactor#tickRate" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="tickRate:scala.concurrent.duration.FiniteDuration"></a><a id="tickRate:FiniteDuration"></a>
-      <span class="permalink">
-      <a href="../../doodle/reactor/Reactor.html#tickRate:scala.concurrent.duration.FiniteDuration" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">tickRate</span><span class="result">: <span class="extype" name="scala.concurrent.duration.FiniteDuration">FiniteDuration</span></span>
+        <span class="name">Reactor</span><span class="params">(<span name="initial">initial: <span class="extype" name="doodle.reactor.Reactor.A">A</span></span>, <span name="onMouseMoveHandler">onMouseMoveHandler: (<a href="../core/Point.html" class="extype" name="doodle.core.Point">Point</a>, <span class="extype" name="doodle.reactor.Reactor.A">A</span>) ⇒ <span class="extype" name="doodle.reactor.Reactor.A">A</span> = <span class="symbol">(_: Point, a: A) =&gt; a</span></span>, <span name="onTickHandler">onTickHandler: (<span class="extype" name="doodle.reactor.Reactor.A">A</span>) ⇒ <span class="extype" name="doodle.reactor.Reactor.A">A</span> = <span class="symbol">(a: A) =&gt; a</span></span>, <span name="tickRate">tickRate: <span class="extype" name="scala.concurrent.duration.FiniteDuration">FiniteDuration</span> = <span class="symbol">FiniteDuration(100, MILLISECONDS)</span></span>, <span name="renderHandler">renderHandler: (<span class="extype" name="doodle.reactor.Reactor.A">A</span>) ⇒ <a href="../image/Image.html" class="extype" name="doodle.image.Image">Image</a> = <span class="symbol"><span class="name"><a href="../index.html">(_: A) =&gt; Image.empty</a></span></span></span>, <span name="stopHandler">stopHandler: (<span class="extype" name="doodle.reactor.Reactor.A">A</span>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">(_: A) =&gt; false</span></span>)</span>
       </span>
       
       
     </li></ol>
             </div>
 
+        
+
+        
+
         <div class="values members">
-              <h3>Concrete Value Members</h3>
+              <h3>Value Members</h3>
               <ol>
                 <li name="scala.AnyRef#!=" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="!=(x$1:Any):Boolean"></a><a id="!=(Any):Boolean"></a>
@@ -381,15 +312,47 @@ does not handle any user input, only clock ticks.</p><p>It is based on * the sam
         <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../java/lang/index.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
-                <span class="name">@native</span><span class="args">()</span>
-              
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
     </span>)</span>
               
+                <span class="name">@native</span><span class="args">()</span>
+              
         </dd></dl></div>
+    </li><li name="doodle.reactor.Reactor#draw" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="draw[Alg[x[_]]&lt;:doodle.language.Basic[x],F[_],Frame,Canvas]()(implicitrenderer:doodle.effect.DefaultRenderer[Alg,F,Frame,Canvas]):Unit"></a><a id="draw[Alg[x[_]]&lt;:Basic[x[_]],F[_],Frame,Canvas]()(DefaultRenderer[Alg,F,Frame,Canvas]):Unit"></a>
+      <span class="permalink">
+      <a href="../../doodle/reactor/Reactor.html#draw[Alg[x[_]]&lt;:doodle.language.Basic[x],F[_],Frame,Canvas]()(implicitrenderer:doodle.effect.DefaultRenderer[Alg,F,Frame,Canvas]):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">draw</span><span class="tparams">[<span name="Alg">Alg<span class="tparams">[<span name="x">x<span class="tparams">[<span name="_">_</span>]</span></span>]</span> &lt;: <a href="../language/Basic.html" class="extype" name="doodle.language.Basic">Basic</a>[<span class="extype" name="doodle.reactor.Reactor.draw.Alg.x">x</span>[<span class="extype" name="doodle.reactor.Reactor.draw.Alg.x._">_</span>]]</span>, <span name="F">F<span class="tparams">[<span name="_">_</span>]</span></span>, <span name="Frame">Frame</span>, <span name="Canvas">Canvas</span>]</span><span class="params">()</span><span class="params">(<span class="implicit">implicit </span><span name="renderer">renderer: <a href="../effect/DefaultRenderer.html" class="extype" name="doodle.effect.DefaultRenderer">DefaultRenderer</a>[<span class="extype" name="doodle.reactor.Reactor.draw.Alg">Alg</span>, <span class="extype" name="doodle.reactor.Reactor.draw.F">F</span>, <span class="extype" name="doodle.reactor.Reactor.draw.Frame">Frame</span>, <span class="extype" name="doodle.reactor.Reactor.draw.Canvas">Canvas</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      
+    </li><li name="doodle.reactor.Reactor#draw" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="draw[Alg[x[_]]&lt;:doodle.language.Basic[x],F[_],Frame,Canvas](frame:Frame)(implicitrenderer:doodle.effect.Renderer[Alg,F,Frame,Canvas]):Unit"></a><a id="draw[Alg[x[_]]&lt;:Basic[x[_]],F[_],Frame,Canvas](Frame)(Renderer[Alg,F,Frame,Canvas]):Unit"></a>
+      <span class="permalink">
+      <a href="../../doodle/reactor/Reactor.html#draw[Alg[x[_]]&lt;:doodle.language.Basic[x],F[_],Frame,Canvas](frame:Frame)(implicitrenderer:doodle.effect.Renderer[Alg,F,Frame,Canvas]):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">draw</span><span class="tparams">[<span name="Alg">Alg<span class="tparams">[<span name="x">x<span class="tparams">[<span name="_">_</span>]</span></span>]</span> &lt;: <a href="../language/Basic.html" class="extype" name="doodle.language.Basic">Basic</a>[<span class="extype" name="doodle.reactor.Reactor.draw.Alg.x">x</span>[<span class="extype" name="doodle.reactor.Reactor.draw.Alg.x._">_</span>]]</span>, <span name="F">F<span class="tparams">[<span name="_">_</span>]</span></span>, <span name="Frame">Frame</span>, <span name="Canvas">Canvas</span>]</span><span class="params">(<span name="frame">frame: <span class="extype" name="doodle.reactor.Reactor.draw.Frame">Frame</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="renderer">renderer: <a href="../effect/Renderer.html" class="extype" name="doodle.effect.Renderer">Renderer</a>[<span class="extype" name="doodle.reactor.Reactor.draw.Alg">Alg</span>, <span class="extype" name="doodle.reactor.Reactor.draw.F">F</span>, <span class="extype" name="doodle.reactor.Reactor.draw.Frame">Frame</span>, <span class="extype" name="doodle.reactor.Reactor.draw.Canvas">Canvas</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      
     </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
       <span class="permalink">
@@ -406,22 +369,6 @@ does not handle any user input, only clock ticks.</p><p>It is based on * the sam
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="scala.AnyRef#equals" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="equals(x$1:Any):Boolean"></a><a id="equals(Any):Boolean"></a>
-      <span class="permalink">
-      <a href="../../doodle/reactor/Reactor.html#equals(x$1:Any):Boolean" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
-      </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
       <span class="permalink">
@@ -437,7 +384,7 @@ does not handle any user input, only clock ticks.</p><p>It is based on * the sam
         <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../java/lang/index.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="symbol">classOf[java.lang.Throwable]</span>
@@ -463,10 +410,10 @@ does not handle any user input, only clock ticks.</p><p>It is based on * the sam
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="scala.AnyRef#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="hashCode():Int"></a>
+    </li><li name="doodle.reactor.Reactor#image" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="image:doodle.image.Image"></a><a id="image:Image"></a>
       <span class="permalink">
-      <a href="../../doodle/reactor/Reactor.html#hashCode():Int" title="Permalink">
+      <a href="../../doodle/reactor/Reactor.html#image:doodle.image.Image" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -475,13 +422,26 @@ does not handle any user input, only clock ticks.</p><p>It is based on * the sam
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+        <span class="name">image</span><span class="result">: <a href="../image/Image.html" class="extype" name="doodle.image.Image">Image</a></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
-                <span class="name">@native</span><span class="args">()</span>
-              
-        </dd></dl></div>
+      
+    </li><li name="doodle.reactor.Reactor#initial" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="initial:A"></a>
+      <span class="permalink">
+      <a href="../../doodle/reactor/Reactor.html#initial:A" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">initial</span><span class="result">: <span class="extype" name="doodle.reactor.Reactor.A">A</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="doodle.reactor.Reactor">Reactor</a> → <a href="BaseReactor.html" class="extype" name="doodle.reactor.BaseReactor">BaseReactor</a></dd></dl></div>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <span class="permalink">
@@ -552,10 +512,10 @@ does not handle any user input, only clock ticks.</p><p>It is based on * the sam
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="doodle.reactor.Reactor#run" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="run[Alg[x[_]]&lt;:doodle.language.Basic[x],F[_],Frame,Canvas](frame:Frame)(implicita:doodle.interact.effect.AnimationRenderer[Canvas],implicite:doodle.effect.Renderer[Alg,F,Frame,Canvas],implicits:monix.execution.Scheduler):Unit"></a><a id="run[Alg[x[_]]&lt;:Basic[x[_]],F[_],Frame,Canvas](Frame)(AnimationRenderer[Canvas],Renderer[Alg,F,Frame,Canvas],Scheduler):Unit"></a>
+    </li><li name="doodle.reactor.Reactor#onMouseMove" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="onMouseMove(f:(doodle.core.Point,A)=&gt;A):doodle.reactor.Reactor[A]"></a><a id="onMouseMove((Point,A)⇒A):Reactor[A]"></a>
       <span class="permalink">
-      <a href="../../doodle/reactor/Reactor.html#run[Alg[x[_]]&lt;:doodle.language.Basic[x],F[_],Frame,Canvas](frame:Frame)(implicita:doodle.interact.effect.AnimationRenderer[Canvas],implicite:doodle.effect.Renderer[Alg,F,Frame,Canvas],implicits:monix.execution.Scheduler):Unit" title="Permalink">
+      <a href="../../doodle/reactor/Reactor.html#onMouseMove(f:(doodle.core.Point,A)=&gt;A):doodle.reactor.Reactor[A]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -564,11 +524,221 @@ does not handle any user input, only clock ticks.</p><p>It is based on * the sam
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">run</span><span class="tparams">[<span name="Alg">Alg<span class="tparams">[<span name="x">x<span class="tparams">[<span name="_">_</span>]</span></span>]</span> &lt;: <a href="../language/Basic.html" class="extype" name="doodle.language.Basic">Basic</a>[<span class="extype" name="doodle.reactor.Reactor.run.Alg.x">x</span>[<span class="extype" name="doodle.reactor.Reactor.run.Alg.x._">_</span>]]</span>, <span name="F">F<span class="tparams">[<span name="_">_</span>]</span></span>, <span name="Frame">Frame</span>, <span name="Canvas">Canvas</span>]</span><span class="params">(<span name="frame">frame: <span class="extype" name="doodle.reactor.Reactor.run.Frame">Frame</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="a">a: <a href="../interact/effect/AnimationRenderer.html" class="extype" name="doodle.interact.effect.AnimationRenderer">AnimationRenderer</a>[<span class="extype" name="doodle.reactor.Reactor.run.Canvas">Canvas</span>]</span>, <span name="e">e: <a href="../effect/Renderer.html" class="extype" name="doodle.effect.Renderer">Renderer</a>[<span class="extype" name="doodle.reactor.Reactor.run.Alg">Alg</span>, <span class="extype" name="doodle.reactor.Reactor.run.F">F</span>, <span class="extype" name="doodle.reactor.Reactor.run.Frame">Frame</span>, <span class="extype" name="doodle.reactor.Reactor.run.Canvas">Canvas</span>]</span>, <span name="s">s: <span class="extype" name="monix.execution.Scheduler">Scheduler</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">onMouseMove</span><span class="params">(<span name="f">f: (<a href="../core/Point.html" class="extype" name="doodle.core.Point">Point</a>, <span class="extype" name="doodle.reactor.Reactor.A">A</span>) ⇒ <span class="extype" name="doodle.reactor.Reactor.A">A</span></span>)</span><span class="result">: <a href="" class="extype" name="doodle.reactor.Reactor">Reactor</a>[<span class="extype" name="doodle.reactor.Reactor.A">A</span>]</span>
       </span>
       
-      <p class="shortcomment cmt">Runs this Reactor, drawing on the given <code>frame</code>, until <code>stop</code> indicates
-it should stop.</p>
+      
+    </li><li name="doodle.reactor.Reactor#onMouseMove" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="onMouseMove(location:doodle.core.Point,state:A):A"></a><a id="onMouseMove(Point,A):A"></a>
+      <span class="permalink">
+      <a href="../../doodle/reactor/Reactor.html#onMouseMove(location:doodle.core.Point,state:A):A" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">onMouseMove</span><span class="params">(<span name="location">location: <a href="../core/Point.html" class="extype" name="doodle.core.Point">Point</a></span>, <span name="state">state: <span class="extype" name="doodle.reactor.Reactor.A">A</span></span>)</span><span class="result">: <span class="extype" name="doodle.reactor.Reactor.A">A</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="doodle.reactor.Reactor">Reactor</a> → <a href="BaseReactor.html" class="extype" name="doodle.reactor.BaseReactor">BaseReactor</a></dd></dl></div>
+    </li><li name="doodle.reactor.Reactor#onMouseMoveHandler" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="onMouseMoveHandler:(doodle.core.Point,A)=&gt;A"></a><a id="onMouseMoveHandler:(Point,A)⇒A"></a>
+      <span class="permalink">
+      <a href="../../doodle/reactor/Reactor.html#onMouseMoveHandler:(doodle.core.Point,A)=&gt;A" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">onMouseMoveHandler</span><span class="result">: (<a href="../core/Point.html" class="extype" name="doodle.core.Point">Point</a>, <span class="extype" name="doodle.reactor.Reactor.A">A</span>) ⇒ <span class="extype" name="doodle.reactor.Reactor.A">A</span></span>
+      </span>
+      
+      
+    </li><li name="doodle.reactor.Reactor#onTick" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="onTick(f:A=&gt;A):doodle.reactor.Reactor[A]"></a><a id="onTick((A)⇒A):Reactor[A]"></a>
+      <span class="permalink">
+      <a href="../../doodle/reactor/Reactor.html#onTick(f:A=&gt;A):doodle.reactor.Reactor[A]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">onTick</span><span class="params">(<span name="f">f: (<span class="extype" name="doodle.reactor.Reactor.A">A</span>) ⇒ <span class="extype" name="doodle.reactor.Reactor.A">A</span></span>)</span><span class="result">: <a href="" class="extype" name="doodle.reactor.Reactor">Reactor</a>[<span class="extype" name="doodle.reactor.Reactor.A">A</span>]</span>
+      </span>
+      
+      
+    </li><li name="doodle.reactor.Reactor#onTick" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="onTick(state:A):A"></a><a id="onTick(A):A"></a>
+      <span class="permalink">
+      <a href="../../doodle/reactor/Reactor.html#onTick(state:A):A" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">onTick</span><span class="params">(<span name="state">state: <span class="extype" name="doodle.reactor.Reactor.A">A</span></span>)</span><span class="result">: <span class="extype" name="doodle.reactor.Reactor.A">A</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="doodle.reactor.Reactor">Reactor</a> → <a href="BaseReactor.html" class="extype" name="doodle.reactor.BaseReactor">BaseReactor</a></dd></dl></div>
+    </li><li name="doodle.reactor.Reactor#onTickHandler" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="onTickHandler:A=&gt;A"></a><a id="onTickHandler:(A)⇒A"></a>
+      <span class="permalink">
+      <a href="../../doodle/reactor/Reactor.html#onTickHandler:A=&gt;A" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">onTickHandler</span><span class="result">: (<span class="extype" name="doodle.reactor.Reactor.A">A</span>) ⇒ <span class="extype" name="doodle.reactor.Reactor.A">A</span></span>
+      </span>
+      
+      
+    </li><li name="doodle.reactor.Reactor#render" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="render(f:A=&gt;doodle.image.Image):doodle.reactor.Reactor[A]"></a><a id="render((A)⇒Image):Reactor[A]"></a>
+      <span class="permalink">
+      <a href="../../doodle/reactor/Reactor.html#render(f:A=&gt;doodle.image.Image):doodle.reactor.Reactor[A]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">render</span><span class="params">(<span name="f">f: (<span class="extype" name="doodle.reactor.Reactor.A">A</span>) ⇒ <a href="../image/Image.html" class="extype" name="doodle.image.Image">Image</a></span>)</span><span class="result">: <a href="" class="extype" name="doodle.reactor.Reactor">Reactor</a>[<span class="extype" name="doodle.reactor.Reactor.A">A</span>]</span>
+      </span>
+      
+      
+    </li><li name="doodle.reactor.Reactor#render" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="render(value:A):doodle.image.Image"></a><a id="render(A):Image"></a>
+      <span class="permalink">
+      <a href="../../doodle/reactor/Reactor.html#render(value:A):doodle.image.Image" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">render</span><span class="params">(<span name="value">value: <span class="extype" name="doodle.reactor.Reactor.A">A</span></span>)</span><span class="result">: <a href="../image/Image.html" class="extype" name="doodle.image.Image">Image</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="doodle.reactor.Reactor">Reactor</a> → <a href="BaseReactor.html" class="extype" name="doodle.reactor.BaseReactor">BaseReactor</a></dd></dl></div>
+    </li><li name="doodle.reactor.Reactor#renderHandler" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="renderHandler:A=&gt;doodle.image.Image"></a><a id="renderHandler:(A)⇒Image"></a>
+      <span class="permalink">
+      <a href="../../doodle/reactor/Reactor.html#renderHandler:A=&gt;doodle.image.Image" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">renderHandler</span><span class="result">: (<span class="extype" name="doodle.reactor.Reactor.A">A</span>) ⇒ <a href="../image/Image.html" class="extype" name="doodle.image.Image">Image</a></span>
+      </span>
+      
+      
+    </li><li name="doodle.reactor.BaseReactor#run" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="run[Alg[x[_]]&lt;:doodle.language.Basic[x],F[_],Frame,Canvas](frame:Frame)(implicita:doodle.interact.effect.AnimationRenderer[Canvas],implicite:doodle.effect.Renderer[Alg,F,Frame,Canvas],implicitm:doodle.interact.algebra.MouseMove[Canvas],implicits:monix.execution.Scheduler):Unit"></a><a id="run[Alg[x[_]]&lt;:Basic[x[_]],F[_],Frame,Canvas](Frame)(AnimationRenderer[Canvas],Renderer[Alg,F,Frame,Canvas],MouseMove[Canvas],Scheduler):Unit"></a>
+      <span class="permalink">
+      <a href="../../doodle/reactor/Reactor.html#run[Alg[x[_]]&lt;:doodle.language.Basic[x],F[_],Frame,Canvas](frame:Frame)(implicita:doodle.interact.effect.AnimationRenderer[Canvas],implicite:doodle.effect.Renderer[Alg,F,Frame,Canvas],implicitm:doodle.interact.algebra.MouseMove[Canvas],implicits:monix.execution.Scheduler):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">run</span><span class="tparams">[<span name="Alg">Alg<span class="tparams">[<span name="x">x<span class="tparams">[<span name="_">_</span>]</span></span>]</span> &lt;: <a href="../language/Basic.html" class="extype" name="doodle.language.Basic">Basic</a>[<span class="extype" name="doodle.reactor.BaseReactor.run.Alg.x">x</span>[<span class="extype" name="doodle.reactor.BaseReactor.run.Alg.x._">_</span>]]</span>, <span name="F">F<span class="tparams">[<span name="_">_</span>]</span></span>, <span name="Frame">Frame</span>, <span name="Canvas">Canvas</span>]</span><span class="params">(<span name="frame">frame: <span class="extype" name="doodle.reactor.BaseReactor.run.Frame">Frame</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="a">a: <a href="../interact/effect/AnimationRenderer.html" class="extype" name="doodle.interact.effect.AnimationRenderer">AnimationRenderer</a>[<span class="extype" name="doodle.reactor.BaseReactor.run.Canvas">Canvas</span>]</span>, <span name="e">e: <a href="../effect/Renderer.html" class="extype" name="doodle.effect.Renderer">Renderer</a>[<span class="extype" name="doodle.reactor.BaseReactor.run.Alg">Alg</span>, <span class="extype" name="doodle.reactor.BaseReactor.run.F">F</span>, <span class="extype" name="doodle.reactor.BaseReactor.run.Frame">Frame</span>, <span class="extype" name="doodle.reactor.BaseReactor.run.Canvas">Canvas</span>]</span>, <span name="m">m: <a href="../interact/algebra/MouseMove.html" class="extype" name="doodle.interact.algebra.MouseMove">MouseMove</a>[<span class="extype" name="doodle.reactor.BaseReactor.run.Canvas">Canvas</span>]</span>, <span name="s">s: <span class="extype" name="monix.execution.Scheduler">Scheduler</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Runs this reactor, drawing on the given <code>frame</code>, until <code>stop</code> indicates
+it should stop.</p><div class="fullcomment"><div class="comment cmt"><p>Runs this reactor, drawing on the given <code>frame</code>, until <code>stop</code> indicates
+it should stop.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="BaseReactor.html" class="extype" name="doodle.reactor.BaseReactor">BaseReactor</a></dd></dl></div>
+    </li><li name="doodle.reactor.Reactor#step" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="step:doodle.reactor.Reactor[A]"></a><a id="step:Reactor[A]"></a>
+      <span class="permalink">
+      <a href="../../doodle/reactor/Reactor.html#step:doodle.reactor.Reactor[A]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">step</span><span class="result">: <a href="" class="extype" name="doodle.reactor.Reactor">Reactor</a>[<span class="extype" name="doodle.reactor.Reactor.A">A</span>]</span>
+      </span>
+      
+      
+    </li><li name="doodle.reactor.Reactor#stop" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="stop(f:A=&gt;Boolean):doodle.reactor.Reactor[A]"></a><a id="stop((A)⇒Boolean):Reactor[A]"></a>
+      <span class="permalink">
+      <a href="../../doodle/reactor/Reactor.html#stop(f:A=&gt;Boolean):doodle.reactor.Reactor[A]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">stop</span><span class="params">(<span name="f">f: (<span class="extype" name="doodle.reactor.Reactor.A">A</span>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="" class="extype" name="doodle.reactor.Reactor">Reactor</a>[<span class="extype" name="doodle.reactor.Reactor.A">A</span>]</span>
+      </span>
+      
+      
+    </li><li name="doodle.reactor.Reactor#stop" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="stop(value:A):Boolean"></a><a id="stop(A):Boolean"></a>
+      <span class="permalink">
+      <a href="../../doodle/reactor/Reactor.html#stop(value:A):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">stop</span><span class="params">(<span name="value">value: <span class="extype" name="doodle.reactor.Reactor.A">A</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="doodle.reactor.Reactor">Reactor</a> → <a href="BaseReactor.html" class="extype" name="doodle.reactor.BaseReactor">BaseReactor</a></dd></dl></div>
+    </li><li name="doodle.reactor.Reactor#stopHandler" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="stopHandler:A=&gt;Boolean"></a><a id="stopHandler:(A)⇒Boolean"></a>
+      <span class="permalink">
+      <a href="../../doodle/reactor/Reactor.html#stopHandler:A=&gt;Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">stopHandler</span><span class="result">: (<span class="extype" name="doodle.reactor.Reactor.A">A</span>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      
     </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
       <span class="permalink">
@@ -585,10 +755,10 @@ it should stop.</p>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="doodle.reactor.Reactor#tick" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="tick[Alg[x[_]]&lt;:doodle.language.Basic[x],F[_],Frame,Canvas](frame:Frame)(implicite:doodle.effect.Renderer[Alg,F,Frame,Canvas]):Option[A]"></a><a id="tick[Alg[x[_]]&lt;:Basic[x[_]],F[_],Frame,Canvas](Frame)(Renderer[Alg,F,Frame,Canvas]):Option[A]"></a>
+    </li><li name="doodle.reactor.BaseReactor#tick" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="tick[F[_],Frame,Canvas](frame:Frame)(implicite:doodle.effect.Renderer[doodle.language.Basic,F,Frame,Canvas]):Option[A]"></a><a id="tick[F[_],Frame,Canvas](Frame)(Renderer[Basic,F,Frame,Canvas]):Option[A]"></a>
       <span class="permalink">
-      <a href="../../doodle/reactor/Reactor.html#tick[Alg[x[_]]&lt;:doodle.language.Basic[x],F[_],Frame,Canvas](frame:Frame)(implicite:doodle.effect.Renderer[Alg,F,Frame,Canvas]):Option[A]" title="Permalink">
+      <a href="../../doodle/reactor/Reactor.html#tick[F[_],Frame,Canvas](frame:Frame)(implicite:doodle.effect.Renderer[doodle.language.Basic,F,Frame,Canvas]):Option[A]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -597,16 +767,16 @@ it should stop.</p>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">tick</span><span class="tparams">[<span name="Alg">Alg<span class="tparams">[<span name="x">x<span class="tparams">[<span name="_">_</span>]</span></span>]</span> &lt;: <a href="../language/Basic.html" class="extype" name="doodle.language.Basic">Basic</a>[<span class="extype" name="doodle.reactor.Reactor.tick.Alg.x">x</span>[<span class="extype" name="doodle.reactor.Reactor.tick.Alg.x._">_</span>]]</span>, <span name="F">F<span class="tparams">[<span name="_">_</span>]</span></span>, <span name="Frame">Frame</span>, <span name="Canvas">Canvas</span>]</span><span class="params">(<span name="frame">frame: <span class="extype" name="doodle.reactor.Reactor.tick.Frame">Frame</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="e">e: <a href="../effect/Renderer.html" class="extype" name="doodle.effect.Renderer">Renderer</a>[<span class="extype" name="doodle.reactor.Reactor.tick.Alg">Alg</span>, <span class="extype" name="doodle.reactor.Reactor.tick.F">F</span>, <span class="extype" name="doodle.reactor.Reactor.tick.Frame">Frame</span>, <span class="extype" name="doodle.reactor.Reactor.tick.Canvas">Canvas</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="doodle.reactor.Reactor.A">A</span>]</span>
+        <span class="name">tick</span><span class="tparams">[<span name="F">F<span class="tparams">[<span name="_">_</span>]</span></span>, <span name="Frame">Frame</span>, <span name="Canvas">Canvas</span>]</span><span class="params">(<span name="frame">frame: <span class="extype" name="doodle.reactor.BaseReactor.tick.Frame">Frame</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="e">e: <a href="../effect/Renderer.html" class="extype" name="doodle.effect.Renderer">Renderer</a>[<a href="../language/Basic.html" class="extype" name="doodle.language.Basic">Basic</a>, <span class="extype" name="doodle.reactor.BaseReactor.tick.F">F</span>, <span class="extype" name="doodle.reactor.BaseReactor.tick.Frame">Frame</span>, <span class="extype" name="doodle.reactor.BaseReactor.tick.Canvas">Canvas</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="doodle.reactor.Reactor.A">A</span>]</span>
       </span>
       
-      <p class="shortcomment cmt">Run one tick of this Reactor, drawing on the given <code>frame</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Run one tick of this Reactor, drawing on the given <code>frame</code>. Returns the
+      <p class="shortcomment cmt">Run one tick of this reactor, drawing on the given <code>frame</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Run one tick of this reactor, drawing on the given <code>frame</code>. Returns the
 next state, or None if the Reactor has stopped.
-</p></div></div>
-    </li><li name="scala.AnyRef#toString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="toString():String"></a>
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="BaseReactor.html" class="extype" name="doodle.reactor.BaseReactor">BaseReactor</a></dd></dl></div>
+    </li><li name="doodle.reactor.Reactor#tickRate" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="tickRate(duration:scala.concurrent.duration.FiniteDuration):doodle.reactor.Reactor[A]"></a><a id="tickRate(FiniteDuration):Reactor[A]"></a>
       <span class="permalink">
-      <a href="../../doodle/reactor/Reactor.html#toString():String" title="Permalink">
+      <a href="../../doodle/reactor/Reactor.html#tickRate(duration:scala.concurrent.duration.FiniteDuration):doodle.reactor.Reactor[A]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -615,10 +785,26 @@ next state, or None if the Reactor has stopped.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+        <span class="name">tickRate</span><span class="params">(<span name="duration">duration: <span class="extype" name="scala.concurrent.duration.FiniteDuration">FiniteDuration</span></span>)</span><span class="result">: <a href="" class="extype" name="doodle.reactor.Reactor">Reactor</a>[<span class="extype" name="doodle.reactor.Reactor.A">A</span>]</span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+      
+    </li><li name="doodle.reactor.Reactor#tickRate" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="tickRate:scala.concurrent.duration.FiniteDuration"></a><a id="tickRate:FiniteDuration"></a>
+      <span class="permalink">
+      <a href="../../doodle/reactor/Reactor.html#tickRate:scala.concurrent.duration.FiniteDuration" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">tickRate</span><span class="result">: <span class="extype" name="scala.concurrent.duration.FiniteDuration">FiniteDuration</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="doodle.reactor.Reactor">Reactor</a> → <a href="BaseReactor.html" class="extype" name="doodle.reactor.BaseReactor">BaseReactor</a></dd></dl></div>
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <span class="permalink">
@@ -679,12 +865,12 @@ next state, or None if the Reactor has stopped.
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
-                <span class="name">@native</span><span class="args">()</span>
-              
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
     </span>)</span>
+              
+                <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
     </li>
@@ -697,7 +883,17 @@ next state, or None if the Reactor has stopped.
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="scala.AnyRef">
+        <div class="parent" name="scala.Serializable">
+              <h3>Inherited from <span class="extype" name="scala.Serializable">Serializable</span></h3>
+            </div><div class="parent" name="java.io.Serializable">
+              <h3>Inherited from <span class="extype" name="java.io.Serializable">Serializable</span></h3>
+            </div><div class="parent" name="scala.Product">
+              <h3>Inherited from <span class="extype" name="scala.Product">Product</span></h3>
+            </div><div class="parent" name="scala.Equals">
+              <h3>Inherited from <span class="extype" name="scala.Equals">Equals</span></h3>
+            </div><div class="parent" name="doodle.reactor.BaseReactor">
+              <h3>Inherited from <a href="BaseReactor.html" class="extype" name="doodle.reactor.BaseReactor">BaseReactor</a>[<span class="extype" name="doodle.reactor.Reactor.A">A</span>]</h3>
+            </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
             </div><div class="parent" name="scala.Any">
               <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
