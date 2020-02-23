@@ -12,7 +12,6 @@
 <script type="text/javascript" src="../js/page.js"></script>
 <script type="text/javascript" src="../js/warnOldVersion.js"></script>
 <script type="text/javascript" src="../js/groups.js"></script>
-<link rel="stylesheet" type="text/css" href="../lib/normalize.css/normalize.css"/>
 <link rel="stylesheet" type="text/css" href="../lib/foundation/dist/foundation.min.css"/>
 <link rel="stylesheet" type="text/css" href="../css/page.css"/>
 
@@ -118,7 +117,7 @@ C16.952,7,17,6.553,17,6c0-0.553-0.048-1-0.6-1H3.6C3.048,5,3,5.447,3,6C3,6.553,3.
 <div class="page-content row">
 <div class="small-12 large-9 column" id="docs">
 <h1><a href="#image" name="image" class="anchor"><span class="anchor-link"></span></a>Image</h1>
-<p>The <a href="../api/doodle/image/index.html">Image DSL</a> is the easiest way to create images using Doodle. The tradeoff the Image library makes is that it only support a (large but limited) subset of operations that are supported across all the backends.</p>
+<p>The <a href="../api/doodle/image/index.html" title="doodle.image"><code>Image DSL</code></a> is the easiest way to create images using Doodle. The tradeoff the Image library makes is that it only support a (large but limited) subset of operations that are supported across all the backends.</p>
 <h2><a href="#imports" name="imports" class="anchor"><span class="anchor-link"></span></a>Imports</h2>
 <p>To use Image you&rsquo;ll need the following imports:</p>
 <pre class="prettyprint"><code class="language-scala">import doodle.image._
@@ -126,7 +125,7 @@ import doodle.image.syntax._
 import doodle.core._
 </code></pre>
 <h2><a href="#basic-concepts" name="basic-concepts" class="anchor"><span class="anchor-link"></span></a>Basic Concepts</h2>
-<p>Image is based on <em>composition</em> and the <em>interpreter pattern</em>.</p>
+<p>Image is based on <em>composition</em> and the <em>interpreter pattern</em>. </p>
 <p>Composition basically means that we build big Images out of small Images. For example, if we have an Image describing a red square and an Image describing a blue square</p>
 <pre class="prettyprint"><code class="language-scala">val redSquare = Image.square(100).fillColor(Color.red)
 // redSquare: Image = FillColor(
@@ -172,7 +171,7 @@ val blueSquare = Image.square(100).fillColor(Color.blue)
 //   )
 // )
 </code></pre>
-<p>The interpreter pattern means that we separate describing the Image from rendering it. Writing <code>Image.square(100)</code> doesn&rsquo;t draw anything. To draw an image we need to call the <code>draw()</code> method. This separation is important for composition; if we were to immediately draw we would lose composition.</p>
+<p>The interpreter pattern means that we separate describing the Image from rendering it. Writing <code>Image.square(100)</code> doesn&rsquo;t draw anything. To draw an image we need to call the <code>draw()</code> method. This separation is important for composition; if we were to immediately draw we would lose composition. </p>
 <div class="source-github">
 The source code for this page can be found <a href="https://github.com/creativescala/doodle/tree/v0.9.15/docs/src/main/paradox/image/index.md">here</a>.
 </div>

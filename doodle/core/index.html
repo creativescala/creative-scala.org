@@ -12,7 +12,6 @@
 <script type="text/javascript" src="../js/page.js"></script>
 <script type="text/javascript" src="../js/warnOldVersion.js"></script>
 <script type="text/javascript" src="../js/groups.js"></script>
-<link rel="stylesheet" type="text/css" href="../lib/normalize.css/normalize.css"/>
 <link rel="stylesheet" type="text/css" href="../lib/foundation/dist/foundation.min.css"/>
 <link rel="stylesheet" type="text/css" href="../css/page.css"/>
 
@@ -118,8 +117,8 @@ C16.952,7,17,6.553,17,6c0-0.553-0.048-1-0.6-1H3.6C3.048,5,3,5.447,3,6C3,6.553,3.
 <div class="page-content row">
 <div class="small-12 large-9 column" id="docs">
 <h1><a href="#core" name="core" class="anchor"><span class="anchor-link"></span></a>Core</h1>
-<p>The <a href="../api/doodle/core/index.html">core</a> package provides utilities, such as <a href="../api/doodle/core/Color.html">Color</a> and <a href="../api/doodle/core/Point.html">Point</a>, that are useful in the rest of the libraries.</p>
-<p>In this section we just cover the most important uses. You should see the <a href="../api/doodel/core/index.html">ScalaDoc</a> for details.</p>
+<p>The <a href="../api/doodle/core/index.html" title="doodle.core"><code>core</code></a> package provides utilities, such as <a href="../api/doodle/core/Color.html" title="doodle.core.Color"><code>Color</code></a> and <a href="../api/doodle/core/Point.html" title="doodle.core.Point"><code>Point</code></a>, that are useful in the rest of the libraries.</p>
+<p>In this section we just cover the most important uses. You should see the <a href="../api/doodle/core/index.html" title="doodle.core"><code>ScalaDoc</code></a> for details.</p>
 <h2><a href="#imports" name="imports" class="anchor"><span class="anchor-link"></span></a>Imports</h2>
 <pre class="prettyprint"><code class="language-scala">// You definitely want doodle.core
 import doodle.core._
@@ -127,13 +126,13 @@ import doodle.core._
 import doodle.syntax._
 </code></pre>
 <h2><a href="#angle" name="angle" class="anchor"><span class="anchor-link"></span></a>Angle</h2>
-<p>The <a href="../api/doodle/core/Angle.html">Angle</a> type represents an angle, as the name suggests.</p>
+<p>The <a href="../api/doodle/core/Angle.html" title="doodle.core.Angle"><code>Angle</code></a> type represents an angle, as the name suggests.</p>
 <p>Most of the time you&rsquo;ll create <code>Angles</code> using the extension methods shown below. Degrees and radians should be familiar, but turns may not be. One turn corresponds to a full circle (i.e. 360 degrees), so using turns in a convenient way to represent simple fractions or multiples of circles.</p>
 <pre class="prettyprint"><code class="language-scala">45.degrees
 1.radians
 0.5.turns // One turn is a full circle, so this is half a circle
 </code></pre>
-<p>There are various methods to perform arithmetic on angles. Here are some examples. See the <a href="../api/doodle/core/Angle.html">ScalaDoc</a> for a complete list.</p>
+<p>There are various methods to perform arithmetic on angles. Here are some examples. See the <a href="../api/doodle/core/Angle.html" title="doodle.core.Angle"><code>ScalaDoc</code></a> for a complete list.</p>
 <pre class="prettyprint"><code class="language-scala">(45.degrees + 45.degrees) &lt; 180.degrees
 // res3: Boolean = true
 (45.degrees * 2) &lt; 90.degrees
@@ -150,7 +149,7 @@ import doodle.syntax._
 // res8: Boolean = true
 </code></pre>
 <h2><a href="#color" name="color" class="anchor"><span class="anchor-link"></span></a>Color</h2>
-<p>Working with <a href="../api/doodle/core/Color.html">Color</a> is something that most images will do. There are two representations of color used in Doodle:</p>
+<p>Working with <a href="../api/doodle/core/Color.html" title="doodle.core.Color"><code>Color</code></a> is something that most images will do. There are two representations of color used in Doodle:</p>
 <ul>
   <li>hue, saturation, and lightness (HSL); and</li>
   <li>red, green, and blue (RGB).</li>
@@ -163,14 +162,14 @@ Color.rgb(0.uByte, 0.uByte, 255.uByte) // Using the UnsignedByte type
 Color.rgba(0, 0, 255, 0.5) // Setting alpha
 Color.rgba(0.uByte, 0.uByte, 255.uByte, 0.5.normalized) // Setting alpha
 </code></pre>
-<p>On the <a href="../api/doodle/core/Color$.html">Color companion object</a> all the standard CSS colors are defined. Here are a few examples.</p>
+<p>On the <a href="../api/doodle/core/Color$.html" title="doodle.core.Color"><code>Color companion object</code></a> all the standard CSS colors are defined. Here are a few examples.</p>
 <pre class="prettyprint"><code class="language-scala">Color.steelBlue // Not to be confused with blue steel
 Color.beige 
 Color.limeGreen
 </code></pre>
-<p>There are many methods to modify colors, such as <code>spin</code>, <code>desaturate</code>, and so on. See the <a href="../api/doodle/core/Color.html">ScalaDoc</a> for full details.</p>
+<p>There are many methods to modify colors, such as <code>spin</code>, <code>desaturate</code>, and so on. See the <a href="../api/doodle/core/Color.html" title="doodle.core.Color"><code>ScalaDoc</code></a> for full details.</p>
 <h2><a href="#point" name="point" class="anchor"><span class="anchor-link"></span></a>Point</h2>
-<p>A <code>Point</code> represents a location in the 2-D plane. We can construct points from cartesian (xy-coordinates) or polar (radius and angle) coordinates as shown below.</p>
+<p>A <a href="../api/doodle/core/Point.html" title="doodle.core.Point"><code>Point</code></a> represents a location in the 2-D plane. We can construct points from cartesian (xy-coordinates) or polar (radius and angle) coordinates as shown below.</p>
 <pre class="prettyprint"><code class="language-scala">Point(1.0, 1.0) // cartesian coordinates
 // res18: Point = Cartesian(1.0, 1.0) // cartesian coordinates
 Point(1.0, 90.degrees) // polar coordinates
@@ -189,7 +188,32 @@ pt1.angle
 // res23: Angle = Angle(0.0)
 </code></pre>
 <h2><a href="#transform" name="transform" class="anchor"><span class="anchor-link"></span></a>Transform</h2>
+<p>A <a href="../api/doodle/core/Transform.html" title="doodle.core.Transform"><code>Transform</code></a>, in Doodle, represents an <a href="https://en.wikipedia.org/wiki/Affine_transformation">affine transform</a> in two-dimensions. The easiest way to create a <code>Transform</code> is via the methods on the <a href="../api/doodle/core/Transform$.html" title="doodle.core.Transform"><code>companion object</code></a>. Here are some examples.</p>
+<pre class="prettyprint"><code class="language-scala">Transform.scale(5.0, -2.0)
+Transform.rotate(90.degrees)
+Transform.translate(10, 10)
+</code></pre>
+<p>A <code>Transform</code> can be applied to a <code>Point</code> to transform that point.</p>
+<pre class="prettyprint"><code class="language-scala">Transform.scale(5.0, -2.0)(Point(1,1))
+// res27: Point = Cartesian(5.0, -2.0)
+Transform.rotate(90.degrees)(Point(1,1))
+// res28: Point = Cartesian(-0.9999999999999999, 1.0)
+Transform.translate(10, 10)(Point(1,1))
+// res29: Point = Cartesian(11.0, 11.0)
+</code></pre>
+<p><code>Transforms</code> can be composed together using the <code>andThen</code> method.</p>
+<pre class="prettyprint"><code class="language-scala">Transform.scale(5.0, -2.0).andThen(Transform.translate(10, 10))(Point(1,1))
+// res30: Point = Cartesian(15.0, 8.0)
+Transform.scale(5.0, -2.0).translate(10, 10)(Point(1,1)) // Shorter version
+// res31: Point = Cartesian(15.0, 8.0)
+</code></pre>
 <h2><a href="#vec" name="vec" class="anchor"><span class="anchor-link"></span></a>Vec</h2>
+<p>A <a href="../api/doodle/core/Vec.html" title="doodle.core.Vec"><code>Vec</code></a> represents a two-dimensional vector. You can construct <code>Vecs</code> from cartesian (xy-coordinates) or polar (length and angle) coordinates, just like <code>Point</code>.</p>
+<pre class="prettyprint"><code class="language-scala">Vec(0, 1)
+// res32: Vec = Vec(0.0, 1.0)
+Vec(1, 90.degrees)
+// res33: Vec = Vec(6.123233995736766E-17, 1.0)
+</code></pre>
 <div class="source-github">
 The source code for this page can be found <a href="https://github.com/creativescala/doodle/tree/v0.9.15/docs/src/main/paradox/core/index.md">here</a>.
 </div>
