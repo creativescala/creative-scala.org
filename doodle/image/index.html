@@ -36,7 +36,7 @@
 </div>
 <div class="nav-toc">
 <ul>
-  <li><a href="../core/index.html" class="page">Core</a></li>
+  <li><a href="../concepts/index.html" class="page">Core Concepts in Doodle</a></li>
   <li><a href="../image/index.html" class="active page">Image</a>
   <ul>
     <li><a href="../image/shape.html" class="page">Shapes</a></li>
@@ -46,6 +46,8 @@
     <li><a href="../image/transform.html" class="page">Transforms</a></li>
     <li><a href="../image/writing.html" class="page">Writing to a File</a></li>
   </ul></li>
+  <li><a href="../algebra/index.html" class="page">Using Tagless Final Algebras in Doodle</a></li>
+  <li><a href="../core/index.html" class="page">Core</a></li>
 </ul>
 </div>
 
@@ -82,7 +84,7 @@ C16.952,7,17,6.553,17,6c0-0.553-0.048-1-0.6-1H3.6C3.048,5,3,5.447,3,6C3,6.553,3.
 </div>
 <div class="nav-toc">
 <ul>
-  <li><a href="../core/index.html" class="page">Core</a></li>
+  <li><a href="../concepts/index.html" class="page">Core Concepts in Doodle</a></li>
   <li><a href="../image/index.html" class="active page">Image</a>
   <ul>
     <li><a href="../image/shape.html" class="page">Shapes</a></li>
@@ -92,6 +94,8 @@ C16.952,7,17,6.553,17,6c0-0.553-0.048-1-0.6-1H3.6C3.048,5,3,5.447,3,6C3,6.553,3.
     <li><a href="../image/transform.html" class="page">Transforms</a></li>
     <li><a href="../image/writing.html" class="page">Writing to a File</a></li>
   </ul></li>
+  <li><a href="../algebra/index.html" class="page">Using Tagless Final Algebras in Doodle</a></li>
+  <li><a href="../core/index.html" class="page">Core</a></li>
 </ul>
 </div>
 
@@ -128,48 +132,10 @@ import doodle.core._
 <p>Image is based on <em>composition</em> and the <em>interpreter pattern</em>. </p>
 <p>Composition basically means that we build big Images out of small Images. For example, if we have an Image describing a red square and an Image describing a blue square</p>
 <pre class="prettyprint"><code class="language-scala">val redSquare = Image.square(100).fillColor(Color.red)
-// redSquare: Image = FillColor(
-//   Rectangle(100.0, 100.0),
-//   RGBA(
-//     UnsignedByte(127),
-//     UnsignedByte(-128),
-//     UnsignedByte(-128),
-//     Normalized(1.0)
-//   )
-// )
 val blueSquare = Image.square(100).fillColor(Color.blue)
-// blueSquare: Image = FillColor(
-//   Rectangle(100.0, 100.0),
-//   RGBA(
-//     UnsignedByte(-128),
-//     UnsignedByte(-128),
-//     UnsignedByte(127),
-//     Normalized(1.0)
-//   )
-// )
 </code></pre>
 <p>we can create an Image describing a red square next to a blue square by combining them together.</p>
 <pre class="prettyprint"><code class="language-scala">val combination = redSquare.beside(blueSquare)
-// combination: Image = Beside(
-//   FillColor(
-//     Rectangle(100.0, 100.0),
-//     RGBA(
-//       UnsignedByte(127),
-//       UnsignedByte(-128),
-//       UnsignedByte(-128),
-//       Normalized(1.0)
-//     )
-//   ),
-//   FillColor(
-//     Rectangle(100.0, 100.0),
-//     RGBA(
-//       UnsignedByte(-128),
-//       UnsignedByte(-128),
-//       UnsignedByte(127),
-//       Normalized(1.0)
-//     )
-//   )
-// )
 </code></pre>
 <p>The interpreter pattern means that we separate describing the Image from rendering it. Writing <code>Image.square(100)</code> doesn&rsquo;t draw anything. To draw an image we need to call the <code>draw()</code> method. This separation is important for composition; if we were to immediately draw we would lose composition. </p>
 <div class="source-github">
