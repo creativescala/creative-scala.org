@@ -36,7 +36,7 @@
 </div>
 <div class="nav-toc">
 <ul>
-  <li><a href="../concepts/index.html" class="page">Core Concepts in Doodle</a></li>
+  <li><a href="../concepts/index.html" class="page">Core Concepts</a></li>
   <li><a href="../image/index.html" class="page">Image</a>
   <ul>
     <li><a href="../image/shape.html" class="active page">Shapes</a></li>
@@ -46,7 +46,7 @@
     <li><a href="../image/transform.html" class="page">Transforms</a></li>
     <li><a href="../image/writing.html" class="page">Writing to a File</a></li>
   </ul></li>
-  <li><a href="../algebra/index.html" class="page">Using Tagless Final Algebras in Doodle</a></li>
+  <li><a href="../algebra/index.html" class="page">Algebras</a></li>
   <li><a href="../core/index.html" class="page">Core</a></li>
 </ul>
 </div>
@@ -84,7 +84,7 @@ C16.952,7,17,6.553,17,6c0-0.553-0.048-1-0.6-1H3.6C3.048,5,3,5.447,3,6C3,6.553,3.
 </div>
 <div class="nav-toc">
 <ul>
-  <li><a href="../concepts/index.html" class="page">Core Concepts in Doodle</a></li>
+  <li><a href="../concepts/index.html" class="page">Core Concepts</a></li>
   <li><a href="../image/index.html" class="page">Image</a>
   <ul>
     <li><a href="../image/shape.html" class="active page">Shapes</a></li>
@@ -94,7 +94,7 @@ C16.952,7,17,6.553,17,6c0-0.553-0.048-1-0.6-1H3.6C3.048,5,3,5.447,3,6C3,6.553,3.
     <li><a href="../image/transform.html" class="page">Transforms</a></li>
     <li><a href="../image/writing.html" class="page">Writing to a File</a></li>
   </ul></li>
-  <li><a href="../algebra/index.html" class="page">Using Tagless Final Algebras in Doodle</a></li>
+  <li><a href="../algebra/index.html" class="page">Algebras</a></li>
   <li><a href="../core/index.html" class="page">Core</a></li>
 </ul>
 </div>
@@ -144,7 +144,7 @@ C16.952,7,17,6.553,17,6c0-0.553-0.048-1-0.6-1H3.6C3.048,5,3,5.447,3,6C3,6.553,3.
 <ul>
   <li><code>Image.openPath(pathElements)</code> converts a <code>Seq[PathElement]</code> into an <code>Image</code> representing an open path (a path that does not end where it begins).</li>
   <li><code>Image.closedPath</code> converts a <code>Seq[PathElement]</code> to an <code>Image</code> representing a closed path (a path that ends where it begins; a straight line will be inserted if to make this the case if needed.)</li>
-  <li><code>Image.interpolatingSpline</code> converts a <code>Seq[Point]</code> to an <code>Image</code> by interpolating a smooth curve between the points using the [Catmull-Rom][catmull-rom] algorithm.</li>
+  <li><code>Image.interpolatingSpline</code> converts a <code>Seq[Point]</code> to an <code>Image</code> by interpolating a smooth curve between the points using the <a href="https://en.wikipedia.org/wiki/Centripetal_Catmull%E2%80%93Rom_spline">Catmull-Rom</a> algorithm.</li>
 </ul>
 <div class="source-github">
 The source code for this page can be found <a href="https://github.com/creativescala/doodle/tree/v0.9.20/docs/src/main/paradox/image/shape.md">here</a>.
