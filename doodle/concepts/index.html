@@ -36,7 +36,11 @@
 </div>
 <div class="nav-toc">
 <ul>
-  <li><a href="../concepts/index.html" class="active page">Core Concepts</a></li>
+  <li><a href="../concepts/index.html" class="active page">Core Concepts</a>
+  <ul>
+    <li><a href="../concepts/principles.html" class="page">Principles</a></li>
+    <li><a href="../concepts/frame-canvas.html" class="page">Frane and Canvas</a></li>
+  </ul></li>
   <li><a href="../image/index.html" class="page">Image</a>
   <ul>
     <li><a href="../image/shape.html" class="page">Shapes</a></li>
@@ -84,7 +88,11 @@ C16.952,7,17,6.553,17,6c0-0.553-0.048-1-0.6-1H3.6C3.048,5,3,5.447,3,6C3,6.553,3.
 </div>
 <div class="nav-toc">
 <ul>
-  <li><a href="../concepts/index.html" class="active page">Core Concepts</a></li>
+  <li><a href="../concepts/index.html" class="active page">Core Concepts</a>
+  <ul>
+    <li><a href="../concepts/principles.html" class="page">Principles</a></li>
+    <li><a href="../concepts/frame-canvas.html" class="page">Frane and Canvas</a></li>
+  </ul></li>
   <li><a href="../image/index.html" class="page">Image</a>
   <ul>
     <li><a href="../image/shape.html" class="page">Shapes</a></li>
@@ -121,39 +129,16 @@ C16.952,7,17,6.553,17,6c0-0.553-0.048-1-0.6-1H3.6C3.048,5,3,5.447,3,6C3,6.553,3.
 <div class="page-content row">
 <div class="small-12 large-9 column" id="docs">
 <h1><a href="#core-concepts" name="core-concepts" class="anchor"><span class="anchor-link"></span></a>Core Concepts</h1>
-<p>Doodle is based on a few core concepts that dictate the design of the library. This section of the documentation attempts to explain them.</p>
-<h2><a href="#pictures-are-created-by-composition" name="pictures-are-created-by-composition" class="anchor"><span class="anchor-link"></span></a>Pictures are Created by Composition</h2>
-<p>In Doodle a picture is constructed by combining together smaller pictures. For example, we can create a row by putting pictures beside each other. This idea of creating complex things from simpler things is known as <em>composition</em>.</p>
-<p>There are several implications of this, which means that Doodle operates differently to many other graphics libraries. This first is that Doodle does not draw anything on the screen until you explicitly ask it to, say by calling the <code>draw</code> method. A picture represents a description of something we want to draw. A backend turns this description into something we can see (which might be on the screen or in a file). This separation of description and action is known as the <em>interpreter pattern</em>. The description is a &ldquo;program&rdquo; and a backend is an &ldquo;interpreter&rdquo; that runs that program. In the graphics world the approach that Doodle takes is sometimes known as <a href="https://en.wikipedia.org/wiki/Retained_mode">retained mode</a>, while the approach of drawing immediately to the screen is known as <a href="https://en.wikipedia.org/wiki/Immediate_mode_(computer_graphics)">immediate mode</a>.</p>
-<p>Another implication is that Doodle can allow relative layout of objects. In Doodle we can say that one picture is next to another and Doodle will work out where on the screen they should be. This requires a retained mode API as you need to keep around information about a picture to work out how much space it takes up.</p>
-<p>A final implication is that pictures have no mutable state. This is needed for composition so you can, for example, put a picture next to itself and have things render correctly.</p>
-<p>All of these ideas are core to functional programming, so you may have seen them in other contexts if you have experienced with functional programming. If not, don&rsquo;t worry. You&rsquo;ll quickly understand them once you start using Doodle, as Doodle makes the ideas very concrete.</p>
-<h2><a href="#support-differences-between-backends" name="support-differences-between-backends" class="anchor"><span class="anchor-link"></span></a>Support Differences Between Backends</h2>
-<p>Another core goal of Doodle is to support the different capabilities of different backends. The alternative is to work only with the features that are found across all backends. In fact earlier versions of Doodle did this but we found it too limiting. There are lots of fun features only available on certain platforms and we want to be able to play with them!</p>
-<p>The implication of this is that the core of Doodle is built in &ldquo;tagless final&rdquo; style, which means the core functionality is split across a number of interfaces or algebras. Backends only have to implement the subset of algebras that they support. </p>
+<p>This section attempts to explain the principles that guide the development of Doodle, and the concepts that span across the sub-projects that make up Doodle.</p>
 <div class="source-github">
 The source code for this page can be found <a href="https://github.com/creativescala/doodle/tree/v0.9.20/docs/src/main/paradox/concepts/index.md">here</a>.
 </div>
 
 <div class="nav-next">
-<p><strong>Next:</strong> <a href="../image/index.html">Image</a></p>
+<p><strong>Next:</strong> <a href="../concepts/principles.html">Principles</a></p>
 </div>
 </div>
 <div class="large-3 show-for-large column" data-sticky-container>
-<nav class="sidebar sticky" data-sticky data-anchor="docs" data-sticky-on="large">
-<div class="page-nav">
-<div class="nav-title">On this page:</div>
-<div class="nav-toc">
-<ul>
-  <li><a href="../concepts/index.html#core-concepts" class="header">Core Concepts</a>
-  <ul>
-    <li><a href="../concepts/index.html#pictures-are-created-by-composition" class="header">Pictures are Created by Composition</a></li>
-    <li><a href="../concepts/index.html#support-differences-between-backends" class="header">Support Differences Between Backends</a></li>
-  </ul></li>
-</ul>
-</div>
-</div>
-</nav>
 </div>
 </div>
 

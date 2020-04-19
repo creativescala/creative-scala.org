@@ -36,7 +36,11 @@
 </div>
 <div class="nav-toc">
 <ul>
-  <li><a href="../concepts/index.html" class="page">Core Concepts</a></li>
+  <li><a href="../concepts/index.html" class="page">Core Concepts</a>
+  <ul>
+    <li><a href="../concepts/principles.html" class="page">Principles</a></li>
+    <li><a href="../concepts/frame-canvas.html" class="page">Frane and Canvas</a></li>
+  </ul></li>
   <li><a href="../image/index.html" class="page">Image</a>
   <ul>
     <li><a href="../image/shape.html" class="page">Shapes</a></li>
@@ -84,7 +88,11 @@ C16.952,7,17,6.553,17,6c0-0.553-0.048-1-0.6-1H3.6C3.048,5,3,5.447,3,6C3,6.553,3.
 </div>
 <div class="nav-toc">
 <ul>
-  <li><a href="../concepts/index.html" class="page">Core Concepts</a></li>
+  <li><a href="../concepts/index.html" class="page">Core Concepts</a>
+  <ul>
+    <li><a href="../concepts/principles.html" class="page">Principles</a></li>
+    <li><a href="../concepts/frame-canvas.html" class="page">Frane and Canvas</a></li>
+  </ul></li>
   <li><a href="../image/index.html" class="page">Image</a>
   <ul>
     <li><a href="../image/shape.html" class="page">Shapes</a></li>
@@ -177,7 +185,7 @@ def basicWithText[Alg[x[_]] &lt;: Basic[x] with Text[x], F[_]]: Picture[Alg, F, 
 <p>We can then <code>draw</code> the picture as before. In this case we get the output below.</p>
 <p><img src="basic-with-text.png" alt="Doodle is rad, and so is tagless final style" /></p>
 <h2><a href="#using-raw-algebras" name="using-raw-algebras" class="anchor"><span class="anchor-link"></span></a>Using Raw Algebras</h2>
-<p>We never need to call methods on algebras directly. Doodle provides the <a href="../api/doodle/algebra/Picture.html" title="doodle.algebra.Picture"><code>Picture</code></a> abstraction and lots of <a href="../api/doodle/syntax.html" title="doodle.syntax"><code>syntax</code></a> to avoid this. However, if some reason we did want to use algebras directly here is how we would do this. Understanding this does help a bit in understanding the utilities that Doodle provides to avoid using algebras directly.</p>
+<p>We never need to call methods on algebras directly. Doodle provides the <a href="../api/doodle/algebra/Picture.html" title="doodle.algebra.Picture"><code>Picture</code></a> abstraction and lots of <a href="../api/doodle/syntax/index.html" title="doodle.syntax"><code>syntax</code></a> to avoid this. However, if some reason we did want to use algebras directly here is how we would do this. Understanding this does help a bit in understanding the utilities that Doodle provides to avoid using algebras directly.</p>
 <p>To use these algebras to create a picture you could write a method with a parameter that is the algebras that you need. For example, if we were to write a simple program using <code>Layout</code>, <code>Style</code>, and <code>Shape</code> we might write the following.</p>
 <pre class="prettyprint"><code class="language-scala">import doodle.core._
 import doodle.algebra._

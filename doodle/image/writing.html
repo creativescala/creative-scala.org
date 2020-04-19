@@ -36,7 +36,11 @@
 </div>
 <div class="nav-toc">
 <ul>
-  <li><a href="../concepts/index.html" class="page">Core Concepts</a></li>
+  <li><a href="../concepts/index.html" class="page">Core Concepts</a>
+  <ul>
+    <li><a href="../concepts/principles.html" class="page">Principles</a></li>
+    <li><a href="../concepts/frame-canvas.html" class="page">Frane and Canvas</a></li>
+  </ul></li>
   <li><a href="../image/index.html" class="page">Image</a>
   <ul>
     <li><a href="../image/shape.html" class="page">Shapes</a></li>
@@ -84,7 +88,11 @@ C16.952,7,17,6.553,17,6c0-0.553-0.048-1-0.6-1H3.6C3.048,5,3,5.447,3,6C3,6.553,3.
 </div>
 <div class="nav-toc">
 <ul>
-  <li><a href="../concepts/index.html" class="page">Core Concepts</a></li>
+  <li><a href="../concepts/index.html" class="page">Core Concepts</a>
+  <ul>
+    <li><a href="../concepts/principles.html" class="page">Principles</a></li>
+    <li><a href="../concepts/frame-canvas.html" class="page">Frane and Canvas</a></li>
+  </ul></li>
   <li><a href="../image/index.html" class="page">Image</a>
   <ul>
     <li><a href="../image/shape.html" class="page">Shapes</a></li>
@@ -122,7 +130,7 @@ C16.952,7,17,6.553,17,6c0-0.553-0.048-1-0.6-1H3.6C3.048,5,3,5.447,3,6C3,6.553,3.
 <div class="page-content row">
 <div class="small-12 large-9 column" id="docs">
 <h1><a href="#writing-to-a-file" name="writing-to-a-file" class="anchor"><span class="anchor-link"></span></a>Writing to a File</h1>
-<p>The <a href="../api/doodle/image/index.html" title="doodle.image"><code>Image DSL</code></a> can write a file as well as displaying on screen. The file formats you can write depend on the backend you&rsquo;re using:</p>
+<p>The <a href="../api/doodle/image/index.html" title="doodle.image"><code>Image DSL</code></a> can write an <code>Image</code> to file as well as displaying it on screen. The file formats you can write depend on the backend you&rsquo;re using:</p>
 <ul>
   <li>the Java2D backend can write PNG, GIF, and JPEG;</li>
   <li>the SVG backend running on the JVM can write SVG; and</li>
@@ -140,8 +148,8 @@ import doodle.core._
 import doodle.effect.Writer._
 </code></pre>
 <p>The first import pulls in the Java2D backend. The second import makes available the standard formats supported by Doodle.</p>
-<h2><a href="#writing-to-a-file" name="writing-to-a-file" class="anchor"><span class="anchor-link"></span></a>Writing to a File</h2>
-<p>To write to a file, call the <code>write</code> method, giving the format as a type parameter and the file name as a normal parameter. For example, to write a PNG to the file called <code>&quot;circle.png&quot;</code></p>
+<h2><a href="#writing-an-image" name="writing-an-image" class="anchor"><span class="anchor-link"></span></a>Writing an Image</h2>
+<p>Call the <code>write</code> method to write to a file, giving the format as a type parameter and the file name as a normal parameter. For example, to write a PNG to the file called <code>&quot;circle.png&quot;</code></p>
 <pre class="prettyprint"><code class="language-scala">val image = Image.circle(100)
   .strokeWidth(10.0)
   .fillColor(Color.crimson)
@@ -170,7 +178,7 @@ The source code for this page can be found <a href="https://github.com/creatives
   <li><a href="../image/writing.html#writing-to-a-file" class="header">Writing to a File</a>
   <ul>
     <li><a href="../image/writing.html#imports" class="header">Imports</a></li>
-    <li><a href="../image/writing.html#writing-to-a-file" class="header">Writing to a File</a></li>
+    <li><a href="../image/writing.html#writing-an-image" class="header">Writing an Image</a></li>
   </ul></li>
 </ul>
 </div>
