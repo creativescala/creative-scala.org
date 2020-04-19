@@ -39,7 +39,7 @@
   <li><a href="../concepts/index.html" class="page">Core Concepts</a>
   <ul>
     <li><a href="../concepts/principles.html" class="page">Principles</a></li>
-    <li><a href="../concepts/frame-canvas.html" class="page">Frane and Canvas</a></li>
+    <li><a href="../concepts/frame-canvas.html" class="page">Frame and Canvas</a></li>
   </ul></li>
   <li><a href="../image/index.html" class="page">Image</a>
   <ul>
@@ -50,7 +50,11 @@
     <li><a href="../image/transform.html" class="page">Transforms</a></li>
     <li><a href="../image/writing.html" class="page">Writing to a File</a></li>
   </ul></li>
-  <li><a href="../algebra/index.html" class="active page">Algebras</a></li>
+  <li><a href="../algebra/index.html" class="active page">Algebras</a>
+  <ul>
+    <li><a href="../algebra/using.html" class="page">Using Algebras</a></li>
+    <li><a href="../algebra/picture.html" class="page">Picture</a></li>
+  </ul></li>
   <li><a href="../core/index.html" class="page">Core</a></li>
 </ul>
 </div>
@@ -91,7 +95,7 @@ C16.952,7,17,6.553,17,6c0-0.553-0.048-1-0.6-1H3.6C3.048,5,3,5.447,3,6C3,6.553,3.
   <li><a href="../concepts/index.html" class="page">Core Concepts</a>
   <ul>
     <li><a href="../concepts/principles.html" class="page">Principles</a></li>
-    <li><a href="../concepts/frame-canvas.html" class="page">Frane and Canvas</a></li>
+    <li><a href="../concepts/frame-canvas.html" class="page">Frame and Canvas</a></li>
   </ul></li>
   <li><a href="../image/index.html" class="page">Image</a>
   <ul>
@@ -102,7 +106,11 @@ C16.952,7,17,6.553,17,6c0-0.553-0.048-1-0.6-1H3.6C3.048,5,3,5.447,3,6C3,6.553,3.
     <li><a href="../image/transform.html" class="page">Transforms</a></li>
     <li><a href="../image/writing.html" class="page">Writing to a File</a></li>
   </ul></li>
-  <li><a href="../algebra/index.html" class="active page">Algebras</a></li>
+  <li><a href="../algebra/index.html" class="active page">Algebras</a>
+  <ul>
+    <li><a href="../algebra/using.html" class="page">Using Algebras</a></li>
+    <li><a href="../algebra/picture.html" class="page">Picture</a></li>
+  </ul></li>
   <li><a href="../core/index.html" class="page">Core</a></li>
 </ul>
 </div>
@@ -131,109 +139,15 @@ C16.952,7,17,6.553,17,6c0-0.553-0.048-1-0.6-1H3.6C3.048,5,3,5.447,3,6C3,6.553,3.
 <h1><a href="#algebras" name="algebras" class="anchor"><span class="anchor-link"></span></a>Algebras</h1>
 <p>The core of Doodle is built in &ldquo;tagless final&rdquo; style. This is a fancy term for saying the functionality is split into a number of different interfaces (which we call &ldquo;algebras&rdquo;) and different backends will implement some subset of these interfaces. The interfaces, or algebras, live in the <a href="../api/doodle/algebra/index.html" title="doodle.algebra"><code>doodle.algebra</code></a> package. This section describes how the algebra and associated machinery works, so you can create images that use backend-specific features or work across backends using features not available in <code>Image</code>.</p>
 <p>The details of this are fairly involved, but you do not need to understand the details to use the tools that Doodle provides. This section starts with two recipes you can use to create whatever you want without having to understand too much about Doodle internals. If you are interested in Doodle internals the rest of this section explains how they work.</p>
-<h2><a href="#what-are-algebras-" name="what-are-algebras-" class="anchor"><span class="anchor-link"></span></a>What Are Algebras?</h2>
-<p>Each algebra defines an interface for something related to creating pictures. For example, the <a href="../api/doodle/algebra/Layout.html" title="doodle.algebra.Layout"><code>Layout</code></a> algebra defines some basic methods for positioning pictures while the <a href="../api/doodle/algebra/Style.html" title="doodle.algebra.Style"><code>Style</code></a> algebra defines methods for changing the fill and stroke of a picture. All algebras extend the <a href="../api/doodle/algebra/Algebra.html" title="doodle.algebra.Algebra"><code>Algebra</code></a> base trait, which requires an algebra declare some type that indicates the type of value returned by calling methods on the algebra.</p>
-<p>Tagless final style allows for a lot of flexibility. Back ends only implement the algebras that they support, which means that different backends can support different features. This allows us to access the full capabilities of each backend (assuming that someone has taken the time to write an algebra for the features you are interested in!)</p>
-<h2><a href="#using-backend-specific-features" name="using-backend-specific-features" class="anchor"><span class="anchor-link"></span></a>Using Backend Specific Features</h2>
-<p>Use the following recipe to write code using backend specific features (for example, the <a href="../api/doodle/algebra/Bitmap.html" title="doodle.algebra.Bitmap"><code>Bitmap</code></a> algebra which is currently only supported by the <a href="../api/doodle/java2d.index.html" title="doodle.java2d"><code>Java 2D</code></a> backend).</p>
-<p>The first step is to import the backend and syntax extensions, and some Cats implicits we&rsquo;ll need. We&rsquo;ll use <code>java2d</code> as our backend.</p>
-<pre class="prettyprint"><code class="language-scala">import doodle.java2d._
-import doodle.syntax._
-import cats.implicits._
-</code></pre>
-<p>Now we can write code in a style very similar to using <code>Image</code>. There is one important difference: whenever we create an element of a picture that is not composed of other elements (for example, a primitive shape such as <code>circle</code>) we must provide two type parameters. Here is an example:</p>
-<pre class="prettyprint"><code class="language-scala">val aCircle = circle[Algebra, Drawing](100) // Circle with diameter 100
-</code></pre>
-<p>By convention these two type parameters are always called <code>Algebra</code> and <code>Drawing</code> respectively, so the above code would work with the SVG backend by simply changing the import from <code>doodle.java2d._</code> to <code>doodle.svg._</code></p>
-<p>Once we have done this we can write code in a straightforward way. For example, to create two red circles beside each other we could write</p>
-<pre class="prettyprint"><code class="language-scala">import doodle.core._ // For Color
-
-val redCircle = circle[Algebra, Drawing](100).strokeColor(Color.red)
-val twoRedCircles = redCircle.beside(redCircle)
-</code></pre>
-<p>To use the <code>Bitmap</code> algebra, and assuming the bitmap we refer to exists on disk, we could write</p>
-<pre class="prettyprint"><code class="language-scala">val oldGod = read[Algebra, Drawing](&quot;old-god.png&quot;)
-</code></pre><div class="callout note "><div class="callout-title">Note</div>
-<p>The bitmap is the <a href="https://www.deviantart.com/kaiseto/journal/Most-of-my-Pixel-Art-is-now-Creative-Commons-369510391">Old God</a> created by Kevin Chaloux and released under Creative Commons.</p></div>
-<p>We could combine this bitmap value with other pictures in the usual way.</p>
-<pre class="prettyprint"><code class="language-scala">twoRedCircles.above(oldGod)
-</code></pre>
-<p>We can then draw it using the <code>draw</code> method, which produces the output shown below.</p>
-<p><img src="suns-old-god.png" alt="Double suns rising over the Old God" /></p>
-<h2><a href="#creating-cross-backend-pictures" name="creating-cross-backend-pictures" class="anchor"><span class="anchor-link"></span></a>Creating Cross-Backend Pictures</h2>
-<p>If we want to use some features that are not availble in <code>Image</code> and target multiple backends we need to do a little bit more work. First we need to decide what algebras we need. Let&rsquo;s say we decide to use <a href="../api/doodle/language/Basic.html" title="doodle.language.Basic"><code>Basic</code></a>, which is a collection of the algebras that matches what <code>Image</code> supports, along with <a href="../api/doodle/algebra/Text.html" title="doodle.algebra.Text"><code>Text</code></a>. We then have steps to follow to firstly create a picture and then to use the picture with a concrete backend.</p>
-<p>To create a picture:</p>
-<ol>
-  <li>We write a method that has two types parameters, one of which is a type parameter that is a subtype of the algebra we have chosen, and the other is just <code>F[_]</code>. See the code below for the example.</li>
-  <li>We declare the result type of the method as <code>doodle.algebra.Picture[Alg, F, Unit]</code>, where <code>Alg</code> is the algebra type we declared in the first step.</li>
-  <li>We then write the code for creating the picture as usual in the body of the method, using <code>Alg</code> for <code>Algebra</code> and <code>F</code> for <code>Drawing</code>.</li>
-</ol>
-<p>Here&rsquo;s an example. The type declaration is complicated but you don&rsquo;t need to understand it. You can just copy and paste, changing <code>Basic</code> and <code>Text</code> as appropriate for your case.</p>
-<pre class="prettyprint"><code class="language-scala">import doodle.language.Basic
-import doodle.algebra.{Picture, Text}
-
-def basicWithText[Alg[x[_]] &lt;: Basic[x] with Text[x], F[_]]: Picture[Alg, F, Unit] = {
-  val redCircle = circle[Alg, F](100).strokeColor(Color.red)
-  val rad = text[Alg, F](&quot;Doodle is rad&quot;)
-  
-  rad.on(redCircle)
-}
-</code></pre>
-<p>To use this method with a concrete backend we call it providing the backend&rsquo;s <code>Algebra</code> and <code>Drawing</code> types for the <code>Alg</code> and <code>F</code> type parameters respectively. Note that method has no parameter list so we do not need to provide any parameters.</p>
-<pre class="prettyprint"><code class="language-scala">val java2dPicture = basicWithText[Algebra, Drawing]
-</code></pre>
-<p>We can then <code>draw</code> the picture as before. In this case we get the output below.</p>
-<p><img src="basic-with-text.png" alt="Doodle is rad, and so is tagless final style" /></p>
-<h2><a href="#using-raw-algebras" name="using-raw-algebras" class="anchor"><span class="anchor-link"></span></a>Using Raw Algebras</h2>
-<p>We never need to call methods on algebras directly. Doodle provides the <a href="../api/doodle/algebra/Picture.html" title="doodle.algebra.Picture"><code>Picture</code></a> abstraction and lots of <a href="../api/doodle/syntax/index.html" title="doodle.syntax"><code>syntax</code></a> to avoid this. However, if some reason we did want to use algebras directly here is how we would do this. Understanding this does help a bit in understanding the utilities that Doodle provides to avoid using algebras directly.</p>
-<p>To use these algebras to create a picture you could write a method with a parameter that is the algebras that you need. For example, if we were to write a simple program using <code>Layout</code>, <code>Style</code>, and <code>Shape</code> we might write the following.</p>
-<pre class="prettyprint"><code class="language-scala">import doodle.core._
-import doodle.algebra._
-
-// Two red circles beside each other
-def twoRedCircles[Alg[x[_]] &lt;: Layout[x] with Style[x] with Shape[x], F[_]](algebra: Alg[F]): F[Unit] = {
-  val redCircle = algebra.strokeColor(algebra.circle(100), Color.red)
-  
-  algebra.beside(redCircle, redCircle)
-}
-  
-</code></pre>
-<p>This is not the most convenient way to write code, so Doodle provides several utilities to make it easier.</p>
-<h2><a href="#picture-and-syntax" name="picture-and-syntax" class="anchor"><span class="anchor-link"></span></a>Picture and Syntax</h2>
-<p>Using methods is not very convenient as methods are not values; we cannot pass a method to a method or return a method from a method. Functions are values, but in Scala 2 we cannot have a function parameter that is also an implicit parameter (Scala 3 solves this with [context functions][context-functions]). <a href="../api/doodle/algebra/Picture.html" title="doodle.algebra.Picture"><code>Picture</code></a> is an abstraction that provides something close to a function with an implicit parameter. It has three type parameters. They are, in order:</p>
-<ul>
-  <li>The type <code>Alg</code> of the algebras that the picture needs to draw. This is an input to the <code>Picture</code> and hence it is contravariant.</li>
-  <li>The type of the effect <code>F</code> that the picture will create.</li>
-  <li>The type <code>A</code> of the result the picture will produce when it is drawn. This is usually <code>Unit</code>, as we normally draw pictures just for their effect, but it could be something else.</li>
-</ul>
-<p>Thus in effect a <code>Picture</code> is a function with type <code>Alg[F] =&gt; F[A]</code></p>
-<p>Doodle provides syntax for all of its algebras that works with <code>Picture</code> to avoid us having to create instances of <code>Picture</code> by hand. However we do sometimes need to write down the type of a result to avoid confusing the type inference algorithm. The recipes above show when this is needed.</p>
 <div class="source-github">
 The source code for this page can be found <a href="https://github.com/creativescala/doodle/tree/v0.9.20/docs/src/main/paradox/algebra/index.md">here</a>.
 </div>
 
 <div class="nav-next">
-<p><strong>Next:</strong> <a href="../core/index.html">Core</a></p>
+<p><strong>Next:</strong> <a href="../algebra/using.html">Using Algebras</a></p>
 </div>
 </div>
 <div class="large-3 show-for-large column" data-sticky-container>
-<nav class="sidebar sticky" data-sticky data-anchor="docs" data-sticky-on="large">
-<div class="page-nav">
-<div class="nav-title">On this page:</div>
-<div class="nav-toc">
-<ul>
-  <li><a href="../algebra/index.html#algebras" class="header">Algebras</a>
-  <ul>
-    <li><a href="../algebra/index.html#what-are-algebras-" class="header">What Are Algebras?</a></li>
-    <li><a href="../algebra/index.html#using-backend-specific-features" class="header">Using Backend Specific Features</a></li>
-    <li><a href="../algebra/index.html#creating-cross-backend-pictures" class="header">Creating Cross-Backend Pictures</a></li>
-    <li><a href="../algebra/index.html#using-raw-algebras" class="header">Using Raw Algebras</a></li>
-    <li><a href="../algebra/index.html#picture-and-syntax" class="header">Picture and Syntax</a></li>
-  </ul></li>
-</ul>
-</div>
-</div>
-</nav>
 </div>
 </div>
 

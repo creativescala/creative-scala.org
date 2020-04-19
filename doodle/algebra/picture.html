@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+<title>Picture · Doodle</title>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content='Compositional graphics for Scala'/>
+<link rel="canonical" href="https://github.com/creativescala/doodlealgebra/picture.html"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:100normal,100italic,300normal,300italic,400normal,400italic,500normal,500italic,700normal,700italic,900normal,900italicc" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../lib/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../js/page.js"></script>
+<script type="text/javascript" src="../js/warnOldVersion.js"></script>
+<script type="text/javascript" src="../js/groups.js"></script>
+<link rel="stylesheet" type="text/css" href="../lib/foundation/dist/foundation.min.css"/>
+<link rel="stylesheet" type="text/css" href="../css/page.css"/>
+
+<!--
+<link rel="shortcut icon" href="../images/favicon.ico" />
+-->
+</head>
+
+<body>
+<div class="off-canvas-wrapper">
+<div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+
+<div class="off-canvas position-left" id="off-canvas-menu" data-off-canvas>
+<nav class="off-canvas-nav">
+<div class="nav-home">
+<a href="../index.html" >
+<span class="home-icon">⌂</span>Doodle
+</a>
+<div class="version-number">
+0.9.20
+</div>
+</div>
+<div class="nav-toc">
+<ul>
+  <li><a href="../concepts/index.html" class="page">Core Concepts</a>
+  <ul>
+    <li><a href="../concepts/principles.html" class="page">Principles</a></li>
+    <li><a href="../concepts/frame-canvas.html" class="page">Frame and Canvas</a></li>
+  </ul></li>
+  <li><a href="../image/index.html" class="page">Image</a>
+  <ul>
+    <li><a href="../image/shape.html" class="page">Shapes</a></li>
+    <li><a href="../image/path.html" class="page">Paths</a></li>
+    <li><a href="../image/styling.html" class="page">Styling</a></li>
+    <li><a href="../image/layout.html" class="page">Layout</a></li>
+    <li><a href="../image/transform.html" class="page">Transforms</a></li>
+    <li><a href="../image/writing.html" class="page">Writing to a File</a></li>
+  </ul></li>
+  <li><a href="../algebra/index.html" class="page">Algebras</a>
+  <ul>
+    <li><a href="../algebra/using.html" class="page">Using Algebras</a></li>
+    <li><a href="../algebra/picture.html" class="active page">Picture</a></li>
+  </ul></li>
+  <li><a href="../core/index.html" class="page">Core</a></li>
+</ul>
+</div>
+
+</nav>
+</div>
+
+<div class="off-canvas-content" data-off-canvas-content>
+
+<header class="site-header expanded row">
+<div class="small-12 column">
+<a href="#" class="off-canvas-toggle hide-for-medium" data-toggle="off-canvas-menu"><svg class="svg-icon svg-icon-menu" version="1.1" id="Menu" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve"> <path class="svg-icon-menu-path" fill="#53CDEC" d="M16.4,9H3.6C3.048,9,3,9.447,3,10c0,0.553,0.048,1,0.6,1H16.4c0.552,0,0.6-0.447,0.6-1C17,9.447,16.952,9,16.4,9z M16.4,13
+H3.6C3.048,13,3,13.447,3,14c0,0.553,0.048,1,0.6,1H16.4c0.552,0,0.6-0.447,0.6-1C17,13.447,16.952,13,16.4,13z M3.6,7H16.4
+C16.952,7,17,6.553,17,6c0-0.553-0.048-1-0.6-1H3.6C3.048,5,3,5.447,3,6C3,6.553,3.048,7,3.6,7z"/></svg>
+</a>
+<div class="title"><a href="../index.html">Doodle</a></div>
+
+<!--
+<a href="https://www.example.com" class="logo show-for-medium">logo</a>
+-->
+</div>
+</header>
+
+<div class="expanded row">
+
+<div class="medium-3 large-2 show-for-medium column">
+<nav class="site-nav">
+<div class="nav-home">
+<a href="../index.html" >
+<span class="home-icon">⌂</span>Doodle
+</a>
+<div class="version-number">
+0.9.20
+</div>
+</div>
+<div class="nav-toc">
+<ul>
+  <li><a href="../concepts/index.html" class="page">Core Concepts</a>
+  <ul>
+    <li><a href="../concepts/principles.html" class="page">Principles</a></li>
+    <li><a href="../concepts/frame-canvas.html" class="page">Frame and Canvas</a></li>
+  </ul></li>
+  <li><a href="../image/index.html" class="page">Image</a>
+  <ul>
+    <li><a href="../image/shape.html" class="page">Shapes</a></li>
+    <li><a href="../image/path.html" class="page">Paths</a></li>
+    <li><a href="../image/styling.html" class="page">Styling</a></li>
+    <li><a href="../image/layout.html" class="page">Layout</a></li>
+    <li><a href="../image/transform.html" class="page">Transforms</a></li>
+    <li><a href="../image/writing.html" class="page">Writing to a File</a></li>
+  </ul></li>
+  <li><a href="../algebra/index.html" class="page">Algebras</a>
+  <ul>
+    <li><a href="../algebra/using.html" class="page">Using Algebras</a></li>
+    <li><a href="../algebra/picture.html" class="active page">Picture</a></li>
+  </ul></li>
+  <li><a href="../core/index.html" class="page">Core</a></li>
+</ul>
+</div>
+
+</nav>
+</div>
+
+<div class="small-12 medium-9 large-10 column">
+<section class="site-content">
+
+<span id="version-warning"></span>
+
+<div class="page-header row">
+<div class="medium-12 show-for-medium column">
+<div class="nav-breadcrumbs">
+<ul>
+  <li><a href="../index.html">Doodle</a></li>
+  <li><a href="../algebra/index.html">Algebras</a></li>
+  <li>Picture</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="page-content row">
+<div class="small-12 large-9 column" id="docs">
+<h1><a href="#picture" name="picture" class="anchor"><span class="anchor-link"></span></a>Picture</h1>
+<p><a href="../api/doodle/algebra/Picture.html" title="doodle.algebra.Picture"><code>Picture</code></a> is an imitation of a function whose input is an implicit parameter (which in Dotty would just be a <a href="https://dotty.epfl.ch/docs/reference/contextual/context-functions.html">context function</a>). It has three type parameters. They are, in order:</p>
+<ul>
+  <li>The type <code>Alg</code> of the algebras that the picture needs to draw. This is an input to the <code>Picture</code> and hence it is contravariant.</li>
+  <li>The type of the effect <code>F</code> that the picture will create.</li>
+  <li>The type <code>A</code> of the result the picture will produce when it is drawn. This is usually <code>Unit</code>, as we normally draw pictures just for their effect, but it could be something else.</li>
+</ul>
+<p>Thus in effect a <code>Picture</code> is a function with type <code>Alg[F] =&gt; F[A]</code>.</p>
+<h2><a href="#pictures-are-values" name="pictures-are-values" class="anchor"><span class="anchor-link"></span></a>Pictures Are Values</h2>
+<p>Algebras <em>do not</em> work directly with <code>Picture</code>. Instead they work with the <code>F[A]</code> type that is the output of a <code>Picture</code>. However, all the <a href="../api/doodle/syntax/index.html" title="doodle.syntax"><code>syntax</code></a> that makes the algebras easier to use, and which we have used in our previous examples create and consume <code>Picture</code>. The reason for this is that working with raw algebras requires we wrap everything in methods. Methods are not values; we cannot pass a method to a method nor return a method from a method. Functions are values, but in Scala 2 their input parameters cannot also be implicit parameters. <code>Picture</code> is like a function with an implicit input parameter. It also provides a bit more structure than using functions directly. When we see a <code>Picture</code> we know exactly what we&rsquo;re dealing with.</p>
+<h2><a href="#writing-and-converting-pictures" name="writing-and-converting-pictures" class="anchor"><span class="anchor-link"></span></a>Writing and Converting Pictures</h2>
+<h2><a href="#converting-other-types-to-a-picture" name="converting-other-types-to-a-picture" class="anchor"><span class="anchor-link"></span></a>Converting Other Types to a Picture</h2>
+<p>The <a href="../api/doodle/algebra/ToPicture.html" title="doodle.algebra.ToPicture"><code>ToPicture</code></a> algebra provides a single method that converts some type (fixed for each instance of <code>ToPicture</code>) to a <code>F[Unit]</code>. The <a href="../api/doodle/syntax/ToPictureSyntax.html" title="doodle.syntax.ToPictureSyntax"><code>corresponding syntax</code></a> wraps the result in a <code>Picture</code>, as is standard for syntax, and therefore gives a way to convert the input type to a <code>Picture</code>.</p>
+<p>The available instances vary depending on the backend. For the Java2D backend, <a href="../api/doodle/core/Base64.html" title="doodle.core.Base64"><code>Base64</code></a> and <code>BufferedImage</code> values can be converted to <code>Picture</code>. For SVG only <code>Base64</code> is currently supported.</p>
+<p>Here is quick example of use. First we create a <code>Base64</code> value from a <code>Picture</code>.</p>
+<pre class="prettyprint"><code class="language-scala">import doodle.core._
+import doodle.syntax._
+import doodle.java2d._
+import doodle.effect.Writer._
+</code></pre>
+<pre class="prettyprint"><code class="language-scala">// The value we throw away is the result of evaluating the `Picture`, which is `Unit`.
+val (_, base64) = circle[Algebra, Drawing](100).base64[Png]()
+// base64: Base64[Png] = Base64(
+//   &quot;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&quot;
+// )
+</code></pre>
+<p>We can convert it right back to a <code>Picture</code> using the <code>toPicture</code> method.</p>
+<pre class="prettyprint"><code class="language-scala">val picture = base64.toPicture
+</code></pre>
+<h2><a href="#type-class-instances-for-picture" name="type-class-instances-for-picture" class="anchor"><span class="anchor-link"></span></a>Type Class Instances for Picture</h2>
+<p>There are a few type class instances defined for <code>Picture</code>.</p>
+<p><code>Picture[Alg,F,?]</code> has a <code>Monoid</code> instance if:</p>
+<ul>
+  <li>the algebra has <code>Layout</code> and <code>Shape</code>;</li>
+  <li>the effect type <code>F</code> has a <code>Functor</code>; and</li>
+  <li>and the result type has a <code>Monoid</code>.</li>
+</ul>
+<p>In this case the combine is <code>on</code>, with identity <code>empty</code>.</p>
+<p><code>Picture[Alg,F,?]</code> has a <code>Monad</code> instance if <code>F</code> does.</p>
+<div class="source-github">
+The source code for this page can be found <a href="https://github.com/creativescala/doodle/tree/v0.9.20/docs/src/main/paradox/algebra/picture.md">here</a>.
+</div>
+
+<div class="nav-next">
+<p><strong>Next:</strong> <a href="../core/index.html">Core</a></p>
+</div>
+</div>
+<div class="large-3 show-for-large column" data-sticky-container>
+<nav class="sidebar sticky" data-sticky data-anchor="docs" data-sticky-on="large">
+<div class="page-nav">
+<div class="nav-title">On this page:</div>
+<div class="nav-toc">
+<ul>
+  <li><a href="../algebra/picture.html#picture" class="header">Picture</a>
+  <ul>
+    <li><a href="../algebra/picture.html#pictures-are-values" class="header">Pictures Are Values</a></li>
+    <li><a href="../algebra/picture.html#writing-and-converting-pictures" class="header">Writing and Converting Pictures</a></li>
+    <li><a href="../algebra/picture.html#converting-other-types-to-a-picture" class="header">Converting Other Types to a Picture</a></li>
+    <li><a href="../algebra/picture.html#type-class-instances-for-picture" class="header">Type Class Instances for Picture</a></li>
+  </ul></li>
+</ul>
+</div>
+</div>
+</nav>
+</div>
+</div>
+
+</section>
+</div>
+
+</div>
+
+<footer class="site-footer">
+
+<section class="site-footer-nav">
+<div class="expanded row">
+<div class="small-12 large-offset-2 large-10 column">
+<div class="row site-footer-content">
+
+<div class="small-12 medium-4 large-3 text-center column">
+<div class="nav-links">
+<ul>
+<!-- <li><a href="https://www.example.com/products/">Products</a> -->
+</ul>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</section>
+
+<section class="site-footer-base">
+<div class="expanded row">
+<div class="small-12 large-offset-2 large-10 column">
+<div class="row site-footer-content">
+
+<div class="small-12 text-center large-9 column">
+
+<!--
+<div class="copyright">
+<span class="text">&copy; 2020</span>
+<a href="https://www.example.com" class="logo">logo</a>
+</div>
+-->
+</div>
+
+</div>
+</div>
+</div>
+</section>
+</footer>
+
+</div>
+</div>
+</div>
+</body>
+
+<script type="text/javascript" src="../lib/foundation/dist/foundation.min.js"></script>
+<script type="text/javascript">jQuery(document).foundation();</script>
+<script type="text/javascript" src="../js/magellan.js"></script>
+
+<style type="text/css">@import "../lib/prettify/prettify.css";</style>
+<script type="text/javascript" src="../lib/prettify/prettify.js"></script>
+<script type="text/javascript" src="../lib/prettify/lang-scala.js"></script>
+<script type="text/javascript">jQuery(function(){window.prettyPrint && prettyPrint()});</script>
+<script type="text/javascript">jQuery(function(jq){initOldVersionWarnings(jq, '0.9.20', 'https://github.com/creativescala/doodle')});</script>
+
+
+</html>

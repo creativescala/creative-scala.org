@@ -2,7 +2,7 @@
 <html class="no-js" lang="en">
 
 <head>
-<title>Frane and Canvas · Doodle</title>
+<title>Frame and Canvas · Doodle</title>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <meta name="description" content='Compositional graphics for Scala'/>
@@ -39,7 +39,7 @@
   <li><a href="../concepts/index.html" class="page">Core Concepts</a>
   <ul>
     <li><a href="../concepts/principles.html" class="page">Principles</a></li>
-    <li><a href="../concepts/frame-canvas.html" class="active page">Frane and Canvas</a></li>
+    <li><a href="../concepts/frame-canvas.html" class="active page">Frame and Canvas</a></li>
   </ul></li>
   <li><a href="../image/index.html" class="page">Image</a>
   <ul>
@@ -50,7 +50,11 @@
     <li><a href="../image/transform.html" class="page">Transforms</a></li>
     <li><a href="../image/writing.html" class="page">Writing to a File</a></li>
   </ul></li>
-  <li><a href="../algebra/index.html" class="page">Algebras</a></li>
+  <li><a href="../algebra/index.html" class="page">Algebras</a>
+  <ul>
+    <li><a href="../algebra/using.html" class="page">Using Algebras</a></li>
+    <li><a href="../algebra/picture.html" class="page">Picture</a></li>
+  </ul></li>
   <li><a href="../core/index.html" class="page">Core</a></li>
 </ul>
 </div>
@@ -91,7 +95,7 @@ C16.952,7,17,6.553,17,6c0-0.553-0.048-1-0.6-1H3.6C3.048,5,3,5.447,3,6C3,6.553,3.
   <li><a href="../concepts/index.html" class="page">Core Concepts</a>
   <ul>
     <li><a href="../concepts/principles.html" class="page">Principles</a></li>
-    <li><a href="../concepts/frame-canvas.html" class="active page">Frane and Canvas</a></li>
+    <li><a href="../concepts/frame-canvas.html" class="active page">Frame and Canvas</a></li>
   </ul></li>
   <li><a href="../image/index.html" class="page">Image</a>
   <ul>
@@ -102,7 +106,11 @@ C16.952,7,17,6.553,17,6c0-0.553-0.048-1-0.6-1H3.6C3.048,5,3,5.447,3,6C3,6.553,3.
     <li><a href="../image/transform.html" class="page">Transforms</a></li>
     <li><a href="../image/writing.html" class="page">Writing to a File</a></li>
   </ul></li>
-  <li><a href="../algebra/index.html" class="page">Algebras</a></li>
+  <li><a href="../algebra/index.html" class="page">Algebras</a>
+  <ul>
+    <li><a href="../algebra/using.html" class="page">Using Algebras</a></li>
+    <li><a href="../algebra/picture.html" class="page">Picture</a></li>
+  </ul></li>
   <li><a href="../core/index.html" class="page">Core</a></li>
 </ul>
 </div>
@@ -121,7 +129,7 @@ C16.952,7,17,6.553,17,6c0-0.553-0.048-1-0.6-1H3.6C3.048,5,3,5.447,3,6C3,6.553,3.
 <ul>
   <li><a href="../index.html">Doodle</a></li>
   <li><a href="../concepts/index.html">Core Concepts</a></li>
-  <li>Frane and Canvas</li>
+  <li>Frame and Canvas</li>
 </ul>
 </div>
 </div>
@@ -129,7 +137,7 @@ C16.952,7,17,6.553,17,6c0-0.553-0.048-1-0.6-1H3.6C3.048,5,3,5.447,3,6C3,6.553,3.
 
 <div class="page-content row">
 <div class="small-12 large-9 column" id="docs">
-<h1><a href="#frane-and-canvas" name="frane-and-canvas" class="anchor"><span class="anchor-link"></span></a>Frane and Canvas</h1>
+<h1><a href="#frame-and-canvas" name="frame-and-canvas" class="anchor"><span class="anchor-link"></span></a>Frame and Canvas</h1>
 <p>In Doodle, a <em>Canvas</em> is an area of screen that we can draw to. This could be a native window or part of a web browser, or something else. A <em>Frame</em> is a description of a Canvas, which tells a particular backend how to construct the Canvas. For example, the <a href="../api/doodle/java2d.effect/Frame.html" title="doodle.java2d.effect.Frame"><code>Java2D Frame</code></a> allows us to specify the title of the window, the size of the window, the background color, and more. </p>
 <p>Frames and Canvases are naturally back-end specific, so there is no code-level abstraction that unites, say, the <a href="../api/doodle/svg/effect/Frame.html" title="doodle.svg.effect.Frame"><code>SVG frame</code></a> and the <a href="../api/doodle/java2d.effect/Frame.html" title="doodle.java2d.effect.Frame"><code>Java2D Frame</code></a>. However, conceptually they are related so where it makes sense they have the same API.</p>
 <p>You can get quite far in Doodle without ever worrying about Frames and Canvases. When you <code>draw</code> a picture, for example, a default Frame will be created if you don&rsquo;t specify one. Sometimes you must explicitly specify the Frame. Animation is one example where this is required. Other times you will want more control over the output, such as to change the background color, and here creating a Frame will give you that control.</p>
