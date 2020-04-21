@@ -54,6 +54,7 @@
   <ul>
     <li><a href="../algebra/using.html" class="page">Using Algebras</a></li>
     <li><a href="../algebra/picture.html" class="active page">Picture</a></li>
+    <li><a href="../algebra/algebras.html" class="page">Available Algebras</a></li>
   </ul></li>
   <li><a href="../core/index.html" class="page">Core</a></li>
 </ul>
@@ -110,6 +111,7 @@ C16.952,7,17,6.553,17,6c0-0.553-0.048-1-0.6-1H3.6C3.048,5,3,5.447,3,6C3,6.553,3.
   <ul>
     <li><a href="../algebra/using.html" class="page">Using Algebras</a></li>
     <li><a href="../algebra/picture.html" class="active page">Picture</a></li>
+    <li><a href="../algebra/algebras.html" class="page">Available Algebras</a></li>
   </ul></li>
   <li><a href="../core/index.html" class="page">Core</a></li>
 </ul>
@@ -146,8 +148,31 @@ C16.952,7,17,6.553,17,6c0-0.553-0.048-1-0.6-1H3.6C3.048,5,3,5.447,3,6C3,6.553,3.
 </ul>
 <p>Thus in effect a <code>Picture</code> is a function with type <code>Alg[F] =&gt; F[A]</code>.</p>
 <h2><a href="#pictures-are-values" name="pictures-are-values" class="anchor"><span class="anchor-link"></span></a>Pictures Are Values</h2>
-<p>Algebras <em>do not</em> work directly with <code>Picture</code>. Instead they work with the <code>F[A]</code> type that is the output of a <code>Picture</code>. However, all the <a href="../api/doodle/syntax/index.html" title="doodle.syntax"><code>syntax</code></a> that makes the algebras easier to use, and which we have used in our previous examples create and consume <code>Picture</code>. The reason for this is that working with raw algebras requires we wrap everything in methods. Methods are not values; we cannot pass a method to a method nor return a method from a method. Functions are values, but in Scala 2 their input parameters cannot also be implicit parameters. <code>Picture</code> is like a function with an implicit input parameter. It also provides a bit more structure than using functions directly. When we see a <code>Picture</code> we know exactly what we&rsquo;re dealing with.</p>
+<p>Algebras <em>do not</em> work directly with <code>Picture</code>. Instead they work with the <code>F[A]</code> type that is the output of a <code>Picture</code>. However, all the <a href="../api/doodle/syntax/index.html" title="doodle.syntax"><code>syntax</code></a> that makes the algebras easier to use, and which we have used in our previous examples, create and consume <code>Picture</code>. The reason for this is that working with raw algebras requires we wrap everything in methods. Methods are not values; we cannot pass a method to a method nor return a method from a method. Functions are values, but in Scala 2 their input parameters cannot also be implicit parameters. <code>Picture</code> is like a function with an implicit input parameter. It also provides a bit more structure than using functions directly. When we see a <code>Picture</code> we know exactly what we&rsquo;re dealing with.</p>
+<h2><a href="#drawing-pictures" name="drawing-pictures" class="anchor"><span class="anchor-link"></span></a>Drawing Pictures</h2>
+<p>We can draw a picture to the screen using the <code>draw</code> method. This is <a href="../api/doodle/syntax/RendererSyntax.html" title="doodle.syntax.RendererSyntax"><code>syntax</code></a> that depends on a having a <a href="../api/doodle/effect/Renderer.html" title="doodle.effect.Renderer"><code>`Renderer` effect</code></a> in scope. There are other methods provided by the <code>Renderer</code> effect, as explained in its documentation.</p>
 <h2><a href="#writing-and-converting-pictures" name="writing-and-converting-pictures" class="anchor"><span class="anchor-link"></span></a>Writing and Converting Pictures</h2>
+<p>In addition to drawing a picture to the screen we can write it to a file or convert it to some other type. The <code>write</code> method saves a picture to a file. When we call write we must pass two parameters: a normal parameter that is the file name to use and a type parameter that gives the format of the file. In the example below we save a file as a <a href="https://en.wikipedia.org/wiki/Portable_Network_Graphics">PNG</a>.</p>
+<pre class="prettyprint"><code class="language-scala">import doodle.core._
+import doodle.syntax._
+import doodle.java2d._
+import doodle.effect.Writer._
+
+val picture = circle[Algebra, Drawing](100)
+
+picture.write[Png](&quot;circle.png&quot;)
+</code></pre>
+<p>The <code>write</code> method is <a href="../api/doodle/syntax/WriterSyntax.html" title="doodle.syntax.WriterSyntax"><code>syntax</code></a> that comes from the <a href="../api/doodle/effect/Writer.html" title="doodle.effect.Writer"><code>`Writer` effect</code></a>. There are other methods that allow, for example, specifying a <code>Frame</code> to use when saving the file.</p>
+<p>We can convert a <code>Picture</code> to a <a href="https://en.wikipedia.org/wiki/Base64">Base64</a> value using the <code>base64</code> method. As with <code>write</code>, this method is <a href="../api/doodle/syntax/Base64Syntax.html" title="doodle.syntax.Base64Syntax"><code>syntax</code></a> for the <a href="../api/doodle/effect/Base64.html" title="doodle.effect.Base64"><code>`Base64` effect</code></a>. The parameters are similar to <code>write</code>: we must specify a format to encode the picture in but we don&rsquo;t specify a filename. Instead we get back the result of evaluating the <code>Picture</code> (the <code>A</code> in <code>F[A]</code> which is usually <code>()</code>) and a <a href="../api/doodle/core/Base64.html" title="doodle.core.Base64"><code>Base64</code></a> value.</p>
+<pre class="prettyprint"><code class="language-scala">import doodle.core._
+import doodle.syntax._
+import doodle.java2d._
+import doodle.effect.Writer._
+
+val picture = circle[Algebra, Drawing](100)
+
+val (result, b64) = picture.base64[Png]()
+</code></pre>
 <h2><a href="#converting-other-types-to-a-picture" name="converting-other-types-to-a-picture" class="anchor"><span class="anchor-link"></span></a>Converting Other Types to a Picture</h2>
 <p>The <a href="../api/doodle/algebra/ToPicture.html" title="doodle.algebra.ToPicture"><code>ToPicture</code></a> algebra provides a single method that converts some type (fixed for each instance of <code>ToPicture</code>) to a <code>F[Unit]</code>. The <a href="../api/doodle/syntax/ToPictureSyntax.html" title="doodle.syntax.ToPictureSyntax"><code>corresponding syntax</code></a> wraps the result in a <code>Picture</code>, as is standard for syntax, and therefore gives a way to convert the input type to a <code>Picture</code>.</p>
 <p>The available instances vary depending on the backend. For the Java2D backend, <a href="../api/doodle/core/Base64.html" title="doodle.core.Base64"><code>Base64</code></a> and <code>BufferedImage</code> values can be converted to <code>Picture</code>. For SVG only <code>Base64</code> is currently supported.</p>
@@ -165,6 +190,7 @@ val (_, base64) = circle[Algebra, Drawing](100).base64[Png]()
 </code></pre>
 <p>We can convert it right back to a <code>Picture</code> using the <code>toPicture</code> method.</p>
 <pre class="prettyprint"><code class="language-scala">val picture = base64.toPicture
+// picture: Picture[doodle.algebra.Algebra[x], Drawing[A], Unit] = doodle.algebra.Picture$$anon$1@25f0f114
 </code></pre>
 <h2><a href="#type-class-instances-for-picture" name="type-class-instances-for-picture" class="anchor"><span class="anchor-link"></span></a>Type Class Instances for Picture</h2>
 <p>There are a few type class instances defined for <code>Picture</code>.</p>
@@ -181,7 +207,7 @@ The source code for this page can be found <a href="https://github.com/creatives
 </div>
 
 <div class="nav-next">
-<p><strong>Next:</strong> <a href="../core/index.html">Core</a></p>
+<p><strong>Next:</strong> <a href="../algebra/algebras.html">Available Algebras</a></p>
 </div>
 </div>
 <div class="large-3 show-for-large column" data-sticky-container>
@@ -193,6 +219,7 @@ The source code for this page can be found <a href="https://github.com/creatives
   <li><a href="../algebra/picture.html#picture" class="header">Picture</a>
   <ul>
     <li><a href="../algebra/picture.html#pictures-are-values" class="header">Pictures Are Values</a></li>
+    <li><a href="../algebra/picture.html#drawing-pictures" class="header">Drawing Pictures</a></li>
     <li><a href="../algebra/picture.html#writing-and-converting-pictures" class="header">Writing and Converting Pictures</a></li>
     <li><a href="../algebra/picture.html#converting-other-types-to-a-picture" class="header">Converting Other Types to a Picture</a></li>
     <li><a href="../algebra/picture.html#type-class-instances-for-picture" class="header">Type Class Instances for Picture</a></li>

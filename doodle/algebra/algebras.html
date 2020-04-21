@@ -2,11 +2,11 @@
 <html class="no-js" lang="en">
 
 <head>
-<title>Image · Doodle</title>
+<title>Available Algebras · Doodle</title>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <meta name="description" content='Compositional graphics for Scala'/>
-<link rel="canonical" href="https://github.com/creativescala/doodleimage/index.html"/>
+<link rel="canonical" href="https://github.com/creativescala/doodlealgebra/algebras.html"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:100normal,100italic,300normal,300italic,400normal,400italic,500normal,500italic,700normal,700italic,900normal,900italicc" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../lib/jquery/jquery.min.js"></script>
 <script type="text/javascript" src="../js/page.js"></script>
@@ -41,7 +41,7 @@
     <li><a href="../concepts/principles.html" class="page">Principles</a></li>
     <li><a href="../concepts/frame-canvas.html" class="page">Frame and Canvas</a></li>
   </ul></li>
-  <li><a href="../image/index.html" class="active page">Image</a>
+  <li><a href="../image/index.html" class="page">Image</a>
   <ul>
     <li><a href="../image/shape.html" class="page">Shapes</a></li>
     <li><a href="../image/path.html" class="page">Paths</a></li>
@@ -54,7 +54,7 @@
   <ul>
     <li><a href="../algebra/using.html" class="page">Using Algebras</a></li>
     <li><a href="../algebra/picture.html" class="page">Picture</a></li>
-    <li><a href="../algebra/algebras.html" class="page">Available Algebras</a></li>
+    <li><a href="../algebra/algebras.html" class="active page">Available Algebras</a></li>
   </ul></li>
   <li><a href="../core/index.html" class="page">Core</a></li>
 </ul>
@@ -98,7 +98,7 @@ C16.952,7,17,6.553,17,6c0-0.553-0.048-1-0.6-1H3.6C3.048,5,3,5.447,3,6C3,6.553,3.
     <li><a href="../concepts/principles.html" class="page">Principles</a></li>
     <li><a href="../concepts/frame-canvas.html" class="page">Frame and Canvas</a></li>
   </ul></li>
-  <li><a href="../image/index.html" class="active page">Image</a>
+  <li><a href="../image/index.html" class="page">Image</a>
   <ul>
     <li><a href="../image/shape.html" class="page">Shapes</a></li>
     <li><a href="../image/path.html" class="page">Paths</a></li>
@@ -111,7 +111,7 @@ C16.952,7,17,6.553,17,6c0-0.553-0.048-1-0.6-1H3.6C3.048,5,3,5.447,3,6C3,6.553,3.
   <ul>
     <li><a href="../algebra/using.html" class="page">Using Algebras</a></li>
     <li><a href="../algebra/picture.html" class="page">Picture</a></li>
-    <li><a href="../algebra/algebras.html" class="page">Available Algebras</a></li>
+    <li><a href="../algebra/algebras.html" class="active page">Available Algebras</a></li>
   </ul></li>
   <li><a href="../core/index.html" class="page">Core</a></li>
 </ul>
@@ -130,7 +130,8 @@ C16.952,7,17,6.553,17,6c0-0.553-0.048-1-0.6-1H3.6C3.048,5,3,5.447,3,6C3,6.553,3.
 <div class="nav-breadcrumbs">
 <ul>
   <li><a href="../index.html">Doodle</a></li>
-  <li>Image</li>
+  <li><a href="../algebra/index.html">Algebras</a></li>
+  <li>Available Algebras</li>
 </ul>
 </div>
 </div>
@@ -138,47 +139,43 @@ C16.952,7,17,6.553,17,6c0-0.553-0.048-1-0.6-1H3.6C3.048,5,3,5.447,3,6C3,6.553,3.
 
 <div class="page-content row">
 <div class="small-12 large-9 column" id="docs">
-<h1><a href="#image" name="image" class="anchor"><span class="anchor-link"></span></a>Image</h1>
-<p>The <a href="../api/doodle/image/index.html" title="doodle.image"><code>Image</code></a> library is the easiest way to create images using Doodle. The tradeoff the Image library makes is that it only support a (large but limited) subset of operations that are supported across all the backends.</p>
-<h2><a href="#imports" name="imports" class="anchor"><span class="anchor-link"></span></a>Imports</h2>
-<p>To use Image you&rsquo;ll need the following imports:</p>
-<pre class="prettyprint"><code class="language-scala">import doodle.image._
-import doodle.image.syntax._
-import doodle.core._
-</code></pre>
-<h2><a href="#basic-concepts" name="basic-concepts" class="anchor"><span class="anchor-link"></span></a>Basic Concepts</h2>
-<p>Image is based on <em>composition</em> and the <em>interpreter pattern</em>. </p>
-<p>Composition basically means that we build big Images out of small Images. For example, if we have an Image describing a red square and an Image describing a blue square</p>
-<pre class="prettyprint"><code class="language-scala">val redSquare = Image.square(100).fillColor(Color.red)
-val blueSquare = Image.square(100).fillColor(Color.blue)
-</code></pre>
-<p>we can create an Image describing a red square next to a blue square by combining them together.</p>
-<pre class="prettyprint"><code class="language-scala">val combination = redSquare.beside(blueSquare)
-</code></pre>
-<p>The interpreter pattern means that we separate describing the Image from rendering it. Writing <code>Image.square(100)</code> doesn&rsquo;t draw anything. To draw an image we need to call the <code>draw()</code> method. This separation is important for composition; if we were to immediately draw we would lose composition. </p>
+<h1><a href="#available-algebras" name="available-algebras" class="anchor"><span class="anchor-link"></span></a>Available Algebras</h1>
+<p>This section gives a quick overview of the main algebras in Doodle. It is not intended to replicate the details you can find in the <a href="../api/doodle/algebra/index.html" title="doodle.algebra"><code>ScalaDoc</code></a>. Read that for more details. All algebras have corresponding syntax that adds the methods they define to <code>Picture</code>.</p>
+<ul>
+  <li>
+  <p><a href="../api/doodle/algebra/Algebra.html" title="doodle.algebra.Algebra"><code>Algebra</code></a> is a marker trait that allow other algebras extend. It provides no useful functionality of its own.</p></li>
+  <li>
+  <p><a href="../api/doodle/algebra/Bitmap.html" title="doodle.algebra.Bitmap"><code>Bitmap</code></a> is a convenience to load a bitmap image as a <code>Picture</code>. This is easy to use but not very flexible, and it does not have any error handling. For more complex cases use the <code>ImageIO</code> in the Java standard library to load a <code>BufferedImage</code> and then use the <code>toPicture</code> method to convert to a <code>Picture</code>.</p></li>
+  <li>
+  <p><a href="../api/doodle/algebra/Blend.html" title="doodle.algebra.Blend"><code>Blend</code></a> specifies blending modes.</p></li>
+  <li>
+  <p><a href="../api/doodle/algebra/Debug.html" title="doodle.algebra.Debug"><code>Debug</code></a> renders a picture&rsquo;s bounding box and origin, which is useful for debugging layout issues.</p></li>
+  <li>
+  <p><a href="../api/doodle/algebra/Layout.html" title="doodle.algebra.Layout"><code>Layout</code></a> provides basic layout operations.</p></li>
+  <li>
+  <p><a href="../api/doodle/algebra/Path.html" title="doodle.algebra.Path"><code>Algebra</code></a> converts a <a href="../api/doodle/core/ClosedPath.html" title="doodle.core.ClosedPath"><code>ClosedPath</code></a> or an <a href="../api/doodle/core/OpenPath.html" title="doodle.core.OpenPath"><code>OpenPath</code></a> into a <code>Picture</code>.</p></li>
+  <li>
+  <p><a href="../api/doodle/algebra/Shape.html" title="doodle.algebra.Shape"><code>Algebra</code></a> is a convenience for drawing some simple shapes, such as circles and squares.</p></li>
+  <li>
+  <p><a href="../api/doodle/algebra/Size.html" title="doodle.algebra.Size"><code>Size</code></a> gets the size of a <code>Picture</code>, which can be used for complex layout, for example.</p></li>
+  <li>
+  <p><a href="../api/doodle/algebra/Style.html" title="doodle.algebra.Style"><code>Size</code></a> allows changing the stroke, fill, and other characterisitics of a <code>Picture</code>.</p></li>
+  <li>
+  <p><a href="../api/doodle/algebra/Text.html" title="doodle.algebra.Text"><code>Text</code></a> adds text to a <code>Picture</code>.</p></li>
+  <li>
+  <p><a href="../api/doodle/algebra/ToPicture.html" title="doodle.algebra.ToPicture"><code>Text</code></a> converts other types to a <code>Picture</code>.</p></li>
+  <li>
+  <p><a href="../api/doodle/algebra/Transform.html" title="doodle.algebra.Transform"><code>Text</code></a> applies geometrics transformations, such as rotations and scaling, to a <code>Picture</code>.</p></li>
+</ul>
 <div class="source-github">
-The source code for this page can be found <a href="https://github.com/creativescala/doodle/tree/v0.9.20/docs/src/main/paradox/image/index.md">here</a>.
+The source code for this page can be found <a href="https://github.com/creativescala/doodle/tree/v0.9.20/docs/src/main/paradox/algebra/algebras.md">here</a>.
 </div>
 
 <div class="nav-next">
-<p><strong>Next:</strong> <a href="../image/shape.html">Shapes</a></p>
+<p><strong>Next:</strong> <a href="../core/index.html">Core</a></p>
 </div>
 </div>
 <div class="large-3 show-for-large column" data-sticky-container>
-<nav class="sidebar sticky" data-sticky data-anchor="docs" data-sticky-on="large">
-<div class="page-nav">
-<div class="nav-title">On this page:</div>
-<div class="nav-toc">
-<ul>
-  <li><a href="../image/index.html#image" class="header">Image</a>
-  <ul>
-    <li><a href="../image/index.html#imports" class="header">Imports</a></li>
-    <li><a href="../image/index.html#basic-concepts" class="header">Basic Concepts</a></li>
-  </ul></li>
-</ul>
-</div>
-</div>
-</nav>
 </div>
 </div>
 
