@@ -2,11 +2,11 @@
 <html class="no-js" lang="en">
 
 <head>
-<title>Available Algebras · Doodle</title>
+<title>Effects · Doodle</title>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <meta name="description" content='Compositional graphics for Scala'/>
-<link rel="canonical" href="https://github.com/creativescala/doodlealgebra/algebras.html"/>
+<link rel="canonical" href="https://github.com/creativescala/doodleeffect/index.html"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:100normal,100italic,300normal,300italic,400normal,400italic,500normal,500italic,700normal,700italic,900normal,900italicc" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../lib/jquery/jquery.min.js"></script>
 <script type="text/javascript" src="../js/page.js"></script>
@@ -54,9 +54,9 @@
   <ul>
     <li><a href="../algebra/using.html" class="page">Using Algebras</a></li>
     <li><a href="../algebra/picture.html" class="page">Picture</a></li>
-    <li><a href="../algebra/algebras.html" class="active page">Available Algebras</a></li>
+    <li><a href="../algebra/algebras.html" class="page">Available Algebras</a></li>
   </ul></li>
-  <li><a href="../effect/index.html" class="page">Effects</a></li>
+  <li><a href="../effect/index.html" class="active page">Effects</a></li>
   <li><a href="../core/index.html" class="page">Core</a></li>
 </ul>
 </div>
@@ -112,9 +112,9 @@ C16.952,7,17,6.553,17,6c0-0.553-0.048-1-0.6-1H3.6C3.048,5,3,5.447,3,6C3,6.553,3.
   <ul>
     <li><a href="../algebra/using.html" class="page">Using Algebras</a></li>
     <li><a href="../algebra/picture.html" class="page">Picture</a></li>
-    <li><a href="../algebra/algebras.html" class="active page">Available Algebras</a></li>
+    <li><a href="../algebra/algebras.html" class="page">Available Algebras</a></li>
   </ul></li>
-  <li><a href="../effect/index.html" class="page">Effects</a></li>
+  <li><a href="../effect/index.html" class="active page">Effects</a></li>
   <li><a href="../core/index.html" class="page">Core</a></li>
 </ul>
 </div>
@@ -132,8 +132,7 @@ C16.952,7,17,6.553,17,6c0-0.553-0.048-1-0.6-1H3.6C3.048,5,3,5.447,3,6C3,6.553,3.
 <div class="nav-breadcrumbs">
 <ul>
   <li><a href="../index.html">Doodle</a></li>
-  <li><a href="../algebra/index.html">Algebras</a></li>
-  <li>Available Algebras</li>
+  <li>Effects</li>
 </ul>
 </div>
 </div>
@@ -141,40 +140,14 @@ C16.952,7,17,6.553,17,6c0-0.553-0.048-1-0.6-1H3.6C3.048,5,3,5.447,3,6C3,6.553,3.
 
 <div class="page-content row">
 <div class="small-12 large-9 column" id="docs">
-<h1><a href="#available-algebras" name="available-algebras" class="anchor"><span class="anchor-link"></span></a>Available Algebras</h1>
-<p>This section gives a quick overview of the main algebras in Doodle. It is not intended to replicate the details you can find in the <a href="../api/doodle/algebra/index.html" title="doodle.algebra"><code>ScalaDoc</code></a>. Read that for more details. All algebras have corresponding syntax that adds the methods they define to <code>Picture</code>.</p>
-<ul>
-  <li>
-  <p><a href="../api/doodle/algebra/Algebra.html" title="doodle.algebra.Algebra"><code>Algebra</code></a> is a marker trait that allow other algebras extend. It provides no useful functionality of its own.</p></li>
-  <li>
-  <p><a href="../api/doodle/algebra/Bitmap.html" title="doodle.algebra.Bitmap"><code>Bitmap</code></a> is a convenience to load a bitmap image as a <code>Picture</code>. This is easy to use but not very flexible, and it does not have any error handling. For more complex cases use the <code>ImageIO</code> in the Java standard library to load a <code>BufferedImage</code> and then use the <code>toPicture</code> method to convert to a <code>Picture</code>.</p></li>
-  <li>
-  <p><a href="../api/doodle/algebra/Blend.html" title="doodle.algebra.Blend"><code>Blend</code></a> specifies blending modes.</p></li>
-  <li>
-  <p><a href="../api/doodle/algebra/Debug.html" title="doodle.algebra.Debug"><code>Debug</code></a> renders a picture&rsquo;s bounding box and origin, which is useful for debugging layout issues.</p></li>
-  <li>
-  <p><a href="../api/doodle/algebra/Layout.html" title="doodle.algebra.Layout"><code>Layout</code></a> provides basic layout operations.</p></li>
-  <li>
-  <p><a href="../api/doodle/algebra/Path.html" title="doodle.algebra.Path"><code>Algebra</code></a> converts a <a href="../api/doodle/core/ClosedPath.html" title="doodle.core.ClosedPath"><code>ClosedPath</code></a> or an <a href="../api/doodle/core/OpenPath.html" title="doodle.core.OpenPath"><code>OpenPath</code></a> into a <code>Picture</code>.</p></li>
-  <li>
-  <p><a href="../api/doodle/algebra/Shape.html" title="doodle.algebra.Shape"><code>Algebra</code></a> is a convenience for drawing some simple shapes, such as circles and squares.</p></li>
-  <li>
-  <p><a href="../api/doodle/algebra/Size.html" title="doodle.algebra.Size"><code>Size</code></a> gets the size of a <code>Picture</code>, which can be used for complex layout, for example.</p></li>
-  <li>
-  <p><a href="../api/doodle/algebra/Style.html" title="doodle.algebra.Style"><code>Size</code></a> allows changing the stroke, fill, and other characterisitics of a <code>Picture</code>.</p></li>
-  <li>
-  <p><a href="../api/doodle/algebra/Text.html" title="doodle.algebra.Text"><code>Text</code></a> adds text to a <code>Picture</code>.</p></li>
-  <li>
-  <p><a href="../api/doodle/algebra/ToPicture.html" title="doodle.algebra.ToPicture"><code>ToPicture</code></a> converts other types to a <code>Picture</code>.</p></li>
-  <li>
-  <p><a href="../api/doodle/algebra/Transform.html" title="doodle.algebra.Transform"><code>Transform</code></a> applies geometrics transformations, such as rotations and scaling, to a <code>Picture</code>.</p></li>
-</ul>
+<h1><a href="#effects" name="effects" class="anchor"><span class="anchor-link"></span></a>Effects</h1>
+<p>A picture is a description of what should be drawn. An effect carries out the description by, for example, drawing a picture to the screen or writing it to a file. Effects are defined in the <a href="../api/doodle/effect/index.html" title="doodle.effect"><code>doodle.effect</code></a> package. All effects have <a href="../api/doodle/syntax/index.html" title="doodle.syntax"><code>syntax</code></a> that makes them easier to use. You should have to use effects directly unless you are extending Doodle.</p>
 <div class="source-github">
-The source code for this page can be found <a href="https://github.com/creativescala/doodle/tree/v0.9.20/docs/src/main/paradox/algebra/algebras.md">here</a>.
+The source code for this page can be found <a href="https://github.com/creativescala/doodle/tree/v0.9.20/docs/src/main/paradox/effect/index.md">here</a>.
 </div>
 
 <div class="nav-next">
-<p><strong>Next:</strong> <a href="../effect/index.html">Effects</a></p>
+<p><strong>Next:</strong> <a href="../core/index.html">Core</a></p>
 </div>
 </div>
 <div class="large-3 show-for-large column" data-sticky-container>

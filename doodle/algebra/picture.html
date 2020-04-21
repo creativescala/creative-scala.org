@@ -56,6 +56,7 @@
     <li><a href="../algebra/picture.html" class="active page">Picture</a></li>
     <li><a href="../algebra/algebras.html" class="page">Available Algebras</a></li>
   </ul></li>
+  <li><a href="../effect/index.html" class="page">Effects</a></li>
   <li><a href="../core/index.html" class="page">Core</a></li>
 </ul>
 </div>
@@ -113,6 +114,7 @@ C16.952,7,17,6.553,17,6c0-0.553-0.048-1-0.6-1H3.6C3.048,5,3,5.447,3,6C3,6.553,3.
     <li><a href="../algebra/picture.html" class="active page">Picture</a></li>
     <li><a href="../algebra/algebras.html" class="page">Available Algebras</a></li>
   </ul></li>
+  <li><a href="../effect/index.html" class="page">Effects</a></li>
   <li><a href="../core/index.html" class="page">Core</a></li>
 </ul>
 </div>
@@ -190,7 +192,7 @@ val (_, base64) = circle[Algebra, Drawing](100).base64[Png]()
 </code></pre>
 <p>We can convert it right back to a <code>Picture</code> using the <code>toPicture</code> method.</p>
 <pre class="prettyprint"><code class="language-scala">val picture = base64.toPicture
-// picture: Picture[doodle.algebra.Algebra[x], Drawing[A], Unit] = doodle.algebra.Picture$$anon$1@25f0f114
+// picture: Picture[doodle.algebra.Algebra[x], Drawing[A], Unit] = doodle.algebra.Picture$$anon$1@131f2bf4
 </code></pre>
 <h2><a href="#type-class-instances-for-picture" name="type-class-instances-for-picture" class="anchor"><span class="anchor-link"></span></a>Type Class Instances for Picture</h2>
 <p>There are a few type class instances defined for <code>Picture</code>.</p>
