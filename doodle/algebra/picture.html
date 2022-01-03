@@ -12,6 +12,7 @@
 <script type="text/javascript" src="../js/page.js"></script>
 <script type="text/javascript" src="../js/warnOldVersion.js"></script>
 <script type="text/javascript" src="../js/groups.js"></script>
+<script type="text/javascript" src="../js/snippets.js"></script>
 <link rel="stylesheet" type="text/css" href="../lib/foundation/dist/foundation.min.css"/>
 <link rel="stylesheet" type="text/css" href="../css/page.css"/>
 
@@ -31,7 +32,7 @@
 <span class="home-icon">⌂</span>Doodle
 </a>
 <div class="version-number">
-0.9.20
+0.10.1
 </div>
 </div>
 <div class="nav-toc">
@@ -89,7 +90,7 @@ C16.952,7,17,6.553,17,6c0-0.553-0.048-1-0.6-1H3.6C3.048,5,3,5.447,3,6C3,6.553,3.
 <span class="home-icon">⌂</span>Doodle
 </a>
 <div class="version-number">
-0.9.20
+0.10.1
 </div>
 </div>
 <div class="nav-toc">
@@ -156,9 +157,10 @@ C16.952,7,17,6.553,17,6c0-0.553-0.048-1-0.6-1H3.6C3.048,5,3,5.447,3,6C3,6.553,3.
 <h2><a href="#writing-and-converting-pictures" name="writing-and-converting-pictures" class="anchor"><span class="anchor-link"></span></a>Writing and Converting Pictures</h2>
 <p>In addition to drawing a picture to the screen we can write it to a file or convert it to some other type. The <code>write</code> method saves a picture to a file. When we call write we must pass two parameters: a normal parameter that is the file name to use and a type parameter that gives the format of the file. In the example below we save a file as a <a href="https://en.wikipedia.org/wiki/Portable_Network_Graphics">PNG</a>.</p>
 <pre class="prettyprint"><code class="language-scala">import doodle.core._
-import doodle.syntax._
+import doodle.syntax.all._
 import doodle.java2d._
 import doodle.effect.Writer._
+import cats.effect.unsafe.implicits.global
 
 val picture = circle[Algebra, Drawing](100)
 
@@ -167,9 +169,10 @@ picture.write[Png](&quot;circle.png&quot;)
 <p>The <code>write</code> method is <a href="../api/doodle/syntax/WriterSyntax.html" title="doodle.syntax.WriterSyntax"><code>syntax</code></a> that comes from the <a href="../api/doodle/effect/Writer.html" title="doodle.effect.Writer"><code>`Writer` effect</code></a>. There are other methods that allow, for example, specifying a <code>Frame</code> to use when saving the file.</p>
 <p>We can convert a <code>Picture</code> to a <a href="https://en.wikipedia.org/wiki/Base64">Base64</a> value using the <code>base64</code> method. As with <code>write</code>, this method is <a href="../api/doodle/syntax/Base64Syntax.html" title="doodle.syntax.Base64Syntax"><code>syntax</code></a> for the <a href="../api/doodle/effect/Base64.html" title="doodle.effect.Base64"><code>`Base64` effect</code></a>. The parameters are similar to <code>write</code>: we must specify a format to encode the picture in but we don&rsquo;t specify a filename. Instead we get back the result of evaluating the <code>Picture</code> (the <code>A</code> in <code>F[A]</code> which is usually <code>()</code>) and a <a href="../api/doodle/core/Base64.html" title="doodle.core.Base64"><code>Base64</code></a> value.</p>
 <pre class="prettyprint"><code class="language-scala">import doodle.core._
-import doodle.syntax._
+import doodle.syntax.all._
 import doodle.java2d._
 import doodle.effect.Writer._
+import cats.effect.unsafe.implicits.global
 
 val picture = circle[Algebra, Drawing](100)
 
@@ -180,19 +183,17 @@ val (result, b64) = picture.base64[Png]()
 <p>The available instances vary depending on the backend. For the Java2D backend, <a href="../api/doodle/core/Base64.html" title="doodle.core.Base64"><code>Base64</code></a> and <code>BufferedImage</code> values can be converted to <code>Picture</code>. For SVG only <code>Base64</code> is currently supported.</p>
 <p>Here is quick example of use. First we create a <code>Base64</code> value from a <code>Picture</code>.</p>
 <pre class="prettyprint"><code class="language-scala">import doodle.core._
-import doodle.syntax._
+import doodle.syntax.all._
 import doodle.java2d._
 import doodle.effect.Writer._
+import cats.effect.unsafe.implicits.global
 </code></pre>
-<pre class="prettyprint"><code class="language-scala">// The value we throw away is the result of evaluating the `Picture`, which is `Unit`.
+<pre class="prettyprint"><code class="language-scala">// The value we throw away is the result of evaluating the
+// `Picture`, which is `Unit`.
 val (_, base64) = circle[Algebra, Drawing](100).base64[Png]()
-// base64: Base64[Png] = Base64(
-//   &quot;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&quot;
-// )
 </code></pre>
 <p>We can convert it right back to a <code>Picture</code> using the <code>toPicture</code> method.</p>
 <pre class="prettyprint"><code class="language-scala">val picture = base64.toPicture
-// picture: Picture[doodle.algebra.Algebra[x], Drawing[A], Unit] = doodle.algebra.Picture$$anon$1@12664d00
 </code></pre>
 <h2><a href="#type-class-instances-for-picture" name="type-class-instances-for-picture" class="anchor"><span class="anchor-link"></span></a>Type Class Instances for Picture</h2>
 <p>There are a few type class instances defined for <code>Picture</code>.</p>
@@ -205,7 +206,7 @@ val (_, base64) = circle[Algebra, Drawing](100).base64[Png]()
 <p>In this case the combine is <code>on</code>, with identity <code>empty</code>.</p>
 <p><code>Picture[Alg,F,?]</code> has a <code>Monad</code> instance if <code>F</code> does.</p>
 <div class="source-github">
-The source code for this page can be found <a href="https://github.com/creativescala/doodle/tree/v0.9.20/docs/src/main/paradox/algebra/picture.md">here</a>.
+The source code for this page can be found <a href="https://github.com/creativescala/doodle/tree/v0.10.1/docs/src/main/paradox/algebra/picture.md">here</a>.
 </div>
 
 <div class="nav-next">
@@ -267,7 +268,7 @@ The source code for this page can be found <a href="https://github.com/creatives
 
 <!--
 <div class="copyright">
-<span class="text">&copy; 2020</span>
+<span class="text">&copy; 2022</span>
 <a href="https://www.example.com" class="logo">logo</a>
 </div>
 -->
@@ -292,7 +293,7 @@ The source code for this page can be found <a href="https://github.com/creatives
 <script type="text/javascript" src="../lib/prettify/prettify.js"></script>
 <script type="text/javascript" src="../lib/prettify/lang-scala.js"></script>
 <script type="text/javascript">jQuery(function(){window.prettyPrint && prettyPrint()});</script>
-<script type="text/javascript">jQuery(function(jq){initOldVersionWarnings(jq, '0.9.20', 'https://github.com/creativescala/doodle')});</script>
+<script type="text/javascript">jQuery(function(jq){initOldVersionWarnings(jq, '0.10.1', 'https://github.com/creativescala/doodle')});</script>
 
 
 </html>

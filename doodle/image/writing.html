@@ -12,6 +12,7 @@
 <script type="text/javascript" src="../js/page.js"></script>
 <script type="text/javascript" src="../js/warnOldVersion.js"></script>
 <script type="text/javascript" src="../js/groups.js"></script>
+<script type="text/javascript" src="../js/snippets.js"></script>
 <link rel="stylesheet" type="text/css" href="../lib/foundation/dist/foundation.min.css"/>
 <link rel="stylesheet" type="text/css" href="../css/page.css"/>
 
@@ -31,7 +32,7 @@
 <span class="home-icon">⌂</span>Doodle
 </a>
 <div class="version-number">
-0.9.20
+0.10.1
 </div>
 </div>
 <div class="nav-toc">
@@ -89,7 +90,7 @@ C16.952,7,17,6.553,17,6c0-0.553-0.048-1-0.6-1H3.6C3.048,5,3,5.447,3,6C3,6.553,3.
 <span class="home-icon">⌂</span>Doodle
 </a>
 <div class="version-number">
-0.9.20
+0.10.1
 </div>
 </div>
 <div class="nav-toc">
@@ -152,14 +153,15 @@ C16.952,7,17,6.553,17,6c0-0.553-0.048-1-0.6-1H3.6C3.048,5,3,5.447,3,6C3,6.553,3.
 <h2><a href="#imports" name="imports" class="anchor"><span class="anchor-link"></span></a>Imports</h2>
 <p>In addition to the usual imports of</p>
 <pre class="prettyprint"><code class="language-scala">import doodle.image._
-import doodle.image.syntax._
+import doodle.image.syntax.all._
 import doodle.core._
 </code></pre>
 <p>to write to a file you&rsquo;ll need</p>
 <pre class="prettyprint"><code class="language-scala">import doodle.java2d._
 import doodle.effect.Writer._
+import cats.effect.unsafe.implicits.global
 </code></pre>
-<p>The first import pulls in the Java2D backend. The second import makes available the standard formats supported by Doodle.</p>
+<p>The first import pulls in the Java2D backend. The second import makes available the standard formats supported by Doodle. The third import brings in the Cats Effect runtime, needed to run code.</p>
 <h2><a href="#writing-an-image" name="writing-an-image" class="anchor"><span class="anchor-link"></span></a>Writing an Image</h2>
 <p>Call the <code>write</code> method to write to a file, giving the format as a type parameter and the file name as a normal parameter. For example, to write a PNG to the file called <code>&quot;circle.png&quot;</code></p>
 <pre class="prettyprint"><code class="language-scala">val image = Image.circle(100)
@@ -174,7 +176,7 @@ image.write[Png](&quot;circle.png&quot;)
 </code></pre>
 <p>Instead of using <code>Png</code> you could use <code>Gif</code> or <code>Jpg</code> to specify those file formats. You&rsquo;d probably want to change the file name as well if you change the format. That&rsquo;s it! Your masterpiece is now ready to share with the world.</p>
 <div class="source-github">
-The source code for this page can be found <a href="https://github.com/creativescala/doodle/tree/v0.9.20/docs/src/main/paradox/image/writing.md">here</a>.
+The source code for this page can be found <a href="https://github.com/creativescala/doodle/tree/v0.10.1/docs/src/main/paradox/image/writing.md">here</a>.
 </div>
 
 <div class="nav-next">
@@ -233,7 +235,7 @@ The source code for this page can be found <a href="https://github.com/creatives
 
 <!--
 <div class="copyright">
-<span class="text">&copy; 2020</span>
+<span class="text">&copy; 2022</span>
 <a href="https://www.example.com" class="logo">logo</a>
 </div>
 -->
@@ -258,7 +260,7 @@ The source code for this page can be found <a href="https://github.com/creatives
 <script type="text/javascript" src="../lib/prettify/prettify.js"></script>
 <script type="text/javascript" src="../lib/prettify/lang-scala.js"></script>
 <script type="text/javascript">jQuery(function(){window.prettyPrint && prettyPrint()});</script>
-<script type="text/javascript">jQuery(function(jq){initOldVersionWarnings(jq, '0.9.20', 'https://github.com/creativescala/doodle')});</script>
+<script type="text/javascript">jQuery(function(jq){initOldVersionWarnings(jq, '0.10.1', 'https://github.com/creativescala/doodle')});</script>
 
 
 </html>

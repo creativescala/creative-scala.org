@@ -12,6 +12,7 @@
 <script type="text/javascript" src="js/page.js"></script>
 <script type="text/javascript" src="js/warnOldVersion.js"></script>
 <script type="text/javascript" src="js/groups.js"></script>
+<script type="text/javascript" src="js/snippets.js"></script>
 <link rel="stylesheet" type="text/css" href="lib/foundation/dist/foundation.min.css"/>
 <link rel="stylesheet" type="text/css" href="css/page.css"/>
 
@@ -31,7 +32,7 @@
 <span class="home-icon">⌂</span>Doodle
 </a>
 <div class="version-number">
-0.9.20
+0.10.1
 </div>
 </div>
 <div class="nav-toc">
@@ -89,7 +90,7 @@ C16.952,7,17,6.553,17,6c0-0.553-0.048-1-0.6-1H3.6C3.048,5,3,5.447,3,6C3,6.553,3.
 <span class="home-icon">⌂</span>Doodle
 </a>
 <div class="version-number">
-0.9.20
+0.10.1
 </div>
 </div>
 <div class="nav-toc">
@@ -138,7 +139,7 @@ C16.952,7,17,6.553,17,6c0-0.553-0.048-1-0.6-1H3.6C3.048,5,3,5.447,3,6C3,6.553,3.
 <p>Doodle is a Scala library for 2D graphics, animation, data visualization, and creative coding. It runs in both the JVM, rendering via <a href="https://en.wikipedia.org/wiki/Java_2D">Java2D</a>, and the web browser using <a href="https://en.wikipedia.org/wiki/Scalable_Vector_Graphics">SVG</a>.</p>
 <h2><a href="#getting-started" name="getting-started" class="anchor"><span class="anchor-link"></span></a>Getting Started</h2>
 <p>To use Doodle, add the following to your <code>build.sbt</code></p>
-<pre class="prettyprint"><code class="language-scala">libraryDependencies += &quot;org.creativescala&quot; %% &quot;doodle&quot; % &quot;0.9.20&quot;
+<pre class="prettyprint"><code class="language-scala">libraryDependencies += &quot;org.creativescala&quot; %% &quot;doodle&quot; % &quot;0.10.1&quot;
 </code></pre>
 <h2><a href="#scaladoc" name="scaladoc" class="anchor"><span class="anchor-link"></span></a>ScalaDoc</h2>
 <p>The <a href="api/doodle/index.html" title="doodle"><code>ScalaDoc</code></a> covers Doodle&rsquo;s APIs.</p>
@@ -167,14 +168,18 @@ val chessboard =
 </code></pre>
 <p>To draw these Images call the <code>draw</code> method like so</p>
 <pre class="prettyprint"><code class="language-scala">// Extension methods
-import doodle.image.syntax._
+import doodle.image.syntax.all._
 // Render to a window using Java2D (must be running in the JVM)
 import doodle.java2d._
+// Need the Cats Effect runtime to run everything
+import cats.effect.unsafe.implicits.global
 
 chessboard.draw()
 </code></pre>
 <p>This creates the picture shown below.</p>
 <p><img src="chessboard.png" alt="A picture of a red and black chessboard" /></p>
+<h3><a href="#attention-intellij-users" name="attention-intellij-users" class="anchor"><span class="anchor-link"></span></a>Attention IntelliJ Users</h3>
+<p>The Scala Plugin of IntelliJ still has an open bug which cannot resolve implicits correctly. The above example might give you an Error warning in Line XX. You can ignore this warning, or fix it using <code>chessboard.draw[Algebra, Drawing, Frame, Canvas]()</code>. Please use any text editor and <a href="https://scalameta.org/metals/">Metals</a> to get a better experience using Doodle.</p>
 <h2><a href="#guides" name="guides" class="anchor"><span class="anchor-link"></span></a>Guides</h2>
 <p><a href="image/index.html">Using the Image library</a> is the easiest way to get started drawing with Doodle.</p>
 <p><a href="algebra/index.html">Using the tagless final algebras</a> allows access to features that are specific to a backend.</p>
@@ -193,7 +198,7 @@ chessboard.draw()
   <li>interactive exploration</li>
 </ul>
 <div class="source-github">
-The source code for this page can be found <a href="https://github.com/creativescala/doodle/tree/v0.9.20/docs/src/main/paradox/index.md">here</a>.
+The source code for this page can be found <a href="https://github.com/creativescala/doodle/tree/v0.10.1/docs/src/main/paradox/index.md">here</a>.
 </div>
 
 <div class="nav-next">
@@ -256,7 +261,7 @@ The source code for this page can be found <a href="https://github.com/creatives
 
 <!--
 <div class="copyright">
-<span class="text">&copy; 2020</span>
+<span class="text">&copy; 2022</span>
 <a href="https://www.example.com" class="logo">logo</a>
 </div>
 -->
@@ -281,7 +286,7 @@ The source code for this page can be found <a href="https://github.com/creatives
 <script type="text/javascript" src="lib/prettify/prettify.js"></script>
 <script type="text/javascript" src="lib/prettify/lang-scala.js"></script>
 <script type="text/javascript">jQuery(function(){window.prettyPrint && prettyPrint()});</script>
-<script type="text/javascript">jQuery(function(jq){initOldVersionWarnings(jq, '0.9.20', 'https://github.com/creativescala/doodle')});</script>
+<script type="text/javascript">jQuery(function(jq){initOldVersionWarnings(jq, '0.10.1', 'https://github.com/creativescala/doodle')});</script>
 
 
 </html>
